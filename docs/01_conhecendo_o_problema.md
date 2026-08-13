@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 13/08/2026
+**Status:** 🟨 em andamento
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -57,43 +57,45 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 ## 0.1 Membros
 
-| Nome completo | Matrícula | GitHub |
-|---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| Nome completo                |   Matrícula | GitHub                       |
+| ---------------------------- | -----------: | ---------------------------- |
+| Kawan Mark Geronimo Da Silva | 22.222.010-5 | https://github.com/KawanMark |
+| Gabriel                        | xxxxx| xxxxxxx |
+| Ale                           | xxxx         |  xxxxxxxxx                  |
+
+
 
 ## 0.2 Título atual do TCC
 
-{{...}}
+Detecção de Anomalias em Imagens de Raio-X de Contêineres de Carga
 
 ## 0.3 Orientador(a)
 
-{{...}}
+Murilo Bouzon
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
 Marque e descreva:
 
 - [ ] sistema/aplicação interativa;
-- [ ] algoritmo;
-- [ ] modelo de IA/ML/LLM;
+- [X] algoritmo;
+- [X] modelo de IA/ML/LLM;
 - [ ] biblioteca/API/framework;
 - [ ] análise de dataset;
-- [ ] estudo/benchmark/avaliação experimental;
+- [X] estudo/benchmark/avaliação experimental;
 - [ ] infraestrutura/backend;
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** O TCC desenvolve primariamente um **modelo de IA/ML** baseado em aprendizado (Autoencoder) acompanhado de **algoritmos** de injeção sintética de anomalias e um **estudo experimental/benchmark** avaliando a precisão da detecção em imagens de raio-X de contêineres
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
 - [ ] Sim, a interface já faz parte do TCC.
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
-- [ ] Não. O TCC é predominantemente técnico e não previa interface.
+- [X] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
-
-> Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
+**Explique o que está formalmente previsto no TCC:** O escopo formal do TCC concentra-se no treinamento e validação de um modelo de aprendizado para detecção de anomalias em imagens radiográficas de contêineres, utilizando datasets públicos e simulação sintética de ameaças, sem prever o desenvolvimento de uma aplicação de interface gráfica.
 
 ---
 
@@ -101,31 +103,25 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+Um sistema computacional capaz de analisar imagens de raio-x de contêineres de carga para detectar autonomamente mercadorias ilícitas e anomalias ocultas sem depender de exemplos reais prévios de contrabando.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+[F] O volume massivo do comércio exterior e a rigorosa regulamentação de segurança tornam a inspeção física de 100% dos contêineres impraticável nos portos (Fonte: Revisão bibliográfica do TCC e relatórios aduaneiros). Isso gera a necessidade de triagem não intrusiva por raio-X, cujas imagens complexas e sobrepostas são difíceis de inspecionar manualmente com precisão.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
-Complete, se ajudar:
-
-> “Nosso TCC produz, melhora, analisa ou permite `{{capacidade}}`.”
-
-Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
-
-{{...}}
+> “Nosso TCC produz, melhora, analisa ou permite **detectar e localizar anomalias e riscos em imagens de raio-X de contêineres utilizando aprendizado e geração de imagens residuais**.”
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+[H] Se bem-sucedida, a tecnologia permitirá que alfândegas e operadores portuários triem um volume muito maior de contêineres com maior precisão, reduzindo o tempo de retenção de cargas lícitas e direcionando a inspeção física apenas para contêineres com alta probabilidade de anomalia.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
-|---|---|
-| {{...}} | {{...}} |
+| ------------------------------- | ---------------------------------- |
+| Treinamento de Autoencoder autossupervisionado com cargas normais; injeção sintética de anomalias via Lei de Beer-Lambert; segmentação por imagem residual. | Ferramenta de apoio à decisão para operadores de scanners em portos, destacando discrepâncias e priorizando alvos de vistoria. |
 
 ---
 
@@ -133,29 +129,27 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 ## 2.1 Quem interage diretamente com o produto, se já existe interface prevista?
 
-Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
+NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
-{{[F/H/?] ...}}
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
-Considere perfis profissionais e stakeholders, não apenas consumidores finais.
-
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
-|---|---|---|---|
-| {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
+| ------ | ------------------------------ | ----------- | ----------------- |
+| **Operador de Scanner de Raio-X / Fiscal Aduaneiro** | Usuário direto operacional | Visualiza a fila de contêineres triados, analisa mapas residuais de anomalia e decide sobre liberação ou vistoria física. | [H] Hipótese |
+| **Analista de Inteligência Aduaneira** | Usuário tático | Consulta relatórios históricos de varreduras, investiga padrões de contrabando e audita decisões anteriores. | [H] Hipótese |
+| **Administrador / Engenheiro de IA** | Configurador técnico | Ajusta limiares de sensibilidade (*thresholds*) do modelo e monitora a performance do pipeline de IA. | [?] Lacuna |
+
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
-
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
-|---|---|---|---|
-| {{...}} | {{...}} | sim/não | {{...}} |
+| ----------- | --------------- | -------------- | ----------------- |
+| **Empresas Importadoras / Exportadoras** | Sofrem impacto direto no tempo de liberação e custos logísticos das cargas nos portos. | Não | [F] Fato (operação portuária) |
+| **Autoridades de Segurança Pública / Alfândega** | Beneficiam-se da eficácia na interceptação de ilícitos (drogas, armas, contrabando). | Não (recebem relatórios consolidados) | [H] Hipótese |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
-
-{{[F/H/?] ...}}
+[H] Operadores de scanner trabalham sob pressão de tempo severa, em turnos prolongados, sujeitos à fadiga visual. Possuem forte conhecimento prático de leitura radiográfica, mas podem não ter familiaridade com conceitos profundos de aprendizado de máquina (exigem explicações visuais claras e diretas, como heatmaps e scores de risco, em vez de métricas matemáticas complexas).
 
 ---
 
@@ -163,25 +157,24 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 
-Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
-
-{{[F/H/?] ...}}
+[H] O fiscal aduaneiro tentando garantir a segurança da carga que entra no país e cumprir as metas de liberação alfandegária sem causar gargalos logísticos no porto. Alem do objetivo de bater a meta diária de liberação de contêineres do terminal com segurança jurídica e absoluta certeza de que nenhum ilícito passou despercebido.
 
 ## 3.2 Quais são as atividades mais importantes?
 
-| ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
-|---|---|---|---|---|
-| A01 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A02 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A03 | {{...}} | {{...}} | {{...}} | {{...}} |
+| ID  | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
+| --- | ------------------ | ------------ | ------------------------------- | ----------------- |
+| A01 | Triar a fila diária de contêineres escaneados por raio-X | Operador de Scanner | Alta / Crítica | [H] Hipótese |
+| A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Fiscal Aduaneiro | Média / Alta | [H] Hipótese |
+| A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção) | Fiscal Aduaneiro | Alta / Crítica | [H] Hipótese |
+| A04 | Consultar histórico de varreduras e laudos anteriores | Analista de Inteligência | Baixa / Média | [?] Lacuna |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-{{[F/H/?] ...}}
+[H] A atividade A01 (triar a fila de contêineres) e A03 (registrar vereditos), pois todo contêiner escaneado precisa passar por verificação e liberação formal no fluxo portuário.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-{{[F/H/?] ...}}
+[H] A atividade A03 (tomada de decisão de liberação). Se um contêiner ilícito for liberado por erro de interpretação (falso negativo), há risco de contrabando de armas ou drogas. Se uma carga lícita for retida indevidamente por falso positivo, gera prejuízos financeiros e atrasos logísticos severos.
 
 ---
 
@@ -189,65 +182,56 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
 
-Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
-
-{{[F/H/?] ...}}
+[H] Hoje, operadores utilizam softwares fornecidos pelos fabricantes dos scanners de raio-X, visualizando imagens densas em múltiplos monitores, sem auxílio avançado de IA para destaque de anomalias complexas, baseando-se puramente em inspeção visual humana.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-{{[F/H/?] ...}}
+[H] A sobreposição visual de mercadorias complexas (diferentes densidades e materiais), a fadiga visual acumulada após horas de plantão examinando imagens, e a dificuldade de detectar anomalias que não correspondem a assinaturas rígidas pré-cadastradas.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-{{[F/H/?] ...}}
+[H] Tons indicativos de densidade material (orgânico vs. inorgânico vs. metálico), geometria dos objetos no interior do contêiner, contexto da declaração da carga e alertas de sistemas auxiliares.
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-{{[F/H/?] ...}}
+[H] Ocorrência de falsos negativos (entrada de ilícitos no país) ou falsos positivos (paralisação de contêineres legítimos, gerando custos de pátio, inspeção física desnecessária e atrito com exportadores).
 
 ## 4.5 Conte uma situação concreta.
 
-Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
-
-{{[F/H/?] narrativa...}}
+[H] Carlos, fiscal aduaneiro em um terminal portuário movimentado, inicia seu terceiro turno consecutivo de análise de imagens de raio-X. Às 03:00 da manhã, após centenas de contêineres escaneados, uma densidade levemente atípica camuflada no interior de paletes de madeira passa despercebida na tela devido à exaustão visual, permitindo a passagem de mercadoria não declarada.
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte | O que sustenta | Limitação |
-|---|---|---|
-| {{...}} | {{...}} | {{...}} |
-
+| ---------------- | -------------- | ----------- |
+| Artigo base do TCC (*Self-supervised anomaly detection and localization for x-ray cargo images*, Gaikwad et al., 2024) | Dificuldade da inspeção manual e necessidade de detecção autossupervisionada em raio-X de carga. | Foco estritamente técnico/algorítmico, sem modelagem de experiência do operador. |
 ---
 
 # 5. Entendendo o contexto de uso
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
 
-{{[F/H/?] ...}}
+[H] Em salas de controle de raio-X de portos, armazéns alfandegados ou centros de triagem da Receita Federal, sob alta demanda operacional.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
-{{[F/H/?] ...}}
+[H] Estações de trabalho desktop profissionais com múltiplos monitores de alta resolução e gama dinâmica otimizada para imagens radiográficas.
 
 ## 5.3 Existem condições físicas relevantes?
 
-Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
-
-{{[F/H/?] ...}}
+[H] Iluminação ambiente controlada, ruído de equipamentos e sirenes de pátio portuário, interrupções frequentes e intensa pressão temporal.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
-Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
-
-{{[F/H/?] ...}}
+[H] Hierarquia rígida de fiscalização, responsabilidade legal e criminal associada à liberação de cargas, necessidade de auditoria e registro imutável de quem autorizou cada liberação.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
-{{[F/H/?] ...}}
+[H] Sim. Toda decisão de liberação ou direcionamento para vistoria deve ser estritamente rastreável para fins legais, investigativos e de conformidade aduaneira.
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-{{[F/H/?] ...}}
+[H] Sim. Falhas podem resultar em evasão fiscal, entrada de drogas/armas no território nacional (falso negativo) ou prejuízos logísticos internacionais por retenção injustificada de cargas (falso positivo).
 
 ---
 
@@ -258,8 +242,8 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 ## 6.1 Como pessoas resolvem problemas semelhantes hoje?
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
-|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| ----------------- | -------- | --------- | ----------------- |
+| {{...}}           | {{...}}  | {{...}}   | {{...}}           |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
@@ -348,22 +332,22 @@ A equipe pode registrar possibilidades para investigação. **Não significa que
 
 Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
-| Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
-|---|---|---|---|
-| Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
-| Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
-| Entrada/upload/seleção de dados | sim/não/talvez | {{...}} | {{...}} |
-| Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
-| Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
-| Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
-| Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
-| Explicabilidade/detalhamento | sim/não/talvez | {{...}} | {{...}} |
-| Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
-| Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
-| CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
-| Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
-| Alertas/ocorrências | sim/não/talvez | {{...}} | {{...}} |
-| Ajuda/documentação | sim/não/talvez | {{...}} | {{...}} |
+| Possibilidade                           | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
+| --------------------------------------- | ------------------- | -------------------------------- | ---------------- |
+| Dashboard/visão geral                  | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Configuração/parametrização         | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Entrada/upload/seleção de dados       | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Acompanhamento de processamento         | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Relatório/resultados                   | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Histórico com busca/filtros            | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Comparação de resultados              | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Explicabilidade/detalhamento            | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Administração/configurações globais | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Usuários/perfis/permissões            | sim/não/talvez     | {{...}}                          | {{...}}          |
+| CRUD de entidade do domínio            | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Auditoria/logs                          | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Alertas/ocorrências                    | sim/não/talvez     | {{...}}                          | {{...}}          |
+| Ajuda/documentação                    | sim/não/talvez     | {{...}}                          | {{...}}          |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -374,32 +358,32 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 ## 9.1 Qual benefício concreto o projeto de IHC pretende oferecer?
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
-|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| ------------------- | -------------------- | -------- | ----------------- |
+| {{...}}             | {{...}}              | {{...}}  | {{...}}           |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
-| ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
-|---|---|---|---|
-| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| ID  | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
+| --- | ------------------------------- | ----------------- | ------------------ |
+| F01 | {{ação}}                      | {{objetivo}}      | alta/média/baixa  |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
 A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
-|---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| ---------------------- | -------------- | -------------------------------- |
+| {{...}}                | {{...}}        | {{...}}                          |
 
 ---
 
 # 10. Hipóteses e dúvidas prioritárias
 
-| ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
-|---|---|---|---|
-| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
-| H02 | {{...}} | {{...}} | {{...}} |
-| H03 | {{...}} | {{...}} | {{...}} |
+| ID  | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
+| --- | ----------------- | --------------- | ---------------------------- |
+| H01 | {{...}}           | {{...}}         | Entrega 2/3/7/...            |
+| H02 | {{...}}           | {{...}}         | {{...}}                      |
+| H03 | {{...}}           | {{...}}         | {{...}}                      |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -407,24 +391,24 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 # 11. Síntese da equipe
 
-| Pergunta | Síntese atual |
-|---|---|
-| Qual é a contribuição central do TCC? | {{...}} |
-| O TCC já previa interface? | {{...}} |
-| Quem é o usuário prioritário de IHC? | {{...}} |
-| O que ele precisa alcançar? | {{...}} |
-| Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | {{...}} |
-| Qual é o contexto de uso? | {{...}} |
-| Que interface/recorte será explorado? | {{...}} |
-| Como a interface se relaciona ao TCC? | {{...}} |
-| Quais pontos ainda são hipóteses? | {{H01...}} |
+| Pergunta                                 | Síntese atual |
+| ---------------------------------------- | -------------- |
+| Qual é a contribuição central do TCC? | {{...}}        |
+| O TCC já previa interface?              | {{...}}        |
+| Quem é o usuário prioritário de IHC?  | {{...}}        |
+| O que ele precisa alcançar?             | {{...}}        |
+| Qual problema/atividade será estudado?  | {{...}}        |
+| Como isso acontece hoje?                 | {{...}}        |
+| Qual é o contexto de uso?               | {{...}}        |
+| Que interface/recorte será explorado?   | {{...}}        |
+| Como a interface se relaciona ao TCC?    | {{...}}        |
+| Quais pontos ainda são hipóteses?      | {{H01...}}     |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}  
-**Fora do escopo de IHC:** {{...}}  
-**Dentro do escopo formal do TCC:** {{...}}  
+**Dentro do escopo de IHC:** {{...}}
+**Fora do escopo de IHC:** {{...}}
+**Dentro do escopo formal do TCC:** {{...}}
 **Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
 
 ---
