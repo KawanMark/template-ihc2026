@@ -243,29 +243,29 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 | ----------------- | -------- | --------- | ----------------- |
-| {{...}}           | {{...}}  | {{...}}   | {{...}}           |
+| Softwares proprietários dos fabricantes de scanners (ex: Rapiscan OS) | Operadores portuários | Visualizar e ajustar contraste de imagens de raio-X de contêineres. | [F] Fato de mercado |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-{{[F/H/?] ...}}
+[H] Sistemas de gerenciamento de carga portuária (TOS - Terminal Operating Systems)
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
 
-Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
+[H] Consoles de operação industrial, softwares GIS/monitoramento, painéis de controle com múltiplos filtros, sistemas ERP alfandegários (ex: Siscomex / Portal Único Siscomex).
 
-{{[F/H/?] ...}}
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
-{{[F/H/?] ...}}
+[H] Gerenciamento do fluxo logístico global, controle de manifesto de cargas e exibição básica de imagens de raio-X.
+
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
-{{[F/H/?] ...}}
+[H] Falta de inteligência para destacar anomalias invisíveis ao olho humano, interfaces muitas vezes densas, legadas e pouco intuitivas, com alta taxa de falsos alarmes sem explicações claras.
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-{{[F/H/?] ...}}
+[H] Terminologia aduaneira e portuária (BL, Manifesto, Recinto, Vistoria, Despacho), códigos de risco por cores (verde, amarelo, vermelho) e filas de status.
 
 ---
 
@@ -285,41 +285,35 @@ Faça o exercício de transferência de uso:
 
 > **Imagine que o TCC foi concluído com sucesso e uma empresa, laboratório ou organização quer transformar a contribuição em algo utilizável. Quem precisaria interagir com ela e para quê?**
 
-Responda:
-
-1. quem poderia contratar/adotar a solução? {{...}}
-2. quem seria o usuário direto? {{...}}
-3. quem administraria/configuraria? {{...}}
-4. quem interpretaria resultados? {{...}}
-5. quem tomaria decisões? {{...}}
-6. quais dados/entradas seriam necessários? {{...}}
-7. quais resultados deveriam ser compreendidos? {{...}}
-8. que erros/rupturas seriam possíveis? {{...}}
+1. quem poderia contratar/adotar a solução? Administrações portuárias, operadores logísticos alfandegados e órgãos aduaneiros (ex: Receita Federal).
+2. quem seria o usuário direto? Operador de Scanner de Raio-X e Fiscal Aduaneiro.
+3. quem administraria/configuraria? Administrador de TI do terminal e Engenheiro de IA.
+4. quem interpretaria resultados? Fiscais aduaneiros e analistas de inteligência.
+5. quem tomaria decisões? Fiscais aduaneiros responsáveis pela liberação.
+6. quais dados/entradas seriam necessários? Imagens de raio-X de transmissão do contêiner e metadados do manifesto de carga.
+7. quais resultados deveriam ser compreendidos? Score de anomalia, mapas residuais de discrepância e regiões de alerta (ROI).
+8. que erros/rupturas seriam possíveis? Falsos positivos gerando vistoria desnecessária; falsos negativos deixando passar ameaças; falha de carregamento da imagem radiográfica.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-{{...}}
+**Fiscal Aduaneiro / Operador de Scanner de Raio-X.**  
+**Por que esse perfil foi escolhido?** É o profissional que lida diretamente com a ponta operacional da triagem de imagens e toma a decisão crítica de liberação ou retenção da carga.
 
-**Por que esse perfil foi escolhido?** {{...}}
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-{{...}}
+Analisar os alertas gerados pelo modelo de IA, comparar a imagem original de raio-X com o mapa residual de anomalia e registrar o veredito de liberação ou vistoria física com segurança e agilidade.
 
 ## 7.4 Que interface será explorada na disciplina?
 
-Complete:
-
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{perfil}}` utilizar `{{capacidade/resultado do TCC}}` para `{{objetivo}}`, no contexto de `{{situação}}`.**
-
-{{...}}
+> **Para fins da disciplina de IHC, será projetada uma interface que permita ao `Fiscal Aduaneiro` utilizar o `modelo de detecção de anomalias em raio-X` para `triar contêineres suspeitos, inspecionar mapas residuais de discrepância e registrar decisões de liberação ou vistoria`, no contexto de `um terminal portuário alfandegado sob pressão de tempo`.**
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
 - [ ] Já fazia parte do TCC.
 - [ ] É um aprofundamento de algo parcialmente previsto.
 - [ ] É uma extensão conceitual criada para a disciplina.
-- [ ] É um protótipo demonstrativo de aplicação potencial.
+- [X] É um protótipo demonstrativo de aplicação potencial.
 - [ ] Outra: {{...}}.
 
 > **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for posteriormente decidido pela equipe e pelo orientador.
@@ -332,23 +326,22 @@ A equipe pode registrar possibilidades para investigação. **Não significa que
 
 Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
-| Possibilidade                           | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
-| --------------------------------------- | ------------------- | -------------------------------- | ---------------- |
-| Dashboard/visão geral                  | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Configuração/parametrização         | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Entrada/upload/seleção de dados       | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Acompanhamento de processamento         | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Relatório/resultados                   | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Histórico com busca/filtros            | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Comparação de resultados              | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Explicabilidade/detalhamento            | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Administração/configurações globais | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Usuários/perfis/permissões            | sim/não/talvez     | {{...}}                          | {{...}}          |
-| CRUD de entidade do domínio            | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Auditoria/logs                          | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Alertas/ocorrências                    | sim/não/talvez     | {{...}}                          | {{...}}          |
-| Ajuda/documentação                    | sim/não/talvez     | {{...}}                          | {{...}}          |
-
+| Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
+| ------------- | ------------------- | -------------------------------- | ---------------- |
+| **Dashboard/visão geral** | Sim | Acompanhar o fluxo diário de contêineres escaneados e status de triagem | [H] |
+| **Configuração/parametrização** | Talvez | Ajustar sensibilidade de detecção da IA pelo operador sênior | [?] |
+| **Entrada/upload/seleção de dados** | Sim | Carregar novas imagens de raio-X e metadados do contêiner | [H] |
+| **Acompanhamento de processamento** | Sim | Acompanhar o status da inferência do Autoencoder na imagem radiográfica | [H] |
+| **Relatório/resultados** | Sim | Exportar laudos de inspeção e estatísticas operacionais | [H] |
+| **Histórico com busca/filtros** | Sim | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco | [H] |
+| **Comparação de resultados** | Sim | Visualizar lado a lado a imagem original de raio-X e o mapa residual gerado pela IA | [H] |
+| **Explicabilidade/detalhamento** | Sim | Exibir score de confiança e regiões de destaque (ROI) da anomalia | [H] |
+| **Administração/configurações globais** | Não | - | - |
+| **Usuários/perfis/permissões** | Não | - | - |
+| **CRUD de entidade do domínio** | Não | - | - |
+| **Auditoria/logs** | Sim | Registrar trilha de ações de liberação/vistoria para fins legais | [H] |
+| **Alertas/ocorrências** | Sim | Notificar contêineres com alta probabilidade de anomalia crítica | [H] |
+| **Ajuda/documentação** | Talvez | Exibir glossário de termos radiográficos e instruções de uso do sistema | [?] |
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
 ---
@@ -359,13 +352,17 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 | ------------------- | -------------------- | -------- | ----------------- |
-| {{...}}             | {{...}}              | {{...}}  | {{...}}           |
+| Redução da fadiga visual e foco direcionado em áreas suspeitas | Exaustão em plantões longos analisando imagens densas | Fiscal Aduaneiro | [H] |
+| Agilidade na tomada de decisão de liberação ou vistoria | Gargalos operacionais e filas portuárias | Operador de Scanner | [H] |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
-| ID  | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
-| --- | ------------------------------- | ----------------- | ------------------ |
-| F01 | {{ação}}                      | {{objetivo}}      | alta/média/baixa  |
+| ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
+| -- | ------------------------------- | ----------------- | ------------------ |
+| F01 | Visualizar fila de contêineres classificados por nível de risco | Priorizar inspeções críticas | Alta |
+| F02 | Comparar imagem original de raio-X com o mapa residual de anomalia | Confirmar a veracidade do alerta da IA | Alta |
+| F03 | Registrar veredito (liberado / vistoria física / retenção) com justificativa | Concluir o despacho alfandegário com rastreabilidade | Alta |
+| F04 | Consultar histórico de varreduras anteriores | Investigar reincidências ou auditar laudos | Média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
