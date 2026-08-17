@@ -446,21 +446,21 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [ ] A equipe declarou se o TCC já previa interface.
-- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
-- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
-- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
-- [ ] Usuários diretos e stakeholders foram diferenciados.
-- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
-- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
-- [ ] Processo/problema atual foi descrito antes da solução.
-- [ ] Existe situação concreta de uso/problema.
-- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [X] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [] A equipe declarou se o TCC já previa interface.
+- [X] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
+- [X] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [X] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [X] Usuários diretos e stakeholders foram diferenciados.
+- [X] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [X] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [X] Processo/problema atual foi descrito antes da solução.
+- [X] Existe situação concreta de uso/problema.
+- [X] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
 - [ ] Mercado/alternativas existentes foram levantados inicialmente.
 - [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
 - [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
 - [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
 - [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
 - [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [X] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
