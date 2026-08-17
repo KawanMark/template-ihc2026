@@ -378,7 +378,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID  | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 | --- | ----------------- | --------------- | ---------------------------- |
-| H01 | {{...}}           | {{...}}         | Entrega 2/3/7/...            |
+| H01 |Operadores preferem visualização lado a lado (original vs. mapa residual) em vez de sobreposição com opacidade.| Define a arquitetura da tela de análise detalhada.|            |
 | H02 | {{...}}           | {{...}}         | {{...}}                      |
 | H03 | {{...}}           | {{...}}         | {{...}}                      |
 
@@ -422,6 +422,12 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 - **Entregas 9–11:** transformam o recorte em modelo de interação e protótipo.
 - **Entregas 12–14:** avaliam a interface construída na disciplina.
 
+- **Entrega 2:** Verifica concorrentes de softwares alfandegários e sistemas de inspeção portuária.
+- **Entrega 3:** Detalha perfis de personas (Fiscal Carlos).
+- **Entregas 4 e 5:** Aprofundam cenários de problema e análise de tarefas (HTA).
+- **Entregas 6 a 11:** Prototipação em baixa e alta fidelidade (Figma) do sistema de triagem.
+- **Entregas 12 a 14:** Avaliação heurística e testes de usabilidade com usuários.
+
 A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser revisada quando surgirem evidências.
 
 ---
@@ -430,9 +436,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** {{...}}
-2. **Contribuição técnica do TCC:** {{...}}
-3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
+1. **Problema/atividade humana:** Fiscais aduaneiros enfrentam extrema fadiga visual e pressão temporal ao inspecionar milhares de imagens complexas de raio-X de contêineres para coibir contrabando.
+2. **Contribuição técnica do TCC:** Um modelo avançado de inteligência artificial autossupervisionada que aprende o padrão de cargas normais e detecta autonomamente anomalias ocultas gerando mapas residuais precisos.
+3. **Como uma pessoa poderia utilizar essa contribuição:** Uma interface intuitiva em sala de controle portuária que prioriza contêineres de risco e destaca visualmente as discrepâncias detectadas pela IA, agilizando a liberação de cargas legítimas e bloqueando ilícitos.
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
