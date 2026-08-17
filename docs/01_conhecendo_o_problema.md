@@ -370,7 +370,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 | ---------------------- | -------------- | -------------------------------- |
-| {{...}}                | {{...}}        | {{...}}                          |
+|| {{...}}        | {{...}}                          |
 
 ---
 
@@ -390,23 +390,23 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta                                 | Síntese atual |
 | ---------------------------------------- | -------------- |
-| Qual é a contribuição central do TCC? | {{...}}        |
-| O TCC já previa interface?              | {{...}}        |
-| Quem é o usuário prioritário de IHC?  | {{...}}        |
-| O que ele precisa alcançar?             | {{...}}        |
-| Qual problema/atividade será estudado?  | {{...}}        |
-| Como isso acontece hoje?                 | {{...}}        |
-| Qual é o contexto de uso?               | {{...}}        |
-| Que interface/recorte será explorado?   | {{...}}        |
-| Como a interface se relaciona ao TCC?    | {{...}}        |
+| Qual é a contribuição central do TCC? |Detecção autossupervisionada de anomalias em raio-X de contêineres via Autoencoders e imagens residuais.|
+| O TCC já previa interface?              |Não|
+| Quem é o usuário prioritário de IHC?  |Fiscal Aduaneiro |
+| O que ele precisa alcançar?             |Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez.|
+| Qual problema/atividade será estudado?  |Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.|
+| Como isso acontece hoje?                 |Inspeção visual manual em softwares legados de fabricantes de scanners.|
+| Qual é o contexto de uso?               |Sala de controle portuária, alta resolução, pressão temporal e gravidade da segurança.|
+| Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.|
+| Como a interface se relaciona ao TCC?    |Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.|
 | Quais pontos ainda são hipóteses?      | {{H01...}}     |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}
-**Fora do escopo de IHC:** {{...}}
-**Dentro do escopo formal do TCC:** {{...}}
-**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+**Dentro do escopo de IHC:** Projeto de telas de triagem, visualização comparativa de imagens e fluxo de decisão
+**Fora do escopo de IHC:** Treinamento do modelo de IA, ajuste de hiperparâmetros do Autoencoder, engenharia de backend e captura física de dados do scanner de raio-X.
+**Dentro do escopo formal do TCC:** Pesquisa e desenvolvimento do algoritmo de detecção autossupervisionada e validação experimental por métricas (F1-score).
+**Interface da disciplina será implementada no TCC?** não definido
 
 ---
 
