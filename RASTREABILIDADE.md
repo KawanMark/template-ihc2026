@@ -8,12 +8,12 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | {{...}} | {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}} | {{...}} | definido |
-| O TCC previa interface? | sim / não / parcialmente | {{...}} | definido |
+| Tema do TCC | Um sistema computacional capaz de analisar imagens radiográficas de contêineres de carga para detectar autonomamente mercadorias ilícitas e anomalias ocultas sem depender de exemplos reais prévios de contrabando. | [TCCI.pdf](https://github.com/user-attachments/files/31158764/TCCI.pdf) | definido |
+| Resultado técnico esperado |Se bem-sucedida, a tecnologia permitirá que alfândegas e operadores portuários triem um volume muito maior de contêineres com maior precisão, reduzindo o tempo de retenção de cargas lícitas e direcionando a inspeção física apenas para contêineres com alta probabilidade de anomalia. | {{...}} | definido |
+| O TCC previa interface? | não | {{...}} | definido |
 | Capacidade/contribuição central | {{o que a tecnologia permite}} | {{...}} | definido |
 | Possíveis beneficiários/stakeholders | {{...}} | {{fonte ou hipótese}} | F / H / ? |
-| Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
+| Usuário escolhido para IHC | Operador de Scanner de Raio-X / Fiscal Aduaneiro | Seriam possíveis usuários pois eles são encarregados de verificar os contêineres  | H|
 | Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
 | Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
 | Interface/recorte de IHC | {{...}} | {{como deriva dos itens acima}} | proposta / revisada |
