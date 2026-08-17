@@ -61,7 +61,7 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 | ---------------------------- | -----------: | ---------------------------- |
 | Kawan Mark Geronimo Da Silva | 22.222.010-5 | https://github.com/KawanMark |
 | Gabriel                        | xxxxx| xxxxxxx |
-| Ale                           | xxxx         |  xxxxxxxxx                  |
+| Alexandre Domiciano Pierri|22.125.061-6|https://github.com/Apierri05|
 
 
 
