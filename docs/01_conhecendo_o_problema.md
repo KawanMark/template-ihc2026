@@ -60,16 +60,14 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 | Nome completo                |   Matrícula | GitHub                       |
 | ---------------------------- | -----------: | ---------------------------- |
 | Kawan Mark Geronimo Da Silva | 22.222.010-5 | https://github.com/KawanMark |
-| Gabriel Albertini Pinheiro| 22.122.094-8|https://github.com/albertx0|
-| Alexandre Domiciano Pierri|22.125.061-6|https://github.com/Apierri05|
-
-
+| Gabriel Albertini Pinheiro   | 22.122.094-8 | https://github.com/albertx0  |
+| Alexandre Domiciano Pierri   | 22.125.061-6 | https://github.com/Apierri05 |
 
 ## 0.2 Título atual do TCC
 
 Detecção de Anomalias em Imagens de Raio-X de Contêineres de Carga
 
-## 0.3 Orientador(a)
+> ## 0.3 Orientador(a):
 
 Murilo Bouzon
 
@@ -119,8 +117,8 @@ Um sistema computacional capaz de analisar imagens de raio-x de contêineres de 
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
-| Mérito/contribuição técnica | Possível aplicação/valor em uso |
-| ------------------------------- | ---------------------------------- |
+| Mérito/contribuição técnica                                                                                                                                  | Possível aplicação/valor em uso                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Treinamento de Autoencoder autossupervisionado com cargas normais; injeção sintética de anomalias via Lei de Beer-Lambert; segmentação por imagem residual. | Ferramenta de apoio à decisão para operadores de scanners em portos, destacando discrepâncias e priorizando alvos de vistoria. |
 
 ---
@@ -131,21 +129,20 @@ Um sistema computacional capaz de analisar imagens de raio-x de contêineres de 
 
 NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
-
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
-| Perfil | Relação com a contribuição | O que faria | Status/evidência |
-| ------ | ------------------------------ | ----------- | ----------------- |
-| **Operador de Scanner de Raio-X / Fiscal Aduaneiro** | Usuário direto operacional | Visualiza a fila de contêineres triados, analisa mapas residuais de anomalia e decide sobre liberação ou vistoria física. | [H] Hipótese |
-| **Analista de Inteligência Aduaneira** | Usuário tático | Consulta relatórios históricos de varreduras, investiga padrões de contrabando e audita decisões anteriores. | [H] Hipótese |
-| **Administrador / Engenheiro de IA** | Configurador técnico | Ajusta limiares de sensibilidade (*thresholds*) do modelo e monitora a performance do pipeline de IA. | [?] Lacuna |
-
+| Perfil                                                     | Relação com a contribuição | O que faria                                                                                                                   | Status/evidência |
+| ---------------------------------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| **Operador de Scanner de Raio-X / Fiscal Aduaneiro** | Usuário direto operacional    | Visualiza a fila de contêineres triados, analisa mapas residuais de anomalia e decide sobre liberação ou vistoria física. | [H] Hipótese     |
+| **Analista de Inteligência Aduaneira**              | Usuário tático               | Consulta relatórios históricos de varreduras, investiga padrões de contrabando e audita decisões anteriores.              | [H] Hipótese     |
+| **Administrador / Engenheiro de IA**                 | Configurador técnico          | Ajusta limiares de sensibilidade (*thresholds*) do modelo e monitora a performance do pipeline de IA.                       | [?] Lacuna        |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
-| Stakeholder | Como é afetado | Usa interface? | Status/evidência |
-| ----------- | --------------- | -------------- | ----------------- |
-| **Empresas Importadoras / Exportadoras** | Sofrem impacto direto no tempo de liberação e custos logísticos das cargas nos portos. | Não | [F] Fato (operação portuária) |
-| **Autoridades de Segurança Pública / Alfândega** | Beneficiam-se da eficácia na interceptação de ilícitos (drogas, armas, contrabando). | Não (recebem relatórios consolidados) | [H] Hipótese |
+
+| Stakeholder                                               | Como é afetado                                                                           | Usa interface?                          | Status/evidência                |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------- |
+| **Empresas Importadoras / Exportadoras**            | Sofrem impacto direto no tempo de liberação e custos logísticos das cargas nos portos. | Não                                    | [F] Fato (operação portuária) |
+| **Autoridades de Segurança Pública / Alfândega** | Beneficiam-se da eficácia na interceptação de ilícitos (drogas, armas, contrabando).  | Não (recebem relatórios consolidados) | [H] Hipótese                    |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
@@ -161,12 +158,12 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 3.2 Quais são as atividades mais importantes?
 
-| ID  | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
-| --- | ------------------ | ------------ | ------------------------------- | ----------------- |
-| A01 | Triar a fila diária de contêineres escaneados por raio-X | Operador de Scanner | Alta / Crítica | [H] Hipótese |
-| A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Fiscal Aduaneiro | Média / Alta | [H] Hipótese |
-| A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção) | Fiscal Aduaneiro | Alta / Crítica | [H] Hipótese |
-| A04 | Consultar histórico de varreduras e laudos anteriores | Analista de Inteligência | Baixa / Média | [?] Lacuna |
+| ID  | Atividade/objetivo                                                                          | Quem realiza              | Frequência/criticidade inicial | Status/evidência |
+| --- | ------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------- | ----------------- |
+| A01 | Triar a fila diária de contêineres escaneados por raio-X                                  | Operador de Scanner       | Alta / Crítica                 | [H] Hipótese     |
+| A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Fiscal Aduaneiro          | Média / Alta                   | [H] Hipótese     |
+| A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção)                 | Fiscal Aduaneiro          | Alta / Crítica                 | [H] Hipótese     |
+| A04 | Consultar histórico de varreduras e laudos anteriores                                      | Analista de Inteligência | Baixa / Média                  | [?] Lacuna        |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
@@ -202,9 +199,10 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 4.6 Que evidência existe hoje?
 
-| Evidência/fonte | O que sustenta | Limitação |
-| ---------------- | -------------- | ----------- |
+| Evidência/fonte                                                                                                         | O que sustenta                                                                                       | Limitação                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | Artigo base do TCC (*Self-supervised anomaly detection and localization for x-ray cargo images*, Gaikwad et al., 2024) | Dificuldade da inspeção manual e necessidade de detecção autossupervisionada em raio-X de carga. | Foco estritamente técnico/algorítmico, sem modelagem de experiência do operador. |
+
 ---
 
 # 5. Entendendo o contexto de uso
@@ -241,8 +239,8 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 6.1 Como pessoas resolvem problemas semelhantes hoje?
 
-| Alternativa atual | Quem usa | Para quê | Status/evidência |
-| ----------------- | -------- | --------- | ----------------- |
+| Alternativa atual                                                      | Quem usa               | Para quê                                                            | Status/evidência   |
+| ---------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------- | ------------------- |
 | Softwares proprietários dos fabricantes de scanners (ex: Rapiscan OS) | Operadores portuários | Visualizar e ajustar contraste de imagens de raio-X de contêineres. | [F] Fato de mercado |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
@@ -253,11 +251,9 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 [H] Consoles de operação industrial, softwares GIS/monitoramento, painéis de controle com múltiplos filtros, sistemas ERP alfandegários (ex: Siscomex / Portal Único Siscomex).
 
-
 ## 6.4 O que essas soluções parecem fazer bem?
 
 [H] Gerenciamento do fluxo logístico global, controle de manifesto de cargas e exibição básica de imagens de raio-X.
-
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
@@ -296,9 +292,8 @@ Faça o exercício de transferência de uso:
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-**Fiscal Aduaneiro / Operador de Scanner de Raio-X.**  
+**Fiscal Aduaneiro / Operador de Scanner de Raio-X.**
 **Por que esse perfil foi escolhido?** É o profissional que lida diretamente com a ponta operacional da triagem de imagens e toma a decisão crítica de liberação ou retenção da carga.
-
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
@@ -326,22 +321,23 @@ A equipe pode registrar possibilidades para investigação. **Não significa que
 
 Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
-| Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
-| ------------- | ------------------- | -------------------------------- | ---------------- |
-| **Dashboard/visão geral** | Sim | Acompanhar o fluxo diário de contêineres escaneados e status de triagem | [H] |
-| **Configuração/parametrização** | Talvez | Ajustar sensibilidade de detecção da IA pelo operador sênior | [?] |
-| **Entrada/upload/seleção de dados** | Sim | Carregar novas imagens de raio-X e metadados do contêiner | [H] |
-| **Acompanhamento de processamento** | Sim | Acompanhar o status da inferência do Autoencoder na imagem radiográfica | [H] |
-| **Relatório/resultados** | Sim | Exportar laudos de inspeção e estatísticas operacionais | [H] |
-| **Histórico com busca/filtros** | Sim | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco | [H] |
-| **Comparação de resultados** | Sim | Visualizar lado a lado a imagem original de raio-X e o mapa residual gerado pela IA | [H] |
-| **Explicabilidade/detalhamento** | Sim | Exibir score de confiança e regiões de destaque (ROI) da anomalia | [H] |
-| **Administração/configurações globais** | Não | - | - |
-| **Usuários/perfis/permissões** | Não | - | - |
-| **CRUD de entidade do domínio** | Não | - | - |
-| **Auditoria/logs** | Sim | Registrar trilha de ações de liberação/vistoria para fins legais | [H] |
-| **Alertas/ocorrências** | Sim | Notificar contêineres com alta probabilidade de anomalia crítica | [H] |
-| **Ajuda/documentação** | Talvez | Exibir glossário de termos radiográficos e instruções de uso do sistema | [?] |
+| Possibilidade                                     | Pode fazer sentido? | Objetivo/tarefa que justificaria                                                    | Evidência atual |
+| ------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------- | ---------------- |
+| **Dashboard/visão geral**                  | Sim                 | Acompanhar o fluxo diário de contêineres escaneados e status de triagem           | [H]              |
+| **Configuração/parametrização**         | Talvez              | Ajustar sensibilidade de detecção da IA pelo operador sênior                     | [?]              |
+| **Entrada/upload/seleção de dados**       | Sim                 | Carregar novas imagens de raio-X e metadados do contêiner                          | [H]              |
+| **Acompanhamento de processamento**         | Sim                 | Acompanhar o status da inferência do Autoencoder na imagem radiográfica           | [H]              |
+| **Relatório/resultados**                   | Sim                 | Exportar laudos de inspeção e estatísticas operacionais                          | [H]              |
+| **Histórico com busca/filtros**            | Sim                 | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco       | [H]              |
+| **Comparação de resultados**              | Sim                 | Visualizar lado a lado a imagem original de raio-X e o mapa residual gerado pela IA | [H]              |
+| **Explicabilidade/detalhamento**            | Sim                 | Exibir score de confiança e regiões de destaque (ROI) da anomalia                 | [H]              |
+| **Administração/configurações globais** | Não                | -                                                                                   | -                |
+| **Usuários/perfis/permissões**            | Não                | -                                                                                   | -                |
+| **CRUD de entidade do domínio**            | Não                | -                                                                                   | -                |
+| **Auditoria/logs**                          | Sim                 | Registrar trilha de ações de liberação/vistoria para fins legais                | [H]              |
+| **Alertas/ocorrências**                    | Sim                 | Notificar contêineres com alta probabilidade de anomalia crítica                  | [H]              |
+| **Ajuda/documentação**                    | Talvez              | Exibir glossário de termos radiográficos e instruções de uso do sistema         | [?]              |
+
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
 ---
@@ -350,19 +346,19 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 ## 9.1 Qual benefício concreto o projeto de IHC pretende oferecer?
 
-| Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
-| ------------------- | -------------------- | -------- | ----------------- |
-| Redução da fadiga visual e foco direcionado em áreas suspeitas | Exaustão em plantões longos analisando imagens densas | Fiscal Aduaneiro | [H] |
-| Agilidade na tomada de decisão de liberação ou vistoria | Gargalos operacionais e filas portuárias | Operador de Scanner | [H] |
+| Benefício esperado                                               | Problema/necessidade                                    | Usuário            | Status/evidência |
+| ----------------------------------------------------------------- | ------------------------------------------------------- | ------------------- | ----------------- |
+| Redução da fadiga visual e foco direcionado em áreas suspeitas | Exaustão em plantões longos analisando imagens densas | Fiscal Aduaneiro    | [H]               |
+| Agilidade na tomada de decisão de liberação ou vistoria        | Gargalos operacionais e filas portuárias               | Operador de Scanner | [H]               |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
-| ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
-| -- | ------------------------------- | ----------------- | ------------------ |
-| F01 | Visualizar fila de contêineres classificados por nível de risco | Priorizar inspeções críticas | Alta |
-| F02 | Comparar imagem original de raio-X com o mapa residual de anomalia | Confirmar a veracidade do alerta da IA | Alta |
-| F03 | Registrar veredito (liberado / vistoria física / retenção) com justificativa | Concluir o despacho alfandegário com rastreabilidade | Alta |
-| F04 | Consultar histórico de varreduras anteriores | Investigar reincidências ou auditar laudos | Média |
+| ID  | O usuário precisa conseguir...                                                 | Para alcançar...                                     | Prioridade inicial |
+| --- | ------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------ |
+| F01 | Visualizar fila de contêineres classificados por nível de risco               | Priorizar inspeções críticas                       | Alta               |
+| F02 | Comparar imagem original de raio-X com o mapa residual de anomalia              | Confirmar a veracidade do alerta da IA                | Alta               |
+| F03 | Registrar veredito (liberado / vistoria física / retenção) com justificativa | Concluir o despacho alfandegário com rastreabilidade | Alta               |
+| F04 | Consultar histórico de varreduras anteriores                                   | Investigar reincidências ou auditar laudos           | Média             |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -370,7 +366,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 | ---------------------- | -------------- | -------------------------------- |
-|| {{...}}        | {{...}}                          |
+|                        | {{...}}        | {{...}}                          |
 
 ---
 
@@ -378,9 +374,9 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID  | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 | --- | ----------------- | --------------- | ---------------------------- |
-| H01 |Operadores preferem visualização lado a lado (original vs. mapa residual) em vez de sobreposição com opacidade.| Define a arquitetura da tela de análise detalhada.|            |
-| H02 | {{...}}           | {{...}}         | {{...}}                      |
-| H03 | {{...}}           | {{...}}         | {{...}}                      |
+| H01 | Operadores preferem visualização lado a lado (original vs. mapa residual) em vez de sobreposição com opacidade. | Define a arquitetura da tela de análise detalhada. | Teste de usabilidade / Avaliação (Entregas 6 e 14) |
+| H02 | A exibição de um score de confiança numérico reduz falsas rejeições por desconfiança na IA. | Garante a adoção efetiva do sistema no porto. | Entrevistas com especialistas / protótipo de papel (Entrega 3 e 6) |
+| H03 | Alertas visuais com código de cores (verde/amarelo/vermelho) na fila de contêineres aceleram a triagem em comparação a uma lista monocromática. | Otimiza o fluxo visual de triagem diária no dashboard. | Avaliação heurística e testes de protótipo (Entregas 6 e 13) |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -388,18 +384,18 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 # 11. Síntese da equipe
 
-| Pergunta                                 | Síntese atual |
-| ---------------------------------------- | -------------- |
-| Qual é a contribuição central do TCC? |Detecção autossupervisionada de anomalias em raio-X de contêineres via Autoencoders e imagens residuais.|
-| O TCC já previa interface?              |Não|
-| Quem é o usuário prioritário de IHC?  |Fiscal Aduaneiro |
-| O que ele precisa alcançar?             |Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez.|
-| Qual problema/atividade será estudado?  |Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.|
-| Como isso acontece hoje?                 |Inspeção visual manual em softwares legados de fabricantes de scanners.|
-| Qual é o contexto de uso?               |Sala de controle portuária, alta resolução, pressão temporal e gravidade da segurança.|
-| Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.|
-| Como a interface se relaciona ao TCC?    |Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.|
-| Quais pontos ainda são hipóteses?      | {{H01...}}     |
+| Pergunta                                 | Síntese atual                                                                                                                  |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Qual é a contribuição central do TCC? | Detecção autossupervisionada de anomalias em raio-X de contêineres via Autoencoders e imagens residuais.                     |
+| O TCC já previa interface?              | Não                                                                                                                            |
+| Quem é o usuário prioritário de IHC?  | Fiscal Aduaneiro                                                                                                                |
+| O que ele precisa alcançar?             | Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez. |
+| Qual problema/atividade será estudado?  | Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.                                             |
+| Como isso acontece hoje?                 | Inspeção visual manual em softwares legados de fabricantes de scanners.                                                       |
+| Qual é o contexto de uso?               | Sala de controle portuária, alta resolução, pressão temporal e gravidade da segurança.                                     |
+| Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.                                                     |
+| Como a interface se relaciona ao TCC?    | Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.                                           |
+| Quais pontos ainda são hipóteses?      | H01 (preferência de layout de comparação), H02 (impacto do score de confiança na aceitação da IA) e H03 (eficácia do código de cores no dashboard de triagem). |
 
 ### Delimitação
 
@@ -421,7 +417,6 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 - **Entrega 8:** define restrições e metas de usabilidade.
 - **Entregas 9–11:** transformam o recorte em modelo de interação e protótipo.
 - **Entregas 12–14:** avaliam a interface construída na disciplina.
-
 - **Entrega 2:** Verifica concorrentes de softwares alfandegários e sistemas de inspeção portuária.
 - **Entrega 3:** Detalha perfis de personas (Fiscal Carlos).
 - **Entregas 4 e 5:** Aprofundam cenários de problema e análise de tarefas (HTA).
@@ -446,8 +441,9 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [X] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [] A equipe declarou se o TCC já previa interface.
+- [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [x] A equipe declarou se o TCC já previa interface.
+
 - [X] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
 - [X] A interface de IHC não foi apresentada como obrigação automática do TCC.
 - [X] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
@@ -457,10 +453,10 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [X] Processo/problema atual foi descrito antes da solução.
 - [X] Existe situação concreta de uso/problema.
 - [X] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
-- [ ] Mercado/alternativas existentes foram levantados inicialmente.
-- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
-- [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
-- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
-- [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
-- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [X] Mercado/alternativas existentes foram levantados inicialmente.
+- [X] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [X] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
+- [X] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [X] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
+- [X] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [X] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
