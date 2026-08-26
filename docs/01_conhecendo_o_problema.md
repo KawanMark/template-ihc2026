@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
 **Data:** 13/08/2026
-**Status:** 🟨 em andamento
+**Status:** `🟩 concluída`
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -372,11 +372,11 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 # 10. Hipóteses e dúvidas prioritárias
 
-| ID  | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
-| --- | ----------------- | --------------- | ---------------------------- |
-| H01 | Operadores preferem visualização lado a lado (original vs. mapa residual) em vez de sobreposição com opacidade. | Define a arquitetura da tela de análise detalhada. | Teste de usabilidade / Avaliação (Entregas 6 e 14) |
-| H02 | A exibição de um score de confiança numérico reduz falsas rejeições por desconfiança na IA. | Garante a adoção efetiva do sistema no porto. | Entrevistas com especialistas / protótipo de papel (Entrega 3 e 6) |
-| H03 | Alertas visuais com código de cores (verde/amarelo/vermelho) na fila de contêineres aceleram a triagem em comparação a uma lista monocromática. | Otimiza o fluxo visual de triagem diária no dashboard. | Avaliação heurística e testes de protótipo (Entregas 6 e 13) |
+| ID  | Hipótese/dúvida                                                                                                                                    | Por que importa                                         | Como poderá ser investigada                                        |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------- |
+| H01 | Operadores preferem visualização lado a lado (original vs. mapa residual) em vez de sobreposição com opacidade.                                  | Define a arquitetura da tela de análise detalhada.     | Teste de usabilidade / Avaliação (Entregas 6 e 14)                |
+| H02 | A exibição de um score de confiança numérico reduz falsas rejeições por desconfiança na IA.                                                   | Garante a adoção efetiva do sistema no porto.         | Entrevistas com especialistas / protótipo de papel (Entrega 3 e 6) |
+| H03 | Alertas visuais com código de cores (verde/amarelo/vermelho) na fila de contêineres aceleram a triagem em comparação a uma lista monocromática. | Otimiza o fluxo visual de triagem diária no dashboard. | Avaliação heurística e testes de protótipo (Entregas 6 e 13)    |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -384,17 +384,17 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 # 11. Síntese da equipe
 
-| Pergunta                                 | Síntese atual                                                                                                                  |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Qual é a contribuição central do TCC? | Detecção autossupervisionada de anomalias em raio-X de contêineres via Autoencoders e imagens residuais.                     |
-| O TCC já previa interface?              | Não                                                                                                                            |
-| Quem é o usuário prioritário de IHC?  | Fiscal Aduaneiro                                                                                                                |
-| O que ele precisa alcançar?             | Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez. |
-| Qual problema/atividade será estudado?  | Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.                                             |
-| Como isso acontece hoje?                 | Inspeção visual manual em softwares legados de fabricantes de scanners.                                                       |
-| Qual é o contexto de uso?               | Sala de controle portuária, alta resolução, pressão temporal e gravidade da segurança.                                     |
-| Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.                                                     |
-| Como a interface se relaciona ao TCC?    | Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.                                           |
+| Pergunta                                 | Síntese atual                                                                                                                                                         |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Qual é a contribuição central do TCC? | Detecção autossupervisionada de anomalias em raio-X de contêineres via Autoencoders e imagens residuais.                                                            |
+| O TCC já previa interface?              | Não                                                                                                                                                                   |
+| Quem é o usuário prioritário de IHC?  | Fiscal Aduaneiro                                                                                                                                                       |
+| O que ele precisa alcançar?             | Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez.                                        |
+| Qual problema/atividade será estudado?  | Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.                                                                                    |
+| Como isso acontece hoje?                 | Inspeção visual manual em softwares legados de fabricantes de scanners.                                                                                              |
+| Qual é o contexto de uso?               | Sala de controle portuária, alta resolução, pressão temporal e gravidade da segurança.                                                                            |
+| Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.                                                                                            |
+| Como a interface se relaciona ao TCC?    | Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.                                                                                  |
 | Quais pontos ainda são hipóteses?      | H01 (preferência de layout de comparação), H02 (impacto do score de confiança na aceitação da IA) e H03 (eficácia do código de cores no dashboard de triagem). |
 
 ### Delimitação
@@ -441,9 +441,8 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [x] A equipe declarou se o TCC já previa interface.
-
+- [X] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [X] A equipe declarou se o TCC já previa interface.
 - [X] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
 - [X] A interface de IHC não foi apresentada como obrigação automática do TCC.
 - [X] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.

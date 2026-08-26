@@ -27,7 +27,7 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 | ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência obtida | Estado atual | Impacto no projeto |
 |---|---|---|---|---|---|---|---|
-| H01 | {{...}} | H / ? | {{...}} | Entrega 2 / 3 / 7 / outra | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
+| H01 | Operadores preferem visualização lado a lado (original vs. mapa residual) em vez de sobreposição com opacidade. | H | Define a arquitetura da tela de análise detalhada. | Entrega 2 / análise C01 e testes posteriores | C01 — Rapiscan InSight Vehicle Compare e Similar Cargo usam comparação visual entre imagens. | sustentada parcialmente | Reforça a decisão de explorar visualizador comparativo no protótipo. |
 | H02 | {{...}} | H / ? | {{...}} | {{...}} | {{...}} | aberta | {{...}} |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
