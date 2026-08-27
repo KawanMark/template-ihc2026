@@ -362,11 +362,14 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
-A tecnologia aparece **agora**, depois do entendimento do uso.
+A tecnologia aparece *agora*, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 | ---------------------- | -------------- | -------------------------------- |
-|                        | {{...}}        | {{...}}                          |
+| *Modelo de IA Autossupervisionado (Autoencoder)* | Escolha de arquitetura do TCC para aprender o padrão de cargas normais sem necessitar de imagens de contrabando prévio para treino. | Exige que a interface apresente o resultado em formato comparativo e explicativo (mapa residual/diferença), já que o modelo aponta discrepâncias e não categorias de objetos pré-rotulados. |
+| *Geração de Mapa Residual de Anomalia* | Saída primária do algoritmo que calcula a diferença entre a imagem real de raio-X e a reconstrução do Autoencoder. | A interface precisa oferecer um visualizador interativo com controle de opacidade, mapa de calor (heatmap) e alternância de camadas para que o fiscal entenda o que a IA destacou. |
+| *Tempo de Inferência e Processamento de Imagem* | Restrição computacional do pipeline de visão computacional ao carregar e reconstruir matrizes de alta resolução de raio-X. | Exige feedback de sistema claro (indicadores de status/carregamento) para que o operador não pense que a interface travou durante a análise do contêiner. |
+| *Injeção Sintética de Anomalias (Lei de Beer-Lambert)* | Método matemático do TCC para simular atenuamentos de radiação de objetos ocultos nas imagens de treino. | Define como os níveis de severidade/confiança das anomalias são calculados e exibidos na interface (ex: score de densidade atípica). |
 
 ---
 
@@ -374,10 +377,9 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID  | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 | --- | ----------------- | --------------- | ---------------------------- |
-| H01 | Operadores preferem visualização lado a lado (original vs. mapa residual) em vez de sobreposição com opacidade. | Define a arquitetura da tela de análise detalhada. | Teste de usabilidade / Avaliação (Entregas 6 e 14) |
-| H02 | A exibição de um score de confiança numérico reduz falsas rejeições por desconfiança na IA. | Garante a adoção efetiva do sistema no porto. | Entrevistas com especialistas / protótipo de papel (Entrega 3 e 6) |
-| H03 | Alertas visuais com código de cores (verde/amarelo/vermelho) na fila de contêineres aceleram a triagem em comparação a uma lista monocromática. | Otimiza o fluxo visual de triagem diária no dashboard. | Avaliação heurística e testes de protótipo (Entregas 6 e 13) |
-
+| *H30* | Operadores preferem a visualização lado a lado (imagem original vs. mapa residual) em vez de sobreposição com ajuste de opacidade (slider). | Define a arquitetura da tela principal de análise e o nível de esforço cognitivo do fiscal durante a inspeção. | Teste A/B com wireframes e protótipos de baixa fidelidade na Entrega 6. |
+| *H04* | A exibição de um índice percentual de anomalia (score de risco) acompanhado de marcação visual (ROI) é suficiente para o fiscal tomar a decisão sem precisar ver métricas estáticas do modelo. | Evita a sobrecarga de informações matemáticas complexas na tela para um operador sob pressão de tempo e fadiga. | Entrevistas e validação de requisitos de IHC nas Entregas 3 e 5. |
+| *H33* | A reorganização automática da fila de trabalho baseada no nível de risco (alertas em tempo real) reduz o tempo de resposta em contêineres críticos. | Valida se a automação da priorização agrega valor direto ao fluxo diário de triagem aduaneira. | Modelagem de Tarefas (HTA) na Entrega 5 e avaliação de usabilidade nas Entregas 12–14. |
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 ---
