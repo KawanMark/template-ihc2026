@@ -17,32 +17,33 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto de IHC:** Estação de triagem aduaneira assistida por IA — interface para análise de imagens de raio-X de contêineres  
+**TCC/projeto de origem:** Detecção de Anomalias em Imagens de Raio-X de Contêineres de Carga  
+**Orientador(a):** Murilo Bouzon  
 **Disciplina:** Interação Humano-Computador  
 **Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Semestre:** 2026/2
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Kawan Mark Geronimo Da Silva | 22.222.010-5 | [@KawanMark](https://github.com/KawanMark) | Análise de concorrência C01 (Rapiscan InSight) na Entrega 2 |
+| Gabriel Albertini Pinheiro | 22.122.094-8 | [@albertx0](https://github.com/albertx0) | {{a definir}} |
+| Alexandre Domiciano Pierri | 22.125.061-6 | [@Apierri05](https://github.com/Apierri05) | {{a definir}} |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Tema central do TCC | Análise automática de imagens radiográficas de contêineres de carga para detectar mercadorias ilícitas e anomalias ocultas sem depender de exemplos reais prévios de contrabando. |
+| Resultado técnico esperado do TCC | Modelo de IA/ML (Autoencoder autossupervisionado), algoritmos de injeção sintética de anomalias e estudo experimental de avaliação da detecção. |
+| O TCC já previa interface? | não |
+| Capacidade técnica que pode gerar valor para pessoas | Detectar e localizar anomalias em imagens de raio-X de contêineres, gerando imagens residuais que apontam as regiões discrepantes. |
+| Usuário principal adotado em IHC | Fiscal aduaneiro / operador de scanner de raio-X. |
+| Objetivo principal desse usuário | Triar contêineres por risco, confirmar se a discrepância apontada é real e registrar o veredito de liberação, vistoria física ou retenção com segurança e agilidade. |
+| Interface/recorte explorado na disciplina | Estação de triagem: fila de contêineres ordenada por risco, visualizador comparativo (imagem original × mapa residual, com score e ROI) e registro de veredito com justificativa e trilha de auditoria. |
+| Relação com o escopo formal do TCC | protótipo demonstrativo |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
@@ -53,6 +54,8 @@ Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolh
 Evite começar pela tecnologia.
 
 > **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
+
+O fiscal aduaneiro precisa decidir, contêiner a contêiner, quais cargas podem ser liberadas e quais devem seguir para vistoria física, em uma sala de controle de terminal portuário, sob metas de liberação e responsabilidade legal sobre cada decisão. Hoje ele examina imagens de raio-X densas e com mercadorias sobrepostas em softwares dos fabricantes dos scanners, apoiando-se apenas na inspeção visual humana — o que, ao longo de turnos prolongados, produz fadiga visual e risco de deixar passar uma anomalia camuflada ou de reter indevidamente uma carga lícita. O tema do TCC investiga a detecção autossupervisionada de anomalias em imagens radiográficas de carga, que aprende o padrão de cargas normais e produz mapas residuais indicando as regiões discrepantes. Para fins da disciplina de IHC, será explorada uma interface que permita a esse fiscal receber os contêineres já ordenados por risco, comparar a imagem original com o mapa residual para confirmar o alerta e registrar seu veredito com justificativa e trilha de auditoria.
 
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 
@@ -101,7 +104,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
 | 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 |
-| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | ⬜ |
+| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟨 |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | ⬜ |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | ⬜ |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | ⬜ |
