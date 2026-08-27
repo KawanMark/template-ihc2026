@@ -4,12 +4,6 @@ A matriz deve ser atualizada ao longo do semestre. Ela ajuda a demonstrar que a 
 
 Para projetos cujo TCC não previa interface, esta matriz é especialmente importante: deve ficar visível a passagem da **contribuição técnica do TCC** para um **cenário de uso plausível**, e desse cenário para as decisões de interação.
 
-# Matriz de rastreabilidade de IHC
-
-A matriz deve ser atualizada ao longo do semestre. Ela ajuda a demonstrar que a interface não surgiu arbitrariamente e registra **como o conhecimento da equipe evoluiu**.
-
-Para projetos cujo TCC não previa interface, esta matriz é especialmente importante: deve ficar visível a passagem da **contribuição técnica do TCC** para um **cenário de uso plausível**, e desse cenário para as decisões de interação.
-
 ---
 
 ## 1. Derivação do escopo de IHC a partir do TCC
