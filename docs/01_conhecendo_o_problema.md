@@ -163,7 +163,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 | A01 | Triar a fila diária de contêineres escaneados por raio-X                                  | Operador de Scanner       | Alta / Crítica                 | [H04] Hipótese     |
 | A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Fiscal Aduaneiro          | Média / Alta                   | [H05] Hipótese     |
 | A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção)                 | Fiscal Aduaneiro          | Alta / Crítica                 | [H06] Hipótese     |
-| A04 | Consultar histórico de varreduras e laudos anteriores                                      | Analista de Inteligência | Baixa / Média                  | [?] Lacuna        |
+| A04 | Consultar histórico de varreduras e laudos anteriores                                      | Analista de Inteligência | Baixa / Média                  | [?02] Lacuna        |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
@@ -324,7 +324,7 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | Possibilidade                                     | Pode fazer sentido? | Objetivo/tarefa que justificaria                                                    | Evidência atual |
 | ------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------- | ---------------- |
 | **Dashboard/visão geral**                  | Sim                 | Acompanhar o fluxo diário de contêineres escaneados e status de triagem           | [H25]              |
-| **Configuração/parametrização**         | Talvez              | Ajustar sensibilidade de detecção da IA pelo operador sênior                     | [?]              |
+| **Configuração/parametrização**         | Talvez              | Ajustar sensibilidade de detecção da IA pelo operador sênior                     | [?03]              |
 | **Entrada/upload/seleção de dados**       | Sim                 | Carregar novas imagens de raio-X e metadados do contêiner                          | [H26]              |
 | **Acompanhamento de processamento**         | Sim                 | Acompanhar o status da inferência do Autoencoder na imagem radiográfica           | [H27]              |
 | **Relatório/resultados**                   | Sim                 | Exportar laudos de inspeção e estatísticas operacionais                          | [H28]              |
@@ -336,7 +336,7 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | **CRUD de entidade do domínio**            | Não                | -                                                                                   | -                |
 | **Auditoria/logs**                          | Sim                 | Registrar trilha de ações de liberação/vistoria para fins legais                | [H32]              |
 | **Alertas/ocorrências**                    | Sim                 | Notificar contêineres com alta probabilidade de anomalia crítica                  | [H33]              |
-| **Ajuda/documentação**                    | Talvez              | Exibir glossário de termos radiográficos e instruções de uso do sistema         | [?]              |
+| **Ajuda/documentação**                    | Talvez              | Exibir glossário de termos radiográficos e instruções de uso do sistema         | [?04]              |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
