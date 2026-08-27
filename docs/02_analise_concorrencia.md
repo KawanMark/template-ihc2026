@@ -31,6 +31,8 @@ Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equ
 | Item citado na Entrega 1                                                    | Tipo                                                | Por que foi citado                                                                                          | Status inicial                   | Decisão nesta entrega |
 | --------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
 | Softwares proprietários dos fabricantes de scanners, como Rapiscan Systems | concorrente / interface profissional representativa | Representam soluções comerciais reais usadas em inspeção de cargas, veículos e contêineres por raio-X | [F] Produto existente no mercado | analisar               |
+| Sistemas ERP alfandegários (Siscomex / Portal Único Siscomex) | interface profissional que o público já utiliza | Citado na Entrega 1 (§6.3, H21) como sistema que o fiscal aduaneiro conhece; concentra fila de despacho, parametrização por canal de risco e registro formal de decisões | [H] H21 | analisar |
+| Sistemas de gerenciamento de carga portuária (TOS) | produto da mesma área, não equivalente | Citado na Entrega 1 (§6.2, H20) como ecossistema em que a inspeção se insere | [H] H20 | não analisar nesta entrega — foco no fluxo de decisão, não na gestão logística |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -101,7 +103,84 @@ Essa característica é importante para o nosso projeto: a interface de IHC deve
 | Limitação: pouca transparência pública sobre fluxo completo de decisão | A página pública mostra ferramentas e imagens, mas não detalha auditoria, fila operacional ou justificativa de veredito. | Há oportunidade para nosso projeto enfatizar rastreabilidade, histórico e registro claro de decisão.               |
 | Lição de IHC: ferramentas devem ser orientadas à tarefa do fiscal        | InSight separa funções como Empty Container, High Density, Similar Cargo e Vehicle Compare.                               | Evitar interface genérica; organizar o protótipo em torno de tarefas reais: triar, inspecionar, comparar e decidir. |
 
-> Repita a subseção para C02, C03... até atender à quantidade da equipe.
+### Análise C02 — Portal Único Siscomex (fluxo de despacho, canal de risco e registro de decisão)
+
+**Autor(a):** Gabriel Albertini Pinheiro — 22.122.094-8
+**Tipo:** interface profissional representativa / sistema que o público-alvo já utiliza
+**Link oficial:** https://portalunico.siscomex.gov.br/portal/
+**Data de acesso:** 27/08/2026
+
+> **Recorte desta análise:** enquanto a C01 investiga *como a IA é apresentada sobre a imagem*, esta análise investiga *o que acontece antes e depois da imagem*: como o fiscal recebe o que precisa examinar, como registra a decisão e como essa decisão fica rastreável. É o eixo que a C01 não conseguiu evidenciar (ver limitação registrada na C01) e de onde saiu a recomendação RC04.
+
+#### Contexto e proposta
+
+O Portal Único Siscomex é o ambiente eletrônico único por onde tramitam as operações de comércio exterior brasileiras, mantido pela Receita Federal do Brasil em conjunto com a Secretaria de Comércio Exterior. Ele concentra o fluxo de importação (Declaração Única de Importação — DUIMP) e de exportação (DU-E), consolidando em um mesmo lugar o que antes se dividia entre sistemas separados e entre os diversos órgãos anuentes (ANVISA, MAPA, Inmetro e outros).
+
+A documentação oficial organiza o sistema em módulos, entre os quais interessam a esta análise: **Importação** (funções *Elaborar Duimp* e *Consultar Duimp*), **Visão Integrada** (*Informações Gerais*, *Operações em Andamento*, *Consultar LI*, *Consultar DI*) e **Anexação de Documentos** (*Anexar Documento*, *Consultar Documento*, *Consultar Dossiê*). O Auditor-Fiscal da Receita Federal está entre os usuários do sistema, e é nele que o resultado da conferência aduaneira — incluindo a decisão sobre liberar a carga ou submetê-la a exame — é formalizado.
+
+O Portal Único **não é concorrente do TCC**: ele não analisa imagens de raio-X nem detecta anomalias. Ele é o sistema no qual a decisão que nosso protótipo pretende apoiar já é registrada hoje, com valor jurídico. Por isso a análise se concentra no que a C01 não conseguiu evidenciar: a fila de trabalho, a classificação de risco, o registro formal do veredito e a rastreabilidade do processo.
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+| --- | --- | --- | --- |
+| Linha do tempo do processo | O acompanhamento do despacho exibe a sequência de marcos do processo: *Registro da Declaração → Parametrização → Distribuição para Auditor → Exigência Fiscal → Desembaraço Aduaneiro*. | Guia de acompanhamento do despacho (ver Referências); print PENDENTE | O processo tem uma **espinha dorsal cronológica** explícita. Sustenta H18 (histórico) e sugere que o histórico do contêiner no nosso protótipo seja uma linha do tempo de eventos, não uma tabela solta. |
+| Distribuição para auditor | Existe uma etapa formal de atribuição da declaração a um auditor responsável, entre a parametrização e a conferência. | Guia de acompanhamento do despacho; print PENDENTE | Confirma que **carga de trabalho atribuída a uma pessoa** é um conceito real do domínio — apoia H06 e H25, e reforça H17 (identificação do responsável). |
+| Canal de parametrização por risco | O gerenciamento de risco classifica a declaração em quatro canais: **verde** (desembaraço automático, sem exame), **amarelo** (exame documental), **vermelho** (exame documental + verificação física) e **cinza** (exame, verificação física e procedimento especial por indício de fraude). Quando vários órgãos avaliam a mesma declaração, aplica-se o controle mais rigoroso. | Manual de Despacho de Importação da RFB — Parametrização (ver Referências); print PENDENTE | Evidência forte para **H24**: o código de cores por risco não é uma metáfora inventada por nós, é a convenção legal do domínio. **Achado que contraria nossa premissa:** são quatro níveis, não três — ver "Pontos positivos, limitações e lições". |
+| Registro de exigência fiscal | Quando o auditor precisa de correção ou documento complementar, registra uma **exigência fiscal**, que aparece ao administrado como mensagem formal com prazo de resposta. | Guia de acompanhamento do despacho; print PENDENTE | Sustenta **H08** e **H19**: a decisão do fiscal não é um clique isolado, é um **ato comunicado, motivado e com prazo**. Nosso registro de veredito precisa prever destinatário, motivo e efeito, não apenas o estado final. |
+| Dossiê de documentos | Documentos do despacho são anexados digitalmente e consultados como *dossiê* vinculado ao processo (*Anexar Documento*, *Consultar Documento*, *Consultar Dossiê*). | Documentação oficial do Portal Único (ver Referências); print PENDENTE | Relaciona-se a H13: a decisão se apoia em evidência documental além da imagem. O mapa residual seria mais uma peça de evidência anexável ao processo. |
+| Consulta e localização de processos | O acompanhamento se dá pela função *Acompanhamento do Despacho* (menu *Operações → Despacho Importação → Consultas*), informando o número da declaração e consultando. | Instruções de consulta do canal de parametrização (ver Referências); print PENDENTE | Evidência **parcial** para H29: a chave de navegação é o **identificador do processo**, não o risco nem a data. Não encontramos evidência de busca por faixa de risco — ver limitações. |
+| Vocabulário do domínio | Rótulos e status usam termos normativos: DUIMP, DI, LI, LPCO, canal, parametrização, distribuição, exigência, desembaraço, dossiê, anuência. | Documentação oficial do Portal Único; print PENDENTE | Alimenta **RC03**: o vocabulário da nossa interface deve vir daqui, não da terminologia de machine learning. "Anomalia residual" não é termo do fiscal; "indício" e "exigência" são. |
+
+> **Estado dos prints:** as capturas ainda não foram feitas. O perfil de Auditor-Fiscal exige certificado digital e acesso institucional, de modo que as telas de decisão não são publicamente acessíveis. As capturas viáveis são as das áreas públicas do Portal e as figuras dos manuais oficiais da Receita, e devem ser salvas em `../assets/02_concorrencia/` com prefixo `c02_`.
+
+#### Experiência do usuário e opiniões
+
+As fontes utilizadas são de dois tipos, com pesos diferentes:
+
+- **Documentação oficial** (Receita Federal e Portal Único): descreve estrutura de menus, etapas do despacho e a definição normativa dos canais. É confiável quanto ao que o sistema faz, mas descreve o processo, não a experiência de uso.
+- **Material de mercado** (consultorias e blogs especializados em comércio exterior, voltados a importadores e despachantes): descreve o Portal Único como uma interface "mais intuitiva e centralizada" frente aos sistemas anteriores, e detalha a rotina de acompanhamento. São fontes com interesse comercial e sem método de avaliação declarado — tratamos essa afirmação como **indício, não como resultado de usabilidade**.
+
+Um relato recorrente nessas fontes é a pressão de prazo associada à exigência fiscal, que requer resposta em prazo curto. Isso é coerente com o contexto de pressão temporal levantado na Entrega 1 (H16), embora aqui a pressão recaia sobre o administrado, e não sobre o fiscal.
+
+**Limitações desta análise:**
+
+1. Não houve acesso ao sistema em operação. O perfil de Auditor-Fiscal depende de certificado digital e vínculo institucional.
+2. Praticamente toda a documentação pública é escrita **da perspectiva do importador/despachante**, não do fiscal. Sabemos que existe a etapa "Distribuição para Auditor", mas não como a lista de trabalho se apresenta a ele.
+3. Não foram encontradas avaliações de usabilidade formais, nem material sobre acessibilidade do sistema.
+4. Consequentemente, as hipóteses H17, H32 e boa parte de H29 permanecem **sem evidência direta** mesmo após esta análise.
+
+#### Preço/modelo de negócio
+
+Não há preço: é sistema público de governo, de uso **obrigatório** por força normativa para operar comércio exterior no Brasil. O acesso é controlado por certificado digital e por perfis distintos (importador, despachante, órgão anuente, auditor), cada um enxergando um subconjunto das funções.
+
+Isso muda a relação do usuário com a interface de um modo que importa ao nosso projeto: **o usuário não escolheu a ferramenta e não pode abandoná-la**. Adoção não é um problema de design aqui — mas também não há pressão de mercado corrigindo atrito de uso, e o custo de um erro é jurídico, não comercial. Um sistema obrigatório tende a acumular funções e jargão normativo ao longo do tempo, o que é consistente com a caracterização de "interfaces densas e legadas" feita na Entrega 1 (H23).
+
+#### Padrões e tendências percebidos
+
+- **Linha do tempo de marcos** como estrutura central do acompanhamento de um processo.
+- **Classificação por canal de cor** que determina quanto esforço de conferência a carga vai receber — o risco não é só informação, é o que define o trabalho a ser feito.
+- **Atribuição explícita a um responsável** ("Distribuição para Auditor") antes da conferência.
+- **Decisão como ato formal comunicado**, com motivo e prazo, e não como simples mudança de estado.
+- **Consolidação multiórgão** em visão única, com aplicação do controle mais rigoroso entre os órgãos.
+- **Documento como dossiê** vinculado ao processo.
+- **Identificador único do processo** como chave primária de navegação.
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+| --- | --- | --- |
+| Ponto positivo: o código de cores por risco é convenção normativa consolidada | Canais verde, amarelo, vermelho e cinza definidos no despacho de importação. | **H24 sustentada.** Nosso semáforo de risco será lido corretamente pelo fiscal sem treinamento — mas deve seguir a semântica oficial, não uma escala inventada. |
+| Achado que contraria nossa premissa: são **quatro** canais, não três | O canal **cinza** existe e significa suspeita de fraude, com procedimento especial. | A Entrega 1 (H03/H33) assumiu uma escala verde/amarelo/vermelho. Falta na nossa fila um estado para **suspeita que exige investigação**, distinto de "vistoria física". Isso deve ser revisto na modelagem. |
+| Ponto positivo: a decisão é um ato motivado e com prazo | A exigência fiscal é registrada e comunicada com prazo de resposta. | **Confirma RC04.** O registro de veredito precisa de justificativa, destinatário e efeito — não basta um botão "liberar/reter". |
+| Ponto positivo: existe responsável nomeado pelo processo | Etapa "Distribuição para Auditor". | Sustenta H17: cada análise no nosso protótipo deve ficar vinculada ao fiscal que a realizou. |
+| Ponto positivo: histórico é cronológico e vai além da decisão | A linha do tempo segue até o comprovante de importação. | O histórico do contêiner deve ser uma linha do tempo de eventos, não uma lista de vereditos. |
+| Limitação: navegação centrada no número da declaração | A consulta se faz informando o número da DI/DUIMP. | **Oportunidade clara:** não há evidência de uma fila priorizada por risco para o fiscal. Quem já sabe qual processo procurar é atendido; quem precisa decidir *o que examinar primeiro*, não. É exatamente o vazio que nossa tela de triagem preenche. |
+| Limitação: documentação escrita para o importador, não para o fiscal | Manuais e material de mercado descrevem o acompanhamento pelo lado do administrado. | H29 e H32 seguem sem evidência direta; devem ser investigadas por entrevista na Entrega 7, não por análise documental. |
+| Limitação: nenhuma evidência sobre acessibilidade | Não foram localizados relatórios ou declarações de acessibilidade. | Mesma lacuna registrada na C01 — a equipe não deve concluir nada sobre acessibilidade do domínio a partir dos concorrentes. |
+| Lição de IHC: nosso sistema conviveria com o Siscomex, não o substituiria | O Portal Único é de uso obrigatório e detém o valor jurídico da decisão. | O veredito do nosso protótipo precisa ter correspondência com os atos que já existem (canal, exigência, desembaraço), sob pena de criar trabalho duplicado para o fiscal. |
+
+> Repita a subseção para C03 até atender à quantidade da equipe.
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
@@ -150,6 +229,15 @@ Liste recomendações com origem explícita.
 - RAPISCAN AS&E. **InSight Intelligent Image Analytics**. Disponível em: https://www.rapiscan-ase.com/products/software/insight-operator-assist-tools. Acesso em: 26/08/2026.
 - RAPISCAN SYSTEMS. **Security Screening, Threat Detection, and Metal Detectors**. Disponível em: https://www.rapiscansystems.com/. Acesso em: 26/08/2026.
 - GAIKWAD et al. **Self-supervised anomaly detection and localization for x-ray cargo images**. Referência utilizada no TCC.
+
+Fontes da análise C02 (Portal Único Siscomex):
+
+- BRASIL. Receita Federal. **Despacho de Importação — Parametrização (gerenciamento de riscos)**. Disponível em: https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/manuais/despacho-de-importacao/topicos-1/despacho-de-importacao/etapas-do-despacho-aduaneiro-de-importacao/parametricao. Acesso em: 27/08/2026.
+- BRASIL. Receita Federal. **Portal Único Siscomex — módulos e funcionalidades (sistema PUCOMEX)**. Disponível em: https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/manuais/despacho-de-importacao/sistemas/duimp/sistema-pucomex. Acesso em: 27/08/2026.
+- BRASIL. **Portal Único Siscomex**. Disponível em: https://portalunico.siscomex.gov.br/portal/. Acesso em: 27/08/2026.
+- BRASIL. Siscomex. **Manuais**. Disponível em: https://www.gov.br/siscomex/pt-br/informacoes/manuais. Acesso em: 27/08/2026.
+- TOEXCEED. **Acompanhamento do Despacho no Siscomex: guia prático de gestão**. Disponível em: https://toexceed.com.br/blog/2026/01/15/acompanhamento-do-despacho-no-siscomex-guia-pratico-de-gestao/. Acesso em: 27/08/2026. *(fonte de mercado, sem método declarado — usada como indício, conforme registrado na C02)*
+- FAZCOMEX. **Canais de parametrização na importação e na DUIMP**. Disponível em: https://www.fazcomex.com.br/npi/canais-de-parametrizacao/. Acesso em: 27/08/2026. *(fonte de mercado)*
 
 ## Checklist
 
