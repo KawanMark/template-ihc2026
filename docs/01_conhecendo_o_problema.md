@@ -105,7 +105,7 @@ Um sistema computacional capaz de analisar imagens de raio-x de contêineres de 
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[F] O volume massivo do comércio exterior e a rigorosa regulamentação de segurança tornam a inspeção física de 100% dos contêineres impraticável nos portos (Fonte: Revisão bibliográfica do TCC e relatórios aduaneiros). Isso gera a necessidade de triagem não intrusiva por raio-X, cujas imagens complexas e sobrepostas são difíceis de inspecionar manualmente com precisão.
+[F01] O volume massivo do comércio exterior e a rigorosa regulamentação de segurança tornam a inspeção física de 100% dos contêineres impraticável nos portos (Fonte: Revisão bibliográfica do TCC e relatórios aduaneiros). Isso gera a necessidade de triagem não intrusiva por raio-X, cujas imagens complexas e sobrepostas são difíceis de inspecionar manualmente com precisão.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -113,7 +113,7 @@ Um sistema computacional capaz de analisar imagens de raio-x de contêineres de 
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-[H] H36 — Se bem-sucedida, a tecnologia permitirá que alfândegas e operadores portuários triem um volume muito maior de contêineres com maior precisão, reduzindo o tempo de retenção de cargas lícitas e direcionando a inspeção física apenas para contêineres com alta probabilidade de anomalia.
+[H36] Se bem-sucedida, a tecnologia permitirá que alfândegas e operadores portuários triem um volume muito maior de contêineres com maior precisão, reduzindo o tempo de retenção de cargas lícitas e direcionando a inspeção física apenas para contêineres com alta probabilidade de anomalia.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -133,20 +133,20 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 | Perfil                                                     | Relação com a contribuição | O que faria                                                                                                                   | Status/evidência |
 | ---------------------------------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| **Operador de Scanner de Raio-X / Fiscal Aduaneiro** | Usuário direto operacional    | Visualiza a fila de contêineres triados, analisa mapas residuais de anomalia e decide sobre liberação ou vistoria física. | [H] H01     |
-| **Analista de Inteligência Aduaneira**              | Usuário tático               | Consulta relatórios históricos de varreduras, investiga padrões de contrabando e audita decisões anteriores.              | [H] H02     |
-| **Administrador / Engenheiro de IA**                 | Configurador técnico          | Ajusta limiares de sensibilidade (*thresholds*) do modelo e monitora a performance do pipeline de IA.                       | [?] Q01        |
+| **Operador de Scanner de Raio-X / Fiscal Aduaneiro** | Usuário direto operacional    | Visualiza a fila de contêineres triados, analisa mapas residuais de anomalia e decide sobre liberação ou vistoria física. | [H01] Hipótese     |
+| **Analista de Inteligência Aduaneira**              | Usuário tático               | Consulta relatórios históricos de varreduras, investiga padrões de contrabando e audita decisões anteriores.              | [H02] Hipótese     |
+| **Administrador / Engenheiro de IA**                 | Configurador técnico          | Ajusta limiares de sensibilidade (*thresholds*) do modelo e monitora a performance do pipeline de IA.                       | [?01] Lacuna        |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder                                               | Como é afetado                                                                           | Usa interface?                          | Status/evidência                |
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------- |
-| **Empresas Importadoras / Exportadoras**            | Sofrem impacto direto no tempo de liberação e custos logísticos das cargas nos portos. | Não                                    | [F] Fato (operação portuária) |
-| **Autoridades de Segurança Pública / Alfândega** | Beneficiam-se da eficácia na interceptação de ilícitos (drogas, armas, contrabando).  | Não (recebem relatórios consolidados) | [H] H03                    |
+| **Empresas Importadoras / Exportadoras**            | Sofrem impacto direto no tempo de liberação e custos logísticos das cargas nos portos. | Não                                    | [F02] Fato (operação portuária) |
+| **Autoridades de Segurança Pública / Alfândega** | Beneficiam-se da eficácia na interceptação de ilícitos (drogas, armas, contrabando).  | Não (recebem relatórios consolidados) | [H03] Hipótese                    |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-[H] H04 — Operadores de scanner trabalham sob pressão de tempo severa, em turnos prolongados, sujeitos à fadiga visual. Possuem forte conhecimento prático de leitura radiográfica, mas podem não ter familiaridade com conceitos profundos de aprendizado de máquina (exigem explicações visuais claras e diretas, como heatmaps e scores de risco, em vez de métricas matemáticas complexas).
+[H37] Operadores de scanner trabalham sob pressão de tempo severa, em turnos prolongados, sujeitos à fadiga visual. Possuem forte conhecimento prático de leitura radiográfica, mas podem não ter familiaridade com conceitos profundos de aprendizado de máquina (exigem explicações visuais claras e diretas, como heatmaps e scores de risco, em vez de métricas matemáticas complexas).
 
 ---
 
@@ -154,24 +154,24 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 
-[H] H05 — O fiscal aduaneiro tentando garantir a segurança da carga que entra no país e cumprir as metas de liberação alfandegária sem causar gargalos logísticos no porto. Alem do objetivo de bater a meta diária de liberação de contêineres do terminal com segurança jurídica e absoluta certeza de que nenhum ilícito passou despercebido.
+[H38] O fiscal aduaneiro tentando garantir a segurança da carga que entra no país e cumprir as metas de liberação alfandegária sem causar gargalos logísticos no porto. Alem do objetivo de bater a meta diária de liberação de contêineres do terminal com segurança jurídica e absoluta certeza de que nenhum ilícito passou despercebido.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID  | Atividade/objetivo                                                                          | Quem realiza              | Frequência/criticidade inicial | Status/evidência |
 | --- | ------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------- | ----------------- |
-| A01 | Triar a fila diária de contêineres escaneados por raio-X                                  | Operador de Scanner       | Alta / Crítica                 | [H] H06     |
-| A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Fiscal Aduaneiro          | Média / Alta                   | [H] H07     |
-| A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção)                 | Fiscal Aduaneiro          | Alta / Crítica                 | [H] H08     |
-| A04 | Consultar histórico de varreduras e laudos anteriores                                      | Analista de Inteligência | Baixa / Média                  | [?] Q02        |
+| A01 | Triar a fila diária de contêineres escaneados por raio-X                                  | Operador de Scanner       | Alta / Crítica                 | [H04] Hipótese     |
+| A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Fiscal Aduaneiro          | Média / Alta                   | [H05] Hipótese     |
+| A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção)                 | Fiscal Aduaneiro          | Alta / Crítica                 | [H06] Hipótese     |
+| A04 | Consultar histórico de varreduras e laudos anteriores                                      | Analista de Inteligência | Baixa / Média                  | [?02] Lacuna        |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-[H] H09 — A atividade A01 (triar a fila de contêineres) e A03 (registrar vereditos), pois todo contêiner escaneado precisa passar por verificação e liberação formal no fluxo portuário.
+[H07] A atividade A01 (triar a fila de contêineres) e A03 (registrar vereditos), pois todo contêiner escaneado precisa passar por verificação e liberação formal no fluxo portuário.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-[H] H10 — A atividade A03 (tomada de decisão de liberação). Se um contêiner ilícito for liberado por erro de interpretação (falso negativo), há risco de contrabando de armas ou drogas. Se uma carga lícita for retida indevidamente por falso positivo, gera prejuízos financeiros e atrasos logísticos severos.
+[H08] A atividade A03 (tomada de decisão de liberação). Se um contêiner ilícito for liberado por erro de interpretação (falso negativo), há risco de contrabando de armas ou drogas. Se uma carga lícita for retida indevidamente por falso positivo, gera prejuízos financeiros e atrasos logísticos severos.
 
 ---
 
@@ -179,23 +179,23 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
 
-[H] H11 — Hoje, operadores utilizam softwares fornecidos pelos fabricantes dos scanners de raio-X, visualizando imagens densas em múltiplos monitores, sem auxílio avançado de IA para destaque de anomalias complexas, baseando-se puramente em inspeção visual humana.
+[H09] Hoje, operadores utilizam softwares fornecidos pelos fabricantes dos scanners de raio-X, visualizando imagens densas em múltiplos monitores, sem auxílio avançado de IA para destaque de anomalias complexas, baseando-se puramente em inspeção visual humana.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-[H] H12 — A sobreposição visual de mercadorias complexas (diferentes densidades e materiais), a fadiga visual acumulada após horas de plantão examinando imagens, e a dificuldade de detectar anomalias que não correspondem a assinaturas rígidas pré-cadastradas.
+[H10] A sobreposição visual de mercadorias complexas (diferentes densidades e materiais), a fadiga visual acumulada após horas de plantão examinando imagens, e a dificuldade de detectar anomalias que não correspondem a assinaturas rígidas pré-cadastradas.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-[H] H13 — Tons indicativos de densidade material (orgânico vs. inorgânico vs. metálico), geometria dos objetos no interior do contêiner, contexto da declaração da carga e alertas de sistemas auxiliares.
+[H11] Tons indicativos de densidade material (orgânico vs. inorgânico vs. metálico), geometria dos objetos no interior do contêiner, contexto da declaração da carga e alertas de sistemas auxiliares.
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-[H] H14 — Ocorrência de falsos negativos (entrada de ilícitos no país) ou falsos positivos (paralisação de contêineres legítimos, gerando custos de pátio, inspeção física desnecessária e atrito com exportadores).
+[H12] Ocorrência de falsos negativos (entrada de ilícitos no país) ou falsos positivos (paralisação de contêineres legítimos, gerando custos de pátio, inspeção física desnecessária e atrito com exportadores).
 
 ## 4.5 Conte uma situação concreta.
 
-[H] H15 — Carlos, fiscal aduaneiro em um terminal portuário movimentado, inicia seu terceiro turno consecutivo de análise de imagens de raio-X. Às 03:00 da manhã, após centenas de contêineres escaneados, uma densidade levemente atípica camuflada no interior de paletes de madeira passa despercebida na tela devido à exaustão visual, permitindo a passagem de mercadoria não declarada.
+[H13] Carlos, fiscal aduaneiro em um terminal portuário movimentado, inicia seu terceiro turno consecutivo de análise de imagens de raio-X. Às 03:00 da manhã, após centenas de contêineres escaneados, uma densidade levemente atípica camuflada no interior de paletes de madeira passa despercebida na tela devido à exaustão visual, permitindo a passagem de mercadoria não declarada.
 
 ## 4.6 Que evidência existe hoje?
 
@@ -209,27 +209,27 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
 
-[H] H37 — Em salas de controle de raio-X de portos, armazéns alfandegados ou centros de triagem da Receita Federal, sob alta demanda operacional.
+[H14] Em salas de controle de raio-X de portos, armazéns alfandegados ou centros de triagem da Receita Federal, sob alta demanda operacional.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
-[H] H38 — Estações de trabalho desktop profissionais com múltiplos monitores de alta resolução e gama dinâmica otimizada para imagens radiográficas.
+[H15] Estações de trabalho desktop profissionais com múltiplos monitores de alta resolução e gama dinâmica otimizada para imagens radiográficas.
 
 ## 5.3 Existem condições físicas relevantes?
 
-[H] H16 — Iluminação ambiente controlada, ruído de equipamentos e sirenes de pátio portuário, interrupções frequentes e intensa pressão temporal.
+[H16] Iluminação ambiente controlada, ruído de equipamentos e sirenes de pátio portuário, interrupções frequentes e intensa pressão temporal.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
-[H] H17 — Hierarquia rígida de fiscalização, responsabilidade legal e criminal associada à liberação de cargas, necessidade de auditoria e registro imutável de quem autorizou cada liberação.
+[H17] Hierarquia rígida de fiscalização, responsabilidade legal e criminal associada à liberação de cargas, necessidade de auditoria e registro imutável de quem autorizou cada liberação.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
-[H] H18 — Sim. Toda decisão de liberação ou direcionamento para vistoria deve ser estritamente rastreável para fins legais, investigativos e de conformidade aduaneira.
+[H18] Sim. Toda decisão de liberação ou direcionamento para vistoria deve ser estritamente rastreável para fins legais, investigativos e de conformidade aduaneira.
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-[H] H19 — Sim. Falhas podem resultar em evasão fiscal, entrada de drogas/armas no território nacional (falso negativo) ou prejuízos logísticos internacionais por retenção injustificada de cargas (falso positivo).
+[H19] Sim. Falhas podem resultar em evasão fiscal, entrada de drogas/armas no território nacional (falso negativo) ou prejuízos logísticos internacionais por retenção injustificada de cargas (falso positivo).
 
 ---
 
@@ -241,27 +241,27 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 | Alternativa atual                                                      | Quem usa               | Para quê                                                            | Status/evidência   |
 | ---------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------- | ------------------- |
-| Softwares proprietários dos fabricantes de scanners (ex: Rapiscan OS) | Operadores portuários | Visualizar e ajustar contraste de imagens de raio-X de contêineres. | [F] Fato de mercado |
+| Softwares proprietários dos fabricantes de scanners (ex: Rapiscan OS) | Operadores portuários | Visualizar e ajustar contraste de imagens de raio-X de contêineres. | [F03] Fato de mercado |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-[H] H20 — Sistemas de gerenciamento de carga portuária (TOS - Terminal Operating Systems)
+[H20] Sistemas de gerenciamento de carga portuária (TOS - Terminal Operating Systems)
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
 
-[H] H21 — Consoles de operação industrial, softwares GIS/monitoramento, painéis de controle com múltiplos filtros, sistemas ERP alfandegários (ex: Siscomex / Portal Único Siscomex).
+[H21] Consoles de operação industrial, softwares GIS/monitoramento, painéis de controle com múltiplos filtros, sistemas ERP alfandegários (ex: Siscomex / Portal Único Siscomex).
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
-[H] H22 — Gerenciamento do fluxo logístico global, controle de manifesto de cargas e exibição básica de imagens de raio-X.
+[H22] Gerenciamento do fluxo logístico global, controle de manifesto de cargas e exibição básica de imagens de raio-X.
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
-[H] H23 — Falta de inteligência para destacar anomalias invisíveis ao olho humano, interfaces muitas vezes densas, legadas e pouco intuitivas, com alta taxa de falsos alarmes sem explicações claras.
+[H23] Falta de inteligência para destacar anomalias invisíveis ao olho humano, interfaces muitas vezes densas, legadas e pouco intuitivas, com alta taxa de falsos alarmes sem explicações claras.
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-[H] H24 — Terminologia aduaneira e portuária (BL, Manifesto, Recinto, Vistoria, Despacho), códigos de risco por cores (verde, amarelo, vermelho) e filas de status.
+[H24] Terminologia aduaneira e portuária (BL, Manifesto, Recinto, Vistoria, Despacho), códigos de risco por cores (verde, amarelo, vermelho) e filas de status.
 
 ---
 
@@ -323,20 +323,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade                                     | Pode fazer sentido? | Objetivo/tarefa que justificaria                                                    | Evidência atual |
 | ------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------- | ---------------- |
-| **Dashboard/visão geral**                  | Sim                 | Acompanhar o fluxo diário de contêineres escaneados e status de triagem           | [H] H25              |
-| **Configuração/parametrização**         | Talvez              | Ajustar sensibilidade de detecção da IA pelo operador sênior                     | [?] Q03              |
-| **Entrada/upload/seleção de dados**       | Sim                 | Carregar novas imagens de raio-X e metadados do contêiner                          | [H] H26              |
-| **Acompanhamento de processamento**         | Sim                 | Acompanhar o status da inferência do Autoencoder na imagem radiográfica           | [H] H27              |
-| **Relatório/resultados**                   | Sim                 | Exportar laudos de inspeção e estatísticas operacionais                          | [H] H28              |
-| **Histórico com busca/filtros**            | Sim                 | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco       | [H] H29              |
-| **Comparação de resultados**              | Sim                 | Visualizar lado a lado a imagem original de raio-X e o mapa residual gerado pela IA | [H] H30              |
-| **Explicabilidade/detalhamento**            | Sim                 | Exibir score de confiança e regiões de destaque (ROI) da anomalia                 | [H] H31              |
+| **Dashboard/visão geral**                  | Sim                 | Acompanhar o fluxo diário de contêineres escaneados e status de triagem           | [H25]              |
+| **Configuração/parametrização**         | Talvez              | Ajustar sensibilidade de detecção da IA pelo operador sênior                     | [?03]              |
+| **Entrada/upload/seleção de dados**       | Sim                 | Carregar novas imagens de raio-X e metadados do contêiner                          | [H26]              |
+| **Acompanhamento de processamento**         | Sim                 | Acompanhar o status da inferência do Autoencoder na imagem radiográfica           | [H27]              |
+| **Relatório/resultados**                   | Sim                 | Exportar laudos de inspeção e estatísticas operacionais                          | [H28]              |
+| **Histórico com busca/filtros**            | Sim                 | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco       | [H29]              |
+| **Comparação de resultados**              | Sim                 | Visualizar lado a lado a imagem original de raio-X e o mapa residual gerado pela IA | [H30]              |
+| **Explicabilidade/detalhamento**            | Sim                 | Exibir score de confiança e regiões de destaque (ROI) da anomalia                 | [H31]              |
 | **Administração/configurações globais** | Não                | -                                                                                   | -                |
 | **Usuários/perfis/permissões**            | Não                | -                                                                                   | -                |
 | **CRUD de entidade do domínio**            | Não                | -                                                                                   | -                |
-| **Auditoria/logs**                          | Sim                 | Registrar trilha de ações de liberação/vistoria para fins legais                | [H] H32              |
-| **Alertas/ocorrências**                    | Sim                 | Notificar contêineres com alta probabilidade de anomalia crítica                  | [H] H33              |
-| **Ajuda/documentação**                    | Talvez              | Exibir glossário de termos radiográficos e instruções de uso do sistema         | [?] Q04              |
+| **Auditoria/logs**                          | Sim                 | Registrar trilha de ações de liberação/vistoria para fins legais                | [H32]              |
+| **Alertas/ocorrências**                    | Sim                 | Notificar contêineres com alta probabilidade de anomalia crítica                  | [H33]              |
+| **Ajuda/documentação**                    | Talvez              | Exibir glossário de termos radiográficos e instruções de uso do sistema         | [?04]              |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -348,8 +348,8 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado                                               | Problema/necessidade                                    | Usuário            | Status/evidência |
 | ----------------------------------------------------------------- | ------------------------------------------------------- | ------------------- | ----------------- |
-| Redução da fadiga visual e foco direcionado em áreas suspeitas | Exaustão em plantões longos analisando imagens densas | Fiscal Aduaneiro    | [H] H34               |
-| Agilidade na tomada de decisão de liberação ou vistoria        | Gargalos operacionais e filas portuárias               | Operador de Scanner | [H] H35               |
+| Redução da fadiga visual e foco direcionado em áreas suspeitas | Exaustão em plantões longos analisando imagens densas | Fiscal Aduaneiro    | [H34]               |
+| Agilidade na tomada de decisão de liberação ou vistoria        | Gargalos operacionais e filas portuárias               | Operador de Scanner | [H35]               |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
@@ -398,7 +398,7 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Qual é o contexto de uso?               | Sala de controle portuária, alta resolução, pressão temporal e gravidade da segurança.                                                                            |
 | Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.                                                                                            |
 | Como a interface se relaciona ao TCC?    | Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.                                                                                  |
-| Quais pontos ainda são hipóteses?      | H30 (preferência de layout de comparação), H31 (impacto do score de confiança e da marcação ROI na aceitação da IA) e H33 (eficácia da priorização automática da fila por risco). Lacunas abertas: Q01 (perfil de administrador) e Q02 (frequência da consulta ao histórico). |
+| Quais pontos ainda são hipóteses?      | H30 (preferência de layout de comparação), H31 (impacto do score de confiança e da marcação ROI na aceitação da IA) e H33 (eficácia da priorização automática da fila por risco). Lacunas abertas: ?01 (perfil de administrador) e ?02 (frequência da consulta ao histórico). |
 
 ### Delimitação
 
