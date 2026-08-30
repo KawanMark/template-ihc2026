@@ -180,7 +180,39 @@ Isso muda a relação do usuário com a interface de um modo que importa ao noss
 | Limitação: nenhuma evidência sobre acessibilidade | Não foram localizados relatórios ou declarações de acessibilidade. | Mesma lacuna registrada na C01 — a equipe não deve concluir nada sobre acessibilidade do domínio a partir dos concorrentes. |
 | Lição de IHC: nosso sistema conviveria com o Siscomex, não o substituiria | O Portal Único é de uso obrigatório e detém o valor jurídico da decisão. | O veredito do nosso protótipo precisa ter correspondência com os atos que já existem (canal, exigência, desembaraço), sob pena de criar trabalho duplicado para o fiscal. |
 
-> Repita a subseção para C03 até atender à quantidade da equipe.
+### Análise C03 — Smiths Detection / CargoVision & Hi-TRAX (Ferramentas de Ajuste de Imagem e Filtros Radiográficos)
+
+**Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6
+**Tipo:** concorrente direto / interface profissional representativa
+**Link oficial:** https://www.smithsdetection.com/products/cargovision/
+**Data de acesso:** 30/08/2026
+
+#### Contexto e proposta
+
+A Smiths Detection é uma das principais concorrentes globais da Rapiscan no fornecimento de sistemas de inspeção por raio-X e tomografia para portos, aeroportos e postos de fronteira. A suite de softwares operacionais da empresa (como o **CargoVision** e o sistema **Hi-TRAX**) é projetada para ser a interface primária do operador de scanner durante a varredura contínua de contêineres e veículos pesados.
+
+Enquanto a análise C01 focou na detecção automática por IA e a C02 no fluxo processual do governo, esta análise foca no **manipulador visual primário da imagem radiográfica**: como a interface permite que o fiscal altere contraste, aplique filtros de número atômico, inverta cores e isole níveis de penetração do feixe para identificar itens ocultos sob materiais densos.
+
+Esta análise é fundamental para o nosso TCC de IHC pois a nossa solução baseada em modelo residual precisará conviver com os hábitos visuais que o operador já possui para manipular e inspecionar a imagem bruta.
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+| --- | --- | --- | --- |
+| Colorização por Número Atômico ($Z_{eff}$) | O software atribui cores falsas (*pseudo-color*) com base na absorção do feixe: orgânicos (laranja), inorgânicos (verde), metais (azul) e áreas inpenetráveis (preto). | Documentação Smiths Detection; `../assets/02_concorrencia/c03_smiths_atomic_color.png` | Confirma a convenção visual consagrada do domínio. A visualização do mapa residual do nosso modelo não pode conflitar com essa paleta de cores padrão. |
+| Inversão de Grayscale e Histogram Stretch | Atalhos diretos de teclado ou botões rápidos no console dedicado permitem alternar entre visão positiva/negativa e esticar o contraste dinâmico de regiões escuras. | Catálogo de funcionalidades Hi-TRAX| O operador depende de **atalhos rápidos de teclado/hardware** para alternar filtros sem tirar a atenção da imagem principal. |
+| Ferramenta de Realce de Bordas (*Edge Enhancement*) | Filtro de convoluição aplicável com um clique que acentua contornos de objetos escondidos atrás de estruturas metálicas do contêiner. | Manuais de operação CargoVision;| Dá indício para a nossa interface: a sobreposição (overlay) da IA deve ter controle de opacidade para não obstruir os filtros de borda que o fiscal já utiliza. |
+| Zoom Regional com Janela Flutuante (Lupa de Alta Resolução) | Permite ampliar áreas específicas da imagem mantendo o contexto geral do contêiner visível em miniatura. | Especificação de interface Smiths Detection;| Sustenta **H30**: o fiscal precisa inspecionar detalhes sem perder o ponto de referência global da carga. |
+
+#### Experiência do usuário e opiniões
+
+A análise foi realizada com base em especificações técnicas, catálogos institucionais e materiais de treinamento públicos de operadores de inspeção de carga. 
+
+Em sistemas de inspeção radiográfica de alto tráfego, a experiência do usuário é dominada pela **velocidade de varredura visual e fadiga ocular**. Operadores trabalham sob janelas de tempo curtas (poucos minutos por contêiner). As interfaces da Smiths Detection priorizam consoles físicos dedicados (teclados com botões diretos para filtros de cor, zoom e inversão) para evitar que o operador precise navegar por menus dropdown complexos.
+
+Limitação da análise: assim como na C01, os softwares de inspeção da Smiths Detection são proprietários e de uso restrito por órgãos de segurança e alfândegas, não havendo versão trial ou avaliações públicas de usabilidade em lojas de aplicativos.
+
+#### Preço/modelo de negócio
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
