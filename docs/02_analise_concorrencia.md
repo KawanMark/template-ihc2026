@@ -180,7 +180,56 @@ Isso muda a relação do usuário com a interface de um modo que importa ao noss
 | Limitação: nenhuma evidência sobre acessibilidade | Não foram localizados relatórios ou declarações de acessibilidade. | Mesma lacuna registrada na C01 — a equipe não deve concluir nada sobre acessibilidade do domínio a partir dos concorrentes. |
 | Lição de IHC: nosso sistema conviveria com o Siscomex, não o substituiria | O Portal Único é de uso obrigatório e detém o valor jurídico da decisão. | O veredito do nosso protótipo precisa ter correspondência com os atos que já existem (canal, exigência, desembaraço), sob pena de criar trabalho duplicado para o fiscal. |
 
-> Repita a subseção para C03 até atender à quantidade da equipe.
+### Análise C03 — Smiths Detection / CargoVision & Hi-TRAX (Ferramentas de Ajuste de Imagem e Filtros Radiográficos)
+
+**Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6
+**Tipo:** concorrente direto / interface profissional representativa
+**Link oficial:** [https://www.smithsdetection.com/products/cargovision/](https://www.safeway-system.com/X-Ray-Baggage-Scanner-pl3041840.html?gad_source=1&gad_campaignid=20861473902&gclid=Cj0KCQjwteTUBhD4ARIsAEYjs3oQzQmXpsbMhSvxUdVjd-kf4fkWjh2QKA2F3sRFe680NqXr1prNUI8aAmpiEALw_wcB)
+**Data de acesso:** 30/08/2026
+
+#### Contexto e proposta
+
+A Smiths Detection é uma das principais concorrentes globais da Rapiscan no fornecimento de sistemas de inspeção por raio-X e tomografia para portos, aeroportos e postos de fronteira. A suite de softwares operacionais da empresa (como o **CargoVision** e o sistema **Hi-TRAX**) é projetada para ser a interface primária do operador de scanner durante a varredura contínua de contêineres e veículos pesados.
+
+Enquanto a análise C01 focou na detecção automática por IA e a C02 no fluxo processual do governo, esta análise foca no **manipulador visual primário da imagem radiográfica**: como a interface permite que o fiscal altere contraste, aplique filtros de número atômico, inverta cores e isole níveis de penetração do feixe para identificar itens ocultos sob materiais densos.
+
+Esta análise é fundamental para o nosso TCC de IHC pois a nossa solução baseada em modelo residual precisará conviver com os hábitos visuais que o operador já possui para manipular e inspecionar a imagem bruta.
+
+| Funcionalidade | Como é realizada | Evidência documental / Fonte | Observação de IHC |
+| --- | --- | --- | --- |
+| Colorização por Número Atômico ($Z_{eff}$) | Atribuição de cores falsas (*pseudo-color*) com base na absorção do feixe de raios-X de dupla energia, permitindo a separação entre materiais orgânicos, inorgânicos e mistos. | Datasheet *HCVG viZual Series* (*Dual energy material discrimination / Organic/inorganic/mixed material colorization based on equivalent atomic numbers*). | Confirma a convenção visual padrão do domínio. O mapa de calor residual da nossa IA deve ser sobreposto sem conflitar com essa paleta de cores. |
+| Ajuste de Contraste e Equalização de Histograma | Manipulação do alcance dinâmico e aplicação de *histogram equalization* para esticar o contraste em regiões de alta densidade e isolar detalhes ocultos. | Datasheets *HCVP e series*, *HCVM e35*, *HCVG viZual* e *HCVM e35 T* (*DaiSy CargoVision Software: Contrast enhancement, histogram equalization*). | O fiscal depende de **atalhos rápidos na workstation (RIW)** para alternar filtros sem desviar os olhos da radiografia principal. |
+| Realce de Bordas (*Edge Enhancement*) | Filtro de convoluição que acentua os contornos e gradientes de densidade de objetos escondidos atrás de blindagens metálicas ou paredes do contêiner. | Datasheets *HCVP e series*, *HCVM e35*, *HCVG viZual* e *HCVM e35 T* (*DaiSy CargoVision Software: Edge enhancement and image filters*). | Exige que a camada gráfica (*overlay*) do nosso modelo de IA possua controle de opacidade para não encobrir as bordas destacadas pelo operador. |
+| Medição e Ferramentas de Anotação | Medição direta de dimensões reais de objetos na imagem (*objects measurement*), inserção de marcações (*marks and annotations*) e cruzamento com o manifesto. | Datasheets *HCVP e series*, *HCVM e35*, *HCVG viZual* e *HCVM e35 T* (*DaiSy CargoVision Software: Objects measurement, marks, annotations and manifest comparison*). | Sustenta o requisito de IHC de cruzar achados visuais com os dados da carga e permitir anotações na própria estação de trabalho. |
+
+#### Experiência do usuário e opiniões
+
+A análise foi realizada com base nas especificações técnicas e datasheets oficiais das estações de trabalho de análise de imagem (**RIW - Review/Image Workstation**) da Smiths Detection.
+
+Em sistemas de inspeção radiográfica de alto tráfego (com capacidade de escaneamento de até 80 caminhões por hora no modo *pass-through*), a experiência do usuário é dominada pela **velocidade de varredura visual e redução da fadiga ocular**. As estações de trabalho contam com monitores dedicados de 22" a 24" (*flat screen workstation*) e softwares projetados para aplicação imediata de filtros de imagem e comparação direta com o banco de dados SQL e documentos de manifesto.
+
+Limitação da análise: os softwares de inspeção da Smiths Detection são proprietários e de uso restrito por órgãos de segurança e alfândegas, não havendo versão trial pública.
+
+#### Preço/modelo de negócio
+
+Modelo **B2B / Governamental**, integrado à venda ou modernização dos complexos de escaneamento físico (sistemas fixos, móveis em chassis de caminhão ou pórticos gantry). O software é fornecido como licença proprietária de estação de trabalho (*Image Workstation RIW / Database Workstation DBW*), incluindo treinamento operacional formal e suporte contínuo.
+
+#### Padrões e tendências percebidos
+
+- **Paleta de cores padronizada por absorção de dupla energia** (discriminação orgânico/inorgânico por $Z_{eff}$).
+- **Manipulação rápida via Workstation (RIW)** com ferramentas nativas de realce de bordas, equalização de histograma e zoom.
+- **Integração direta entre radiografia e dados do manifesto** na mesma interface de análise.
+- **Suporte a automações opcionais** (como reconhecimento de placas ALPR, códigos de contêiner ACCR e detecção de radiação ARD).
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+| --- | --- | --- |
+| Ponto positivo: discriminação de materiais e realce de bordas nativos | Módulos *viZual* e filtros *Edge Enhancement* em toda a linha DaiSy CargoVision. | **Lição direta:** o mapa de calor da nossa IA (mapa residual) não pode poluir visualmente nem conflitar com as cores padrão de discriminação de material ($Z_{eff}$). |
+| Ponto positivo: integração de metadados e anotações na mesma tela | Recurso *Manifest data comparison and annotations* na estação RIW. | O protótipo de IHC deve permitir visualizar os dados da carga e adicionar marcações de anomalia sem trocar de janela. |
+| Limitação: acúmulo de filtros na tela | O uso simultâneo de equalização de histograma, bordas e marcações pode poluir a imagem. | O protótipo de IHC deve oferecer controle de **opacidade ajustável (slider)** e alternância rápida (toggle) para a máscara de anomalia da IA. |
+| Lição de IHC: centralidade na imagem radiográfica | A estação de trabalho (RIW com tela de 22"/24") prioriza a área de exibição do scanner. | A área central do nosso protótipo precisa ser dedicada à exibição e manipulação da radiografia, deixando metadados e botões de veredito em painéis laterais retraíveis. |
+
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
@@ -208,6 +257,12 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Critério                         | C01                                                                                                                  | C02 | C03 | Oportunidade para o projeto                                                                     |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------- | --- | --- | ----------------------------------------------------------------------------------------------- |
+| Navegação                       | Ferramentas organizadas por tarefa de inspeção: Vehicle Compare, High Density, Similar Cargo, Empty Container etc. |     |Interface focada na estação de trabalho (RIW), com centralidade na imagem radiográfica e atalhos rápidos para alternar filtros e camadas sem desviar do fluxo principal.     | Organizar nosso protótipo por tarefas do fiscal: triagem, inspeção, comparação e decisão. |
+| Feedback/estado                   | Destaca visualmente regiões de interesse na imagem e indica resultados de ferramentas analíticas.                  |     |Feedback visual direto via colorização por número atômico ($Z_{eff}$) em pseudo-color, realce de bordas (Edge Enhancement) e indicação de densidade por equalização de histograma.     | Usar feedback visual direto no mapa residual, evitando depender apenas de números.             |
+| Prevenção/recuperação de erro | A página pública não detalha fluxos de erro, confirmação ou reversão de decisão.                              |     |Suporte a anotações e marcações de anomalias diretamente na tela (marks and annotations), reduzindo erros de interpretação ao cruzar dados do manifesto.     | Projetar confirmação de veredito, justificativa e registro de auditoria como diferencial.     |
+| Terminologia                      | Usa termos operacionais do domínio: cargo, container, high density, similar cargo, threats, contraband.             |     |Utiliza termos do domínio e especificações de inspeção: Zeff, material discrimination, organic/inorganic/mixed, edge enhancement, manifest comparison.     | Usar vocabulário do fiscal e evitar jargão técnico de IA na interface principal.             |
+| Acessibilidade                    | Não há evidência pública suficiente sobre acessibilidade da interface.                                           |     |Exibição em monitores dedicados de 22" a 24" para reduzir a fadiga ocular; porém, depende fortemente de mapa de cores (pseudo-color) para discriminação de materiais.     | Avaliar contraste, legibilidade, cores de alerta e alternativa a informação apenas por cor.   |
+| Eficiência                       | A proposta do InSight é tornar analistas mais eficientes ao focar áreas suspeitas.                                 |     |Projetado para alto tráfego (até 80 caminhões/h no pass-through), permitindo aplicação imediata de filtros de imagem e comparação rápida no banco SQL.     | Priorizar interação rápida: fila de risco, comparação visual e decisão em poucos passos.  |
 | Navegação                       | Ferramentas organizadas por tarefa de inspeção: Vehicle Compare, High Density, Similar Cargo, Empty Container etc. | Organizada por módulos normativos (Importação, Visão Integrada, Anexação de Documentos) e pela linha do tempo do despacho; a chave de acesso ao processo é o número da declaração (DI/DUIMP), não uma fila de trabalho. |     | Organizar nosso protótipo por tarefas do fiscal: triagem, inspeção, comparação e decisão — oferecendo a fila por risco que o Siscomex não tem, sem perder a busca pelo número da declaração. |
 | Feedback/estado                   | Destaca visualmente regiões de interesse na imagem e indica resultados de ferramentas analíticas.                  | Estado comunicado por marcos do processo (registro → parametrização → distribuição → exigência → desembaraço) e pelo canal de cor atribuído à declaração; feedback textual e normativo, não visual. |     | Usar feedback visual direto no mapa residual, evitando depender apenas de números, e espelhar os marcos do processo em uma linha do tempo do contêiner. |
 | Prevenção/recuperação de erro | A página pública não detalha fluxos de erro, confirmação ou reversão de decisão.                              | A exigência fiscal é o mecanismo formal de correção: o auditor registra o motivo, o administrado responde em prazo definido e o processo retoma — o erro é tratado como ato comunicado e rastreável. |     | Projetar confirmação de veredito, justificativa e registro de auditoria como diferencial.     |
@@ -238,6 +293,10 @@ Fontes da análise C02 (Portal Único Siscomex):
 - BRASIL. Siscomex. **Manuais**. Disponível em: https://www.gov.br/siscomex/pt-br/informacoes/manuais. Acesso em: 27/08/2026.
 - TOEXCEED. **Acompanhamento do Despacho no Siscomex: guia prático de gestão**. Disponível em: https://toexceed.com.br/blog/2026/01/15/acompanhamento-do-despacho-no-siscomex-guia-pratico-de-gestao/. Acesso em: 27/08/2026. *(fonte de mercado, sem método declarado — usada como indício, conforme registrado na C02)*
 - FAZCOMEX. **Canais de parametrização na importação e na DUIMP**. Disponível em: https://www.fazcomex.com.br/npi/canais-de-parametrizacao/. Acesso em: 27/08/2026. *(fonte de mercado)*
+- Smiths Detection Group Ltd.** *HCVP™e series - Medium Energy Pass Through, X-Ray Screening System* [Datasheet]. Documento nº 95595556, 2017.
+- **Smiths Detection Group Ltd.** *HCVM™ e35 - Light Weight Medium Energy X-Ray Mobile Screening System* [Datasheet]. Documento nº 95593679, 2018.
+- **Smiths Detection Group Ltd.** *HCVG viZual™ - High Energy X-Ray Gantry Series with Material Discrimination* [Datasheet]. Documento nº 95591819, 2017.
+- **Smiths Detection Group Ltd.** *Technical Data HCVM e35 T - Pass through x-ray system* [Technical Data Sheet]. Documento nº 95594380 / 168960-388, 2013.
 
 ## Checklist
 
