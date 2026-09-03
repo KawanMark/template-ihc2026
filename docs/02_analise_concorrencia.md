@@ -184,7 +184,7 @@ Isso muda a relação do usuário com a interface de um modo que importa ao noss
 
 **Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6
 **Tipo:** concorrente direto / interface profissional representativa
-**Link oficial:** https://www.smithsdetection.com/products/cargovision/
+**Link oficial:** [https://www.smithsdetection.com/products/cargovision/](https://www.safeway-system.com/X-Ray-Baggage-Scanner-pl3041840.html?gad_source=1&gad_campaignid=20861473902&gclid=Cj0KCQjwteTUBhD4ARIsAEYjs3oQzQmXpsbMhSvxUdVjd-kf4fkWjh2QKA2F3sRFe680NqXr1prNUI8aAmpiEALw_wcB)
 **Data de acesso:** 30/08/2026
 
 #### Contexto e proposta
@@ -195,24 +195,41 @@ Enquanto a análise C01 focou na detecção automática por IA e a C02 no fluxo 
 
 Esta análise é fundamental para o nosso TCC de IHC pois a nossa solução baseada em modelo residual precisará conviver com os hábitos visuais que o operador já possui para manipular e inspecionar a imagem bruta.
 
-#### Funcionalidades relevantes
-
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+| Funcionalidade | Como é realizada | Evidência documental / Fonte | Observação de IHC |
 | --- | --- | --- | --- |
-| Colorização por Número Atômico ($Z_{eff}$) | O software atribui cores falsas (*pseudo-color*) com base na absorção do feixe: orgânicos (laranja), inorgânicos (verde), metais (azul) e áreas inpenetráveis (preto). | Documentação Smiths Detection; `../assets/02_concorrencia/c03_smiths_atomic_color.png` | Confirma a convenção visual consagrada do domínio. A visualização do mapa residual do nosso modelo não pode conflitar com essa paleta de cores padrão. |
-| Inversão de Grayscale e Histogram Stretch | Atalhos diretos de teclado ou botões rápidos no console dedicado permitem alternar entre visão positiva/negativa e esticar o contraste dinâmico de regiões escuras. | Catálogo de funcionalidades Hi-TRAX| O operador depende de **atalhos rápidos de teclado/hardware** para alternar filtros sem tirar a atenção da imagem principal. |
-| Ferramenta de Realce de Bordas (*Edge Enhancement*) | Filtro de convoluição aplicável com um clique que acentua contornos de objetos escondidos atrás de estruturas metálicas do contêiner. | Manuais de operação CargoVision;| Dá indício para a nossa interface: a sobreposição (overlay) da IA deve ter controle de opacidade para não obstruir os filtros de borda que o fiscal já utiliza. |
-| Zoom Regional com Janela Flutuante (Lupa de Alta Resolução) | Permite ampliar áreas específicas da imagem mantendo o contexto geral do contêiner visível em miniatura. | Especificação de interface Smiths Detection;| Sustenta **H30**: o fiscal precisa inspecionar detalhes sem perder o ponto de referência global da carga. |
+| Colorização por Número Atômico ($Z_{eff}$) | Atribuição de cores falsas (*pseudo-color*) com base na absorção do feixe de raios-X de dupla energia, permitindo a separação entre materiais orgânicos, inorgânicos e mistos. | Datasheet *HCVG viZual Series* (*Dual energy material discrimination / Organic/inorganic/mixed material colorization based on equivalent atomic numbers*). | Confirma a convenção visual padrão do domínio. O mapa de calor residual da nossa IA deve ser sobreposto sem conflitar com essa paleta de cores. |
+| Ajuste de Contraste e Equalização de Histograma | Manipulação do alcance dinâmico e aplicação de *histogram equalization* para esticar o contraste em regiões de alta densidade e isolar detalhes ocultos. | Datasheets *HCVP e series*, *HCVM e35*, *HCVG viZual* e *HCVM e35 T* (*DaiSy CargoVision Software: Contrast enhancement, histogram equalization*). | O fiscal depende de **atalhos rápidos na workstation (RIW)** para alternar filtros sem desviar os olhos da radiografia principal. |
+| Realce de Bordas (*Edge Enhancement*) | Filtro de convoluição que acentua os contornos e gradientes de densidade de objetos escondidos atrás de blindagens metálicas ou paredes do contêiner. | Datasheets *HCVP e series*, *HCVM e35*, *HCVG viZual* e *HCVM e35 T* (*DaiSy CargoVision Software: Edge enhancement and image filters*). | Exige que a camada gráfica (*overlay*) do nosso modelo de IA possua controle de opacidade para não encobrir as bordas destacadas pelo operador. |
+| Medição e Ferramentas de Anotação | Medição direta de dimensões reais de objetos na imagem (*objects measurement*), inserção de marcações (*marks and annotations*) e cruzamento com o manifesto. | Datasheets *HCVP e series*, *HCVM e35*, *HCVG viZual* e *HCVM e35 T* (*DaiSy CargoVision Software: Objects measurement, marks, annotations and manifest comparison*). | Sustenta o requisito de IHC de cruzar achados visuais com os dados da carga e permitir anotações na própria estação de trabalho. |
 
 #### Experiência do usuário e opiniões
 
-A análise foi realizada com base em especificações técnicas, catálogos institucionais e materiais de treinamento públicos de operadores de inspeção de carga. 
+A análise foi realizada com base nas especificações técnicas e datasheets oficiais das estações de trabalho de análise de imagem (**RIW - Review/Image Workstation**) da Smiths Detection.
 
-Em sistemas de inspeção radiográfica de alto tráfego, a experiência do usuário é dominada pela **velocidade de varredura visual e fadiga ocular**. Operadores trabalham sob janelas de tempo curtas (poucos minutos por contêiner). As interfaces da Smiths Detection priorizam consoles físicos dedicados (teclados com botões diretos para filtros de cor, zoom e inversão) para evitar que o operador precise navegar por menus dropdown complexos.
+Em sistemas de inspeção radiográfica de alto tráfego (com capacidade de escaneamento de até 80 caminhões por hora no modo *pass-through*), a experiência do usuário é dominada pela **velocidade de varredura visual e redução da fadiga ocular**. As estações de trabalho contam com monitores dedicados de 22" a 24" (*flat screen workstation*) e softwares projetados para aplicação imediata de filtros de imagem e comparação direta com o banco de dados SQL e documentos de manifesto.
 
-Limitação da análise: assim como na C01, os softwares de inspeção da Smiths Detection são proprietários e de uso restrito por órgãos de segurança e alfândegas, não havendo versão trial ou avaliações públicas de usabilidade em lojas de aplicativos.
+Limitação da análise: os softwares de inspeção da Smiths Detection são proprietários e de uso restrito por órgãos de segurança e alfândegas, não havendo versão trial pública.
 
 #### Preço/modelo de negócio
+
+Modelo **B2B / Governamental**, integrado à venda ou modernização dos complexos de escaneamento físico (sistemas fixos, móveis em chassis de caminhão ou pórticos gantry). O software é fornecido como licença proprietária de estação de trabalho (*Image Workstation RIW / Database Workstation DBW*), incluindo treinamento operacional formal e suporte contínuo.
+
+#### Padrões e tendências percebidos
+
+- **Paleta de cores padronizada por absorção de dupla energia** (discriminação orgânico/inorgânico por $Z_{eff}$).
+- **Manipulação rápida via Workstation (RIW)** com ferramentas nativas de realce de bordas, equalização de histograma e zoom.
+- **Integração direta entre radiografia e dados do manifesto** na mesma interface de análise.
+- **Suporte a automações opcionais** (como reconhecimento de placas ALPR, códigos de contêiner ACCR e detecção de radiação ARD).
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+| --- | --- | --- |
+| Ponto positivo: discriminação de materiais e realce de bordas nativos | Módulos *viZual* e filtros *Edge Enhancement* em toda a linha DaiSy CargoVision. | **Lição direta:** o mapa de calor da nossa IA (mapa residual) não pode poluir visualmente nem conflitar com as cores padrão de discriminação de material ($Z_{eff}$). |
+| Ponto positivo: integração de metadados e anotações na mesma tela | Recurso *Manifest data comparison and annotations* na estação RIW. | O protótipo de IHC deve permitir visualizar os dados da carga e adicionar marcações de anomalia sem trocar de janela. |
+| Limitação: acúmulo de filtros na tela | O uso simultâneo de equalização de histograma, bordas e marcações pode poluir a imagem. | O protótipo de IHC deve oferecer controle de **opacidade ajustável (slider)** e alternância rápida (toggle) para a máscara de anomalia da IA. |
+| Lição de IHC: centralidade na imagem radiográfica | A estação de trabalho (RIW com tela de 22"/24") prioriza a área de exibição do scanner. | A área central do nosso protótipo precisa ser dedicada à exibição e manipulação da radiografia, deixando metadados e botões de veredito em painéis laterais retraíveis. |
+
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
