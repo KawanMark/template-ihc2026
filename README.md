@@ -29,8 +29,8 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
 | Kawan Mark Geronimo Da Silva | 22.222.010-5 | [@KawanMark](https://github.com/KawanMark) | Análise de concorrência C01 (Rapiscan InSight) na Entrega 2 |
-| Gabriel Albertini Pinheiro | 22.122.094-8 | [@albertx0](https://github.com/albertx0) | {{a definir}} |
-| Alexandre Domiciano Pierri | 22.125.061-6 | [@Apierri05](https://github.com/Apierri05) | {{a definir}} |
+| Gabriel Albertini Pinheiro | 22.122.094-8 | [@albertx0](https://github.com/albertx0) | Análise de concorrência C02 (Portal Único Siscomex) na Entrega 2 |
+| Alexandre Domiciano Pierri | 22.125.061-6 | [@Apierri05](https://github.com/Apierri05) | Análise de concorrência C03 (Smiths Detection DaiSy/viZual) na Entrega 2 |
 
 ## Relação entre TCC e projeto de IHC
 
