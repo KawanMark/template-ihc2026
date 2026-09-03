@@ -294,14 +294,19 @@ Fontes da análise C02 (Portal Único Siscomex):
 
 ## Checklist
 
-- [ ] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
+- [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
 - [ ] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
-- [ ] Há pelo menos uma análise completa por integrante.
+- [x] Há pelo menos uma análise completa por integrante.
 - [ ] Cada análise contém prints legíveis da interface.
 - [ ] Prints mostram telas/estados relevantes, não apenas logos/homepage.
-- [ ] Foram analisados concorrentes e/ou interfaces representativas ao público.
-- [ ] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
-- [ ] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
-- [ ] Opiniões de UX têm fonte.
-- [ ] A síntese compara critérios comuns e produz recomendações.
-- [ ] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+- [x] Foram analisados concorrentes e/ou interfaces representativas ao público.
+- [x] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
+- [x] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
+- [x] Opiniões de UX têm fonte.
+- [x] A síntese compara critérios comuns e produz recomendações.
+- [x] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+
+> **Pendências desta entrega (itens não marcados):**
+> - Prints: apenas a C01 possui capturas em `../assets/02_concorrencia/`. A C02 depende de acesso com certificado digital ao perfil de Auditor-Fiscal (limitação registrada na própria análise) e a C03 ainda não teve as capturas anexadas.
+> - Rastreabilidade: as evidências levantadas nesta entrega ainda não foram lançadas em `RASTREABILIDADE.md` — em especial a revisão de **H24** (o domínio usa **quatro** canais: verde, amarelo, vermelho e cinza, não três).
+> - Complementos em aberto: seção 3 (softwares do cotidiano), colunas de C02/C03 na seção 3.1 e recomendações derivadas de C02 e C03 na seção 5.
