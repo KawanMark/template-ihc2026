@@ -287,6 +287,10 @@ Fontes da análise C02 (Portal Único Siscomex):
 - BRASIL. Siscomex. **Manuais**. Disponível em: https://www.gov.br/siscomex/pt-br/informacoes/manuais. Acesso em: 27/08/2026.
 - TOEXCEED. **Acompanhamento do Despacho no Siscomex: guia prático de gestão**. Disponível em: https://toexceed.com.br/blog/2026/01/15/acompanhamento-do-despacho-no-siscomex-guia-pratico-de-gestao/. Acesso em: 27/08/2026. *(fonte de mercado, sem método declarado — usada como indício, conforme registrado na C02)*
 - FAZCOMEX. **Canais de parametrização na importação e na DUIMP**. Disponível em: https://www.fazcomex.com.br/npi/canais-de-parametrizacao/. Acesso em: 27/08/2026. *(fonte de mercado)*
+- Smiths Detection Group Ltd.** *HCVP™e series - Medium Energy Pass Through, X-Ray Screening System* [Datasheet]. Documento nº 95595556, 2017.
+- **Smiths Detection Group Ltd.** *HCVM™ e35 - Light Weight Medium Energy X-Ray Mobile Screening System* [Datasheet]. Documento nº 95593679, 2018.
+- **Smiths Detection Group Ltd.** *HCVG viZual™ - High Energy X-Ray Gantry Series with Material Discrimination* [Datasheet]. Documento nº 95591819, 2017.
+- **Smiths Detection Group Ltd.** *Technical Data HCVM e35 T - Pass through x-ray system* [Technical Data Sheet]. Documento nº 95594380 / 168960-388, 2013.
 
 ## Checklist
 
