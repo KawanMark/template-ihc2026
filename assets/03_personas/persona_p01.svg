@@ -1,5 +1,112 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="#f1f5f9"/>
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="20" width="920" height="110" rx="12" fill="url(#headerGrad)"/>
+  
+  <!-- Avatar / Icon representation -->
+  <circle cx="80" cy="75" r="38" fill="#3b82f6"/>
+  <!-- User silhouette -->
+  <path d="M80 50 a16 16 0 1 0 0.1 0 Z" fill="#ffffff"/>
+  <path d="M60 88 c0 -14 10 -20 20 -20 s20 6 20 20 Z" fill="#ffffff"/>
+
+  <!-- Header Info -->
+  <text x="140" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">Carlos Eduardo Moreira</text>
+  <text x="140" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#94a3b8">46 anos • Fiscal Aduaneiro / Operador de Scanner de Raio-X • Recinto Portuário</text>
+  <rect x="140" y="95" width="115" height="22" rx="4" fill="#22c55e" fill-opacity="0.2"/>
+  <text x="197" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#4ade80">PERSONA PRIMÁRIA</text>
+
+  <rect x="265" y="95" width="155" height="22" rx="4" fill="#3b82f6" fill-opacity="0.2"/>
+  <text x="342" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#60a5fa">AUTOR: KAWAN MARK</text>
+
+  <!-- Quote on Banner -->
+  <text x="910" y="75" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-style="italic" fill="#cbd5e1">“Não posso travar o porto com falsos alarmes,</text>
+  <text x="910" y="95" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-style="italic" fill="#cbd5e1">mas não posso deixar passar ilícitos na calada da noite.”</text>
+
+  <!-- Column 1: Perfil & Contexto -->
+  <g transform="translate(20, 145)" filter="url(#shadow)">
+    <rect width="290" height="375" rx="10" fill="url(#cardGrad)" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="0" y="0" width="290" height="40" rx="10" fill="#f8fafc"/>
+    <path d="M0 10 Q0 0 10 0 L280 0 Q290 0 290 10 L290 40 L0 40 Z" fill="#e2e8f0"/>
+    <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">👤 PERFIL &amp; CONTEXTO</text>
+
+    <text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#475569">Tempo de Carreira:</text>
+    <text x="16" y="83" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">12 anos na aduana; 7 em raio-X</text>
+
+    <text x="16" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#475569">Regime de Trabalho:</text>
+    <text x="16" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Plantões 12x36h (inclui madrugadas)</text>
+
+    <text x="16" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#475569">Ambiente de Operação:</text>
+    <text x="16" y="183" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Sala de controle com pouca luz;</text>
+    <text x="16" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">monitor 24"; ruído do pátio</text>
+
+    <text x="16" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#475569">Domínio Técnico:</text>
+    <text x="16" y="250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Especialista em densidade radiológica</text>
+    <text x="16" y="267" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">e falso-color Zeff (orgânico/inorgânico)</text>
+
+    <text x="16" y="299" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#475569">Relação com IA:</text>
+    <text x="16" y="317" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Quer auxílio visual imediato (ROI);</text>
+    <text x="16" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">rejeita métricas abstratas de ML</text>
+  </g>
+
+  <!-- Column 2: Objetivos & Necessidades -->
+  <g transform="translate(335, 145)" filter="url(#shadow)">
+    <rect width="290" height="375" rx="10" fill="url(#cardGrad)" stroke="#e2e8f0" stroke-width="1"/>
+    <path d="M0 10 Q0 0 10 0 L280 0 Q290 0 290 10 L290 40 L0 40 Z" fill="#dbeafe"/>
+    <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">🎯 OBJETIVOS &amp; NECESSIDADES</text>
+
+    <text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">1. Triagem Ágil por Risco:</text>
+    <text x="16" y="83" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Priorizar inspeções com alta probabilidade</text>
+    <text x="16" y="99" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">de anomalia residual sem atrasar o pátio.</text>
+
+    <text x="16" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">2. Destaque Visual Não Destrutivo:</text>
+    <text x="16" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Ver mapa residual sobreposto com</text>
+    <text x="16" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">slider de opacidade sem mascarar o Zeff.</text>
+
+    <text x="16" y="195" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">3. Veredito Rápido e Motivado:</text>
+    <text x="16" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Despachar liberação ou vistoria física</text>
+    <text x="16" y="229" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">com motivo pré-formatado e rastreabilidade.</text>
+
+    <text x="16" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">4. Integração Radiografia + Dados:</text>
+    <text x="16" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">Conferir manifesto e histórico do contêiner</text>
+    <text x="16" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">em painel retrátil, sem trocar de janela.</text>
+  </g>
+
+  <!-- Column 3: Dores & Implicações de IHC -->
+  <g transform="translate(650, 145)" filter="url(#shadow)">
+    <rect width="290" height="375" rx="10" fill="url(#cardGrad)" stroke="#e2e8f0" stroke-width="1"/>
+    <path d="M0 10 Q0 0 10 0 L280 0 Q290 0 290 10 L290 40 L0 40 Z" fill="#fee2e2"/>
+    <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#991b1b">⚠️ DORES &amp; IMPACTOS DE DESIGN</text>
+
+    <text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Fadiga Visual Noturna (H10, H13):</text>
+    <text x="16" y="83" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">→ Interface em Dark Mode obrigatório;</text>
+    <text x="16" y="99" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">alto contraste sem ofuscamento.</text>
+
+    <text x="16" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Medo de Falso Negativo (H08, H19):</text>
+    <text x="16" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">→ Demarcação ROI na imagem para</text>
+    <text x="16" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">direcionar os olhos imediatamente à anomalia.</text>
+
+    <text x="16" y="195" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Poluição Visual de Filtros (RC09, C03):</text>
+    <text x="16" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">→ Teclas de atalho e controle deslizante</text>
+    <text x="16" y="229" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">para ligar/desligar camada da IA com fluidez.</text>
+
+    <text x="16" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Decisão sem Rastreabilidade (RC04):</text>
+    <text x="16" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">→ Veredito atrelado à matrícula do fiscal</text>
+    <text x="16" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e293b">com carimbo de data/hora e justificativa.</text>
+  </g>
 </svg>
