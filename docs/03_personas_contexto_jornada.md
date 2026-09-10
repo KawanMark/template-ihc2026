@@ -49,7 +49,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** Combinação entre a literatura do TCC (*Self-supervised anomaly detection and localization for x-ray cargo images*, Gaikwad et al., 2024), a análise de soluções de mercado na Entrega 2 (Rapiscan InSight C01 e Smiths Detection RIW C03), a rotina normativa do Siscomex (C02) e a situação concreta de uso H13 registrada na Entrega 1.  
 **Hipóteses da Entrega 1 relacionadas:** H01, H04, H05, H06, H07, H08, H10, H13, H14, H15 (revisada), H16, H24 (revisada), H30, H31, H34, H37, H38
 
-![Persona P01](../assets/03_personas/persona_p01.svg)
+![Persona P01](../assets/03_personas/persona_p01.jpeg)
 
 | Campo | Descrição |
 |---|---|
