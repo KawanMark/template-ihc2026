@@ -28,7 +28,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 | Item da Entrega 1 | Status inicial | Evidência disponível agora | Como será tratado nesta entrega |
 |---|---|---|---|
-| **Perfil: Fiscal Aduaneiro / Operador de Scanner (H01)** | [H01] Hipótese | Confirmado pela análise de mercado (C01 Rapiscan e C03 Smiths) e pelo fluxo de despacho do Siscomex (C02) como o usuário que opera a estação de imagem e decide sobre a conferência. | Incorporar como base da Persona Primária P01 (Carlos Moreira). |
+| **Perfil: Fiscal Aduaneiro / Operador de Scanner (H01)** | [H01] Hipótese | Confirmado pela análise de mercado (C01 Rapiscan e C03 Smiths) e pelo fluxo de despacho do Siscomex (C02) como o usuário que opera a estação de imagem e decide sobre a conferência. | Incorporar como base da Persona Primária P01 (Gustavo Onofre). |
 | **Fadiga visual e exaustão em plantão noturno (H10, H13)** | [H10], [H13] Hipóteses | Situação concreta descrita na Entrega 1 (§4.5) e corroborada pelas especificações de estações de alta rotação da Smiths (C03: monitores de 22"-24" para alívio ocular em tráfego de até 80 caminhões/h). | Incorporar como restrição central e dor prioritária de P01, demandando Dark Mode e ergonomia visual. |
 | **Ambiente de sala de controle em recinto alfandegado (H14, H16)** | [H14], [H16] Hipóteses | Especificações da estação RIW (Review Image Workstation) da Smiths e salas de monitoramento portuário. Ambiente com penumbra e ruídos externos. | Incorporar no contexto de uso de P01, descartando soluções com interfaces claras ou alertas puramente sonoros. |
 | **Estação de trabalho com monitor dedicado (H15)** | [H15] Hipótese (revisada) | Análise C03 demonstrou uso de monitor dedicado de 22" a 24" calibrado para radiografia (afastando a premissa inicial de múltiplos monitores genéricos). | Incorporar como restrição de hardware para P01, exigindo centralidade da radiografia e painéis retráteis. |
@@ -42,7 +42,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ## 1. Personas
 
-### Persona P01 — Carlos Eduardo Moreira (Fiscal Aduaneiro / Operador de Scanner)
+### Persona P01 — Gustavo Onofre (Fiscal Aduaneiro / Operador de Scanner)
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5  
 **Tipo:** primária  
@@ -69,10 +69,10 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 - **Tema Dark Mode obrigatório:** Interface construída com paleta escura profissional de alto contraste, desenhada especificamente para salas de controle com pouca luz ambiente, minimizando a fadiga visual do plantonista (H10, H13, H16).
 - **Centralidade absoluta da radiografia (RC10):** A imagem de raio-X deve ocupar mais de 70% da área útil do monitor de 24", mantendo metadados da carga (manifesto) e botões de ação em painéis laterais retraíveis para não desviar a atenção visual principal (H15).
-- **Camada de anomalia com slider de opacidade e toggle rápido (RC09):** O mapa de calor residual da IA deve ser exibido como uma sobreposição ajustável (de 0% a 100%) via atalho de teclado ou controle deslizante suave, permitindo que Carlos inspecione a anomalia sem perder a visão das cores falsas de número atômico ($Z_{eff}$) e do contorno dos objetos.
+- **Camada de anomalia com slider de opacidade e toggle rápido (RC09):** O mapa de calor residual da IA deve ser exibido como uma sobreposição ajustável (de 0% a 100%) via atalho de teclado ou controle deslizante suave, permitindo que Gustavo inspecione a anomalia sem perder a visão das cores falsas de número atômico ($Z_{eff}$) e do contorno dos objetos.
 - **Fila de trabalho priorizada automaticamente por risco (RC05, RC06):** A tela inicial do sistema deve organizar os contêineres escaneados por ordem de criticidade de anomalia residual da IA, correlacionados aos quatro canais normativos (com destaque imediato para canal cinza - fraude e canal vermelho - conferência física), suprindo a maior deficiência dos softwares concorrentes.
 - **Sinalização acessível redundante (RC11):** Toda classificação de risco e severidade de alerta deve conter texto explícito (ex.: `[CANAL VERMELHO — RISCO ELEVADO]`) acompanhado de ícones de advertência, sem confiar unicamente na distinção entre tons de verde, amarelo e vermelho.
-- **Fluxo de veredito rápido com justificativas pré-estruturadas (RC04, RC07):** A homologação da decisão deve exigir poucos cliques (ex.: tecla de atalho + seleção de motivo em menu rápido: "discrepância de densidade em relação ao manifesto" / "indício de compartimento oculto"), vinculando automaticamente a matrícula de Carlos e o timestamp para fins de conformidade legal (H17, H18).
+- **Fluxo de veredito rápido com justificativas pré-estruturadas (RC04, RC07):** A homologação da decisão deve exigir poucos cliques (ex.: tecla de atalho + seleção de motivo em menu rápido: "discrepância de densidade em relação ao manifesto" / "indício de compartimento oculto"), vinculando automaticamente a matrícula de Gustavo e o timestamp para fins de conformidade legal (H17, H18).
 
 ---
 
@@ -142,7 +142,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** Persona P01 — Carlos Eduardo Moreira  
+**Persona escolhida:** Persona P01 — Gustavo Onofre  
 **Justificativa:** É a persona primária do projeto, representando o operador direto que toma a decisão crítica de triagem e veredito na estação de imagem sob condições severas de fadiga visual e pressão de tempo.
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
@@ -178,7 +178,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ## 4. Jornada do usuário — equipe
 
-**Persona:** Persona P01 — Carlos Eduardo Moreira  
+**Persona:** Persona P01 — Gustavo Onofre  
 **Objetivo da jornada:** Triar contêineres na fila de varredura, inspecionar suspeitas de anomalia residual com auxílio da IA e emitir veredito motivado com segurança operacional.  
 **Início e fim da jornada:** Inicia na assunção do posto de trabalho na sala de raio-X e encerra no despacho do lote de contêineres com registro formal no sistema.
 
