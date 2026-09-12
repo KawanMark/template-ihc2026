@@ -111,6 +111,8 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** Estruturada a partir dos requisitos formais de interceptação aduaneira e policial no ambiente portuário, pelas regras normativas de exigência/conferência física do Siscomex (C02), pelas hipóteses de uso operacional de campo (H03, H16, H17, H19, H24) e pela necessidade de consumo simplificado do resultado da IA sem complexidade de análise radiográfica.  
 **Hipóteses da Entrega 1 relacionadas:** H03, H06, H08, H12, H14, H16, H17, H18, H19, H24 (revisada)
 
+![Persona P03](../assets/03_personas/persona_p03.jpeg)
+
 | Campo | Descrição |
 |---|---|
 | **Nome** | Marcos Oliveira (Capitão Oliveira) |
