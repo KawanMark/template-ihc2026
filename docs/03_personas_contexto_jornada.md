@@ -76,33 +76,35 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ---
 
-### Persona P02 — {{nome fictício}}
+### Persona P02 — Dr. Eduardo Resende (Perito / Especialista em Análise Radiográfica)
 
-**Autor(a):** Gabriel Albertini Pinheiro — 22.122.094-8  
-**Tipo:** secundária  
-**Base de evidências:** {{entrevista / questionário / literatura / observação / proto-persona a validar / combinação}}  
-**Hipóteses da Entrega 1 relacionadas:** {{H02, H17, H18, H29, H32 ou —}}
+**Autor(a):** Gabriel Albertini Pinheiro  
+**Tipo:** primária  
+**Base de evidências:** Estruturada a partir da literatura de detecção profunda e reconstrução espectral em raio-X de carga, das diretrizes de auditoria aduaneira de alta complexidade do Siscomex (C02), da necessidade de laudos periciais fundamentados (RC07, RC08) e dos cenários operacionais de escalonamento de suspeitas (H08, H12, H14, H18, H30).  
+**Hipóteses da Entrega 1 relacionadas:** H02, H05, H08, H11, H12, H14, H18, H20, H30, H35, H38
 
-![Persona P02](../assets/03_personas/persona_p02.svg)
+![Persona P02](../assets/03_personas/persona_p02.jpeg)
 
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | {{somente o que impacta o uso}} |
-| Ocupação/papel | {{...}} |
-| Conhecimento do domínio | {{...}} |
-| Experiência tecnológica | {{...}} |
-| Objetivos | {{...}} |
-| Necessidades | {{...}} |
-| Dores/frustrações | {{...}} |
-| Motivadores | {{...}} |
-| Restrições/acessibilidade | {{...}} |
-| Ambiente típico de uso | {{...}} |
-| Comportamentos relevantes | {{...}} |
+| **Faixa etária / contexto relevante** | 52 anos. Perito criminal e analista sênior de imagens radiográficas com 20 anos de experiência em perícia aduaneira e física aplicada à radiologia de segurança. Atua no Centro de Inteligência e Análise de Imagem de 2ª Linha, atendendo remotamente múltiplos terminais portuários. |
+| **Ocupação/papel** | Perito / Especialista em Análise Radiográfica de 2ª Linha. É o usuário especialista primário acionado quando o operador de triagem (P01) escala uma imagem duvidosa ou quando o sistema de IA aponta um padrão de alta sofisticação (ex.: blindagem de chumbo, densidade composta ou camuflagem estrutural). É responsável por emitir o laudo técnico pericial definitivo que autoriza a violação de lacre e ação policial de campo (P03). |
+| **Conhecimento do domínio** | Científico e altíssimo. Domina a física da radiação, atenuação espectral, coeficientes de absorção de raio-X de alta energia (6–9 MeV), identificação de isótopos/metais pesados e morfologia de contêineres. Sabe diferenciar falhas de calibração do detector de artefatos de camuflagem intencional. |
+| **Experiência tecnológica** | Altíssima em softwares analíticos avançados de processamento de imagem, estações DICOM/PACS, histogramas digitais e visualização 3D/Tomografia de Carga. Média/Alta em inteligência artificial: compreende o funcionamento dos mapas de atenção (Grad-CAM), limiares de confiança estatística e reconstrução residual do modelo. |
+| **Objetivos** | 1. Diagnosticar com precisão pericial anomalias hiper-camufladas que passam despercebidas na triagem rápida de 1ª linha.<br>2. Reduzir drasticamente falsos positivos de alto impacto que paralisam operações de grandes exportadores/importadores.<br>3. Gerar laudos periciais detalhados, instruídos com evidências visuais e métricas de densidade para respaldar inquéritos policiais e processos judiciais. |
+| **Necessidades** | 1. Conjunto completo de ferramentas de manipulação espectral (ajuste fino de $Z_{eff}$, equalização de histograma local, inversão de frequência e isolamento de banda de densidade).<br>2. Comparador de imagens dinâmico lado a lado (imagem atual vs. banco de dados histórico do mesmo contêiner ou tipo de carga).<br>3. Exibição das métricas de incerteza da IA (Score de Confiança e mapa de calor de reconstrução residual) com detalhamento numérico e vetorial.<br>4. Módulo de anotação técnica na imagem para demarcação de vetor de invasão, cálculo de volume suspeito e exportação direta para laudo em PDF. |
+| **Dores/frustrações** | 1. Receber casos escalados sem contextualização prévia dos dados de manifesto ou com imagens comprimidas que perdem resolução radiográfica.<br>2. Sistemas que "escondem" os dados brutos da IA, entregando apenas caixas delimitadoras simples sem explicar a assinatura espectral detectada.<br>3. Perda de tempo preenchendo relatórios periciais burocráticos em editores de texto externos. |
+| **Motivadores** | 1. Desvendar esquemas complexos de crime organizado e narcotráfico internacional que utilizam engenharia de camuflagem avançada.<br>2. Rigor científico e precisão técnica absoluta em suas emissões de laudo. |
+| **Restrições/acessibilidade** | 1. Necessidade de monitores de grau médico de altíssima resolução e contraste (mínimo de 4K com calibração de escala de cinza DICOM).<br>2. Exige controle total de sobreposição (UI não pode poluir a imagem nem aplicar filtros destrutivos irreversíveis na matriz radiográfica). |
+| **Ambiente típico de uso** | Sala de Inteligência e Perícia Centralizada; ambiente climatizado, silencioso, com iluminação pericial controlada (penumbra); estação de trabalho de altíssimo desempenho com múltiplos monitores de alta fidelidade visual. |
+| **Comportamentos relevantes** | Dedica de 3 a 10 minutos investigando cada caso escalado; aplica rotineiramente múltiplos filtros combinados antes de fechar o diagnóstico; não confia cegamente no veredito automatizado da IA sem antes verificar a assinatura física da matéria na imagem radiográfica. |
 
 **Decisões de design influenciadas por P02:**
 
-- {{...}}
-
+- **Painel de Ferramentas Periciais Avançadas (Modo Inspeção Profunda):** Disponibilização de um modo de análise avançada acessível via atalho dedicado, ativando equalização de histograma por região (CLAHE), isolamento de número atômico ($Z_{eff}$) por janela de densidade e medição de volume em pixels radiográficos (H08, H11, H14).
+- **Módulo de Comparação Histórica Lado a Lado (RC10):** Permite que Eduardo abra simultaneamente no mesmo plano de visão o escaneamento atual e imagens radiográficas anteriores da mesma declaração/manifesto para identificar alterações estruturais ou padrões de fraude recorrentes (H02, H30).
+- **Inspeção de Incerteza e Resíduo da IA (RC09):** Painel expansível que expõe não apenas o mapa de calor, mas o *score* estatístico de divergência da matriz de densidade, permitindo que o perito valide numericamente o peso da indicação algorítmica (H05, H12).
+- **Gerador Automático de Laudo Pericial com Anotações (RC07, RC08):** Ferramenta de anotação integrada à imagem que exporta a região demarcada com as métricas da IA e considerações técnicas diretamente para um modelo de termo de retenção fundamentado, eliminando a necessidade de redigir laudos em softwares externos (H18, H20, H35).
 ---
 
 ### Persona Secundária P03 — Marcos Oliveira / Agente de Segurança Pública (Operacional de Campo)
