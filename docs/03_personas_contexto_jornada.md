@@ -35,8 +35,8 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | **Necessidade de comparação visual e explicabilidade (H05, H30, H31, H37)** | [H05], [H30], [H31], [H37] Hipóteses | C01 (InSight Vehicle Compare / High Density) e C03 (viZual Zeff) mostram que operadores dependem de comparação e rejeitam métricas matemáticas abstratas na hora da triagem. | Incorporar como objetivo técnico de P01: mapa residual por transparência (slider) e destaque de ROI. |
 | **Registro motivado de veredito e responsabilidade legal (H06, H08, H17, H18, H19)** | [H06], [H08], [H17], [H18], [H19] Hipóteses | Análise C02 comprovou que a decisão aduaneira é um ato formal comunicado (exigência fiscal), motivado e com valor jurídico, vinculado à matrícula do auditor. | Incorporar como requisito de fluxo de P01: veredito com justificativa rápida e registro de auditoria imutável. |
 | **Escala de risco com quatro canais aduaneiros (H24 revisada)** | [H24] Revisada na Entrega 2 | Manual de Despacho de Importação da RFB (C02) comprovou que o gerenciamento aduaneiro adota 4 canais: verde, amarelo, vermelho e cinza (fraude). | Incorporar no modelo mental de P01, adaptando a fila de triagem da IA aos quatro canais normativos. |
-| **Perfil: Analista de Inteligência Aduaneira (H02)** | [H02] Hipótese | O Siscomex (C02) opera com dossiês históricos e trilhas de auditoria para investigação e acompanhamento de despacho. | A ser incorporado na Persona Secundária P02 (Gabriel Albertini). |
-| **Perfil: Especialista de Scanner / Supervisor (H09 revisada, ?03)** | [H09], [?03] Hipóteses | C03 demonstrou o domínio técnico avançado de operadores sobre manipulação de filtros (Zeff, realce de bordas, histograma). | A ser incorporado na Persona Secundária P03 (Alexandre Pierri). |
+| **Perfil: Auditor-Fiscal / Decisão de Despacho e Inteligência (H02)** | [H02] Hipótese | Confirmado pela análise do Siscomex (C02: parametrização, distribuição para auditor e exigência fiscal). É a autoridade com competência jurídica para lavrar a retenção e emitir o ato formal. | Incorporar como base da Persona Secundária P02 (Eduardo Resende). |
+| **Perfil: Agente de Segurança Pública / Policial de Campo (H03)** | [H03] Hipótese | Necessidade de intervenção física de campo no pátio e gates para abordagem e abertura do contêiner sem interpretar o raio-X bruto. | Incorporado na Persona Secundária P03 (Marcos Oliveira). |
 
 ---
 
@@ -76,33 +76,36 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ---
 
-### Persona P02 — {{nome fictício}}
+### Persona Secundária P02 — Dr. Eduardo Resende (Auditor-Fiscal da Receita Federal / Chefe de Despacho Aduaneiro)
 
 **Autor(a):** Gabriel Albertini Pinheiro — 22.122.094-8  
 **Tipo:** secundária  
-**Base de evidências:** {{entrevista / questionário / literatura / observação / proto-persona a validar / combinação}}  
-**Hipóteses da Entrega 1 relacionadas:** {{H02, H17, H18, H29, H32 ou —}}
+**Base de evidências:** Análise do Portal Único Siscomex na Entrega 2 (C02: fluxo DUIMP, distribuição para auditor, canais de parametrização e exigência fiscal motivada), regulamentação aduaneira da Receita Federal do Brasil (RFB), requisitos de auditoria, conformidade legal e governança (H02, H06, H08, H17, H18, H19, H24 revisada, RC04, RC07, RC08).  
+**Hipóteses da Entrega 1 relacionadas:** H02, H06, H08, H11, H14, H17, H18, H19, H24 (revisada), H29, H32, H35
 
-![Persona P02](../assets/03_personas/persona_p02.svg)
+![Persona P02](../assets/03_personas/persona_p02.jpeg)
 
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | {{somente o que impacta o uso}} |
-| Ocupação/papel | {{...}} |
-| Conhecimento do domínio | {{...}} |
-| Experiência tecnológica | {{...}} |
-| Objetivos | {{...}} |
-| Necessidades | {{...}} |
-| Dores/frustrações | {{...}} |
-| Motivadores | {{...}} |
-| Restrições/acessibilidade | {{...}} |
-| Ambiente típico de uso | {{...}} |
-| Comportamentos relevantes | {{...}} |
+| **Nome** | Dr. Eduardo Resende |
+| **Faixa etária / contexto relevante** | 52 anos. Auditor-Fiscal da Receita Federal há 20 anos, atuando na Seção de Conferência Aduaneira e Gerenciamento de Risco em delegacia alfandegária portuária. Possui formação em Direito e especialização em Comércio Exterior. Atua em gabinete administrativo/auditoria, atendendo a demandas de conferência e decisões de parametrização fiscal. |
+| **Ocupação/papel** | Auditor-Fiscal da Receita Federal / Chefe de Equipe de Despacho Aduaneiro. É o usuário secundário detentor da **competência legal privativa ("a caneta")** para formalizar atos fiscais, lavrar termos de retenção e determinar abertura física da carga. Não opera o console de triagem contínua a cada 45 segundos como o Gustavo (P01); é acionado quando o operador ou o modelo de IA sinaliza anomalia crítica (Canal Vermelho ou Canal Cinza — fraude), cabendo a ele cruzar a evidência técnica da imagem com a documentação no Siscomex, lavrar a Exigência Fiscal e autorizar a ação policial no pátio (P03). |
+| **Conhecimento do domínio** | Altíssimo em legislação aduaneira, regulamento aduaneiro da Receita Federal, comércio exterior (DUIMP, DI, NCM, valoração aduaneira), parametrização de risco e processo administrativo fiscal. Conhecimento intermediário em imagens de raio-X: compreende o significado de mapas de calor residuais e áreas de densidade atípica, focando na coerência entre a mercadoria declarada na DUIMP e o conteúdo radiográfico inspecionado. |
+| **Experiência tecnológica** | Altíssima no Portal Único Siscomex (PUCOMEX), sistemas corporativos da Receita Federal e assinatura digital com certificado ICP-Brasil. Média/baixa em softwares de edição ou processamento avançado de imagens. Busca um ambiente integrado, seguro e prático, rejeitando interfaces com jargões puramente matemáticos de machine learning. |
+| **Objetivos** | 1. Avaliar com rapidez e segurança jurídica os contêineres escalados com anomalia pelo operador (P01) e pelo modelo de IA.<br>2. Cruza a evidência radiográfica residual com os dados do manifesto de carga (DUIMP) para comprovar indícios de contrabando, descaminho ou compartimentos ocultos.<br>3. Emitir com respaldo formal a Exigência Fiscal ou Termo de Retenção motivado, com prazo e efeitos jurídicos vinculados à sua credencial funcional.<br>4. Evitar litígios judiciais ou custos portuários decorrentes de retenções físicas infundadas de grandes exportadores/importadores idôneos. |
+| **Necessidades** | 1. Dossiê integrado na mesma interface, reunindo a radiografia com o mapa de anomalia da IA e os metadados do Siscomex (DUIMP, descrição da mercadoria, NCM, exportador, peso e histórico de parametrização).<br>2. Linha do tempo e histórico de processos anteriores do mesmo importador ou rota de risco para checar reincidências (apoiando H29).<br>3. Módulo de formalização rápida de veredito com modelos pré-estruturados de despacho (Exigência Fiscal / Vistoria Física com Rompimento de Lacre / Liberação Homologada).<br>4. Trilha de auditoria rastreável e imutável que vincule a matrícula funcional e o timestamp da decisão (atendendo H17 e H18). |
+| **Dores/frustrações** | 1. Fragmentação de sistemas: ter que visualizar a imagem do scanner em um software proprietário e abrir manualmente o Siscomex para lançar os dados da exigência fiscal.<br>2. Receber alertas de anomalia da IA desprovidos de contexto documental, sem saber quem é o importador ou qual a mercadoria declarada.<br>3. Insegurança jurídica e administrativa: pavor de liberar uma carga ilícita ou ordenar uma conferência física invasiva em carga sensível sem prova visual robusta. |
+| **Motivadores** | 1. Eficiência na repressão a fraudes fiscais e interceptação de ilícitos de alto impacto no comércio exterior.<br>2. Conclusão ágil do despacho aduaneiro para empresas certificadas e de baixo risco (OEA).<br>3. Absoluta conformidade jurídica dos atos praticados sob sua assinatura funcional. |
+| **Restrições/acessibilidade** | 1. Ambiente de gabinete com iluminação convencional de escritório (necessita de tipografia legível, bom contraste e harmonia com outros sistemas de governo).<br>2. Interface orientada ao vocabulário normativo oficial da aduana brasileira (DUIMP, canal, exigência, desembaraço, dossiê, recinto), eliminando métricas técnicas obscuras de inteligência artificial.<br>3. Exigência estrita de conformidade com padrões de segurança da informação e autenticação por certificado digital. |
+| **Ambiente típico de uso** | Gabinete da Seção de Conferência Aduaneira em delegacia alfandegária de porto; ambiente climatizado de escritório; estação desktop padrão corporativo com dois monitores; acesso autenticado à rede da Receita Federal. |
+| **Comportamentos relevantes** | Analisa os casos com rigor documental e metodológico; antes de lavrar a exigência, consulta o histórico do CNPJ importador; confere sempre a compatibilidade entre a densidade radiológica identificada pela IA e a descrição do produto na nota fiscal/fatura. |
 
-**Decisões de design influenciadas por P02:**
+**Decisões de design influenciadas pela Persona Secundária P02 (Eduardo):**
 
-- {{...}}
-
+- **Dossiê Integrado Siscomex + Radiografia (RC04, RC07):** Painel consolidado de decisão que exibe, lado a lado, os dados documentais da carga (DUIMP, mercadoria, NCM, importador) e o visualizador radiográfico com o mapa residual da IA, permitindo ao auditor validar a suspeita sem alternar de aplicativo.
+- **Módulo de Linha do Tempo e Consulta a Histórico de Processos (RC06, RC08, H29):** Busca direta por chave processual (número da DUIMP ou contêiner) com exibição cronológica de marcos e histórico de varreduras passadas para investigar reincidência de importadores ou fraudes conhecidas.
+- **Emissão Estruturada de Exigência Fiscal e Termo de Retenção (RC04, RC07):** Ferramenta integrada que gera o despacho formal em poucos cliques, pré-carregando as evidências visuais da IA (área de discrepância residual e score de risco), motivo normativo pré-selecionado e prazo legal de resposta.
+- **Trilha de Auditoria e Vinculação Funcional (H17, H18, H32):** Registro imutável de cada etapa decisória, associando o login/certificado digital do auditor à homologação do canal de risco e à ordem de intervenção enviada ao agente de campo (P03).
 ---
 
 ### Persona Secundária P03 — Marcos Oliveira / Agente de Segurança Pública (Operacional de Campo)
@@ -140,7 +143,17 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Síntese das personas
 
-*(A síntese comparativa das personas será consolidada pela equipe após a inclusão das personas P02 e P03 pelos demais integrantes.)*
+| Dimensão | Persona P01 — Gustavo Onofre | Persona P02 — Dr. Eduardo Resende | Persona P03 — Marcos Oliveira |
+|---|---|---|---|
+| **Autor(a)** | Kawan Mark Geronimo Da Silva | Gabriel Albertini Pinheiro | Alexandre Domiciano Pierri |
+| **Papel no domínio** | Fiscal Aduaneiro / Operador de Scanner (1ª Linha Operacional) | Auditor-Fiscal da Receita Federal / Chefe de Despacho (2ª Linha Decisória) | Agente de Segurança Pública / Policial de Campo (Ação Tática) |
+| **Tipo de persona** | **Primária** | **Secundária** | **Secundária** |
+| **Dispositivo / Hardware** | Desktop com monitor dedicado de 24" de alta resolução radiográfica | Desktop corporativo padrão com dois monitores | Tablet / coletor móvel robustecido de pátio |
+| **Ambiente de uso** | Sala de comando portuária em penumbra, ruído externo e alta demanda | Gabinete administrativo climatizado e silencioso | Pátio externo aberto sob intempéries (sol, chuva, poeira) e ruído |
+| **Frequência de interação** | Contínua e ininterrupta (varredura de dezenas de contêineres por hora) | Sob demanda / escalonamento (ao receber casos de Canal Vermelho/Cinza) | Pontual e imediata (ao receber alertas de interceptação ou vistoria física) |
+| **Interação com a IA** | Manipula a imagem bruta com sobreposição da máscara residual e slider de opacidade | Avalia o score de risco, mapa de calor e cruza com a DUIMP/Siscomex | Consome apenas o status binário (`ANOMALIA DETECTADA`) e localização de quadrante |
+| **Decisão central** | Sinalizar contêiner como suspeito ou liberar na fila rápida de triagem | Lavrar Exigência Fiscal / Termo de Retenção e ordenar conferência física | Executar a abordagem, romper lacre, vistoriar a carga e confirmar ação |
+| **Principal impacto no design** | Dark Mode obrigatório, radiografia ocupando 70%+ da tela, botões rápidos de veredito | Dossiê integrado (Siscomex + Raio-X), busca por ID/DUIMP, termo com assinatura digital | UI móvel de alto contraste para luz solar, botões grandes para luvas, alertas em 1 toque |
 
 ---
 
@@ -204,8 +217,8 @@ Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e n
 
 ## Checklist
 
-- [x] Existe pelo menos uma persona por integrante (P01 desenvolvida; P02 e P03 estruturadas para os respectivos autores).
-- [ ] As personas não são apenas diferenças demográficas superficiais (aguardando P02 e P03).
+- [x] Existe pelo menos uma persona por integrante (P01: Gustavo Onofre, P02: Dr. Eduardo Resende, P03: Marcos Oliveira).
+- [x] As personas não são apenas diferenças demográficas superficiais (diferenciadas por papéis, ambientes, dispositivos e relação com a IA: triagem contínua, despacho legal e ação tática de campo).
 - [x] Está claro o que é dado real e o que é hipótese/proto-persona.
 - [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
 - [x] Objetivos e dores têm consequência para o design.
