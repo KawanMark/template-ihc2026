@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 04/09/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -164,46 +164,47 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
-*(Seção a ser consolidada em conjunto pela equipe a partir das vivências e decisões de P01.)*
-
 | Dimensão | Conteúdo | Status/evidência |
 |---|---|---|
-| **O que vê?** | {{...}} | {{...}} |
-| **O que ouve?** | {{...}} | {{...}} |
-| **O que diz e faz?** | {{...}} | {{...}} |
-| **O que pensa e sente?** | {{...}} | {{...}} |
-| **Dores** | {{...}} | {{...}} |
-| **Ganhos** | {{...}} | {{...}} |
+| **O que pensa e sente?** | • "Minha prioridade é garantir a segurança aduaneira sem cometer erros: não posso travar o fluxo comercial do porto por falso alarme, mas não posso deixar passar ilícito na calada da noite."<br>• Tensão e estresse contínuo pela responsabilidade funcional e penal: pavor de falsos negativos sob fadiga visual.<br>• Deseja que a inteligência artificial seja uma aliada transparente e explicável, destacando áreas suspeitas sem tirar dele a autoridade decisória final. | [H08], [H10], [H12], [H34], [H37] |
+| **O que vê?** | • **No ambiente de trabalho:** Sala de controle mantida em penumbra; estação de trabalho com monitor dedicado de 24" calibrado para radiologia exibindo imagens densas e complexas; fila contínua de carretas nos gates portuários aguardando liberação.<br>• **Nas ferramentas de mercado:** Softwares legados de scanners (Rapiscan, Smiths) densos, com excesso de janelas e telas de fundo claro que ofuscam os olhos no escuro; ausência de ordenação inteligente por grau de risco. | [F01], [H14], [H15], [H16], Análises C01 e C03 da Entrega 2 |
+| **O que ouve?** | • **Da chefia e supervisão:** Cobrança constante por produtividade e agilidade na liberação de contêineres para não congestionar a rodovia e os gates do porto; alertas severos de que a omissão funcional pode gerar processos administrativos disciplinares.<br>• **Da Polícia e Inteligência:** Informes sobre rotas internacionais de narcotráfico e novas táticas sofisticadas de camuflagem (ex.: chapas de chumbo para mascarar radiação, fundos falsos e paredes duplas).<br>• **No ambiente de operação:** Barulho constante de carretas no pátio, sirenes dos pórticos e comunicações via rádio da fiscalização. | [H16], [H17], [H19], situação H13 da Entrega 1 |
+| **O que diz e faz?** | • **O que diz:** "Essa densidade no canto traseiro do contêiner não é compatível com paletes de madeira; preciso conferir a cor do número atômico ($Z_{eff}$) e os dados do manifesto antes de liberar."<br>• **O que faz:** Opera com foco metódico; utiliza atalhos de teclado rápidos (zoom, contraste, pan e inversão) com alta memória muscular sem desviar os olhos da radiografia; quando surge uma dúvida crítica de madrugada, chama o colega da estação adjacente para um segundo olhar de confirmação ("olhar cruzado"). | [H10], [H13], C03 da Entrega 2 (estação RIW) |
+| **Dores** | • **Fadiga visual severa:** Ardência nos olhos e exaustão mental após 6 a 12 horas consecutivas examinando matrizes radiográficas densas no escuro.<br>• **Alto custo do erro:** Dilema permanente entre liberar contrabando por falha humana (falso negativo) e paralisar cargas idôneas indevidamente (falso positivo, gerando custos de demurrage e atrito com exportadores).<br>• **Poluição de tela:** Ferramentas de IA que mascaram a imagem bruta com caixas opacas ou anulam as falsas cores de absorção de materiais ($Z_{eff}$).<br>• **Retrabalho e fragmentação:** Ter que examinar a radiografia em um console e digitar manualmente as conclusões em sistemas governamentais. | [H10], [H12], [H13], [H34], RC09, RC10 da Entrega 2 |
+| **Ganhos** | • **Fila priorizada automaticamente:** Contêineres ordenados pelo grau de anomalia da IA nos quatro canais oficiais da Receita Federal (Verde, Amarelo, Vermelho e Cinza), sabendo exatamente onde concentrar atenção.<br>• **Mapa de anomalia dinâmico e suave:** Visualizador com slider de transparência (0 a 100%) e tecla de atalho rápida para alternar a máscara da IA sem perder a visão do $Z_{eff}$.<br>• **Tema Dark Mode profissional:** Fundo escuro de alto contraste ergonomicamente desenhado para salas em penumbra.<br>• **Veredito rápido com respaldo:** Registro de decisões em até 3 cliques, com motivos pré-formatados vinculados à sua credencial funcional.<br>• **Consulta integrada ao manifesto:** Acesso instantâneo a NCM, peso e mercadoria declarada na mesma tela. | [H24 revisada], [H30], [H31], [H35], RC01 a RC11 da Entrega 2 |
 
 ---
 
 ## 3. Contexto de uso — consolidação
 
-*(Seção a ser consolidada em conjunto pela equipe.)*
+*(Consolidação das dimensões contextuais que guiam os requisitos de IHC para toda a equipe.)*
 
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
-| **Usuários** | {{...}} | {{...}} |
-| **Tarefas** | {{...}} | {{...}} |
-| **Equipamentos** | {{...}} | {{...}} |
-| **Ambiente físico** | {{...}} | {{...}} |
-| **Ambiente social/organizacional** | {{...}} | {{...}} |
-| **Papéis/permissões/governança** | {{...}} | {{...}} |
-| **Volume de dados/histórico** | {{...}} | {{...}} |
+| **Usuários** | Três perfis operacionais com responsabilidades complementares e bem delimitadas:<br>1. **Gustavo Onofre (P01 — Primário):** Fiscal Aduaneiro / Operador de Scanner que atua na triagem radiográfica em tempo real na esteira de escaneamento.<br>2. **Dr. Eduardo Resende (P02 — Secundário):** Auditor-Fiscal da Receita Federal / Decisor de Despacho que recebe casos escalados, cruza evidências com o Siscomex e formaliza exigências com valor jurídico.<br>3. **Marcos Oliveira (P03 — Secundário):** Agente de Segurança Pública / Policial de Campo que consome alertas simplificados para abordagem física no pátio.<br>Stakeholders indiretos: transportadoras, despachantes e importadores. | Segregação de privilégios e visões no sistema (RBAC). A tela principal deve ser otimizada para o fluxo ininterrupto de P01 (análise radiográfica), oferecendo módulos secundários dedicados ao dossiê de despacho de P02 e alertas de campo simplificados para o dispositivo móvel de P03. |
+| **Tarefas** | Conjunto de tarefas articuladas do fluxo aduaneiro:<br>(a) Triagem contínua da fila de entrada (~45 a 60 segundos por contêiner);<br>(b) Inspeção radiográfica de anomalias residuais com ferramentas de manipulação espectral;<br>(c) Confronto entre imagem e dados do manifesto de carga (DUIMP);<br>(d) Homologação de veredito de canal de risco (Verde, Amarelo, Vermelho, Cinza);<br>(e) Emissão de Termo de Retenção e Exigência Fiscal fundamentada;<br>(f) Localização espacial e vistoria física da mercadoria no pátio. | Eficiência máxima de interação: suporte a atalhos de teclado ergonômicos para todas as ações repetitivas de P01, redução drástica de cliques no fluxo de veredito e geração automática de laudos estruturados para P02. |
+| **Equipamentos** | • **P01 (Operador):** Estação de trabalho dedicada (RIW - Review Image Workstation) com monitor profissional de 22" a 24" calibrado para escala radiográfica, teclado com teclas de atalho e mouse ergonômico.<br>• **P02 (Auditor-Fiscal):** Desktop corporativo com 2 monitores e leitor de certificado digital ICP-Brasil.<br>• **P03 (Policial de Campo):** Tablet robustecido (*rugged tablet*) com tela antirreflexo e conectividade sem fio de pátio. | A radiografia inspecionada por P01 deve ocupar mais de 70% da área útil do monitor de 24" (RC10). As ferramentas de apoio (manifesto e veredito) devem residir em painéis retráteis. O layout para P03 deve priorizar alvos de toque grandes e alto contraste para visualização móvel sob sol. |
+| **Ambiente físico** | • **P01:** Sala de controle de raio-X mantida em penumbra (meia-luz contínua) para favorecer a percepção de contrastes radiológicos; ruído contínuo de motores diesel, carretas pesadas e sirenes de pátio no ambiente externo; temperatura climatizada fria.<br>• **P02:** Gabinete de conferência aduaneira silencioso com iluminação convencional de escritório.<br>• **P03:** Pátio aberto de contêineres e galpões de vistoria sob sol pleno, chuva, poeira e movimentação pesada de empilhadeiras. | Tema Dark Mode obrigatório para a estação de triagem de P01 (alívio à fadiga ocular na penumbra). Proibição estrita de depender de alertas exclusivamente sonoros (devido ao ruído ambiente severo). Para o tablet de P03, tema claro de altíssimo contraste para legibilidade sob luz solar. |
+| **Ambiente social/organizacional** | Estrutura hierárquica e legal rígida da Receita Federal e órgãos de segurança pública; fiscalização aduaneira ininterrupta em turnos de plantão (12x36h); severa pressão de produtividade para evitar filas e gargalos nos gates portuários; elevado risco pessoal e responsabilidade administrativa e criminal (crimes de facilitação de contrabando ou prevaricação). | A interface deve transmitir alta seriedade e transparência corporativa. Cada decisão crítica (ex.: conversão para Canal Cinza - fraude) deve exibir confirmação clara do impacto. O sistema deve apoiar o operador sem criar sensação de vigilância punitiva por parte da IA. |
+| **Papéis/permissões/governança** | Segregação estrita por competência funcional legal: P01 tria e emite apontamento técnico; P02 detém a fé pública exclusiva para formalizar retenção de carga, aplicar penalidades fiscais e autorizar arrombamento de lacre; P03 executa a ordem de busca e apreensão. | Trilha de auditoria imutável (H17, H18, H32): toda ação de veredito é carimbada com a matrícula funcional, perfil do usuário, nível de confiança da IA e timestamp criptográfico, sem permissão de exclusão retroativa de registros. |
+| **Volume de dados/histórico** | Milhares de contêineres inspecionados por mês em cada pórtico; matrizes radiográficas brutas em alta resolução (dezenas de megabytes por arquivo); necessidade legal de armazenamento de históricos de varredura por no mínimo 5 anos para investigações fiscais e inquéritos policiais. | Arquitetura de interface com carregamento assíncrono e progressivo de imagens, sem congelar a UI durante inferências da IA. Mecanismo de busca indexada por número da declaração (DUIMP), contêiner, faixa de datas e canal de risco (RC06, H29). |
 
 ---
 
 ## 4. Jornada do usuário — equipe
 
 **Persona:** Persona P01 — Gustavo Onofre  
-**Objetivo da jornada:** Triar contêineres na fila de varredura, inspecionar suspeitas de anomalia residual com auxílio da IA e emitir veredito motivado com segurança operacional.  
-**Início e fim da jornada:** Inicia na assunção do posto de trabalho na sala de raio-X e encerra no despacho do lote de contêineres com registro formal no sistema.
-
-*(Seção a ser consolidada em conjunto pela equipe.)*
+**Objetivo da jornada:** Triar contêineres na fila de varredura contínua, inspecionar suspeitas de anomalia residual com auxílio da IA e emitir veredito fundamentado com agilidade e segurança jurídica.  
+**Início e fim da jornada:** Inicia na assunção do posto de trabalho na sala de raio-X e encerra no fechamento do lote com registro formal e passagem de plantão.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 |---|---|---|---|---|---|---|
-| 1 | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| **1. Assunção do Posto e Calibração** | Gustavo chega à sala de comando às 19:00 para iniciar o plantão noturno de 12h; autentica-se no sistema com sua matrícula e confere o status de calibração do scanner e da IA. | Iniciar a sessão e certificar-se de que os sensores e o modelo de IA estão operando perfeitamente. | "Mais 12 horas pela frente. Preciso garantir que a estação tá calibrada pra nenhum falso positivo me atrapalhar hoje." *(Foco e atenção)* | Telas de login brancas que ofuscam a visão ao entrar na sala em penumbra. | Inicialização direta em tema escuro profissional (Dark Mode), com dashboard de status dos detectores e carregamento do perfil do operador. | H10, H14, H16 |
+| **2. Triagem e Priorização da Fila** | O fluxo de carretas nos gates é intenso (~60/hora); a tela inicial recebe as novas radiografias e a IA reorganiza a fila automaticamente pelo score de anomalia residual. | Identificar rapidamente quais contêineres precisam de inspeção imediata e quais estão limpos. | "Excelente que os contêineres normais já caem em canal verde; posso focar minha atenção onde há discrepância real." *(Alívio cognitivo)* | Fila linear puramente cronológica que obriga a examinar contêineres normais antes dos suspeitos. | Fila inteligente organizada por 4 canais de risco (Verde, Amarelo, Vermelho, Cinza), com badges textuais e ícones redundantes à cor. | H04, H07, H24 revisada, RC05, RC06 |
+| **3. Análise Detalhada de Alerta Crítico** | Às 02:45 da madrugada, um contêiner é classificado como Canal Cinza (alta anomalia); Gustavo abre a imagem em tela cheia e ativa o slider de opacidade da máscara residual sobre as falsas cores de $Z_{eff}$. | Entender exatamente onde a IA detectou a discrepância e inspecionar se há compartimento falso ou blindagem. | "A IA acusou uma massa densa no canto traseiro do palete... Deixa eu conferir a sobreposição para ver o contorno dos objetos." *(Tensão investigativa)* | Caixas delimitadoras rígidas que tampam a imagem ou alteram as cores de discriminação de material ($Z_{eff}$). | Visualizador central ocupando 70%+ da tela, com controle suave de transparência (0 a 100%) e alternância rápida por tecla de atalho. | H05, H10, H13, H30, RC01, RC09, RC10 |
+| **4. Validação Contextual com Manifesto** | Gustavo abre a gaveta lateral integrada de dados da carga para confrontar a imagem com a Declaração de Importação (DUIMP). | Validar se a densidade atípica visualizada é compatível com o produto declarado na nota fiscal. | "O manifesto declara copos de vidro, mas essa densidade residual é característica de metal ou composto orgânico denso... É ilícito evidente." *(Certeza técnica)* | Ter que alternar para o Portal Único Siscomex em outra tela para consultar o manifesto, perdendo o foco visual da imagem. | Painel lateral retrátil integrado exibindo NCM, descrição declarada, peso e dados do importador sem desviar da radiografia. | H11, RC10, C03 |
+| **5. Emissão de Veredito e Escalonamento** | Gustavo aciona o botão de veredito, seleciona o motivo pré-estruturado ("Incompatibilidade de densidade radiológica com mercadoria declarada"), marca o quadrante e homologa o encaminhamento. | Formalizar a retenção da carga com respaldo legal, encaminhando a ocorrência ao Auditor-Fiscal (P02) e à equipe de campo (P03). | "Veredito homologado com justificativa robusta. Minha parte tá cumprida com total rastreabilidade legal." *(Segurança jurídica)* | Preenchimento burocrático demorado de formulários manuais enquanto a fila de carretas continua aumentando lá fora. | Fluxo de veredito em até 3 cliques, com justificativas normativas pré-formatadas e assinatura digital associada automaticamente à matrícula. | H06, H08, H17, H18, RC04, RC07 |
+| **6. Fechamento de Turno e Passagem de Plantão** | Às 07:00 da manhã, ao término do plantão de 12 horas, Gustavo visualiza o sumário de contêineres triados e transfere a estação ao colega da manhã com os casos pendentes documentados. | Concluir o plantão com todas as cargas auditadas e prestar contas transparentes das decisões tomadas no turno. | "Noite pesada, mas conseguimos barrar um contêiner suspeito sem travar o pátio do terminal." *(Sensação de dever cumprido)* | Perda de contexto na passagem de turno verbal e cansaço visual acumulado ao longo da noite. | Relatório consolidado de passagem de turno exportável em 1 clique, com resumo de contêineres triados, retidos e pendentes de conferência. | H13, H35, H38 |
 
 ---
 
@@ -211,7 +212,14 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes?
 
-*(A ser preenchido pela equipe na consolidação final da entrega.)*
+A partir das personas, do contexto de uso e da jornada do usuário consolidados nesta entrega, os seguintes requisitos, objetivos e tarefas tornam-se **mandatórios para os Cenários de Problema (Entrega 4) e Análise de Tarefas (Entrega 5)**:
+
+1. **Priorização Inteligente da Fila de Triagem por Risco:** O sistema deve organizar a entrada de radiografias de acordo com os 4 canais normativos da Receita Federal (Verde, Amarelo, Vermelho e Cinza), garantindo que cargas com alta anomalia residual da IA recebam foco prioritário imediato do operador.
+2. **Inspeção Comparativa sem Degradação de Imagem:** A interface deve oferecer manipulação visual contínua da anomalia via controle deslizante suave de opacidade (slider de 0 a 100%) e alternância rápida (toggle), garantindo que o mapa residual conviva harmoniosamente com a discriminação de número atômico ($Z_{eff}$) e ferramentas de realce de bordas.
+3. **Ergonomia Visual e Dark Mode Obrigatório:** O ambiente de sala de controle em penumbra e a prevenção da fadiga visual (especialmente nas madrugadas) impõem uma paleta escura de alto contraste com mais de 70% da área útil dedicada à radiografia, com painéis laterais retráteis.
+4. **Integração de Metadados Aduaneiros (Dossiê Documental):** Consulta integrada aos dados da Declaração Única de Importação (DUIMP/Siscomex) diretamente no visualizador de imagem, evitando troca de janelas durante a validação da suspeita.
+5. **Formalização Ágil de Veredito com Rastreabilidade Legal:** Registro de decisões em poucos cliques com justificativas pré-estruturadas, associando a matrícula do operador (P01) e carimbo de tempo para posterior ratificação pelo Auditor-Fiscal (P02).
+6. **Disseminação Simplificada de Alertas para Equipes de Campo:** Notificação direcionada para dispositivos móveis de agentes de segurança (P03), contendo indicação textual/esquemática simplificada do quadrante físico da anomalia no contêiner para busca física no pátio.
 
 ---
 
@@ -225,5 +233,6 @@ Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e n
 - [x] Contexto de uso está coerente com a Entrega 1 e com a análise de concorrência da Entrega 2.
 - [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica (modelo de anomalia residual em raio-X).
 - [x] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
-- [ ] Jornada possui etapas, dores e oportunidades e não é apenas wireflow (aguardando consolidação).
+- [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow (mapeada em 6 etapas operacionais completas).
 - [x] IDs das personas foram mapeados para a rastreabilidade.
+
