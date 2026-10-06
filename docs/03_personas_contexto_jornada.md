@@ -42,6 +42,18 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ## 1. Personas
 
+### Classificação do elenco
+
+A classificação segue o papel de cada persona no design, e não a frequência de uso. Persona primária é a que precisa de uma interface própria, porque não seria bem atendida pela interface desenhada para outra.
+
+| Persona | Classificação | Justificativa |
+|---|---|---|
+| P01, Gustavo Onofre | primária | [H01] Examina a imagem radiográfica, que é onde a contribuição do TCC atua. A interface de análise é desenhada para ela. |
+| P02, Dr. Eduardo Resende | primária | [F] O Auditor-Fiscal é o responsável pelo desembaraço, e o despacho tem distribuição para auditor e exigência fiscal (C02 da Entrega 2). [H39] Se a decisão formal couber a ele, precisa de um fluxo próprio, de conferir a evidência com a declaração e formalizar o ato, que a interface de análise de P01 não atende. |
+| P03, Marcos Oliveira | proto-persona a validar | [H42] Não está demonstrado que o agente de campo interage com a solução. Ele pode receber a ordem por outro sistema, verbalmente ou por documento, pertencer a outro órgão ou não precisar de interface nova. Até H42 ser investigada, P03 é tratado como possível stakeholder do fluxo, fica fora do recorte principal e não justifica uma interface móvel. |
+
+[H39] Se a investigação mostrar que P01 e P02 são a mesma pessoa ou funções da mesma carreira, as duas personas serão fundidas ou redefinidas.
+
 ### Persona P01 — Gustavo Onofre (Fiscal Aduaneiro / Operador de Scanner)
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5  
@@ -76,10 +88,10 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ---
 
-### Persona Secundária P02 — Dr. Eduardo Resende (Auditor-Fiscal da Receita Federal / Chefe de Despacho Aduaneiro)
+### Persona P02 — Dr. Eduardo Resende (Auditor-Fiscal da Receita Federal)
 
 **Autor(a):** Gabriel Albertini Pinheiro — 22.122.094-8  
-**Tipo:** secundária  
+**Tipo:** primária (ver Classificação do elenco)  
 **Base de evidências:** Análise do Portal Único Siscomex na Entrega 2 (C02: fluxo DUIMP, distribuição para auditor, canais de parametrização e exigência fiscal motivada), regulamentação aduaneira da Receita Federal do Brasil (RFB), requisitos de auditoria, conformidade legal e governança (H02, H06, H08, H17, H18, H19, H24 revisada, RC04, RC07, RC08).  
 **Hipóteses da Entrega 1 relacionadas:** H02, H06, H08, H11, H14, H17, H18, H19, H24 (revisada), H29, H32, H35
 
@@ -100,7 +112,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | **Ambiente típico de uso** | Gabinete da Seção de Conferência Aduaneira em delegacia alfandegária de porto; ambiente climatizado de escritório; estação desktop padrão corporativo com dois monitores; acesso autenticado à rede da Receita Federal. |
 | **Comportamentos relevantes** | Analisa os casos com rigor documental e metodológico; antes de lavrar a exigência, consulta o histórico do CNPJ importador; confere sempre a compatibilidade entre a densidade radiológica identificada pela IA e a descrição do produto na nota fiscal/fatura. |
 
-**Decisões de design influenciadas pela Persona Secundária P02 (Eduardo):**
+**Decisões de design influenciadas pela Persona P02 (Eduardo):**
 
 - **Dossiê Integrado Siscomex + Radiografia (RC04, RC07):** Painel consolidado de decisão que exibe, lado a lado, os dados documentais da carga (DUIMP, mercadoria, NCM, importador) e o visualizador radiográfico com o mapa residual da IA, permitindo ao auditor validar a suspeita sem alternar de aplicativo.
 - **Módulo de Linha do Tempo e Consulta a Histórico de Processos (RC06, RC08, H29):** Busca direta por chave processual (número da DUIMP ou contêiner) com exibição cronológica de marcos e histórico de varreduras passadas para investigar reincidência de importadores ou fraudes conhecidas.
@@ -108,9 +120,10 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - **Trilha de Auditoria e Vinculação Funcional (H17, H18, H32):** Registro imutável de cada etapa decisória, associando o login/certificado digital do auditor à homologação do canal de risco e à ordem de intervenção enviada ao agente de campo (P03).
 ---
 
-### Persona Secundária P03 — Marcos Oliveira / Agente de Segurança Pública (Operacional de Campo)
+### Persona P03 — Marcos Oliveira / Agente de Segurança Pública (Operacional de Campo)
 
-**Tipo:** secundária  
+**Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6  
+**Tipo:** proto-persona a validar, possível stakeholder (ver Classificação do elenco)  
 **Base de evidências:** Estruturada a partir dos requisitos formais de interceptação aduaneira e policial no ambiente portuário, pelas regras normativas de exigência/conferência física do Siscomex (C02), pelas hipóteses de uso operacional de campo (H03, H16, H17, H19, H24) e pela necessidade de consumo simplificado do resultado da IA sem complexidade de análise radiográfica.  
 **Hipóteses da Entrega 1 relacionadas:** H03, H06, H08, H12, H14, H16, H17, H18, H19, H24 (revisada)
 
@@ -133,7 +146,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ---
 
-### Decisões de design influenciadas pela Persona Secundária P03 (Marcos):
+### Decisões de design influenciadas pela Persona P03 (Marcos):
 
 * **Cartão de Veredito Simplificado (Avisos de Campo):** Para perfis de segurança/policiais, o sistema deve fornecer uma visualização simplificada/exportável contendo apenas o número do contêiner, placa do veículo, o status formal do canal (ex.: `[CANAL CINZA — RETENÇÃO IMEDIATA]`) e a presença ou ausência de anomalia, sem expor o visualizador completo de raio-X.
 * **Mapeamento de Zona/Quadrante no Contêiner:** A anomalia deve ser traduzida em uma localização textual/esquemática simples (ex.: "Quadrante 3 — Fundo do Contêiner, Lado Direito") para guiar a busca física no pátio sem exigir que o policial interprete a imagem radiográfica.
@@ -147,7 +160,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 |---|---|---|---|
 | **Autor(a)** | Kawan Mark Geronimo Da Silva | Gabriel Albertini Pinheiro | Alexandre Domiciano Pierri |
 | **Papel no domínio** | Fiscal Aduaneiro / Operador de Scanner (1ª Linha Operacional) | Auditor-Fiscal da Receita Federal / Chefe de Despacho (2ª Linha Decisória) | Agente de Segurança Pública / Policial de Campo (Ação Tática) |
-| **Tipo de persona** | **Primária** | **Secundária** | **Secundária** |
+| **Tipo de persona** | **Primária** | **Primária** | **Proto-persona a validar** (possível stakeholder, H42) |
 | **Dispositivo / Hardware** | Desktop com monitor dedicado de 24" de alta resolução radiográfica | Desktop corporativo padrão com dois monitores | Tablet / coletor móvel robustecido de pátio |
 | **Ambiente de uso** | Sala de comando portuária em penumbra, ruído externo e alta demanda | Gabinete administrativo climatizado e silencioso | Pátio externo aberto sob intempéries (sol, chuva, poeira) e ruído |
 | **Frequência de interação** | Contínua e ininterrupta (varredura de dezenas de contêineres por hora) | Sob demanda / escalonamento (ao receber casos de Canal Vermelho/Cinza) | Pontual e imediata (ao receber alertas de interceptação ou vistoria física) |
@@ -160,7 +173,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 ## 2. Mapa de empatia — equipe
 
 **Persona escolhida:** Persona P01 — Gustavo Onofre  
-**Justificativa:** É a persona primária do projeto, representando o operador direto que toma a decisão crítica de triagem e veredito na estação de imagem sob condições severas de fadiga visual e pressão de tempo.
+**Justificativa:** Das duas personas primárias, P01 é a que examina a imagem, onde a contribuição do TCC atua. O mapa é o de uma proto-persona: o conteúdo é hipotético [H], salvo onde indicado [F].
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
