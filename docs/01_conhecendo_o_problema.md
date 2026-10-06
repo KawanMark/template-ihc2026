@@ -186,7 +186,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
 
-[H09] Hoje, operadores utilizam softwares fornecidos pelos fabricantes dos scanners de raio-X, visualizando imagens densas em múltiplos monitores, sem auxílio avançado de IA para destaque de anomalias complexas, baseando-se puramente em inspeção visual humana.
+[H09] Hoje, quem opera a estação usa os softwares fornecidos pelos fabricantes dos scanners. [F] Esses softwares já oferecem apoio analítico, como discriminação de materiais por pseudo-cor, realce de bordas e comparação com imagens semelhantes (C01 e C03 da Entrega 2), mas não foi encontrada detecção autossupervisionada de anomalias. [H] A interpretação final da imagem continua sendo visual e humana.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
@@ -220,7 +220,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
-[H15] Estações de trabalho desktop profissionais com múltiplos monitores de alta resolução e gama dinâmica otimizada para imagens radiográficas.
+[H15] Estação de trabalho desktop com monitor dedicado para imagens radiográficas. [F] A especificação da estação de trabalho da Smiths Detection indica monitores de 22" a 24" (C03 da Entrega 2). [?] Não há evidência de configuração com múltiplos monitores.
 
 ## 5.3 Existem condições físicas relevantes?
 
@@ -268,7 +268,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-[H24] Terminologia aduaneira e portuária (BL, Manifesto, Recinto, Vistoria, Despacho), códigos de risco por cores (verde, amarelo, vermelho) e filas de status.
+[H24] Terminologia aduaneira e portuária (BL, Manifesto, Recinto, Vistoria, Despacho) e filas de status. [F] O despacho de importação usa quatro canais de parametrização: verde, amarelo, vermelho e cinza (Manual de Despacho de Importação da RFB, C02 da Entrega 2). Os canais são uma classificação normativa do processo de despacho, e não uma escala de risco produzida pelo modelo de IA.
 
 ---
 
@@ -401,8 +401,8 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Quem é o usuário prioritário de IHC?  | [H01] Operador da estação de imagem de raio-X. A relação com o Auditor-Fiscal que formaliza a decisão está aberta (H39). |
 | O que ele precisa alcançar?             | Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez.                                        |
 | Qual problema/atividade será estudado?  | Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.                                                                                    |
-| Como isso acontece hoje?                 | Inspeção visual manual em softwares legados de fabricantes de scanners.                                                                                              |
-| Qual é o contexto de uso?               | Sala de controle portuária, alta resolução, pressão temporal e gravidade da segurança.                                                                            |
+| Como isso acontece hoje?                 | [H09] Inspeção visual em softwares dos fabricantes de scanners, que já oferecem apoio analítico (pseudo-cor, realce, comparação), sem detecção autossupervisionada de anomalias. |
+| Qual é o contexto de uso?               | [H14, H15, H16] Sala de controle portuária, estação com monitor dedicado de 22" a 24", pressão temporal e gravidade da segurança. |
 | Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.                                                                                            |
 | Como a interface se relaciona ao TCC?    | Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.                                                                                  |
 | Quais pontos ainda são hipóteses?      | H30 (preferência de layout de comparação), H31 (impacto do score de confiança e da marcação ROI na aceitação da IA) e H33 (eficácia da priorização automática da fila por risco). Lacunas abertas: ?01 (perfil de administrador) e ?02 (frequência da consulta ao histórico). |
