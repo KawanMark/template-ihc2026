@@ -157,7 +157,9 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 
-[H38] O fiscal aduaneiro tentando garantir a segurança da carga que entra no país e cumprir as metas de liberação alfandegária sem causar gargalos logísticos no porto. Alem do objetivo de bater a meta diária de liberação de contêineres do terminal com segurança jurídica e absoluta certeza de que nenhum ilícito passou despercebido.
+[H38] Ao examinar cada contêiner, quem opera a estação de imagem procura chegar a uma conclusão em que confie: entender se o que aparece na imagem é compatível com a carga declarada, saber onde olhar quando há algo atípico e registrar o que concluiu de forma que possa ser defendida depois. Essa conclusão é tomada sob incerteza. Falsos positivos e falsos negativos são possíveis (H12), e o objetivo é reduzir a incerteza, não eliminá-la.
+
+[?07] Não sabemos se existem metas de liberação por turno para esse perfil, nem como seriam cobradas. A segurança da carga que entra no país e a fluidez do porto são objetivos da organização (H36), não necessariamente o que o usuário busca durante a tarefa.
 
 ## 3.2 Quais são as atividades mais importantes?
 
