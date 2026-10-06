@@ -1,5 +1,27 @@
 # Feedback do Professor > Entrega 01 > Grupo 09
 
+> **Status da aplicação (06/10/2026):** esta revisão cobre a Entrega 1 inteira e a matriz de rastreabilidade, que são trabalho de grupo. Cada comentário abaixo traz uma anotação com o link para o commit correspondente, na branch `aplicar-feedback`. O texto original do professor foi preservado; as anotações aparecem em blocos de citação logo após cada item.
+>
+> | Item do parecer | Situação | Commit(s) |
+> |---|---|---|
+> | Correção 1: papéis de operador e fiscal | aplicada | [`47b55d3`](https://github.com/KawanMark/template-ihc2026/commit/47b55d3) |
+> | Correção 2: objetivo do usuário | aplicada | [`480ed2c`](https://github.com/KawanMark/template-ihc2026/commit/480ed2c) |
+> | Correção 3: fontes dos fatos | aplicada | [`07a2966`](https://github.com/KawanMark/template-ihc2026/commit/07a2966) |
+> | Correção 4: coerência com a matriz | aplicada | [`074ef91`](https://github.com/KawanMark/template-ihc2026/commit/074ef91) |
+> | Correção 5: tecnologia convertida em requisito | aplicada | [`46813c3`](https://github.com/KawanMark/template-ihc2026/commit/46813c3) |
+> | Correção 6: escopo de interação | aplicada | [`3d88701`](https://github.com/KawanMark/template-ihc2026/commit/3d88701) |
+> | Correção 7: priorização das hipóteses | aplicada | [`8483739`](https://github.com/KawanMark/template-ihc2026/commit/8483739) |
+> | Correção 8: Fiscal Carlos | aplicada | [`21b82f1`](https://github.com/KawanMark/template-ihc2026/commit/21b82f1) |
+> | Correção 9: lacunas da matriz | aplicada | [`65ba4cc`](https://github.com/KawanMark/template-ihc2026/commit/65ba4cc) |
+> | Correção 10: colisão de identificadores | aplicada | [`e5959a8`](https://github.com/KawanMark/template-ihc2026/commit/e5959a8) |
+> | Recomendação 1: afirmações absolutas | aplicada | [`de898c8`](https://github.com/KawanMark/template-ihc2026/commit/de898c8) |
+> | Recomendação 2: nomenclatura da seção 9.2 | aplicada | [`0b28ebc`](https://github.com/KawanMark/template-ihc2026/commit/0b28ebc) |
+> | Recomendação 3: onde investigar cada hipótese | aplicada | [`d3eec41`](https://github.com/KawanMark/template-ihc2026/commit/d3eec41) |
+> | Recomendação 4: duplicações e terminologia | aplicada | [`21b82f1`](https://github.com/KawanMark/template-ihc2026/commit/21b82f1), [`5cbd425`](https://github.com/KawanMark/template-ihc2026/commit/5cbd425) |
+> | Registro da revisão | aplicado | [`93bb475`](https://github.com/KawanMark/template-ihc2026/commit/93bb475) |
+>
+> \- Gabriel
+
 ## Avaliação geral
 
 A equipe construiu uma Entrega 01 bastante estruturada e, de modo geral, compreendeu a principal proposta desta etapa: partir de um TCC predominantemente técnico e construir um cenário plausível de uso para a disciplina de IHC. A separação entre contribuição técnica do TCC e possível aplicação interativa está clara, o usuário prioritário foi explicitado, o contexto foi inicialmente descrito e houve esforço consistente para distinguir fatos, hipóteses e lacunas.
@@ -33,6 +55,10 @@ A equipe precisa investigar essa separação antes de consolidar a persona princ
 
 Essa revisão afeta diretamente H01, H04, H05, H06, H07, H08 e o recorte descrito em 7.2–7.4.
 
+> **✅ Como foi tratado** ([`47b55d3`](https://github.com/KawanMark/template-ihc2026/commit/47b55d3)): as seções 2.2, 3.2, 7.1 a 7.4 e 11 da Entrega 1 passam a distinguir o **operador da estação de imagem**, que examina a radiografia (H01), do **Auditor-Fiscal**, que decide e formaliza. A dúvida sobre serem ou não a mesma pessoa virou a hipótese H39, registrada na matriz. A atividade A03 fica com responsável `[?]` até H39 ser investigada na Entrega 7.
+>
+> \- Gabriel
+
 ### 2. O objetivo do usuário ainda mistura objetivo humano, meta organizacional e uma condição impossível de garantir
 
 Na seção 3.1, o objetivo é descrito como garantir segurança, cumprir metas de liberação, evitar gargalos, "bater a meta diária" e alcançar **"absoluta certeza de que nenhum ilícito passou despercebido"**.
@@ -44,6 +70,10 @@ Primeiro, parte do texto descreve objetivos organizacionais ou indicadores opera
 A equipe precisa reformular o objetivo de modo que ele represente aquilo que o usuário procura alcançar durante a atividade, sem transformar uma expectativa ideal em garantia absoluta e sem assumir metas organizacionais ainda não investigadas.
 
 Este ponto é particularmente importante porque objetivos mal definidos contaminam personas, cenários, tarefas, métricas de usabilidade e decisões posteriores de interface.
+
+> **✅ Como foi tratado** ([`480ed2c`](https://github.com/KawanMark/template-ihc2026/commit/480ed2c)): a seção 3.1 descreve o que o usuário busca durante a tarefa: chegar a uma conclusão em que confie e registrá-la de forma defensável, sob incerteza. "Absoluta certeza" saiu. A meta diária de liberação virou a lacuna ?07, e segurança e fluidez do porto ficaram como objetivos da organização (H36). H38 foi reformulada na matriz.
+>
+> \- Gabriel
 
 ### 3. Algumas afirmações marcadas como fato ainda possuem evidência insuficientemente identificada
 
@@ -58,6 +88,10 @@ Exemplos:
 O problema não é a plausibilidade dessas afirmações. O problema é a rastreabilidade. Quando a equipe marca algo como fato, o leitor precisa conseguir descobrir de onde aquilo veio.
 
 Revisem os fatos para indicar uma fonte concreta quando ela existir. Se a equipe ainda não possui fonte suficiente, mantenham a afirmação como hipótese. Nesta disciplina, uma hipótese corretamente identificada é melhor do que um "fato" difícil de verificar.
+
+> **✅ Como foi tratado** ([`07a2966`](https://github.com/KawanMark/template-ihc2026/commit/07a2966)): FT01 ficou restrito ao que o artigo base sustenta (Gaikwad et al., 2024) e a afirmação sobre o volume do comércio exterior virou a hipótese H40, sem fonte por enquanto. FT02 cita o Manual de Despacho de Importação da RFB e FT03 cita as páginas oficiais da Rapiscan AS&E e da Smiths Detection, ambas levantadas na Entrega 2. O trecho de FT02 sobre custos logísticos ficou como `[H]`.
+>
+> \- Gabriel
 
 ### 4. A Entrega 01 ficou inconsistente com evidências posteriores já registradas na própria rastreabilidade
 
@@ -74,6 +108,10 @@ Isso não é um problema por a equipe ter "errado no começo". A Entrega 01 é j
 
 Sugiro atualizar a Entrega 01 ou marcar explicitamente os trechos superados, preservando o histórico na rastreabilidade. A regra é simples: **nova evidência pode mudar o projeto, mas a mudança precisa aparecer de forma coerente nos artefatos relacionados**.
 
+> **✅ Como foi tratado** ([`074ef91`](https://github.com/KawanMark/template-ihc2026/commit/074ef91)): as seções 4.1, 5.2, 6.6 e a síntese da seção 11 refletem H09, H15 e H24 como estão na matriz: softwares atuais já oferecem apoio analítico, o monitor é dedicado de 22" a 24" sem evidência de múltiplos monitores, e os canais são quatro. A seção 6.6 também diz que os canais são classificação normativa, não escala de risco da IA. A linha de contexto de uso da seção 1 da matriz foi alinhada.
+>
+> \- Gabriel
+
 ### 5. Algumas hipóteses técnicas estão sendo convertidas cedo demais em requisitos de interface
 
 A seção 9.3 merece revisão cuidadosa.
@@ -87,6 +125,10 @@ Um mapa residual não prova, por si só, que o usuário precisa de heatmap, slid
 Essas formulações devem permanecer como **hipóteses de design a investigar**, e não como consequências inevitáveis da arquitetura do TCC.
 
 Cuidado para não deixar a IA do TCC virar o "designer" da interface. Quem deve determinar a forma de apresentação são as necessidades da atividade, o contexto e as evidências sobre os usuários.
+
+> **✅ Como foi tratado** ([`46813c3`](https://github.com/KawanMark/template-ihc2026/commit/46813c3)): na seção 9.3 a terceira coluna passou a se chamar "Possibilidade ou restrição para a interação (hipótese de design a investigar)". Cada linha separa o que é fato da tecnologia do que é alternativa de apresentação, ligada a H27, H30, H31 e ?05.
+>
+> \- Gabriel
 
 ### 6. O escopo de interação está se expandindo além do fluxo central antes de as necessidades estarem confirmadas
 
@@ -107,6 +149,10 @@ Antes de avançar, classifiquem o que é:
 
 Isso é importante para evitar que o projeto vire "um sistema portuário completo" quando o objetivo da disciplina é aprofundar um problema de interação suficientemente delimitado.
 
+> **✅ Como foi tratado** ([`3d88701`](https://github.com/KawanMark/template-ihc2026/commit/3d88701)): a tabela da seção 8 ganhou a coluna "Classificação no recorte" com os quatro níveis pedidos. Ficaram como essenciais a comparação, o destaque da região apontada e o registro do resultado. Dashboard, alertas, acompanhamento de processamento e relatório são hipóteses secundárias. Histórico e parametrização são de outros perfis. Upload e ajuda podem ser descartados.
+>
+> \- Gabriel
+
 ### 7. As hipóteses prioritárias escolhidas estão muito orientadas à solução; faltam hipóteses mais fundamentais sobre o trabalho real
 
 Na seção 10, a equipe priorizou H30, H31 e H33:
@@ -123,6 +169,10 @@ Antes de testar se um slider é melhor do que duas imagens lado a lado, a equipe
 
 Revisem a priorização das hipóteses considerando **risco para o projeto**: quais suposições, se estiverem erradas, obrigariam a mudar o usuário, o fluxo ou o próprio recorte de IHC?
 
+> **✅ Como foi tratado** ([`8483739`](https://github.com/KawanMark/template-ihc2026/commit/8483739)): a seção 10 ordena as hipóteses pelo risco para o projeto. Em prioridade 1 estão H01 e H39, H04 e H07, H06 e H08, H11 e H14 a H16. H30, H31 e H33 ficaram em prioridade 2. A síntese da seção 11 acompanha.
+>
+> \- Gabriel
+
 ### 8. A situação do "Fiscal Carlos" deve continuar claramente como cenário hipotético, não como perfil já conhecido
 
 A seção 4.5 cria uma situação bastante específica: "Carlos", terceiro turno consecutivo, 03:00 da manhã, centenas de contêineres e falha causada por exaustão.
@@ -132,6 +182,10 @@ Como cenário exploratório, isso é útil. Como descrição do trabalho real, a
 A própria equipe marcou H13 como hipótese, o que está correto. Porém, na seção 12, já aparece "personas (Fiscal Carlos)", sugerindo que o personagem começou a ganhar status de usuário representativo antes da investigação.
 
 Não transformem o exemplo narrativo da Entrega 01 em persona por inércia. A persona das próximas etapas deve ser derivada de informações investigadas sobre o perfil, e não do personagem que ficou mais fácil de lembrar.
+
+> **✅ Como foi tratado** ([`21b82f1`](https://github.com/KawanMark/template-ihc2026/commit/21b82f1)): a seção 4.5 declara que a situação é um cenário exploratório e que Carlos não é perfil investigado nem persona. A seção 12 não cita mais "personas (Fiscal Carlos)".
+>
+> \- Gabriel
 
 ### 9. A matriz de rastreabilidade ainda possui lacunas justamente na ligação que mais importa para um TCC sem interface original
 
@@ -145,6 +199,10 @@ Não é necessário preencher hoje campos que pertencem a entregas futuras. O qu
 
 O problema não é existir campo pendente. O problema é a rastreabilidade central continuar apenas como modelo vazio enquanto várias funcionalidades já foram propostas.
 
+> **✅ Como foi tratado** ([`65ba4cc`](https://github.com/KawanMark/template-ihc2026/commit/65ba4cc)): a seção 3 da matriz tem três linhas reais (R01 a R03) ligando capacidade do TCC, necessidade, persona e atividade, com as colunas de entregas futuras marcadas `PENDENTE`. A seção 4 lista os padrões em avaliação (fila de triagem, histórico) com a tarefa e a evidência de cada um, e registra administração/CRUD como não adotado.
+>
+> \- Gabriel
+
 ### 10. Os identificadores estão começando a colidir e podem prejudicar a rastreabilidade
 
 Na Entrega 01, `F01` aparece como identificador de um fato na seção 1.2 e depois `F01`, `F02`, `F03` e `F04` são reutilizados como identificadores de ações/funcionalidades na seção 9.2.
@@ -152,6 +210,10 @@ Na Entrega 01, `F01` aparece como identificador de um fato na seção 1.2 e depo
 Isso pode gerar ambiguidade nas entregas seguintes, especialmente quando os mesmos códigos começarem a aparecer em cenários, modelos de tarefa, protótipos e avaliações.
 
 A equipe deve estabelecer uma convenção estável de identificadores e evitar reutilizar o mesmo prefixo para tipos diferentes de informação. O nome exato do prefixo é menos importante do que a consistência ao longo do semestre.
+
+> **✅ Como foi tratado** ([`e5959a8`](https://github.com/KawanMark/template-ihc2026/commit/e5959a8)): as ações da seção 9.2 passaram a AC01 a AC04 e os fatos a FT01 a FT03. A matriz ganhou a seção "Convenção de identificadores", com `F` reservado a telas, `C` a concorrentes e `CP` a cenários de problema.
+>
+> \- Gabriel
 
 ## Recomendações de melhoria
 
@@ -167,6 +229,10 @@ Na comunicação do projeto, mantenham a distinção entre:
 
 Isso deixa o projeto mais científico e mais convincente, não menos.
 
+> **✅ Como foi tratado** ([`de898c8`](https://github.com/KawanMark/template-ihc2026/commit/de898c8)): a seção 13 separa o problema sustentado (FT01), a contribuição técnica pretendida e os benefícios esperados ainda a validar (H34, H36).
+>
+> \- Gabriel
+
 ### 2. Revisar a nomenclatura entre atividade, objetivo, ação e funcionalidade
 
 A seção 9.2 usa identificadores `F01–F04` para "ações que o usuário deverá conseguir realizar". Algumas delas parecem tarefas do usuário; outras já pressupõem uma organização específica da interface, como "visualizar fila classificada por risco".
@@ -181,6 +247,10 @@ Nas próximas entregas, tomem cuidado para não confundir:
 
 Essa distinção será importante na modelagem de tarefas.
 
+> **✅ Como foi tratado** ([`0b28ebc`](https://github.com/KawanMark/template-ihc2026/commit/0b28ebc)): AC01 a AC04 descrevem resultados que o usuário precisa alcançar, sem pressupor fila classificada ou outro componente.
+>
+> \- Gabriel
+
 ### 3. Revisar onde cada hipótese realmente deve ser investigada
 
 Alguns campos "Como/onde investigar" apontam diretamente para prototipação ou modelagem quando a pergunta é, na verdade, sobre o trabalho real.
@@ -189,11 +259,19 @@ Por exemplo, saber se uma atividade é frequente, quem a executa ou como uma dec
 
 A equipe deve diferenciar investigação de **situação atual** de avaliação de **solução proposta**.
 
+> **✅ Como foi tratado** ([`d3eec41`](https://github.com/KawanMark/template-ihc2026/commit/d3eec41)): na matriz, H04 a H08, H10, H11, H16, H29 e H33 apontam para a coleta de dados da Entrega 7 quando a pergunta é sobre o trabalho real. Uma nota na seção 2 da matriz explica a diferença entre investigar a situação atual e avaliar a solução.
+>
+> \- Gabriel
+
 ### 4. Limpar duplicações e pequenos problemas de consistência editorial
 
 A seção 12 repete parte do encadeamento das próximas entregas. Existem também pequenas diferenças terminológicas entre "operador", "fiscal", "Fiscal Aduaneiro" e "Operador de Scanner".
 
 Esses pontos não comprometem o mérito da entrega, mas vale corrigi-los agora porque terminologia inconsistente se torna um problema grande quando começa a aparecer em personas, cenários, HTA, MoLIC e protótipos.
+
+> **✅ Como foi tratado** ([`21b82f1`](https://github.com/KawanMark/template-ihc2026/commit/21b82f1), [`5cbd425`](https://github.com/KawanMark/template-ihc2026/commit/5cbd425)): a lista duplicada da seção 12 foi removida, e as seções 2.4, 4.5, 9.1 e 11 usam "operador da estação de imagem".
+>
+> \- Gabriel
 
 ## Pontos que devem alimentar as próximas entregas
 
@@ -208,6 +286,10 @@ Esses pontos não comprometem o mérito da entrega, mas vale corrigi-los agora p
 - **Personas:** não converter automaticamente "Carlos" em persona. Primeiro investiguem o perfil; depois construam a representação.
 - **Modelagem de tarefas:** partir do trabalho efetivamente investigado e não da sequência de telas imaginada.
 
+> **ℹ️ Encaminhamento** ([`8483739`](https://github.com/KawanMark/template-ihc2026/commit/8483739), [`d3eec41`](https://github.com/KawanMark/template-ihc2026/commit/d3eec41)): estes pontos orientam as Entregas 4 a 8. A divisão de papéis (H01, H39), H04 a H08 e H14 a H17 estão em prioridade 1 na seção 10 e apontam para a Entrega 7 na matriz. Os pontos sobre personas e sobre H25, H28 a H33 foram tratados na revisão das Entregas 2 e 3.
+>
+> \- Gabriel
+
 ## Síntese das ações recomendadas
 
 1. **Separar e confirmar os papéis de Operador de Scanner e Fiscal Aduaneiro**, definindo quem será realmente o usuário prioritário.
@@ -220,5 +302,9 @@ Esses pontos não comprometem o mérito da entrega, mas vale corrigi-los agora p
 8. **Preencher a ligação inicial da matriz de rastreabilidade** entre contribuição do TCC, necessidade, tarefa e fluxo, deixando etapas futuras como `PENDENTE`.
 9. **Eliminar colisões de identificadores** e estabelecer uma convenção que possa ser mantida ao longo das próximas entregas.
 10. **Manter o "Fiscal Carlos" apenas como cenário hipotético** até que dados sobre usuários permitam construir uma persona sustentada.
+
+> **Situação:** as dez ações foram aplicadas na Entrega 1 e na matriz, que são trabalho de grupo. Nada ficou pendente com outros integrantes. As hipóteses novas (H39, H40) e a lacuna ?07 dependem da coleta de dados da Entrega 7.
+>
+> \- Gabriel
 
 A equipe está com uma base promissora para a continuidade da disciplina. Agora o trabalho precisa ficar um pouco menos "pronto para desenhar a tela" e um pouco mais "pronto para provar que estamos desenhando a tela certa para a pessoa certa". Essa diferença é pequena no texto, mas enorme em IHC.
