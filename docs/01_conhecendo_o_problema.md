@@ -386,11 +386,18 @@ A tecnologia do TCC cria possibilidades e restrições, mas não determina a for
 
 # 10. Hipóteses e dúvidas prioritárias
 
-| ID  | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
-| --- | ----------------- | --------------- | ---------------------------- |
-| H30 | Operadores preferem a visualização lado a lado (imagem original vs. mapa residual) em vez de sobreposição com ajuste de opacidade (slider). | Define a arquitetura da tela principal de análise e o nível de esforço cognitivo do fiscal durante a inspeção. | Teste A/B com wireframes e protótipos de baixa fidelidade na Entrega 6. |
-| H31 | A exibição de um índice percentual de anomalia (score de risco) acompanhado de marcação visual (ROI) é suficiente para o fiscal tomar a decisão sem precisar ver métricas estáticas do modelo. | Evita a sobrecarga de informações matemáticas complexas na tela para um operador sob pressão de tempo e fadiga. | Entrevistas e validação de requisitos de IHC nas Entregas 3 e 5. |
-| H33 | A reorganização automática da fila de trabalho baseada no nível de risco (alertas em tempo real) reduz o tempo de resposta em contêineres críticos. | Valida se a automação da priorização agrega valor direto ao fluxo diário de triagem aduaneira. | Modelagem de Tarefas (HTA) na Entrega 5 e avaliação de usabilidade nas Entregas 12–14. |
+As hipóteses estão ordenadas pelo risco para o projeto: primeiro as que, se estiverem erradas, obrigam a mudar o usuário, o fluxo ou o recorte de IHC. As hipóteses sobre alternativas de solução vêm depois.
+
+| Prioridade | ID | Hipótese/dúvida | O que muda se estiver errada | Como poderá ser investigada |
+| --- | --- | --- | --- | --- |
+| 1 | H01, H39 | Quem opera a estação de imagem é o usuário direto, e a decisão formal sobre a carga pode caber a outro cargo. | Muda o usuário prioritário, as permissões e o significado do registro feito na interface. | Entrega 7: entrevista com profissional da área ou, na falta, normas e material institucional da RFB sobre conferência com escâner. |
+| 1 | H04, H07 | A triagem é uma atividade contínua e frequente, e existe uma fila de contêineres a examinar. | Se as imagens chegam uma a uma, sem fila, a triagem e a priorização saem do recorte. | Entrega 7: entrevista ou observação. A Entrega 5 modela só o que estiver sustentado. |
+| 1 | H06, H08 | O resultado da análise é registrado formalmente, e esse registro é a etapa mais crítica. | Muda o fluxo de registro e o risco de duplicar o que já é feito no Siscomex. | Entrega 7: entrevista e documentação do despacho (C02 da Entrega 2). |
+| 1 | H11 | Além da imagem, o profissional usa dados da carga declarada para concluir. | Define quais informações precisam estar disponíveis junto da imagem e em que momento. | Entrega 7: entrevista. |
+| 1 | H14, H15, H16 | O uso ocorre em sala de controle, em estação dedicada, com ruído, interrupções e pressão de tempo. | Restringe cor, som e densidade de informação. | Entrega 7: entrevista, fotos ou material institucional do ambiente. |
+| 2 | H30 | Visualização lado a lado (imagem original e mapa residual) é preferível à sobreposição com ajuste de opacidade. | Define a disposição da tela de análise. Só faz sentido testar depois de confirmados usuário e tarefa. | Entrega 6: comparação de alternativas em baixa fidelidade. |
+| 2 | H31 | Um índice de anomalia acompanhado de marcação da região é suficiente para apoiar a conclusão. | Define o nível de explicação mostrado. | Entrega 6 e avaliação nas Entregas 12 a 14. |
+| 2 | H33 | Reorganizar a fila por nível de anomalia reduz o tempo de resposta em casos críticos. | Depende de H04: sem fila, não há o que reorganizar. | Entrega 7 para a tarefa; Entregas 12 a 14 para a solução. |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -409,7 +416,7 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Qual é o contexto de uso?               | [H14, H15, H16] Sala de controle portuária, estação com monitor dedicado de 22" a 24", pressão temporal e gravidade da segurança. |
 | Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.                                                                                            |
 | Como a interface se relaciona ao TCC?    | Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.                                                                                  |
-| Quais pontos ainda são hipóteses?      | H30 (preferência de layout de comparação), H31 (impacto do score de confiança e da marcação ROI na aceitação da IA) e H33 (eficácia da priorização automática da fila por risco). Lacunas abertas: ?01 (perfil de administrador) e ?02 (frequência da consulta ao histórico). |
+| Quais pontos ainda são hipóteses?      | Prioridade 1, porque podem mudar usuário, tarefa ou recorte: H01 e H39 (quem opera e quem decide), H04 e H07 (existência e frequência da triagem em fila), H06 e H08 (registro do resultado), H11 (informações para concluir) e H14 a H16 (contexto). Prioridade 2, alternativas de solução: H30, H31 e H33. Lacunas abertas: ?01, ?02 e ?07. |
 
 ### Delimitação
 
