@@ -364,12 +364,14 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
+As linhas descrevem resultados que o usuário precisa alcançar, e não telas ou componentes. A forma de apoiar cada um será definida a partir da modelagem de tarefas.
+
 | ID  | O usuário precisa conseguir...                                                 | Para alcançar...                                     | Prioridade inicial |
 | --- | ------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------ |
-| AC01 | Visualizar fila de contêineres classificados por nível de risco               | Priorizar inspeções críticas                       | Alta               |
-| AC02 | Comparar imagem original de raio-X com o mapa residual de anomalia              | Confirmar a veracidade do alerta da IA                | Alta               |
-| AC03 | Registrar veredito (liberado / vistoria física / retenção) com justificativa | Concluir o despacho alfandegário com rastreabilidade | Alta               |
-| AC04 | Consultar histórico de varreduras anteriores                                   | Investigar reincidências ou auditar laudos           | Média             |
+| AC01 | Saber quais contêineres examinar e em que ordem (depende de H04) | Dedicar atenção primeiro ao que mais precisa | Alta |
+| AC02 | Entender onde e por que a IA apontou discrepância na imagem | Concluir se o apontamento é procedente | Alta |
+| AC03 | Registrar o resultado da análise com sua justificativa (apontamento ou decisão, conforme H39) | Deixar a conclusão rastreável para quem decide e para auditoria | Alta |
+| AC04 | Recuperar análises anteriores de um contêiner ou declaração | Investigar reincidências ou auditar análises | Média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
