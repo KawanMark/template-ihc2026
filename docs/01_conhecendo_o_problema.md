@@ -133,9 +133,12 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 | Perfil                                                     | Relação com a contribuição | O que faria                                                                                                                   | Status/evidência |
 | ---------------------------------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| **Operador de Scanner de Raio-X / Fiscal Aduaneiro** | Usuário direto operacional    | Visualiza a fila de contêineres triados, analisa mapas residuais de anomalia e decide sobre liberação ou vistoria física. | [H01] Hipótese     |
+| **Operador da estação de imagem de raio-X** | Usuário direto operacional | Examina a radiografia e o mapa residual de cada contêiner e produz um apontamento sobre o que encontrou. | [H01] Hipótese |
+| **Autoridade aduaneira que decide e formaliza (Auditor-Fiscal)** | Usuário direto ou destinatário do apontamento | Decide sobre liberação, vistoria física ou retenção e registra o ato formal. Pode ser a mesma pessoa que opera a estação ou outro cargo. | [H39] Hipótese |
 | **Analista de Inteligência Aduaneira**              | Usuário tático               | Consulta relatórios históricos de varreduras, investiga padrões de contrabando e audita decisões anteriores.              | [H02] Hipótese     |
 | **Administrador / Engenheiro de IA**                 | Configurador técnico          | Ajusta limiares de sensibilidade (*thresholds*) do modelo e monitora a performance do pipeline de IA.                       | [?01] Lacuna        |
+
+[H39] Operar a estação de imagem e decidir formalmente sobre a carga podem ser atividades de pessoas ou cargos diferentes, com permissões, vocabulário e responsabilidades distintas. [?] Ainda não sabemos quem executa cada parte: quem opera a estação, quem interpreta a imagem, quem recebe o apontamento, quem decide, quem registra a decisão e quem responde formalmente por ela. Nos trechos seguintes, "operador da estação" designa quem examina a imagem e "Auditor-Fiscal" designa quem detém a decisão formal, sem assumir que são a mesma pessoa.
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
@@ -160,9 +163,9 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 | ID  | Atividade/objetivo                                                                          | Quem realiza              | Frequência/criticidade inicial | Status/evidência |
 | --- | ------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------- | ----------------- |
-| A01 | Triar a fila diária de contêineres escaneados por raio-X                                  | Operador de Scanner       | Alta / Crítica                 | [H04] Hipótese     |
-| A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Fiscal Aduaneiro          | Média / Alta                   | [H05] Hipótese     |
-| A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção)                 | Fiscal Aduaneiro          | Alta / Crítica                 | [H06] Hipótese     |
+| A01 | Triar a fila diária de contêineres escaneados por raio-X | Operador da estação de imagem [H01] | Alta / Crítica | [H04] Hipótese |
+| A02 | Inspecionar detalhes de uma anomalia detectada (comparar imagem original com mapa residual) | Operador da estação de imagem [H01] | Média / Alta | [H05] Hipótese |
+| A03 | Registrar o veredito (liberado, suspeito para vistoria física, retenção) | [?] Operador da estação ou Auditor-Fiscal, conforme H39 | Alta / Crítica | [H06] Hipótese |
 | A04 | Consultar histórico de varreduras e laudos anteriores                                      | Analista de Inteligência | Baixa / Média                  | [?02] Lacuna        |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
@@ -282,26 +285,26 @@ Faça o exercício de transferência de uso:
 > **Imagine que o TCC foi concluído com sucesso e uma empresa, laboratório ou organização quer transformar a contribuição em algo utilizável. Quem precisaria interagir com ela e para quê?**
 
 1. quem poderia contratar/adotar a solução? Administrações portuárias, operadores logísticos alfandegados e órgãos aduaneiros (ex: Receita Federal).
-2. quem seria o usuário direto? Operador de Scanner de Raio-X e Fiscal Aduaneiro.
+2. quem seria o usuário direto? [H01] O operador da estação de imagem de raio-X. [H39] Se a decisão formal couber a outro cargo, o Auditor-Fiscal também seria usuário direto, com outra tarefa.
 3. quem administraria/configuraria? Administrador de TI do terminal e Engenheiro de IA.
-4. quem interpretaria resultados? Fiscais aduaneiros e analistas de inteligência.
-5. quem tomaria decisões? Fiscais aduaneiros responsáveis pela liberação.
+4. quem interpretaria resultados? [H01] O operador da estação de imagem e, de forma agregada, [H02] analistas de inteligência.
+5. quem tomaria decisões? [?] Ainda não sabemos se quem examina a imagem tem autoridade para liberar ou reter, ou se apenas produz um apontamento para o Auditor-Fiscal (H39).
 6. quais dados/entradas seriam necessários? Imagens de raio-X de transmissão do contêiner e metadados do manifesto de carga.
 7. quais resultados deveriam ser compreendidos? Score de anomalia, mapas residuais de discrepância e regiões de alerta (ROI).
 8. que erros/rupturas seriam possíveis? Falsos positivos gerando vistoria desnecessária; falsos negativos deixando passar ameaças; falha de carregamento da imagem radiográfica.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-**Fiscal Aduaneiro / Operador de Scanner de Raio-X.**
-**Por que esse perfil foi escolhido?** É o profissional que lida diretamente com a ponta operacional da triagem de imagens e toma a decisão crítica de liberação ou retenção da carga.
+**Operador da estação de imagem de raio-X** [H01].
+**Por que esse perfil foi escolhido?** [H01] É quem examina a radiografia de cada contêiner, e é sobre a imagem que a contribuição do TCC atua. [H39] Não está demonstrado que esse perfil também detém a autoridade para liberar ou reter a carga. Essa divisão de papéis é a primeira questão a investigar, porque muda permissões, vocabulário e o próprio fluxo de registro da decisão.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-Analisar os alertas gerados pelo modelo de IA, comparar a imagem original de raio-X com o mapa residual de anomalia e registrar o veredito de liberação ou vistoria física com segurança e agilidade.
+Analisar os alertas gerados pelo modelo de IA, comparar a imagem original de raio-X com o mapa residual de anomalia e registrar o resultado da análise. [H39] Esse registro pode ser um apontamento técnico encaminhado a quem decide ou a própria decisão de liberação ou vistoria física, conforme a divisão de papéis.
 
 ## 7.4 Que interface será explorada na disciplina?
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita ao `Fiscal Aduaneiro` utilizar o `modelo de detecção de anomalias em raio-X` para `triar contêineres suspeitos, inspecionar mapas residuais de discrepância e registrar decisões de liberação ou vistoria`, no contexto de `um terminal portuário alfandegado sob pressão de tempo`.**
+> **Para fins da disciplina de IHC, será projetada uma interface que permita ao `operador da estação de imagem de raio-X` utilizar o `modelo de detecção de anomalias em raio-X` para `triar contêineres suspeitos, inspecionar mapas residuais de discrepância e registrar o resultado da análise`, no contexto de `um terminal portuário alfandegado sob pressão de tempo`.**
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
@@ -391,7 +394,7 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Qual é a contribuição central do TCC? | Detecção autossupervisionada de anomalias em raio-X de contêineres via Autoencoders e imagens residuais.                                                            |
 | O TCC já previa interface?              | Não                                                                                                                                                                   |
-| Quem é o usuário prioritário de IHC?  | Fiscal Aduaneiro                                                                                                                                                       |
+| Quem é o usuário prioritário de IHC?  | [H01] Operador da estação de imagem de raio-X. A relação com o Auditor-Fiscal que formaliza a decisão está aberta (H39). |
 | O que ele precisa alcançar?             | Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez.                                        |
 | Qual problema/atividade será estudado?  | Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.                                                                                    |
 | Como isso acontece hoje?                 | Inspeção visual manual em softwares legados de fabricantes de scanners.                                                                                              |
