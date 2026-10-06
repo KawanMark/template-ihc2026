@@ -79,8 +79,11 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | {{ex.: recomendação de otimização}} | {{...}} | {{P01}} | {{C01}} | {{T01}} | {{links}} | {{...}} | {{M01}} | {{F01...}} | {{V01 ou —}} | {{UT01}} | {{...}} |
-| R02 |  |  |  |  |  |  |  |  |  |  |  |  |
+| R01 | Mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | PENDENTE | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R02 | Medida de anomalia calculada para cada imagem | [H04, H25, H35] Saber quais contêineres examinar primeiro. A existência dessa tarefa é hipótese | P01 | PENDENTE | A01: triar os contêineres escaneados | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R03 | Mapa residual como evidência associada ao contêiner | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 | PENDENTE | A03: registrar o resultado da análise | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+
+As colunas marcadas `PENDENTE` pertencem a entregas ainda não realizadas (cenários na Entrega 4, tarefas na Entrega 5, MoLIC na Entrega 10, telas na Entrega 11, avaliação nas Entregas 13 e 14).
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -88,9 +91,11 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 
 | ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
 |---|---|---|---|---|---|
-| F01 | dashboard | {{T01}} | {{...}} | {{H01/evidência...}} | {{C01/M01}} |
-| F02 | histórico com filtros | {{T02}} | {{...}} | {{...}} | {{...}} |
-| F03 | administração/CRUD | {{T03}} | {{...}} | {{...}} | {{...}} |
+| PENDENTE | fila de triagem (lista de trabalho) | A01 | Ordem em que os contêineres são examinados | [H04, H25, H33, H35] Hipótese de design. C02 não evidencia fila priorizada para o fiscal, o que não prova a necessidade | R02 |
+| PENDENTE | histórico com busca | A04 | Localizar análises anteriores de um contêiner ou declaração | [H18] sustentada documentalmente pela linha do tempo do despacho (C02). [H29] parcial. [?02] frequência desconhecida | PENDENTE |
+| não adotado | administração/CRUD | Nenhuma tarefa identificada | Não se aplica | Padrão não observado em C01, C02 nem C03 (Entrega 2, seção 3.1). ?01 e ?03 seguem abertas | Não se aplica |
+
+Nenhuma tela existe ainda, por isso a coluna de ID fica `PENDENTE`. Os padrões entram aqui com a tarefa e a evidência que os justificariam, para que a decisão de adotá-los ou não fique registrada.
 
 ## 5. Registro de mudanças de escopo
 
