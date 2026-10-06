@@ -141,6 +141,25 @@ O Portal Único **não é concorrente do TCC**: ele não analisa imagens de raio
 
 > **Ressalva:** as telas de trabalho do Auditor-Fiscal não são publicamente acessíveis, porque o perfil exige certificado digital e vínculo institucional. Esta análise tem, portanto, uma única captura de interface (a entrada do Portal) e uma captura de documentação. O requisito de prints de telas e estados relevantes fica **parcialmente atendido** em C02. As conclusões sobre o Siscomex tratam de processo e vocabulário, e não de layout, densidade de informação ou sequência de uso.
 
+**Marcações nos prints.** As versões marcadas indicam qual parte da captura comprova cada ponto. `P` é ponto positivo ou evidência, `N` é limitação e `M` é padrão ou convenção.
+
+![Entrada do Portal Único Siscomex com marcações](../assets/02_concorrencia/c02_siscomex_portal_perfis_marcado.png)
+
+| Marca | Elemento na captura | Ponto que comprova |
+| --- | --- | --- |
+| M1 | Grade de perfis na entrada do Portal | [F] Padrão: o acesso é segmentado por papel antes de qualquer tarefa. |
+| P1 | Perfil "Administração Pública" | [H] Entrada provável dos servidores, entre eles o Auditor-Fiscal. O conteúdo não é acessível sem certificado. |
+| N1 | Link "Como obter o seu Certificado Digital?" | [F] Limitação: o acesso depende de certificado digital, e por isso as telas de trabalho não foram observadas. |
+
+![Página Gerenciamento de riscos do Manual de Despacho de Importação com marcações](../assets/02_concorrencia/c02_siscomex_canais_parametrizacao_marcado.png)
+
+| Marca | Elemento na captura | Ponto que comprova |
+| --- | --- | --- |
+| M1 | Lista dos quatro canais de conferência aduaneira | [F] Convenção normativa: verde, amarelo, vermelho e cinza, cada um com nome textual e procedimento definido (H24). |
+| P1 | Lista dos elementos considerados na seleção do canal | [F] Os critérios são fiscais e documentais (regularidade fiscal, habitualidade, natureza e valor da importação, origem, características da mercadoria). Nenhum deles é resultado de imagem. |
+| P2 | Parágrafo sobre redirecionamento da declaração em canal verde | [F] O canal pode mudar durante a análise fiscal, quando são identificados indícios de irregularidade. |
+| P3 | Parágrafo que cita o Auditor-Fiscal responsável pelo desembaraço | [F] A responsabilidade pelo desembaraço é do Auditor-Fiscal da Receita Federal (H17, H39). |
+
 #### Experiência do usuário e opiniões
 
 As fontes utilizadas são de dois tipos, com pesos diferentes:
