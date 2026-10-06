@@ -204,6 +204,8 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 [H13] Carlos, fiscal aduaneiro em um terminal portuário movimentado, inicia seu terceiro turno consecutivo de análise de imagens de raio-X. Às 03:00 da manhã, após centenas de contêineres escaneados, uma densidade levemente atípica camuflada no interior de paletes de madeira passa despercebida na tela devido à exaustão visual, permitindo a passagem de mercadoria não declarada.
 
+Esta situação é um cenário exploratório, criado para discutir o problema. Carlos não é um perfil investigado nem uma persona: turno, horário e volume são suposições [H13].
+
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte                                                                                                         | O que sustenta                                                                                       | Limitação                                                                         |
@@ -430,7 +432,7 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 # 12. Como esta entrega alimenta as próximas
 
 - **Entrega 2:** verifica mercado, concorrentes e interfaces profissionais representativas.
-- **Entrega 3:** detalha perfis e contexto.
+- **Entrega 3:** detalha perfis e contexto a partir do que for investigado sobre o usuário. O personagem da situação 4.5 não é ponto de partida para persona.
 - **Entrega 4:** aprofunda situações problemáticas.
 - **Entrega 5:** modela tarefas centrais.
 - **Entrega 6:** experimenta alternativas em baixa fidelidade.
@@ -438,11 +440,6 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 - **Entrega 8:** define restrições e metas de usabilidade.
 - **Entregas 9–11:** transformam o recorte em modelo de interação e protótipo.
 - **Entregas 12–14:** avaliam a interface construída na disciplina.
-- **Entrega 2:** Verifica concorrentes de softwares alfandegários e sistemas de inspeção portuária.
-- **Entrega 3:** Detalha perfis de personas (Fiscal Carlos).
-- **Entregas 4 e 5:** Aprofundam cenários de problema e análise de tarefas (HTA).
-- **Entregas 6 a 11:** Prototipação em baixa e alta fidelidade (Figma) do sistema de triagem.
-- **Entregas 12 a 14:** Avaliação heurística e testes de usabilidade com usuários.
 
 A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser revisada quando surgirem evidências.
 
