@@ -106,6 +106,30 @@ Nenhuma tela existe ainda, por isso a coluna de ID fica `PENDENTE`. Os padrões 
 | 03/09/2026 | A linha de base deixa de ser descrita como inspeção "100% visual e manual": os softwares atuais já oferecem apoio analítico, embora sem detecção de anomalias. | C01 (InSight: High Density, Similar Cargo, Vehicle Compare) e C03 (Smiths HCVM/RIW: Zeff, realce de bordas, anotações). | H09; argumento de diferencial do projeto | Kawan Mark / Alexandre Domiciano Pierri |
 | 03/09/2026 | O contexto de uso deixa de assumir estação multi-monitor: a evidência disponível aponta monitor dedicado de 22"–24". | C03 — especificação da estação de trabalho (RIW) do sistema pass-through. | H15; premissas de layout e densidade de informação | Alexandre Domiciano Pierri |
 
+## Convenção de identificadores
+
+Cada prefixo designa um único tipo de informação, do início ao fim do semestre.
+
+| Prefixo | Significa | Onde nasce |
+|---|---|---|
+| `FT01` | Fato com fonte | Entrega 1 |
+| `H01` | Hipótese | Entrega 1 em diante |
+| `?01` | Lacuna de conhecimento | Entrega 1 em diante |
+| `A01` | Atividade do usuário no mundo real | Entrega 1, seção 3.2 |
+| `AC01` | Resultado que o usuário precisa conseguir alcançar | Entrega 1, seção 9.2 |
+| `C01` | Concorrente ou interface analisada | Entrega 2 |
+| `RC01` | Recomendação derivada da análise de concorrência | Entrega 2 |
+| `P01` | Persona | Entrega 3 |
+| `CP01` | Cenário de problema | Entrega 4 |
+| `T01` | Tarefa modelada | Entrega 5 |
+| `M01` | Diagrama MoLIC | Entrega 10 |
+| `F01` | Tela ou estado no Figma | Entrega 11 |
+| `V01` | Violação de heurística | Entrega 13 |
+| `UT01` | Tarefa de teste com usuário | Entrega 14 |
+| `R01` | Linha da cadeia de rastreabilidade (seção 3) | Esta matriz |
+
+`F` fica reservado às telas e `C` aos concorrentes. Por isso fatos usam `FT` e cenários de problema usam `CP`.
+
 ## Como usar
 
 - Use identificadores estáveis (`H01`, `P01`, `C01`, `T01`, `M01`, `F01`, `UT01`).
