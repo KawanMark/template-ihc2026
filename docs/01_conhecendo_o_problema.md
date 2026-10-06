@@ -449,9 +449,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** Fiscais aduaneiros enfrentam extrema fadiga visual e pressão temporal ao inspecionar milhares de imagens complexas de raio-X de contêineres para coibir contrabando.
-2. **Contribuição técnica do TCC:** Um modelo avançado de inteligência artificial autossupervisionada que aprende o padrão de cargas normais e detecta autonomamente anomalias ocultas gerando mapas residuais precisos.
-3. **Como uma pessoa poderia utilizar essa contribuição:** Uma interface intuitiva em sala de controle portuária que prioriza contêineres de risco e destaca visualmente as discrepâncias detectadas pela IA, agilizando a liberação de cargas legítimas e bloqueando ilícitos.
+1. **Problema/atividade humana:** [FT01] Imagens de raio-X de contêineres são complexas e sobrepostas, o que dificulta a inspeção manual. [H] Quem examina essas imagens trabalha sob fadiga visual e pressão de tempo (H10, H37).
+2. **Contribuição técnica do TCC:** Um modelo de inteligência artificial autossupervisionada que aprende o padrão de cargas normais e gera mapas residuais indicando onde a imagem se afasta desse padrão. A precisão desses mapas é o que a avaliação experimental do TCC vai medir.
+3. **Como uma pessoa poderia utilizar essa contribuição:** [H] Uma interface em sala de controle portuária que mostre a quem examina a imagem onde a IA encontrou discrepância e apoie o registro da análise. Os benefícios esperados, ainda a validar, são localizar regiões suspeitas com menos esforço (H34) e reter menos cargas lícitas (H36).
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
