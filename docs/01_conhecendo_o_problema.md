@@ -371,12 +371,14 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 A tecnologia aparece *agora*, depois do entendimento do uso.
 
-| Tecnologia/restrição | Por que existe | Possível impacto na interação |
+| Tecnologia/restrição | Por que existe | Possibilidade ou restrição para a interação (hipótese de design a investigar) |
 | ---------------------- | -------------- | -------------------------------- |
-| *Modelo de IA Autossupervisionado (Autoencoder)* | Escolha de arquitetura do TCC para aprender o padrão de cargas normais sem necessitar de imagens de contrabando prévio para treino. | Exige que a interface apresente o resultado em formato comparativo e explicativo (mapa residual/diferença), já que o modelo aponta discrepâncias e não categorias de objetos pré-rotulados. |
-| *Geração de Mapa Residual de Anomalia* | Saída primária do algoritmo que calcula a diferença entre a imagem real de raio-X e a reconstrução do Autoencoder. | A interface precisa oferecer um visualizador interativo com controle de opacidade, mapa de calor (heatmap) e alternância de camadas para que o fiscal entenda o que a IA destacou. |
-| *Tempo de Inferência e Processamento de Imagem* | Restrição computacional do pipeline de visão computacional ao carregar e reconstruir matrizes de alta resolução de raio-X. | Exige feedback de sistema claro (indicadores de status/carregamento) para que o operador não pense que a interface travou durante a análise do contêiner. |
-| *Injeção Sintética de Anomalias (Lei de Beer-Lambert)* | Método matemático do TCC para simular atenuamentos de radiação de objetos ocultos nas imagens de treino. | Define como os níveis de severidade/confiança das anomalias são calculados e exibidos na interface (ex: score de densidade atípica). |
+| *Modelo de IA Autossupervisionado (Autoencoder)* | Escolha de arquitetura do TCC para aprender o padrão de cargas normais sem necessitar de imagens de contrabando prévio para treino. | [F] O modelo aponta discrepâncias em relação ao padrão de carga normal, e não categorias de objetos. [H] Apresentar o resultado de forma comparativa pode ajudar a entender o que foi apontado. A forma de apresentação está aberta (H30). |
+| *Geração de Mapa Residual de Anomalia* | Saída primária do algoritmo que calcula a diferença entre a imagem real de raio-X e a reconstrução do Autoencoder. | [F] Existe uma segunda imagem, o mapa residual, que pode ser mostrada junto da radiografia. [H] Mapa de calor, controle de opacidade, alternância de camadas e lado a lado são alternativas a comparar (H30). Nenhuma decorre da tecnologia. |
+| *Tempo de Inferência e Processamento de Imagem* | Restrição computacional do pipeline de visão computacional ao carregar e reconstruir matrizes de alta resolução de raio-X. | [?05] O tempo de inferência ainda não é conhecido. [H27] Se houver espera perceptível, algum retorno sobre o andamento pode ser necessário. A forma desse retorno não está definida. |
+| *Injeção Sintética de Anomalias (Lei de Beer-Lambert)* | Método matemático do TCC para simular atenuamentos de radiação de objetos ocultos nas imagens de treino. | [F] O método afeta como o modelo é treinado e avaliado. [H31] Não está demonstrado que um score numérico seja compreensível, confiável ou útil para quem examina a imagem. |
+
+A tecnologia do TCC cria possibilidades e restrições, mas não determina a forma de apresentação. Essa forma depende da atividade, do contexto e das evidências sobre os usuários.
 
 ---
 
