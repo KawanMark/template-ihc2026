@@ -105,7 +105,9 @@ Um sistema computacional capaz de analisar imagens de raio-x de contêineres de 
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[F01] O volume massivo do comércio exterior e a rigorosa regulamentação de segurança tornam a inspeção física de 100% dos contêineres impraticável nos portos (Fonte: Revisão bibliográfica do TCC e relatórios aduaneiros). Isso gera a necessidade de triagem não intrusiva por raio-X, cujas imagens complexas e sobrepostas são difíceis de inspecionar manualmente com precisão.
+[F01] A inspeção manual de imagens de raio-X de carga é difícil, porque as imagens são complexas e os objetos se sobrepõem, o que motiva a detecção automática de anomalias (Fonte: Gaikwad et al., 2024, artigo base do TCC, citado em 4.6).
+
+[H40] O volume do comércio exterior torna impraticável a inspeção física de todos os contêineres, e por isso os portos recorrem à triagem não intrusiva por raio-X. A equipe ainda não tem uma fonte específica para esta afirmação.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -144,7 +146,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 | Stakeholder                                               | Como é afetado                                                                           | Usa interface?                          | Status/evidência                |
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------- |
-| **Empresas Importadoras / Exportadoras**            | Sofrem impacto direto no tempo de liberação e custos logísticos das cargas nos portos. | Não                                    | [F02] Fato (operação portuária) |
+| **Empresas Importadoras / Exportadoras** | [F02] O canal de parametrização define se a carga tem desembaraço automático ou passa por exame documental e verificação física, o que altera o tempo de liberação (Fonte: Manual de Despacho de Importação da RFB, análise C02 da Entrega 2). [H] O impacto em custos logísticos ainda não tem fonte. | Não | [F02] Fato, com a fonte indicada |
 | **Autoridades de Segurança Pública / Alfândega** | Beneficiam-se da eficácia na interceptação de ilícitos (drogas, armas, contrabando).  | Não (recebem relatórios consolidados) | [H03] Hipótese                    |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
@@ -246,7 +248,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 | Alternativa atual                                                      | Quem usa               | Para quê                                                            | Status/evidência   |
 | ---------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------- | ------------------- |
-| Softwares proprietários dos fabricantes de scanners (ex: Rapiscan OS) | Operadores portuários | Visualizar e ajustar contraste de imagens de raio-X de contêineres. | [F03] Fato de mercado |
+| Softwares proprietários dos fabricantes de scanners (ex.: Rapiscan AS&E InSight, Smiths Detection DaiSy) | Operadores de estação de imagem | Visualizar, tratar e comparar imagens de raio-X de contêineres. | [F03] Fato. Fonte: páginas oficiais da Rapiscan AS&E e da Smiths Detection, analisadas em C01 e C03 da Entrega 2 |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
