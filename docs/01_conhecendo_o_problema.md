@@ -328,22 +328,24 @@ A equipe pode registrar possibilidades para investigação. **Não significa que
 
 Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
-| Possibilidade                                     | Pode fazer sentido? | Objetivo/tarefa que justificaria                                                    | Evidência atual |
-| ------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------- | ---------------- |
-| **Dashboard/visão geral**                  | Sim                 | Acompanhar o fluxo diário de contêineres escaneados e status de triagem           | [H25]              |
-| **Configuração/parametrização**         | Talvez              | Ajustar sensibilidade de detecção da IA pelo operador sênior                     | [?03]              |
-| **Entrada/upload/seleção de dados**       | Sim                 | Carregar novas imagens de raio-X e metadados do contêiner                          | [H26]              |
-| **Acompanhamento de processamento**         | Sim                 | Acompanhar o status da inferência do Autoencoder na imagem radiográfica           | [H27]              |
-| **Relatório/resultados**                   | Sim                 | Exportar laudos de inspeção e estatísticas operacionais                          | [H28]              |
-| **Histórico com busca/filtros**            | Sim                 | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco       | [H29]              |
-| **Comparação de resultados**              | Sim                 | Visualizar lado a lado a imagem original de raio-X e o mapa residual gerado pela IA | [H30]              |
-| **Explicabilidade/detalhamento**            | Sim                 | Exibir score de confiança e regiões de destaque (ROI) da anomalia                 | [H31]              |
-| **Administração/configurações globais** | Não                | -                                                                                   | -                |
-| **Usuários/perfis/permissões**            | Não                | -                                                                                   | -                |
-| **CRUD de entidade do domínio**            | Não                | -                                                                                   | -                |
-| **Auditoria/logs**                          | Sim                 | Registrar trilha de ações de liberação/vistoria para fins legais                | [H32]              |
-| **Alertas/ocorrências**                    | Sim                 | Notificar contêineres com alta probabilidade de anomalia crítica                  | [H33]              |
-| **Ajuda/documentação**                    | Talvez              | Exibir glossário de termos radiográficos e instruções de uso do sistema         | [?04]              |
+| Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual | Classificação no recorte |
+| --- | --- | --- | --- | --- |
+| **Comparação de resultados** | Sim | Entender onde a imagem se afasta do padrão, vendo a radiografia e o mapa residual | [H30] | 1. Essencial |
+| **Explicabilidade/detalhamento** | Sim | Saber qual região foi apontada e por quê | [H31] | 1. Essencial para o destaque da região. O score numérico é hipótese secundária |
+| **Auditoria/logs** | Sim | Registrar o resultado da análise e quem o produziu | [H32] | 1. Essencial para o registro do resultado. O formato da trilha é hipótese secundária |
+| **Dashboard/visão geral** | Sim | Saber quais contêineres examinar e em que ordem | [H25] | 2. Hipótese secundária, depende de H04 |
+| **Alertas/ocorrências** | Sim | Não deixar um caso crítico parado na fila | [H33] | 2. Hipótese secundária, depende de H04 e H25 |
+| **Acompanhamento de processamento** | Sim | Saber se a análise da imagem já terminou | [H27] | 2. Hipótese secundária, depende de ?05 |
+| **Relatório/resultados** | Sim | Encaminhar o resultado da análise a quem decide ou executa | [H28] | 2. Hipótese secundária, depende de H39 |
+| **Histórico com busca/filtros** | Sim | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco | [H29] | 3. Necessidade de outro perfil (Analista de Inteligência, H02) |
+| **Configuração/parametrização** | Talvez | Ajustar sensibilidade de detecção da IA | [?03] | 3. Necessidade de outro perfil (configurador técnico, ?01) |
+| **Entrada/upload/seleção de dados** | Talvez | Receber novas imagens de raio-X e metadados do contêiner | [H26] | 4. Pode ser descartada: a imagem tende a chegar do scanner, sem ação do usuário |
+| **Ajuda/documentação** | Talvez | Consultar termos radiográficos e instruções de uso | [?04] | 4. Pode ser descartada |
+| **Administração/configurações globais** | Não | - | - | Fora do recorte |
+| **Usuários/perfis/permissões** | Não | - | - | Fora do recorte |
+| **CRUD de entidade do domínio** | Não | - | - | Fora do recorte |
+
+**Classificação no recorte.** O recorte da seção 7.4 é triar, inspecionar o mapa residual e registrar o resultado da análise. Cada possibilidade foi classificada como: 1, essencial para esse fluxo; 2, hipótese secundária que pode apoiá-lo; 3, necessidade de outro perfil; 4, possibilidade que pode ser descartada. Só o nível 1 entra nas próximas entregas sem investigação adicional, e mesmo nele a forma de apresentação continua aberta.
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
