@@ -110,7 +110,7 @@ Essa característica é importante para o nosso projeto: a interface de IHC deve
 **Link oficial:** https://portalunico.siscomex.gov.br/portal/
 **Data de acesso:** 27/08/2026
 
-> **Recorte desta análise:** enquanto a C01 investiga *como a IA é apresentada sobre a imagem*, esta análise investiga *o que acontece antes e depois da imagem*: como o fiscal recebe o que precisa examinar, como registra a decisão e como essa decisão fica rastreável. É o eixo que a C01 não conseguiu evidenciar (ver limitação registrada na C01) e de onde saiu a recomendação RC04.
+> **Recorte desta análise:** enquanto a C01 investiga *como a IA é apresentada sobre a imagem*, esta análise investiga *o que acontece antes e depois da imagem*: como o fiscal recebe o que precisa examinar, como registra a decisão e como essa decisão fica rastreável. É o eixo que a C01 não conseguiu evidenciar (ver limitação registrada na C01) e a origem principal da recomendação RC04.
 
 #### Contexto e proposta
 
@@ -198,7 +198,7 @@ Isso muda a relação do usuário com a interface de um modo que importa ao noss
 | --- | --- | --- |
 | Ponto positivo: o código de cores por risco é convenção normativa consolidada | Canais verde, amarelo, vermelho e cinza definidos no despacho de importação. | **H24 sustentada.** Nosso semáforo de risco será lido corretamente pelo fiscal sem treinamento — mas deve seguir a semântica oficial, não uma escala inventada. |
 | Achado que contraria nossa premissa: são **quatro** canais, não três | O canal **cinza** existe e significa suspeita de fraude, com procedimento especial. | A Entrega 1 (H24/H33) assumiu uma escala verde/amarelo/vermelho. Falta na nossa fila um estado para **suspeita que exige investigação**, distinto de "vistoria física". Isso deve ser revisto na modelagem. |
-| Ponto positivo: a decisão é um ato motivado e com prazo | A exigência fiscal é registrada e comunicada com prazo de resposta. | **Confirma RC04.** O registro de veredito precisa de justificativa, destinatário e efeito — não basta um botão "liberar/reter". |
+| Ponto positivo: a decisão é um ato motivado e com prazo | A exigência fiscal é registrada e comunicada com prazo de resposta. | **Origem principal de RC04 e RC07.** O registro do resultado precisa de justificativa, destinatário e efeito. |
 | Ponto positivo: existe responsável nomeado pelo processo | Etapa "Distribuição para Auditor". | Sustenta H17: cada análise no nosso protótipo deve ficar vinculada ao fiscal que a realizou. |
 | Ponto positivo: histórico é cronológico e vai além da decisão | A linha do tempo segue até o comprovante de importação. | O histórico do contêiner deve ser uma linha do tempo de eventos, não uma lista de vereditos. |
 | Limitação: navegação centrada no número da declaração | A consulta se faz informando o número da DI/DUIMP. | **Oportunidade clara:** não há evidência de uma fila priorizada por risco para o fiscal. Quem já sabe qual processo procurar é atendido; quem precisa decidir *o que examinar primeiro*, não. É exatamente o vazio que nossa tela de triagem preenche. |
@@ -313,7 +313,7 @@ Liste recomendações com origem explícita.
 - **RC01:** O visualizador principal deve permitir comparação clara entre imagem original e evidência gerada pela IA — derivada de C01 / InSight Vehicle Compare e InSight Similar Cargo.
 - **RC02:** O sistema deve destacar regiões suspeitas sem substituir a decisão do fiscal — derivada de C01 / InSight High Density.
 - **RC03:** A interface deve usar linguagem operacional do domínio aduaneiro e de inspeção, evitando expor métricas técnicas de IA como elemento principal — derivada de C01 / organização das ferramentas InSight por tarefa.
-- **RC04:** O fluxo de decisão deve incluir registro de justificativa e trilha de auditoria, pois essa dimensão não aparece claramente nas evidências públicas da Rapiscan e é crítica no contexto aduaneiro — derivada de C01 / limitação observada.
+- **RC04:** O registro do resultado da análise deve incluir justificativa e ficar rastreável a quem o produziu. Derivada principalmente de C02: a exigência fiscal é um ato formal com motivo e prazo, o processo é distribuído a um auditor responsável e o despacho é acompanhado como linha do tempo. Relacionada a H17, H18, H19 e H32. A C01 não mostra essa dimensão em seu material público, o que serve apenas de contraste e não de origem. O formato concreto da trilha segue aberto (H32).
 - **RC05:** A escala de risco da fila deve ter **quatro** estados alinhados aos canais oficiais — liberação direta, exame documental, verificação física e indício de fraude —, e não os três níveis assumidos na Entrega 1 — derivada de C02 / parametrização do despacho de importação (revisa H24 e H33).
 - **RC06:** A tela de triagem deve oferecer uma fila ordenada por risco, mantendo também a busca pelo identificador do contêiner/declaração — derivada de C02 / no Siscomex a navegação é apenas pelo número da declaração, o que não atende quem precisa decidir o que examinar primeiro.
 - **RC07:** O registro de veredito deve capturar motivo, destinatário e efeito, e não apenas o estado final, espelhando a estrutura da exigência fiscal — derivada de C02 / a decisão no domínio é um ato motivado, comunicado e com prazo.
