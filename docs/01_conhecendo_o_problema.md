@@ -151,7 +151,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-[H37] Operadores de scanner trabalham sob pressão de tempo severa, em turnos prolongados, sujeitos à fadiga visual. Possuem forte conhecimento prático de leitura radiográfica, mas podem não ter familiaridade com conceitos profundos de aprendizado de máquina (exigem explicações visuais claras e diretas, como heatmaps e scores de risco, em vez de métricas matemáticas complexas).
+[H37] Operadores da estação de imagem trabalham sob pressão de tempo severa, em turnos prolongados, sujeitos à fadiga visual. Possuem forte conhecimento prático de leitura radiográfica, mas podem não ter familiaridade com conceitos profundos de aprendizado de máquina (exigem explicações visuais claras e diretas, como heatmaps e scores de risco, em vez de métricas matemáticas complexas).
 
 ---
 
@@ -202,7 +202,7 @@ NÃO SE APLICA AO ESCOPO ORIGINAL (O TCC não prevê interface).
 
 ## 4.5 Conte uma situação concreta.
 
-[H13] Carlos, fiscal aduaneiro em um terminal portuário movimentado, inicia seu terceiro turno consecutivo de análise de imagens de raio-X. Às 03:00 da manhã, após centenas de contêineres escaneados, uma densidade levemente atípica camuflada no interior de paletes de madeira passa despercebida na tela devido à exaustão visual, permitindo a passagem de mercadoria não declarada.
+[H13] Carlos, operador da estação de imagem em um terminal portuário movimentado, inicia seu terceiro turno consecutivo de análise de imagens de raio-X. Às 03:00 da manhã, após centenas de contêineres escaneados, uma densidade levemente atípica camuflada no interior de paletes de madeira passa despercebida na tela devido à exaustão visual, permitindo a passagem de mercadoria não declarada.
 
 Esta situação é um cenário exploratório, criado para discutir o problema. Carlos não é um perfil investigado nem uma persona: turno, horário e volume são suposições [H13].
 
@@ -359,8 +359,8 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado                                               | Problema/necessidade                                    | Usuário            | Status/evidência |
 | ----------------------------------------------------------------- | ------------------------------------------------------- | ------------------- | ----------------- |
-| Redução da fadiga visual e foco direcionado em áreas suspeitas | Exaustão em plantões longos analisando imagens densas | Fiscal Aduaneiro    | [H34]               |
-| Agilidade na tomada de decisão de liberação ou vistoria        | Gargalos operacionais e filas portuárias               | Operador de Scanner | [H35]               |
+| Redução da fadiga visual e foco direcionado em áreas suspeitas | Exaustão em plantões longos analisando imagens densas | Operador da estação de imagem | [H34] |
+| Agilidade para concluir a análise e encaminhar liberação ou vistoria | Gargalos operacionais e filas portuárias | Operador da estação de imagem | [H35] |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
@@ -414,7 +414,7 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Qual é a contribuição central do TCC? | Detecção autossupervisionada de anomalias em raio-X de contêineres via Autoencoders e imagens residuais.                                                            |
 | O TCC já previa interface?              | Não                                                                                                                                                                   |
 | Quem é o usuário prioritário de IHC?  | [H01] Operador da estação de imagem de raio-X. A relação com o Auditor-Fiscal que formaliza a decisão está aberta (H39). |
-| O que ele precisa alcançar?             | Triar contêineres, inspecionar  se há discrepâncias em seu interior e decidir liberação/vistoria com segurança e rapidez.                                        |
+| O que ele precisa alcançar?             | [H38] Chegar a uma conclusão confiável sobre cada contêiner examinado e registrá-la de forma defensável. |
 | Qual problema/atividade será estudado?  | Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.                                                                                    |
 | Como isso acontece hoje?                 | [H09] Inspeção visual em softwares dos fabricantes de scanners, que já oferecem apoio analítico (pseudo-cor, realce, comparação), sem detecção autossupervisionada de anomalias. |
 | Qual é o contexto de uso?               | [H14, H15, H16] Sala de controle portuária, estação com monitor dedicado de 22" a 24", pressão temporal e gravidade da segurança. |
