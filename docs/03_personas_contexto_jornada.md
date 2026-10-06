@@ -248,14 +248,39 @@ A jornada é a de uma proto-persona: tudo é hipótese [H], salvo onde indicado 
 
 Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes?
 
-A partir das personas, do contexto de uso e da jornada do usuário consolidados nesta entrega, os seguintes requisitos, objetivos e tarefas tornam-se **mandatórios para os Cenários de Problema (Entrega 4) e Análise de Tarefas (Entrega 5)**:
+Esta entrega não fixa a interface. O que ela entrega às próximas está separado em três níveis.
 
-1. **Priorização Inteligente da Fila de Triagem por Risco:** O sistema deve organizar a entrada de radiografias de acordo com os 4 canais normativos da Receita Federal (Verde, Amarelo, Vermelho e Cinza), garantindo que cargas com alta anomalia residual da IA recebam foco prioritário imediato do operador.
-2. **Inspeção Comparativa sem Degradação de Imagem:** A interface deve oferecer manipulação visual contínua da anomalia via controle deslizante suave de opacidade (slider de 0 a 100%) e alternância rápida (toggle), garantindo que o mapa residual conviva harmoniosamente com a discriminação de número atômico ($Z_{eff}$) e ferramentas de realce de bordas.
-3. **Ergonomia Visual e Dark Mode Obrigatório:** O ambiente de sala de controle em penumbra e a prevenção da fadiga visual (especialmente nas madrugadas) impõem uma paleta escura de alto contraste com mais de 70% da área útil dedicada à radiografia, com painéis laterais retráteis.
-4. **Integração de Metadados Aduaneiros (Dossiê Documental):** Consulta integrada aos dados da Declaração Única de Importação (DUIMP/Siscomex) diretamente no visualizador de imagem, evitando troca de janelas durante a validação da suspeita.
-5. **Formalização Ágil de Veredito com Rastreabilidade Legal:** Registro de decisões em poucos cliques com justificativas pré-estruturadas, associando a matrícula do operador (P01) e carimbo de tempo para posterior ratificação pelo Auditor-Fiscal (P02).
-6. **Disseminação Simplificada de Alertas para Equipes de Campo:** Notificação direcionada para dispositivos móveis de agentes de segurança (P03), contendo indicação textual/esquemática simplificada do quadrante físico da anomalia no contêiner para busca física no pátio.
+**Nível 1. Necessidades e objetivos com sustentação.** Entram nos cenários de problema (Entrega 4) e na análise de tarefas (Entrega 5).
+
+1. Entender onde e por que a IA apontou discrepância, sem perder a imagem original. Comparação e destaque de regiões são padrões observados (C01), e a imagem tem prioridade visual nas estações analisadas (C01, C03; RC01, RC02, RC10).
+2. Usar o vocabulário do domínio aduaneiro e de inspeção (C01, C02, C03; RC03).
+3. Registrar o resultado da análise com motivo e de forma rastreável a quem o produziu. A decisão aduaneira é um ato formal vinculado a um auditor responsável (C02; RC04, RC07; H18).
+4. Manter o canal aduaneiro, que é classificação normativa, separado do resultado da IA (C02; RC05).
+5. Não transmitir informação crítica só por cor (RC11).
+
+**Nível 2. Hipóteses que as próximas entregas precisam investigar.** Não entram como requisito antes disso.
+
+1. Quem opera a estação de imagem e quem decide e formaliza (H01, H39). Define se P01 e P02 continuam separadas.
+2. Se existe uma fila de imagens e se quem examina decide a ordem (H04, H41).
+3. Quais informações da carga declarada são usadas junto da imagem e em que momento (H11).
+4. Como o resultado da imagem entra no processo formal no Siscomex (?08).
+5. Se o agente de campo interage com a solução (H42). Define se P03 é persona ou stakeholder.
+6. Condições reais do ambiente: iluminação, ruído, turnos, número de monitores (H14, H15, H16).
+7. O que o usuário considera uma análise bem feita e se há metas de liberação (H38, ?07).
+
+**Nível 3. Alternativas de solução a prototipar e comparar.** Nenhuma está decidida.
+
+| Alternativa | Necessidade que tentaria atender | Hipótese ligada |
+|---|---|---|
+| Lado a lado, sobreposição, opacidade ajustável ou alternância da camada de IA | Entender onde a IA apontou sem perder a imagem | H30, RC09 |
+| Tema escuro ou claro | Conforto visual no ambiente real | H10, H16 |
+| Proporção da tela dedicada à imagem e posição de dados e ações (painéis fixos, retráteis, faixa inferior) | Prioridade visual da imagem | H15, RC10 |
+| Ordem de exame por nível de anomalia | Decidir por onde começar | H25, H33, H41, RC06 |
+| Número de passos do registro e justificativas pré-escritas | Registrar sem retrabalho | H06, H07, RC04 |
+| Dados da declaração junto da imagem, em painel, anexo ou resumo | Conferir a imagem com o que foi declarado | H11, RC07 |
+| Aviso em dispositivo móvel para o agente de campo | Encaminhar a verificação física | H42. Só se P03 for confirmado como usuário |
+
+Para a Entrega 4, os cenários de problema partem da situação atual, sem a solução. Para a Entrega 5, as tarefas são derivadas do trabalho que a investigação sustentar, e não de botões ou componentes.
 
 ---
 
