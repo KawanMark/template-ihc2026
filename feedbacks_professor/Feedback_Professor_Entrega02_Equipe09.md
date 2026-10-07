@@ -72,6 +72,10 @@ Para melhorar a entrega, a equipe deve procurar, quando legalmente e publicament
 >
 > \- Gabriel
 
+> **➕ Complemento (06/10/2026)** ([`ed78639`](https://github.com/KawanMark/template-ihc2026/commit/ed78639)): a busca por material público que mostre a tela de trabalho do Auditor-Fiscal foi feita e não encontrou manuais, vídeos nem materiais de treinamento. O resultado está nas limitações de C02. Foram localizadas normas da RFB sobre o uso de escâner, que descrevem o processo e os requisitos do software, e não a tela.
+>
+> \- Gabriel
+
 ### 2. Os prints precisam ficar mais fortemente ligados aos achados positivos, negativos e padrões de mercado
 
 A equipe descreve os achados em tabelas e referencia os arquivos do diretório `assets/02_concorrencia/`, o que é positivo. Porém, a comprovação visual ainda depende muito da interpretação do leitor.
@@ -90,6 +94,10 @@ Esse aspecto é especialmente importante em uma entrega de análise de concorrê
 > **🟨 Tratado em parte** ([`0e15205`](https://github.com/KawanMark/template-ihc2026/commit/0e15205)): C02 ganhou versões marcadas das duas capturas (`c02_siscomex_portal_perfis_marcado.png` e `c02_siscomex_canais_parametrizacao_marcado.png`) e uma tabela que liga cada marca (P, N, M) ao ponto que ela comprova. As marcas da página de canais mostram a lista dos quatro canais, os elementos de seleção, o redirecionamento de canal e o Auditor-Fiscal responsável pelo desembaraço.
 >
 > **⏭️ Fora desta revisão**: as marcações nos prints de C01 ficam com Kawan e as de C03 com Alexandre.
+>
+> \- Gabriel
+
+> **➕ Complemento (06/10/2026)**: os trechos das marcas P2 e P3 foram conferidos no texto da página oficial da Receita Federal e correspondem ao que a tabela de marcações diz. Não houve mudança de arquivo.
 >
 > \- Gabriel
 

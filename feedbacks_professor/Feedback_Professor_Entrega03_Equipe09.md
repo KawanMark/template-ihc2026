@@ -11,7 +11,7 @@
 > | Correção 5: mapa de empatia | aplicada | [`612ec66`](https://github.com/KawanMark/template-ihc2026/commit/612ec66) |
 > | Correções 6 e 7: jornada | aplicadas | [`7b78dcc`](https://github.com/KawanMark/template-ihc2026/commit/7b78dcc) |
 > | Correção 8: contexto de uso | aplicada | [`de4b08f`](https://github.com/KawanMark/template-ihc2026/commit/de4b08f) |
-> | Correção 9: imagens | pendente: P02 com Gabriel, P01 com Kawan | |
+> | Correção 9: imagens | aplicada em P02; P01 fica com Kawan | [`7e848e9`](https://github.com/KawanMark/template-ihc2026/commit/7e848e9) |
 > | Correção 10: rastreabilidade | aplicada | [`7056d2c`](https://github.com/KawanMark/template-ihc2026/commit/7056d2c) |
 > | Correção 11: síntese | aplicada | [`6279139`](https://github.com/KawanMark/template-ihc2026/commit/6279139) |
 > | Recomendações 1 a 3: evidência, objetivos e UI nas personas | aplicadas em P02; P01 e P03 ficam com seus autores | [`c3be35b`](https://github.com/KawanMark/template-ihc2026/commit/c3be35b) |
@@ -130,6 +130,10 @@ Antes de consolidar as próximas tarefas, a equipe precisa investigar essa front
 > **🟨 Tratado em parte** ([`34b88c8`](https://github.com/KawanMark/template-ihc2026/commit/34b88c8), [`da6431d`](https://github.com/KawanMark/template-ihc2026/commit/da6431d)): a tabela de entradas não diz mais que H01 e H02 foram confirmadas. Ela registra o que C01, C02 e C03 mostram e o que não mostram, e a divisão entre quem examina a imagem e quem decide é a hipótese H39, aberta, com a evidência documental de que o Auditor-Fiscal responde pelo desembaraço. A ficha de P02 lista como lacuna se ele opera a estação e como o resultado da imagem chega a ele (?08). As seis perguntas deste item seguem para a Entrega 7.
 >
 > **⏭️ Fora desta revisão**: a ficha de P01 ainda atribui a Gustavo a decisão de liberar ou reter. A reescrita fica com Kawan.
+>
+> \- Gabriel
+
+> **➕ Complemento (06/10/2026)** ([`ed78639`](https://github.com/KawanMark/template-ihc2026/commit/ed78639)): três normas da RFB respondem parte das perguntas deste item. A Portaria RFB nº 143/2022 (art. 14) manda o recinto disponibilizar o escâner e transmitir as imagens em tempo real à RFB. A Portaria ALF/FNS nº 9/2024, da unidade de Imbituba, diz que o escâner é operado por operadores designados pelo recinto, que comunicam suspeitas à RFB, e que a carga fica retida até a manifestação da RFB. O ADE Coana nº 19/2014 prevê licenças do software de análise para estações de trabalho da RFB. Com isso, H39 e H01 passaram a parcialmente sustentadas e ?08 tem resposta parcial. Segue aberto que cargo da RFB examina as imagens. As normas foram lidas em reprodução não oficial (normasbrasil.com.br), e a portaria de Imbituba vale para uma unidade. A classificação do elenco registra que P01 pode ser um operador do recinto, e não um servidor da RFB. A reescrita da ficha continua com Kawan.
 >
 > \- Gabriel
 
@@ -283,6 +287,10 @@ A foto da persona não precisa reproduzir literalmente a cena de trabalho, mas e
 >
 > \- Gabriel
 
+> **✅ Como foi tratado** ([`7e848e9`](https://github.com/KawanMark/template-ihc2026/commit/7e848e9)): a imagem de P02 passou a ser um retrato do rosto em fundo neutro, recortado da ilustração original, sem a sala de monitores. A imagem de P01 continua com Kawan.
+>
+> \- Gabriel
+
 ### 10. A rastreabilidade não foi atualizada para registrar efetivamente a Entrega 03
 
 Este é um problema de conformidade importante.
@@ -304,6 +312,10 @@ Se houve novo conhecimento, ele precisa aparecer também na matriz. Se não houv
 A equipe deve atualizar a rastreabilidade registrando P01, P02 e P03 e relacionando cada uma às hipóteses realmente sustentadas, às hipóteses ainda abertas e às futuras tarefas/cenários.
 
 > **✅ Como foi tratado** ([`7056d2c`](https://github.com/KawanMark/template-ihc2026/commit/7056d2c), [`65ba4cc`](https://github.com/KawanMark/template-ihc2026/commit/65ba4cc)): a matriz ganhou a seção 2.1, com P01, P02 e P03, o que cada uma tem de sustentado, as hipóteses abertas de que depende e as atividades e linhas da cadeia a que se liga. H01, H16 e H38 não estão mais `PENDENTE`: registram que a Entrega 3 não trouxe evidência nova e que a persona não valida a hipótese. As seções 3 e 4 tinham sido preenchidas na revisão da Entrega 1. O registro de mudanças tem as linhas de 06/10/2026.
+>
+> \- Gabriel
+
+> **➕ Complemento (06/10/2026)** ([`ed78639`](https://github.com/KawanMark/template-ihc2026/commit/ed78639)): H01, H09, H14, H18, H29, H39 e ?08 receberam a evidência das normas da RFB, e o registro de mudanças tem uma linha sobre a divisão entre operador do recinto e RFB.
 >
 > \- Gabriel
 
@@ -447,7 +459,7 @@ Essa estrutura ajudará a separar atividade humana de tela.
 11. **Ajustar as imagens de P01 e P02**, caso a equipe queira que elas representem também o ambiente profissional descrito.
 12. **Usar as próximas entregas para investigar o trabalho real antes de congelar a solução.**
 
-> **Situação:** as ações 1, 5, 6, 7, 8, 9 e 10 foram aplicadas nas partes de grupo e na matriz. As ações 2, 3 e 4 foram aplicadas em P02, na tabela de entradas e na classificação. Ficam com Kawan a reescrita de P01 (papel, biografia, decisões de design) e a imagem de P01. Ficam com Alexandre a reescrita de P03 e a decisão de mantê-lo como ficha de proto-persona ou convertê-lo em stakeholder. A imagem de P02 fica pendente com Gabriel. A ação 12 depende da Entrega 7.
+> **Situação:** as ações 1, 5, 6, 7, 8, 9 e 10 foram aplicadas nas partes de grupo e na matriz. As ações 2, 3 e 4 foram aplicadas em P02, na tabela de entradas e na classificação. Ficam com Kawan a reescrita de P01 (papel, biografia, decisões de design) e a imagem de P01. Ficam com Alexandre a reescrita de P03 e a decisão de mantê-lo como ficha de proto-persona ou convertê-lo em stakeholder. A imagem de P02 foi trocada depois, em complemento. A ação 12 depende da Entrega 7.
 >
 > \- Gabriel
 

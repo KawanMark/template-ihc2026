@@ -93,6 +93,10 @@ Revisem os fatos para indicar uma fonte concreta quando ela existir. Se a equipe
 >
 > \- Gabriel
 
+> **➕ Complemento (06/10/2026)** ([`9271666`](https://github.com/KawanMark/template-ihc2026/commit/9271666)): o resumo do artigo base foi conferido (Gaikwad, Patra, Crawford e Miller, DOI 10.1016/j.engappai.2024.109675). Ele sustenta o grande volume de carga nas fronteiras e a dificuldade de localizar anomalias, mas não a afirmação de que as imagens são complexas e sobrepostas. FT01 ficou restrito ao que o resumo diz, a complexidade das imagens voltou a ser hipótese (H10) e H40 passou a parcialmente sustentada. A seção 13 e o mapa de empatia da Entrega 3 acompanham.
+>
+> \- Gabriel
+
 ### 4. A Entrega 01 ficou inconsistente com evidências posteriores já registradas na própria rastreabilidade
 
 A matriz mostra que a equipe já revisou algumas premissas importantes da Entrega 01, mas o texto principal ainda conserva versões antigas.
