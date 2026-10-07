@@ -106,9 +106,11 @@ Um sistema computacional capaz de analisar imagens de raio-x de contêineres de 
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[FT01] A inspeção manual de imagens de raio-X de carga é difícil, porque as imagens são complexas e os objetos se sobrepõem, o que motiva a detecção automática de anomalias (Fonte: Gaikwad et al., 2024, artigo base do TCC, citado em 4.6).
+[FT01] A detecção de itens ilícitos por inspeção de raio-X ganhou importância por causa do grande volume de carga que cruza fronteiras, e localizar esses itens é difícil porque as anomalias são imprevisíveis (Fonte: resumo de Gaikwad et al., artigo base do TCC, DOI 10.1016/j.engappai.2024.109675, citado em 4.6).
 
-[H40] O volume do comércio exterior torna impraticável a inspeção física de todos os contêineres, e por isso os portos recorrem à triagem não intrusiva por raio-X. A equipe ainda não tem uma fonte específica para esta afirmação.
+[H10] As imagens são complexas e têm objetos sobrepostos, o que dificulta a inspeção manual. O resumo do artigo não afirma isso.
+
+[H40] O volume do comércio exterior torna impraticável a inspeção física de todos os contêineres, e por isso os portos recorrem à triagem não intrusiva por raio-X. [F] O artigo base sustenta o grande volume de carga. [?] Não informa que parcela é inspecionada fisicamente.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -211,7 +213,7 @@ Esta situação é um cenário exploratório, criado para discutir o problema. C
 
 | Evidência/fonte                                                                                                         | O que sustenta                                                                                       | Limitação                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Artigo base do TCC (*Self-supervised anomaly detection and localization for x-ray cargo images*, Gaikwad et al., 2024) | Dificuldade da inspeção manual e necessidade de detecção autossupervisionada em raio-X de carga. | Foco estritamente técnico/algorítmico, sem modelagem de experiência do operador. |
+| Artigo base do TCC (*Self-supervised anomaly detection and localization for x-ray cargo images*, Gaikwad et al., 2024) | Grande volume de carga nas fronteiras, dificuldade de localizar anomalias imprevisíveis e proposta de detecção e localização autossupervisionadas (resumo do artigo, DOI 10.1016/j.engappai.2024.109675). | Foco estritamente técnico/algorítmico, sem modelagem de experiência do operador. |
 
 ---
 
@@ -452,7 +454,7 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** [FT01] Imagens de raio-X de contêineres são complexas e sobrepostas, o que dificulta a inspeção manual. [H] Quem examina essas imagens trabalha sob fadiga visual e pressão de tempo (H10, H37).
+1. **Problema/atividade humana:** [FT01] O grande volume de carga que cruza fronteiras torna importante a detecção de itens ilícitos por raio-X, e localizar esses itens é difícil. [H] Quem examina as imagens lida com objetos sobrepostos, fadiga visual e pressão de tempo (H10, H37).
 2. **Contribuição técnica do TCC:** Um modelo de inteligência artificial autossupervisionada que aprende o padrão de cargas normais e gera mapas residuais indicando onde a imagem se afasta desse padrão. A precisão desses mapas é o que a avaliação experimental do TCC vai medir.
 3. **Como uma pessoa poderia utilizar essa contribuição:** [H] Uma interface em sala de controle portuária que mostre a quem examina a imagem onde a IA encontrou discrepância e apoie o registro da análise. Os benefícios esperados, ainda a validar, são localizar regiões suspeitas com menos esforço (H34) e reter menos cargas lícitas (H36).
 

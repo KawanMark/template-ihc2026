@@ -336,7 +336,7 @@ Quando há duas classificações, a primeira vale para o princípio e a segunda 
 
 - RAPISCAN AS&E. **InSight Intelligent Image Analytics**. Disponível em: https://www.rapiscan-ase.com/products/software/insight-operator-assist-tools. Acesso em: 26/08/2026.
 - RAPISCAN SYSTEMS. **Security Screening, Threat Detection, and Metal Detectors**. Disponível em: https://www.rapiscansystems.com/. Acesso em: 26/08/2026.
-- GAIKWAD et al. **Self-supervised anomaly detection and localization for x-ray cargo images**. Referência utilizada no TCC.
+- GAIKWAD, B.; PATRA, A.; CRAWFORD, C. R.; MILLER, E. L. **Self-supervised anomaly detection and localization for X-ray cargo images: generalization to novel anomalies**. Engineering Applications of Artificial Intelligence, 2025. DOI 10.1016/j.engappai.2024.109675. Referência utilizada no TCC.
 
 Fontes da análise C02 (Portal Único Siscomex):
 

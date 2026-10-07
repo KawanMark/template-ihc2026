@@ -23,8 +23,8 @@
 <text x="60" y="225" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">do scanner: pseudo-cor por material</text>
 <text x="60" y="243" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">e realce de bordas (C01, C03).</text>
 <circle cx="48" cy="265" r="3.5" fill="#0369a1"/>
-<text x="60" y="269" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[F] Imagens complexas, com objetos</text>
-<text x="60" y="287" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">sobrepostos (FT01).</text>
+<text x="60" y="269" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Imagens complexas, com objetos</text>
+<text x="60" y="287" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">sobrepostos (H10).</text>
 <circle cx="48" cy="309" r="3.5" fill="#0369a1"/>
 <text x="60" y="313" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Uma sala de controle com outras</text>
 <text x="60" y="331" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">estações de trabalho (H14).</text>
