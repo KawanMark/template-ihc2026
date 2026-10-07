@@ -176,6 +176,7 @@ Um relato recorrente nessas fontes é a pressão de prazo associada à exigênci
 2. Praticamente toda a documentação pública é escrita **da perspectiva do importador/despachante**, não do fiscal. Sabemos que existe a etapa "Distribuição para Auditor", mas não como a lista de trabalho se apresenta a ele.
 3. Não foram encontradas avaliações de usabilidade formais, nem material sobre acessibilidade do sistema.
 4. Consequentemente, as hipóteses H17, H32 e boa parte de H29 permanecem **sem evidência direta** mesmo após esta análise.
+5. A busca por manuais, vídeos ou materiais de treinamento que exibam a tela de trabalho do Auditor-Fiscal não encontrou material público. Foram localizadas normas da RFB sobre o uso de escâner, listadas nas Referências da Entrega 3. Elas descrevem o processo e os requisitos do software, e não a tela.
 
 #### Preço/modelo de negócio
 
