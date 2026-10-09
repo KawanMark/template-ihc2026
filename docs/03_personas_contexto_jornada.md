@@ -183,16 +183,16 @@ Nenhuma dessas alternativas avança antes de se investigar H39 e ?08: sem saber 
 | Dimensão | Persona P01 — Gustavo Onofre | Persona P02 — Dr. Eduardo Resende | Persona P03 — Marcos Oliveira |
 |---|---|---|---|
 | **Autor(a)** | Kawan Mark Geronimo Da Silva | Gabriel Albertini Pinheiro | Alexandre Domiciano Pierri |
-| **Papel no domínio** | Fiscal Aduaneiro / Operador de Scanner (1ª Linha Operacional) | [F] Auditor-Fiscal da Receita Federal, responsável pelo desembaraço (C02) | Agente de Segurança Pública / Policial de Campo (Ação Tática) |
+| **Papel no domínio** | [H01] Operador da estação de imagem de raio-X, que examina a imagem. [H39] A autoridade para liberar ou reter não lhe é atribuída | [F] Auditor-Fiscal da Receita Federal, responsável pelo desembaraço (C02) | Agente de Segurança Pública / Policial de Campo (Ação Tática) |
 | **Tipo de persona** | **Primária** | **Primária** | **Proto-persona a validar** (possível stakeholder, H42) |
-| **Dispositivo / Hardware** | Desktop com monitor dedicado de 24" de alta resolução radiográfica | [?] Não investigado. [F] Acesso ao Portal Único com certificado digital (C02) | Tablet / coletor móvel robustecido de pátio |
-| **Ambiente de uso** | Sala de comando portuária em penumbra, ruído externo e alta demanda | [H] Ambiente administrativo de unidade aduaneira | Pátio externo aberto sob intempéries (sol, chuva, poeira) e ruído |
-| **Frequência de interação** | Contínua e ininterrupta (varredura de dezenas de contêineres por hora) | [H] Sob demanda, quando recebe um caso apontado (H39) | Pontual e imediata (ao receber alertas de interceptação ou vistoria física) |
-| **Interação com a IA** | Manipula a imagem bruta com sobreposição da máscara residual e slider de opacidade | [H] Usa o resultado da imagem como evidência, junto dos dados da declaração (H11, ?08) | Consome apenas o status binário (`ANOMALIA DETECTADA`) e localização de quadrante |
-| **Decisão central** | Sinalizar contêiner como suspeito ou liberar na fila rápida de triagem | [F] Formalizar exigência, verificação física ou desembaraço (C02) | Executar a abordagem, romper lacre, vistoriar a carga e confirmar ação |
-| **Principal impacto no design** | Dark Mode obrigatório, radiografia ocupando 70%+ da tela, botões rápidos de veredito | [H] Evidência da imagem reunida aos dados da declaração e registro com motivo. Formas a investigar | UI móvel de alto contraste para luz solar, botões grandes para luvas, alertas em 1 toque |
+| **Dispositivo / Hardware** | [F] Estação de trabalho com monitor dedicado de 22" a 24" (C03) | [?] Não investigado. [F] Acesso ao Portal Único com certificado digital (C02) | Tablet / coletor móvel robustecido de pátio |
+| **Ambiente de uso** | [H] Sala de operação do escâner em recinto alfandegado, com possibilidade de plantão noturno. [?] Iluminação, ruído e turnos não investigados (H16) | [H] Ambiente administrativo de unidade aduaneira | Pátio externo aberto sob intempéries (sol, chuva, poeira) e ruído |
+| **Frequência de interação** | [H] Contínua ao longo do turno, conforme chegam as imagens (H04). [?] Volume real não conhecido | [H] Sob demanda, quando recebe um caso apontado (H39) | Pontual e imediata (ao receber alertas de interceptação ou vistoria física) |
+| **Interação com a IA** | [H] Examina a imagem junto da região apontada pela IA. A forma de apresentação é alternativa a testar (H30) | [H] Usa o resultado da imagem como evidência, junto dos dados da declaração (H11, ?08) | Consome apenas o status binário (`ANOMALIA DETECTADA`) e localização de quadrante |
+| **Decisão central** | [H39] Concluir se há algo a apontar no contêiner e registrar a conclusão. Decidir sobre a carga depende de H39 | [F] Formalizar exigência, verificação física ou desembaraço (C02) | Executar a abordagem, romper lacre, vistoriar a carga e confirmar ação |
+| **Principal impacto no design** | [H] Prioridade visual da imagem, comparação do apontamento sem perder a imagem original e registro com motivo. Tema, proporção de tela e número de passos são alternativas (nível 3 da Síntese) | [H] Evidência da imagem reunida aos dados da declaração e registro com motivo. Formas a investigar | UI móvel de alto contraste para luz solar, botões grandes para luvas, alertas em 1 toque |
 
-Na coluna de P02, cada afirmação traz `[F]`, `[H]` ou `[?]`. As colunas de P01 e P03 repetem as fichas dessas personas, que ainda não têm essa marcação.
+Nas colunas de P01 e P02, cada afirmação traz `[F]`, `[H]` ou `[?]`. A coluna de P03 repete a ficha dessa persona, que ainda não tem essa marcação.
 
 ---
 
