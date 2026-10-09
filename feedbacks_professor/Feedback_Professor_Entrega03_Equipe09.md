@@ -20,6 +20,10 @@
 >
 > \- Gabriel
 
+> **➕ Complemento (09/10/2026):** os itens de P01 foram aplicados em [`920dc8d`](https://github.com/KawanMark/template-ihc2026/commit/920dc8d), [`9352376`](https://github.com/KawanMark/template-ihc2026/commit/9352376), [`8251582`](https://github.com/KawanMark/template-ihc2026/commit/8251582) e [`598c597`](https://github.com/KawanMark/template-ihc2026/commit/598c597): correções 2, 3 e 9 e recomendações 1, 2 e 3. Ficam com Alexandre os itens de P03.
+>
+> \- Kawan
+
 ## Avaliação geral
 
 A equipe cumpriu o requisito quantitativo básico da entrega: foram produzidas três personas para três integrantes, acompanhadas de imagens, mapa de empatia, contexto de uso consolidado e jornada. Há também uma boa preocupação em relacionar os artefatos às hipóteses e às descobertas das entregas anteriores.
@@ -108,6 +112,10 @@ A recomendação é revisar as personas reduzindo ou marcando explicitamente os 
 >
 > \- Gabriel
 
+> **➕ Complemento (09/10/2026)** ([`9352376`](https://github.com/KawanMark/template-ihc2026/commit/9352376)): os detalhes listados foram retirados da ficha ou marcados. Ficam só a idade e o nome como ficção, "vários anos de experiência" como `[H]`, e carreira, turnos, iluminação e atalhos como `[?]`. A segunda opinião aparece como `[H]` sem fonte. Os detalhes de P03 seguem com Alexandre.
+>
+> \- Kawan
+
 ### 3. P01 ainda mistura “Fiscal Aduaneiro” e “Operador de Scanner” sem resolver a divisão real de papéis
 
 Desde a Entrega 01 existe a hipótese de que “Fiscal Aduaneiro / Operador de Scanner” seja o usuário direto.
@@ -132,6 +140,10 @@ Antes de consolidar as próximas tarefas, a equipe precisa investigar essa front
 > **⏭️ Fora desta revisão**: a ficha de P01 ainda atribui a Gustavo a decisão de liberar ou reter. A reescrita fica com Kawan.
 >
 > \- Gabriel
+
+> **➕ Complemento (09/10/2026)** ([`9352376`](https://github.com/KawanMark/template-ihc2026/commit/9352376)): a ficha de P01 deixa de atribuir a Gustavo a decisão de liberar ou reter. Ele examina a imagem e chega a uma conclusão, e se essa conclusão é um apontamento ou a decisão está em aberto (H39), com a evidência das normas da RFB. Fica como lacuna se quem está na posição dele é operador do recinto ou servidor da RFB (?08). O título passou a "operador da estação de imagem". O mesmo ajuste está na coluna de P01 da síntese das personas.
+>
+> \- Kawan
 
 > **➕ Complemento (06/10/2026)** ([`ed78639`](https://github.com/KawanMark/template-ihc2026/commit/ed78639)): três normas da RFB respondem parte das perguntas deste item. A Portaria RFB nº 143/2022 (art. 14) manda o recinto disponibilizar o escâner e transmitir as imagens em tempo real à RFB. A Portaria ALF/FNS nº 9/2024, da unidade de Imbituba, diz que o escâner é operado por operadores designados pelo recinto, que comunicam suspeitas à RFB, e que a carga fica retida até a manifestação da RFB. O ADE Coana nº 19/2014 prevê licenças do software de análise para estações de trabalho da RFB. Com isso, H39 e H01 passaram a parcialmente sustentadas e ?08 tem resposta parcial. Segue aberto que cargo da RFB examina as imagens. As normas foram lidas em reprodução não oficial (normasbrasil.com.br), e a portaria de Imbituba vale para uma unidade. A classificação do elenco registra que P01 pode ser um operador do recinto, e não um servidor da RFB. A reescrita da ficha continua com Kawan.
 >
@@ -291,6 +303,10 @@ A foto da persona não precisa reproduzir literalmente a cena de trabalho, mas e
 >
 > \- Gabriel
 
+> **➕ Complemento (09/10/2026)** ([`920dc8d`](https://github.com/KawanMark/template-ihc2026/commit/920dc8d)): a imagem de P01 passou a ser um retrato do personagem em fundo liso, sem o escritório corporativo e sem terno, de modo que não contradiz o ambiente descrito na ficha. A imagem de P03 segue com Alexandre.
+>
+> \- Kawan
+
 ### 10. A rastreabilidade não foi atualizada para registrar efetivamente a Entrega 03
 
 Este é um problema de conformidade importante.
@@ -366,6 +382,10 @@ Isso também reduzirá o risco de a biografia fictícia virar “prova” de um 
 >
 > \- Gabriel
 
+> **➕ Complemento (09/10/2026)** ([`9352376`](https://github.com/KawanMark/template-ihc2026/commit/9352376)): a ficha de P01 tem a legenda de leitura com `[F]`, `[H]`, `[?]` e "ficcional", como a de P02. A faixa etária e o nome são ficcionais. Anos de carreira, anos com scanner, escala 12x36, presbiopia, pavor de sindicância, atalhos e segundo olhar saíram como característica: o que ficou aparece como `[H]` ou `[?]`. Os detalhes de P03 seguem com Alexandre.
+>
+> \- Kawan
+
 ### 2. Trabalhar melhor objetivos pessoais, práticos e de experiência
 
 Os objetivos atuais estão fortemente associados à tarefa institucional: liberar cargas, interceptar ilícitos, emitir decisões.
@@ -386,6 +406,10 @@ Esses objetivos ajudam muito mais o design de interação do que apenas metas or
 >
 > \- Gabriel
 
+> **➕ Complemento (09/10/2026)** ([`9352376`](https://github.com/KawanMark/template-ihc2026/commit/9352376)): a ficha de P01 tem os campos "Objetivos práticos" e "Objetivos de experiência": manter o foco ao longo do turno, confiar que não deixou passar algo relevante, não se sentir inseguro quanto ao que concluiu, sentir que a conclusão continua sendo dele e entender por que uma região foi apontada. Os motivadores deixaram de falar em prestígio e em meta de 100% de precisão. Os objetivos de P03 seguem com Alexandre.
+>
+> \- Kawan
+
 ### 3. Reduzir decisões de UI dentro das personas
 
 Slider, Dark Mode, painéis retráteis, quantidade de cliques, percentual de área da tela e push notification não precisam desaparecer do projeto. Eles apenas precisam voltar à categoria correta: **alternativas de design a investigar**.
@@ -395,6 +419,10 @@ Slider, Dark Mode, painéis retráteis, quantidade de cliques, percentual de ár
 > **⏭️ Fora desta revisão**: as listas "Decisões de design influenciadas" de P01 e P03 ainda trazem Dark Mode obrigatório, 70% da tela, slider e ações em um toque. Ficam com Kawan e Alexandre. A tabela "Síntese das personas" repete essas fichas nas colunas de P01 e P03, e uma nota abaixo dela diz isso.
 >
 > \- Gabriel
+
+> **➕ Complemento (09/10/2026)** ([`9352376`](https://github.com/KawanMark/template-ihc2026/commit/9352376), [`8251582`](https://github.com/KawanMark/template-ihc2026/commit/8251582)): a lista "Decisões de design influenciadas por P01" virou "Implicações de P01 para o design (alternativas a investigar, não requisitos)". Tema escuro, proporção da tela para a imagem, slider e alternância da camada, ordem de exame, passos do registro e canal aduaneiro estão como `[H]`, com remissão a H10, H15, H16, H30, H04, H41, RC05, RC06, RC09 e RC10. A coluna de P01 na síntese das personas traz `[F]`, `[H]` ou `[?]` e remete as soluções ao nível 3 da Síntese. A lista de P03 segue com Alexandre.
+>
+> \- Kawan
 
 ### 4. Manter o mapa de empatia como representação da pessoa
 
@@ -462,6 +490,10 @@ Essa estrutura ajudará a separar atividade humana de tela.
 > **Situação:** as ações 1, 5, 6, 7, 8, 9 e 10 foram aplicadas nas partes de grupo e na matriz. As ações 2, 3 e 4 foram aplicadas em P02, na tabela de entradas e na classificação. Ficam com Kawan a reescrita de P01 (papel, biografia, decisões de design) e a imagem de P01. Ficam com Alexandre a reescrita de P03 e a decisão de mantê-lo como ficha de proto-persona ou convertê-lo em stakeholder. A imagem de P02 foi trocada depois, em complemento. A ação 12 depende da Entrega 7.
 >
 > \- Gabriel
+
+> **➕ Complemento (09/10/2026)** ([`598c597`](https://github.com/KawanMark/template-ihc2026/commit/598c597)): as ações 2, 3 e 11 estão aplicadas também em P01, na ficha e na coluna de P01 da síntese das personas. A ação 4 e a decisão sobre manter P03 como ficha ou stakeholder seguem com Alexandre.
+>
+> \- Kawan
 
 ## Parecer geral sobre a Entrega 03
 
