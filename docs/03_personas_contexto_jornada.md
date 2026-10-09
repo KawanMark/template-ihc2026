@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 04/09/2026 (versão original)  
-**Revisão:** 06/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md)  
+**Revisão:** 06/10/2026 e 09/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md)  
 **Status:** 🟩 concluída  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
@@ -312,8 +312,8 @@ As três normas foram lidas em 06/10/2026 na reprodução do site normasbrasil.c
 
 - [x] Existe pelo menos uma persona por integrante (P01: Gustavo Onofre, P02: Dr. Eduardo Resende, P03: Marcos Oliveira).
 - [x] As personas não são apenas diferenças demográficas superficiais (diferenciadas por papéis, ambientes, dispositivos e relação com a IA: triagem contínua, despacho legal e ação tática de campo).
-- [ ] Está claro o que é dado real e o que é hipótese/proto-persona. (Feito em P02, no mapa de empatia, no contexto de uso e na jornada. As fichas de P01 e P03 ainda não têm a marcação.)
-- [ ] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência. (Feito na tabela de entradas, em P02 e na matriz. As fichas de P01 e P03 ainda apresentam hipóteses como características.)
+- [ ] Está claro o que é dado real e o que é hipótese/proto-persona. (Feito em P01, P02, no mapa de empatia, no contexto de uso e na jornada. A ficha de P03 ainda não tem a marcação.)
+- [ ] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência. (Feito na tabela de entradas, em P01, P02 e na matriz. A ficha de P03 ainda apresenta hipóteses como características.)
 - [x] Objetivos e dores têm consequência para o design.
 - [x] Contexto de uso está coerente com a Entrega 1 e com a análise de concorrência da Entrega 2.
 - [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica (modelo de anomalia residual em raio-X).
