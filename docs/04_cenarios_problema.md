@@ -8,11 +8,15 @@
 
 Descrever situações atuais em que o usuário tenta alcançar um objetivo e encontra dificuldades. O cenário de análise/problema deve tornar visível **o contexto, os atores, as ações e as rupturas**, sem antecipar a interface que será projetada.
 
+> **Regra central:** cenário de problema é a “história do problema”. Se o texto já diz “o sistema mostra”, “o aplicativo resolve” ou descreve botões/telas futuras, provavelmente está misturando problema com solução.
+
+Sempre que possível, o cenário deve aprofundar uma **situação concreta já registrada na Entrega 1**.
+
 ---
 
 ## Cenário C03 — Inspeção Física no Pátio Ineficiente por Falta de Detalhamento Espacial e Visual da Anomalia em Cargas de Alto Risco
 
-**Autor(a):** Alexandre Domiciano Pierri — 22.122.012-0  
+**Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6  
 **Persona(s) relacionada(s):** P03 – Marcos Oliveira (Agente de Campo / Fiscal de Pátio e Vistoria Física)  
 **Necessidade relacionada:** R01 (Orientação precisa para verificação física no pátio através de mapa residual e coordenadas)  
 **Situação concreta da Entrega 1 relacionada:** Seção 4.4 / H28 (Emissão e consulta de relatórios/laudos de instrução para vistorias) e H42 (Atuação e tomada de decisão do agente de pátio)  
@@ -30,6 +34,8 @@ O processo estende o tempo de permanência da carga no pátio, gera atrito com o
 
 ### 2. Questões de refinamento
 
+As perguntas foram formuladas com base na taxonomia de refinamento de cenários (questões exploratórias, de verificação e por quê/como) para detalhar os elementos de ambiente, ator, ações e planejamento:
+
 | # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
 |---|---|---|---|
 | Q1 | Quais condições operacionais do ambiente de pátio afetam a leitura do laudo pelo agente? | Para entender as limitações físicas (iluminação, dispositivos, EPIs) enfrentadas na ponta durante a consulta do laudo. | Entrevista contextual / observação de campo com agentes de vistoria no porto. |
@@ -42,7 +48,7 @@ O processo estende o tempo de permanência da carga no pátio, gera atrito com o
 
 Durante o turno da noite no Porto de Imbituba, sob chuva fina, vento forte e iluminação artificial precária, o agente de campo Marcos Oliveira (P03) recebe uma ordem de verificação física para um contêiner refrigerado (*reefer*) retido em canal vermelho. **[NOVO: Marcos consulta a ordem de serviço em seu terminal móvel industrial com tela de baixa resolução sob luz refletida, encontrando apenas a mensagem genérica "Inconsistência de densidade detectada na imagem de raio-X", sem qualquer anexo gráfico, marcação de quadrante (porta, meio ou fundo) ou indicação de probabilidade de risco.]**
 
-Marcos desloca-se até o setor de vistorias, onde o ruído de empilhadeiras e reach stackers impede a comunicação clara sem o uso de rádio. Acompanhado pela equipe de apoio de movimentação física, **[NOVO: por não saber em qual seção a anomalia se encontra, Marcos adota o procedimento padrão empírico de esvaziar o contêiner a partir da porta frontal]**. A equipe rompe os lacres e descarrega manualmente dezenas de caixas de carne congelada a -18 °C. 
+Marcos desloca-se até o setor de vistorias, onde o ruído de empilhadeiras e reach stackers impede a comunicação clara sem o uso de rádio. Acompanhado pela equipe de apoio de movimentação física, **[NOVO: por não saber em qual seção a anomalia se encontra, Marcos adota o procedimento padrão empírico de esvaziar o contêiner a partir da porta frontal.]** A equipe rompe os lacres e descarregar manualmente dezenas de caixas de carne congelada a -18 °C. 
 
 Sem o mapa residual visual ou o gabarito explicativo de ROI (Região de Interesse), a equipe gasta mais de três horas esvaziando dois terços do contêiner **[NOVO: manipulando cerca de 12 toneladas de carga em ambiente de extrema fadiga física]** para constatar que a alteração de densidade tratava-se de um adensamento de gelo acumulado no compressor interno do sistema de refrigeração. **[NOVO: Se a equipe soubesse que a alteração estava na parede do fundo, junto ao motor, a vistoria teria focado apenas no painel técnico externo, sem necessidade de tocar na carga.]**
 
