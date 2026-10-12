@@ -2,7 +2,7 @@
 
 **Data:** 13/08/2026 (versão original)
 **Revisão:** 06/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe09.md)
-**Status:** 🟩 concluída
+**Status:** 🟦 revisada após feedback
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -68,7 +68,7 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 Detecção de Anomalias em Imagens de Raio-X de Contêineres de Carga
 
-> ## 0.3 Orientador(a):
+## 0.3 Orientador(a)
 
 Murilo Bouzon
 
@@ -84,7 +84,7 @@ Marque e descreva:
 - [X] estudo/benchmark/avaliação experimental;
 - [ ] infraestrutura/backend;
 - [ ] componente embarcado/IoT;
-- [ ] outro: {{...}}.
+- [ ] outro.
 
 **Descrição:** O TCC desenvolve primariamente um **modelo de IA/ML** baseado em aprendizado (Autoencoder) acompanhado de **algoritmos** de injeção sintética de anomalias e um **estudo experimental/benchmark** avaliando a precisão da detecção em imagens de raio-X de contêineres
 
@@ -213,7 +213,7 @@ Esta situação é um cenário exploratório, criado para discutir o problema. C
 
 | Evidência/fonte                                                                                                         | O que sustenta                                                                                       | Limitação                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Artigo base do TCC (*Self-supervised anomaly detection and localization for x-ray cargo images*, Gaikwad et al., 2024) | Grande volume de carga nas fronteiras, dificuldade de localizar anomalias imprevisíveis e proposta de detecção e localização autossupervisionadas (resumo do artigo, DOI 10.1016/j.engappai.2024.109675). | Foco estritamente técnico/algorítmico, sem modelagem de experiência do operador. |
+| Artigo base do TCC (*Self-supervised anomaly detection and localization for x-ray cargo images*, Gaikwad et al., 2025) | Grande volume de carga nas fronteiras, dificuldade de localizar anomalias imprevisíveis e proposta de detecção e localização autossupervisionadas (resumo do artigo, DOI 10.1016/j.engappai.2024.109675). | Foco estritamente técnico/algorítmico, sem modelagem de experiência do operador. |
 
 ---
 
@@ -283,9 +283,7 @@ Esta situação é um cenário exploratório, criado para discutir o problema. C
 
 ### Caminho A — TCC já possui interface
 
-Explique qual parte da interface será usada como recorte da disciplina e por que esse fluxo é relevante.
-
-{{...}}
+Não se aplica: o TCC não previa interface.
 
 ### Caminho B — TCC não possui interface prevista
 
@@ -321,7 +319,7 @@ Analisar os alertas gerados pelo modelo de IA, comparar a imagem original de rai
 - [ ] É um aprofundamento de algo parcialmente previsto.
 - [ ] É uma extensão conceitual criada para a disciplina.
 - [X] É um protótipo demonstrativo de aplicação potencial.
-- [ ] Outra: {{...}}.
+- [ ] Outra.
 
 > **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for posteriormente decidido pela equipe e pelo orientador.
 
@@ -342,7 +340,7 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | **Alertas/ocorrências** | Sim | Não deixar um caso crítico parado na fila | [H33] | 2. Hipótese secundária, depende de H04 e H25 |
 | **Acompanhamento de processamento** | Sim | Saber se a análise da imagem já terminou | [H27] | 2. Hipótese secundária, depende de ?05 |
 | **Relatório/resultados** | Sim | Encaminhar o resultado da análise a quem decide ou executa | [H28] | 2. Hipótese secundária, depende de H39 |
-| **Histórico com busca/filtros** | Sim | Consultar varreduras anteriores por ID do contêiner, data ou nível de risco | [H29] | 3. Necessidade de outro perfil (Analista de Inteligência, H02) |
+| **Histórico com busca/filtros** | Sim | Duas necessidades distintas: recuperar o que já aconteceu com um contêiner ou declaração (AC04) e investigar padrões em varreduras anteriores | [H29], [?02] | 2. Hipótese secundária para a consulta de um caso pelo identificador (AC04). 3. Necessidade de outro perfil para a investigação de padrões (Analista de Inteligência, H02) |
 | **Configuração/parametrização** | Talvez | Ajustar sensibilidade de detecção da IA | [?03] | 3. Necessidade de outro perfil (configurador técnico, ?01) |
 | **Entrada/upload/seleção de dados** | Talvez | Receber novas imagens de raio-X e metadados do contêiner | [H26] | 4. Pode ser descartada: a imagem tende a chegar do scanner, sem ação do usuário |
 | **Ajuda/documentação** | Talvez | Consultar termos radiográficos e instruções de uso | [?04] | 4. Pode ser descartada |
@@ -403,8 +401,8 @@ As hipóteses estão ordenadas pelo risco para o projeto: primeiro as que, se es
 | 1 | H11 | Além da imagem, o profissional usa dados da carga declarada para concluir. | Define quais informações precisam estar disponíveis junto da imagem e em que momento. | Entrega 7: entrevista. |
 | 1 | H14, H15, H16 | O uso ocorre em sala de controle, em estação dedicada, com ruído, interrupções e pressão de tempo. | Restringe cor, som e densidade de informação. | Entrega 7: entrevista, fotos ou material institucional do ambiente. |
 | 2 | H30 | Visualização lado a lado (imagem original e mapa residual) é preferível à sobreposição com ajuste de opacidade. | Define a disposição da tela de análise. Só faz sentido testar depois de confirmados usuário e tarefa. | Entrega 6: comparação de alternativas em baixa fidelidade. |
-| 2 | H31 | Um índice de anomalia acompanhado de marcação da região é suficiente para apoiar a conclusão. | Define o nível de explicação mostrado. | Entrega 6 e avaliação nas Entregas 12 a 14. |
-| 2 | H33 | Reorganizar a fila por nível de anomalia reduz o tempo de resposta em casos críticos. | Depende de H04: sem fila, não há o que reorganizar. | Entrega 7 para a tarefa; Entregas 12 a 14 para a solução. |
+| 2 | H31 | Exibir a marcação da região apontada e um índice de anomalia aumenta a aceitação da IA por quem examina a imagem. | Define o nível de explicação mostrado. | Entrega 7 para o que o usuário espera de uma explicação; Entrega 6 e Entregas 12 a 14 para as alternativas. |
+| 2 | H33 | Avisos em tempo real são necessários para que um contêiner com anomalia alta não fique parado na fila. A reordenação da fila por nível de anomalia é tratada em H35 e H41. | Depende de H04: sem fila, não há o que avisar nem reordenar. | Entrega 7 para a tarefa; Entregas 12 a 14 para a solução. |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -418,16 +416,16 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | O TCC já previa interface?              | Não                                                                                                                                                                   |
 | Quem é o usuário prioritário de IHC?  | [H01] Operador da estação de imagem de raio-X. A relação com o Auditor-Fiscal que formaliza a decisão está aberta (H39). |
 | O que ele precisa alcançar?             | [H38] Chegar a uma conclusão confiável sobre cada contêiner examinado e registrá-la de forma defensável. |
-| Qual problema/atividade será estudado?  | Triagem de contêineres e tomada de decisão sob fadiga visual e pressão de tempo.                                                                                    |
+| Qual problema/atividade será estudado?  | Exame de imagens de contêineres e registro do resultado, sob incerteza. Fadiga visual e pressão de tempo são hipóteses (H10, H16).                                                                                    |
 | Como isso acontece hoje?                 | [H09] Inspeção visual em softwares dos fabricantes de scanners, que já oferecem apoio analítico (pseudo-cor, realce, comparação), sem detecção autossupervisionada de anomalias. |
 | Qual é o contexto de uso?               | [H14, H15, H16] Sala de controle portuária, estação com monitor dedicado de 22" a 24", pressão temporal e gravidade da segurança. |
-| Que interface/recorte será explorado?   | Visualizador comparativo (original vs. mapa residual) e painel de veredito.                                                                                            |
+| Que interface/recorte será explorado?   | Visualizador comparativo (original e mapa residual) e registro do resultado da análise, que pode ser apontamento ou decisão (H39).                                                                                            |
 | Como a interface se relaciona ao TCC?    | Protótipo demonstrativo de aplicação potencial da capacidade analítica do modelo.                                                                                  |
-| Quais pontos ainda são hipóteses?      | Prioridade 1, porque podem mudar usuário, tarefa ou recorte: H01 e H39 (quem opera e quem decide), H04 e H07 (existência e frequência da triagem em fila), H06 e H08 (registro do resultado), H11 (informações para concluir) e H14 a H16 (contexto). Prioridade 2, alternativas de solução: H30, H31 e H33. Lacunas abertas: ?01, ?02 e ?07. |
+| Quais pontos ainda são hipóteses?      | Prioridade 1, porque podem mudar usuário, tarefa ou recorte: H01 e H39 (quem opera e quem decide), H04 e H07 (existência e frequência da triagem em fila), H06 e H08 (registro do resultado), H11 (informações para concluir) e H14 a H16 (contexto). Prioridade 2, alternativas de solução: H30, H31 e H33. Lacunas abertas: ?01 a ?08, com destaque para ?07 e ?08. |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** Projeto de telas de triagem, visualização comparativa de imagens e fluxo de decisão
+**Dentro do escopo de IHC:** Visualização comparativa de imagens e registro do resultado da análise. A triagem em fila entra se H04 e H41 se sustentarem.
 **Fora do escopo de IHC:** Treinamento do modelo de IA, ajuste de hiperparâmetros do Autoencoder, engenharia de backend e captura física de dados do scanner de raio-X.
 **Dentro do escopo formal do TCC:** Pesquisa e desenvolvimento do algoritmo de detecção autossupervisionada e validação experimental por métricas (F1-score).
 **Interface da disciplina será implementada no TCC?** não definido
@@ -482,3 +480,10 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [X] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
 - [X] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [X] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+
+## Histórico de revisões
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 06/10/2026 | Papéis de operador e Auditor-Fiscal (H39), objetivo do usuário (H38), fontes dos fatos, classificação das possibilidades da seção 8, hipóteses de design da seção 9.3, priorização da seção 10 e identificadores. | [Parecer do professor](../feedbacks_professor/Feedback_Professor_Entrega01_Equipe09.md), com o tratamento de cada item anotado no próprio parecer. |
+| 12/10/2026 | Enunciados de H31 e H33 iguais aos da matriz. Histórico desdobrado em duas necessidades na seção 8. Síntese e delimitação da seção 11 com o vocabulário das seções 7.3 e 7.4. Ano do artigo base (2025). Campos de template removidos. | Auditoria de coerência de 12/10/2026 (AC-006, AC-007, AC-012, AC-015, AC-016). |
