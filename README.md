@@ -1,8 +1,5 @@
 # Projeto de Interação Humano-Computador (IHC)
 
-> **Template acadêmico para documentação do projeto no GitHub.**  
-> Substitua todo texto entre `{{...}}`, remova exemplos que não se aplicam e mantenha evidências no próprio repositório sempre que possível.
-
 ## Princípio do projeto da disciplina
 
 A disciplina utiliza **preferencialmente o tema do TCC em andamento** como domínio para exercitar os métodos de Interação Humano-Computador.
@@ -21,16 +18,16 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 **TCC/projeto de origem:** Detecção de Anomalias em Imagens de Raio-X de Contêineres de Carga  
 **Orientador(a):** Murilo Bouzon  
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
+**Instituição:** Centro Universitário FEI  
 **Semestre:** 2026/2
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Kawan Mark Geronimo Da Silva | 22.222.010-5 | [@KawanMark](https://github.com/KawanMark) | Análise de concorrência C01 (Rapiscan InSight) na Entrega 2 |
-| Gabriel Albertini Pinheiro | 22.122.094-8 | [@albertx0](https://github.com/albertx0) | Análise de concorrência C02 (Portal Único Siscomex) na Entrega 2 |
-| Alexandre Domiciano Pierri | 22.125.061-6 | [@Apierri05](https://github.com/Apierri05) | Análise de concorrência C03 (Smiths Detection DaiSy/viZual) na Entrega 2 |
+| Kawan Mark Geronimo Da Silva | 22.222.010-5 | [@KawanMark](https://github.com/KawanMark) | C01 (Rapiscan InSight) na Entrega 2, persona P01 na Entrega 3 e cenário CP01 na Entrega 4 |
+| Gabriel Albertini Pinheiro | 22.122.094-8 | [@albertx0](https://github.com/albertx0) | C02 (Portal Único Siscomex) na Entrega 2, persona P02 na Entrega 3 e cenário CP02 na Entrega 4 |
+| Alexandre Domiciano Pierri | 22.125.061-6 | [@Apierri05](https://github.com/Apierri05) | C03 (Smiths Detection DaiSy/viZual) na Entrega 2, proto-persona P03 na Entrega 3 e cenário CP03 na Entrega 4 |
 
 ## Relação entre TCC e projeto de IHC
 
@@ -40,24 +37,18 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Resultado técnico esperado do TCC | Modelo de IA/ML (Autoencoder autossupervisionado), algoritmos de injeção sintética de anomalias e estudo experimental de avaliação da detecção. |
 | O TCC já previa interface? | não |
 | Capacidade técnica que pode gerar valor para pessoas | Detectar e localizar anomalias em imagens de raio-X de contêineres, gerando imagens residuais que apontam as regiões discrepantes. |
-| Usuário principal adotado em IHC | Fiscal aduaneiro / operador de scanner de raio-X. |
-| Objetivo principal desse usuário | Triar contêineres por risco, confirmar se a discrepância apontada é real e registrar o veredito de liberação, vistoria física ou retenção com segurança e agilidade. |
-| Interface/recorte explorado na disciplina | Estação de triagem: fila de contêineres ordenada por risco, visualizador comparativo (imagem original × mapa residual, com score e ROI) e registro de veredito com justificativa e trilha de auditoria. |
+| Usuário principal adotado em IHC | Operador da estação de imagem de raio-X (H01). A autoridade para decidir sobre a carga pode caber a outro cargo, o Auditor-Fiscal (H39). |
+| Objetivo principal desse usuário | Chegar a uma conclusão confiável sobre cada contêiner examinado e registrá-la de forma defensável, sob incerteza (H38). |
+| Interface/recorte explorado na disciplina | Visualizador comparativo (imagem original × mapa residual) e registro do resultado da análise com justificativa. Ordem de exame por nível de anomalia, score numérico e formato da trilha de registro são hipóteses a investigar (H25, H31, H32). |
 | Relação com o escopo formal do TCC | protótipo demonstrativo |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
+Quem opera a estação de imagem de raio-X precisa chegar, contêiner a contêiner, a uma conclusão em que confie sobre o que a imagem mostra e registrá-la de forma defensável, em uma sala de controle de recinto alfandegado. A decisão formal de liberar, exigir ou reter a carga pode caber a outro cargo, o Auditor-Fiscal, e essa divisão de papéis ainda está em investigação. Hoje a imagem é examinada em softwares dos fabricantes dos scanners, que já oferecem apoio analítico como pseudo-cor por material, realce de bordas e comparação com imagens semelhantes, mas a interpretação final continua visual e humana. A equipe supõe que a sobreposição de mercadorias e a fadiga visual dificultam essa leitura, com risco de deixar passar uma anomalia ou de reter uma carga regular. O tema do TCC investiga a detecção autossupervisionada de anomalias em imagens radiográficas de carga, que aprende o padrão de cargas normais e produz mapas residuais indicando as regiões discrepantes. Para fins da disciplina de IHC, será explorada uma interface que permita a esse operador comparar a imagem original com o mapa residual, entender onde e por que a IA apontou discrepância e registrar o resultado da análise com justificativa.
 
-Evite começar pela tecnologia.
-
-> **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
-
-O fiscal aduaneiro precisa decidir, contêiner a contêiner, quais cargas podem ser liberadas e quais devem seguir para vistoria física, em uma sala de controle de terminal portuário, sob metas de liberação e responsabilidade legal sobre cada decisão. Hoje ele examina imagens de raio-X densas e com mercadorias sobrepostas em softwares dos fabricantes dos scanners, apoiando-se apenas na inspeção visual humana — o que, ao longo de turnos prolongados, produz fadiga visual e risco de deixar passar uma anomalia camuflada ou de reter indevidamente uma carga lícita. O tema do TCC investiga a detecção autossupervisionada de anomalias em imagens radiográficas de carga, que aprende o padrão de cargas normais e produz mapas residuais indicando as regiões discrepantes. Para fins da disciplina de IHC, será explorada uma interface que permita a esse fiscal receber os contêineres já ordenados por risco, comparar a imagem original com o mapa residual para confirmar o alerta e registrar seu veredito com justificativa e trilha de auditoria.
-
-Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
+As afirmações deste resumo que ainda são hipóteses (papéis, dificuldades e contexto) estão registradas com seus IDs na [Entrega 1](docs/01_conhecendo_o_problema.md) e na [Matriz de rastreabilidade](RASTREABILIDADE.md).
 
 ## Por que pensar em interface mesmo em TCCs técnicos?
 
@@ -103,10 +94,10 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
-| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 |
-| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟩 |
-| 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 |
-| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | ⬜ |
+| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟦 |
+| 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟦 |
+| 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟦 |
+| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟨 |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | ⬜ |
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | ⬜ |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | ⬜ |
@@ -117,6 +108,8 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | ⬜ |
 | 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, todas as telas/estados e 10 heurísticas | ⬜ |
 | 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | ⬜ |
+
+Estados: ⬜ não iniciada, 🟨 em andamento, 🟩 concluída, 🟦 revisada após feedback.
 
 > Se o docente definir quantidade diferente para a turma/semestre, a orientação da disciplina prevalece.
 

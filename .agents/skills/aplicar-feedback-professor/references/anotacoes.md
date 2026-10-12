@@ -6,7 +6,7 @@ Os links de commit usam a URL do repositório: `[`abc1234`](https://github.com/p
 
 ## Tabela de situação no topo
 
-Logo abaixo do título `# Feedback do Professor > Entrega NN > Equipe 16`:
+Logo abaixo do título `# Feedback do Professor > Entrega NN > Equipe 09`:
 
 ```markdown
 > **Status da aplicação (DD/MM/AAAA):** esta revisão cobre <partes de quem aplica> e as partes de grupo da entrega: <seções>. <Partes individuais dos outros> ficam com seus autores. Cada comentário abaixo traz uma anotação com o link para o commit correspondente, na branch `aplicar-feedback`. O texto original do professor foi preservado; as anotações aparecem em blocos de citação logo após cada item.
@@ -18,7 +18,7 @@ Logo abaixo do título `# Feedback do Professor > Entrega NN > Equipe 16`:
 > | Recomendação: <resumo> | aplicada | [`...`](...) |
 > | Pendência da Entrega N: <resumo> | aplicada | [`...`](...) |
 >
-> \- Pedro
+> \- Gabriel
 ```
 
 ## Bloco depois de cada item
@@ -33,7 +33,7 @@ Escolha o tipo pelo resultado:
 ```markdown
 > **✅ Como foi tratado** ([`abc1234`](https://github.com/p4cs-974/projeto-ihc/commit/abc1234)): <o que mudou, onde, e qual decisão foi tomada>. <O que fica com quem, se for o caso>.
 >
-> \- Pedro
+> \- Gabriel
 ```
 
 Um item pode ter dois blocos dentro da mesma citação, separados por `>`, quando parte foi tratada e parte ficou com outra pessoa (`🟨` seguido de `⏭️`).
@@ -45,7 +45,7 @@ Itens em lista, como as recomendações, levam o bloco indentado com dois espaç
 
   > **✅ Como foi tratado** ([`abc1234`](...)): ...
   >
-  > \- Pedro
+  > \- Gabriel
 
 - Próxima recomendação.
 ```
