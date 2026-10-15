@@ -14,7 +14,7 @@ Nos arquivos `.md`, o diff é feito por blocos: parágrafos, itens de lista e li
   "titulo": "Entrega 3: diffs do feedback",
   "base": "538c3dd",
   "fim": "25fc482",
-  "parecer": "feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md",
+  "parecer": "feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md",
   "parecer_rev": "1f73b32",
   "itens": [
     {
@@ -26,7 +26,7 @@ Nos arquivos `.md`, o diff é feito por blocos: parágrafos, itens de lista e li
         {"onde": "Correção prioritária 1: ...", "inicio": "Na seção de personas", "fim": "efetivamente serão apoiadas."},
         {"onde": "Recomendação de melhoria", "linha": "- Justifiquem a classificação"}
       ],
-      "nota": "Opção escolhida por Pedro: ..."
+      "nota": "Opção escolhida por Gabriel: ..."
     }
   ]
 }

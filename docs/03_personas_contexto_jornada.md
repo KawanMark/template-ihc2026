@@ -1,8 +1,8 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 04/09/2026 (versão original)  
-**Revisão:** 06/10/2026 e 09/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md)  
-**Status:** 🟩 concluída  
+**Revisão:** 06/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md)  
+**Status:** 🟦 revisada após feedback  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -29,7 +29,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 | Item da Entrega 1 | Status inicial | Evidência disponível agora | Como será tratado nesta entrega |
 |---|---|---|---|
-| **Perfil: operador da estação de imagem (H01)** | [H01] Hipótese reformulada | [F] C01 e C03 mostram que os produtos de mercado têm uma estação operada por alguém que examina a imagem. Não mostram quem é essa pessoa no Brasil. [F] Em ao menos uma unidade, é um operador designado pelo recinto alfandegado, que comunica suspeitas à RFB e não decide sobre a carga (Portaria ALF/FNS nº 9/2024, arts. 3º e 8º). | Base de P01 como proto-persona. A autoridade para liberar ou reter não é atribuída a P01: depende de H39. |
+| **Perfil: operador da estação de imagem (H01)** | [H01] Hipótese reformulada | [F] C01 e C03 mostram que os produtos de mercado têm uma estação operada por alguém que examina a imagem. Não mostram quem é essa pessoa no Brasil. [F] Em ao menos uma unidade, é um operador designado pelo recinto alfandegado, que comunica suspeitas à RFB e não decide sobre a carga (Portaria ALF/FNS nº 9/2024, arts. 3º e 8º). [F] Em Santos, matérias de A Tribuna de 2013 e 2015 dizem que as imagens são analisadas por servidores da Receita em uma central de vigilância, na sede da Alfândega. São matérias de jornal antigas, e não se sabe se segue assim (fontes na Entrega 4, CP02). | Base de P01 como proto-persona, que pode representar um operador do recinto ou um servidor da vigilância da RFB. A autoridade para liberar ou reter não é atribuída a P01: depende de H39. |
 | **Divisão entre quem examina a imagem e quem decide (H39)** | [H39] Hipótese aberta | [F] C02: o despacho tem distribuição para auditor e exigência fiscal, e o Manual de Despacho atribui o desembaraço ao Auditor-Fiscal. [F] A norma nacional manda transmitir as imagens em tempo real à RFB (Portaria RFB nº 143/2022, art. 14) e prevê software de análise em estações de trabalho da RFB (ADE Coana nº 19/2014). [F] Em ao menos uma unidade, o recinto comunica a suspeita e a carga fica retida até a manifestação da RFB (Portaria ALF/FNS nº 9/2024, art. 8º). [?] Falta saber que cargo da RFB analisa as imagens. | Base de P02 como proto-persona. A fronteira entre P01 e P02 é a primeira questão da Entrega 7. |
 | **Fadiga visual e plantão noturno (H10, H13)** | [H10], [H13] Hipóteses | [F] C03: o fabricante justifica monitores de 22" a 24" pela redução de fadiga ocular. É texto de fabricante, não observação de usuários. H13 é cenário exploratório da Entrega 1. | Dor hipotética de P01. Não fundamenta, por si, tema escuro nem outra solução. |
 | **Sala de controle em recinto alfandegado (H14, H16)** | [H14] parcialmente sustentada, [H16] aberta | [F] C03: estação dedicada em sistema de alto tráfego. Iluminação, penumbra e ruído não têm evidência. | Entram no contexto de uso como hipótese e lacuna. |
@@ -50,54 +50,49 @@ A classificação segue o papel de cada persona no design, e não a frequência 
 
 | Persona | Classificação | Justificativa |
 |---|---|---|
-| P01, Gustavo Onofre | primária | [H01] Examina a imagem radiográfica, que é onde a contribuição do TCC atua. A interface de análise é desenhada para ela. [F] Em ao menos uma unidade da RFB, o escâner é operado por operadores designados pelo recinto alfandegado, e as imagens seguem em tempo real para a RFB (Portaria ALF/FNS nº 9/2024). [?] Não sabemos se quem examina a imagem com atenção é esse operador, um servidor da RFB ou ambos. |
+| P01, Gustavo Onofre | primária | [H01] Examina a imagem radiográfica, que é onde a contribuição do TCC atua. A interface de análise é desenhada para ela. [F] Em ao menos uma unidade da RFB, o escâner é operado por operadores designados pelo recinto alfandegado, e as imagens seguem em tempo real para a RFB (Portaria ALF/FNS nº 9/2024). [F] Em Santos, segundo matérias de jornal de 2013 e 2015, as imagens são analisadas por servidores da vigilância da RFB em uma central (fontes na Entrega 4, CP02). [?] Não sabemos se quem examina a imagem com atenção é o operador do recinto, um servidor da RFB ou ambos, nem se isso varia por unidade. |
 | P02, Dr. Eduardo Resende | primária | [F] O Auditor-Fiscal é o responsável pelo desembaraço, e o despacho tem distribuição para auditor e exigência fiscal (C02 da Entrega 2). [H39] Se a decisão formal couber a ele, precisa de um fluxo próprio, de conferir a evidência com a declaração e formalizar o ato, que a interface de análise de P01 não atende. |
 | P03, Marcos Oliveira | proto-persona a validar | [H42] Não está demonstrado que o agente de campo interage com a solução. Ele pode receber a ordem por outro sistema, verbalmente ou por documento, pertencer a outro órgão ou não precisar de interface nova. Até H42 ser investigada, P03 é tratado como possível stakeholder do fluxo, fica fora do recorte principal e não justifica uma interface móvel. |
 
 [H39] Se a investigação mostrar que P01 e P02 são a mesma pessoa ou funções da mesma carreira, as duas personas serão fundidas ou redefinidas.
 
-### Persona P01 — Gustavo Onofre (operador da estação de imagem)
+### Persona P01 — Gustavo Onofre (operador da estação de imagem de raio-X)
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5  
 **Tipo:** primária (ver Classificação do elenco)  
-**Base de evidências:** [F] Análises C01 (Rapiscan InSight) e C03 (Smiths Detection DaiSy/viZual) da Entrega 2: existe uma estação de imagem operada por alguém, com tratamentos visuais sobre a imagem, comparação com dados do manifesto e monitor dedicado de 22" a 24". [F] Normas da RFB listadas em Referências, sobre inspeção não invasiva e operação do escâner. [F] O resumo do artigo base do TCC (Gaikwad et al.) cita o grande volume de carga e a dificuldade de localizar anomalias imprevisíveis. Nenhum operador de estação foi entrevistado ou observado. Por isso P01 é uma **proto-persona**.  
-**Hipóteses relacionadas:** H01, H04, H05, H06, H08, H10, H11, H12, H13, H14, H15, H16, H30, H31, H34, H37, H38, H39, H41 e as lacunas ?07 e ?08
+**Base de evidências:** [F] Análise das estações de imagem de mercado na Entrega 2 (Rapiscan InSight, C01, e Smiths Detection, C03). [F] Normas da RFB sobre inspeção não invasiva, listadas em Referências. [F] Resumo do artigo base do TCC (Gaikwad et al., 2025). Nenhum operador foi entrevistado ou observado. Por isso P01 é uma **proto-persona**.  
+**Hipóteses relacionadas:** H01, H04, H05, H10, H11, H16, H34, H37, H38, H39, H41 e a lacuna ?07
 
-**Como ler esta ficha.** Cada afirmação traz sua base, como em P02:
-
-- **[F]** sustentada por fonte: as análises C01 e C03 da Entrega 2 ou as normas listadas em Referências;
-- **[H]** hipótese plausível de perfil, ainda não investigada com usuários;
-- **[?]** lacuna, algo que a equipe não sabe;
-- **ficcional** detalhe de identidade criado só para tornar o personagem memorável. Não embasa decisão de design.
+A ficha usa as mesmas marcas de P02: **[F]** sustentado por fonte, **[H]** hipótese de perfil ainda não investigada, **[?]** lacuna, e **ficcional** para detalhe de identidade que não embasa decisão de design.
 
 ![Persona P01](../assets/03_personas/persona_p01.jpeg)
 
 | Campo | Descrição |
 |---|---|
 | **Nome** | Gustavo Onofre (ficcional) |
-| **Faixa etária / contexto relevante** | Ficcional: 46 anos. [H] Escolha da proto-persona, sem base investigada: vários anos de experiência com inspeção não intrusiva em um terminal portuário. [?] Tempo de carreira, regime de turnos e se alterna dia e noite não foram investigados (H13, H16). |
-| **Ocupação/papel** | [F] Existe uma estação de imagem operada por alguém nos produtos de mercado (C01, C03). [F] Em ao menos uma unidade, o escâner é operado por operadores designados pelo recinto alfandegado, que comunicam a suspeita à RFB, e a carga fica retida até a manifestação da RFB (Portaria ALF/FNS nº 9/2024, arts. 3º e 8º). [H01] Gustavo examina a imagem de cada contêiner e chega a uma conclusão sobre ela. [H39] Se essa conclusão é um apontamento para quem decide ou a própria decisão está aberto. Esta ficha não lhe atribui autoridade para liberar ou reter a carga. [?] Não sabemos se quem está na posição de Gustavo é operador do recinto ou servidor da RFB, nem que cargo da RFB examina as imagens (?08). |
-| **Conhecimento do domínio** | [H] Alto na leitura de imagens radiográficas de carga, por ser o conteúdo do papel: reconhece estruturas típicas de contêineres e lê as cores que indicam o tipo de material. [F] O software de mercado usa pseudo-cor por material orgânico, inorgânico e misto (C03). [H] Conhece o vocabulário aduaneiro e de inspeção, como manifesto, vistoria e canal (C02, RC03). [?] Profundidade do conhecimento da legislação aduaneira e das técnicas de ocultação de carga não foi investigada. |
-| **Experiência tecnológica** | [F] Usa o software do escâner, com zoom, ajuste de contraste, realce de bordas, pseudo-cor e equalização (C03; ADE Coana nº 19/2014, item 1.2.8). [H] Familiaridade média ou alta com estações dedicadas. [H] Pouca familiaridade com termos de aprendizado de máquina, o que torna provável preferir explicações visuais a métricas (H37). [?] Se usa atalhos de teclado e que tolerância tem à lentidão do software não foi investigado. |
-| **Objetivos práticos** | 1. [H38] Chegar a uma conclusão em que confie sobre cada contêiner examinado.<br>2. [H11] Verificar se o que a imagem mostra é compatível com a carga declarada.<br>3. [H06, H39] Deixar a conclusão registrada de forma que quem decide possa usá-la.<br>4. [H04] Dar conta do fluxo de imagens que chega ao longo do turno sem deixar de examinar cada uma. A existência de fila e de meta de liberação é lacuna (H41, ?07). |
-| **Objetivos de experiência** | 1. [H] Manter o foco ao longo do turno.<br>2. [H] Confiar que não deixou passar algo relevante por cansaço ou por sobreposição de objetos.<br>3. [H] Não se sentir inseguro quanto ao que concluiu e ao que registrou.<br>4. [H] Sentir que a conclusão continua sendo dele e que a automação não substitui seu julgamento.<br>5. [H] Entender por que uma região foi apontada, em vez de aceitar o apontamento sem saber a razão. |
-| **Necessidades** | 1. [H] Ver onde e por que a imagem sugere uma discrepância, sem perder a imagem original (H30, RC01, RC02, RC09). [F] A comparação entre imagens e o destaque de regiões são padrões de mercado (C01).<br>2. [H] Conferir a imagem com o que a carga declara ser (H11). [F] A comparação com dados do manifesto existe em produtos de mercado (C03).<br>3. [F] Encontrar o vocabulário do domínio aduaneiro e de inspeção (RC03).<br>4. [H] Registrar a conclusão com motivo e vinculada a quem a produziu (RC04, H17, H18).<br>5. [F] Receber informação crítica com redundância além da cor (RC11). |
-| **Dores/frustrações** | 1. [H] Cansaço visual e queda de atenção depois de muitas imagens seguidas (H10, H13). [F] O fabricante justifica o monitor de 22" a 24" pela redução da fadiga ocular (C03), o que não é observação de usuários.<br>2. [H] Imagens densas, com objetos sobrepostos, que dificultam distinguir o que é carga do que é anomalia (H10).<br>3. [H] Custo de errar para os dois lados: deixar passar algo ou comunicar a suspeita sem base. [F] Quando a suspeita é comunicada, a carga fica retida até a manifestação da RFB (Portaria ALF/FNS nº 9/2024, art. 8º) (H12).<br>4. [H] Marcações que cobrem a imagem ou competem com as cores de material que já usa (C03).<br>5. [H] Não ficar sabendo o desfecho dos casos que apontou ou deixou de apontar (?08).<br>6. [H] Registrar a conclusão em outro sistema sem aproveitar o que já examinou. [F] A decisão com valor jurídico é registrada no Siscomex (C02). |
-| **Motivadores** | 1. [H] Concluir sabendo que a leitura foi cuidadosa e que a conclusão se sustenta se for questionada.<br>2. [H] Contar com ferramentas que ajudem a olhar sem decidir no lugar dele.<br>3. [H] Saber depois se a sua leitura estava certa. |
-| **Restrições/acessibilidade** | 1. [F] Informação crítica com redundância além da cor, por princípio de acessibilidade (RC11).<br>2. [F] Estação com monitor dedicado de 22" a 24" (C03).<br>3. [H] Cansaço ocular ao longo do turno é plausível (H10). Nenhuma limitação visual individual é atribuída a Gustavo.<br>4. [?] Iluminação da sala, inclusive se é mantida em penumbra, e ruído do ambiente não foram investigados (H16). |
-| **Ambiente típico de uso** | [F] Existe uma sala de operação do escâner, de acesso restrito (Portaria ALF/FNS nº 9/2024, art. 3º), com estação de trabalho de monitor dedicado (C03). [H] Recinto alfandegado de terminal portuário, com possibilidade de plantão noturno (H13, H14). [?] Iluminação, ruído, número de monitores e interrupções não foram investigados (H16). |
-| **Comportamentos relevantes** | [F] Ajusta contraste, pseudo-cor, realce de bordas e zoom para examinar uma região, funções que o software atual oferece (C03; ADE Coana nº 19/2014, item 1.2.8). [H] Compara a imagem com a descrição da carga antes de concluir (H11). [H] Em dúvida, pode pedir a opinião de outra pessoa. Não há fonte sobre essa prática. |
+| **Faixa etária / contexto relevante** | Ficcional: 46 anos. [H] Escolhas da proto-persona, sem base investigada: cerca de 12 anos na área, 7 deles com inspeção por escâner, e trabalho em turnos que incluem a noite. [?] Regime de escala desconhecido. |
+| **Ocupação/papel** | [H01] Opera a estação de imagem: examina a radiografia de cada contêiner e produz um apontamento sobre o que encontrou. [F] Em ao menos uma unidade, quem opera o escâner é um operador designado pelo recinto alfandegado, que comunica suspeitas à RFB (Portaria ALF/FNS nº 9/2024, arts. 3º e 8º). [F] Em Santos, matérias de 2013 e 2015 dizem que as imagens são analisadas por servidores da Receita em uma central de vigilância (fontes na Entrega 4, CP02). [?] Não sabemos qual dos dois arranjos Gustavo representa. [H39] A decisão de liberar, exigir ou reter a carga não é atribuída a ele. |
+| **Conhecimento do domínio** | [H] Alto conhecimento prático de leitura de radiografias de carga: densidades, estruturas típicas do contêiner e formas conhecidas de ocultação. [F] Os softwares de estação oferecem pseudo-cor por material, realce de contornos, zoom, brilho e contraste (C03; ADE Coana nº 19/2014). [H] Conhece o vocabulário aduaneiro e os canais de parametrização (H24). |
+| **Experiência tecnológica** | [H] Média a alta com softwares de estação de escâner. [F] Esses softwares existem e são operados por alguém (C01, C03). [H] Pouca familiaridade com termos de aprendizado de máquina (H37). |
+| **Objetivos práticos** | 1. [H38] Chegar, a cada contêiner, a uma conclusão em que confie.<br>2. [H] Verificar se o que a imagem mostra é compatível com a carga declarada (H11).<br>3. [H] Registrar o que concluiu de forma que possa ser defendida depois (H06). |
+| **Objetivos de experiência** | 1. [H] Manter a concentração ao longo do turno.<br>2. [H] Confiar que não deixou passar algo que deveria ter visto.<br>3. [H] Sentir que a conclusão é dele, e não da automação.<br>4. [H] Saber depois se a sua leitura estava certa. |
+| **Necessidades** | 1. [H] Saber onde olhar em uma imagem densa (H10, H34).<br>2. [H] Entender onde e por que a IA apontou discrepância, sem perder a imagem original nem as cores de material que já usa (RC02, RC09).<br>3. [H] Ter à mão o que a carga declara ser (H11).<br>4. [H] Registrar o resultado sem refazer o trabalho em outro sistema (H06).<br>5. [H] Saber por onde começar, se a ordem de exame for decisão dele (H04, H41). |
+| **Dores/frustrações** | 1. [H] Cansaço visual e queda de atenção depois de muitas imagens seguidas (H10). [F] O fabricante justifica monitores de 22" a 24" pela redução de fadiga ocular (C03), o que é texto de fabricante.<br>2. [H] Receio de errar para os dois lados: algo passar despercebido ou uma carga regular ficar retida (H12).<br>3. [H] Registrar a conclusão em um sistema diferente daquele onde examina a imagem. [F] A decisão com valor jurídico é registrada no Siscomex (C02).<br>4. [H] Não ficar sabendo o desfecho dos casos que apontou. |
+| **Motivadores** | 1. [H] Concluir cada análise com segurança.<br>2. [H] Ver um apontamento seu se confirmar na verificação física.<br>3. [H] Contar com apoio para a varredura da imagem sem perder a palavra sobre a conclusão.<br>[?07] Não sabemos se existem metas de liberação por turno. |
+| **Restrições/acessibilidade** | 1. [H] Escolha da proto-persona: cansaço ocular recorrente e início de presbiopia.<br>2. Informação crítica com redundância além da cor, por princípio de acessibilidade (RC11).<br>3. [?] Iluminação da sala desconhecida (H16). |
+| **Ambiente típico de uso** | [F] Sala de operação do escâner, de acesso restrito (Portaria ALF/FNS nº 9/2024, art. 3º). [F] Estação com monitor dedicado de 22" a 24" (C03). [H] Ruído de pátio e interrupções (H16). [?] Se a sala é mantida em penumbra. |
+| **Comportamentos relevantes** | [F] Ajusta zoom, contraste, pseudo-cor e realce para examinar uma região, funções que os softwares oferecem (C03; ADE Coana nº 19/2014). [H] Usa atalhos de teclado para isso. [H] Em dúvida, pede a opinião de um colega antes de concluir. |
 
 **Implicações de P01 para o design (alternativas a investigar, não requisitos):**
 
-- [H] Mostrar onde a IA apontou discrepância sem esconder a imagem original. Alternativas a comparar: lado a lado, sobreposição, opacidade ajustável, alternância da camada (H30, RC09). Nenhuma foi observada como padrão de mercado.
-- [H] Dar à imagem a maior prioridade visual. Proporção da tela e posição dos dados da carga e das ações são alternativas a testar, como painéis fixos, retráteis ou faixa inferior (H15, RC10).
-- [H] Tema claro ou escuro depende do ambiente real, que não foi investigado (H10, H16).
-- [H] Ordem de exame por nível de anomalia só faz sentido se existir fila e se quem examina puder alterar a ordem (H04, H41, RC06).
-- [H] Registro da conclusão com motivo e vínculo a quem a produziu. Número de passos e justificativas pré-escritas são alternativas a testar (H06, RC04, RC07).
-- [H] Canal aduaneiro e resultado da IA ficam separados, e nenhum dos dois é comunicado só por cor (RC05, RC11, ?08).
+- [H] Tema claro ou escuro, conforme a iluminação real da sala (H16).
+- [H] Prioridade visual da radiografia na tela (RC10). Proporção da imagem e posição de dados e ações são alternativas de layout.
+- [H] Camada de IA distinguível dos tratamentos radiográficos e que não oculte a imagem (RC09). Lado a lado, sobreposição, opacidade ajustável e alternância são alternativas a comparar (H30).
+- [H] Ordem de exame por nível de anomalia (RC06), só se Gustavo decidir o que examinar primeiro (H41). O canal aduaneiro não representa o resultado da IA (RC05).
+- Informação crítica com texto ou padrão redundante à cor (RC11).
+- [H] Registro do resultado com motivo e vinculado a quem o produziu (RC04). Número de passos e justificativas pré-escritas são alternativas a testar.
 
-Nenhuma dessas alternativas avança antes de se investigar H39 e H01: sem saber se quem examina a imagem apenas aponta ou também decide, não há como fixar o que o registro de P01 significa.
+Nenhuma dessas alternativas avança antes de se investigar H01, H04 e H39: sem saber quem examina a imagem, se existe uma fila e o que o registro significa, não há como definir a interface de P01.
 
 ---
 
@@ -144,37 +139,43 @@ Nenhuma dessas alternativas avança antes de se investigar H39 e ?08: sem saber 
 
 ---
 
-### Persona P03 — Marcos Oliveira / Agente de Segurança Pública (Operacional de Campo)
+### Persona P03 — Marcos Oliveira (agente que executa a verificação física)
 
 **Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6  
 **Tipo:** proto-persona a validar, possível stakeholder (ver Classificação do elenco)  
-**Base de evidências:** Estruturada a partir dos requisitos formais de interceptação aduaneira e policial no ambiente portuário, pelas regras normativas de exigência/conferência física do Siscomex (C02), pelas hipóteses de uso operacional de campo (H03, H16, H17, H19, H24) e pela necessidade de consumo simplificado do resultado da IA sem complexidade de análise radiográfica.  
-**Hipóteses da Entrega 1 relacionadas:** H03, H06, H08, H12, H14, H16, H17, H18, H19, H24 (revisada)
+**Base de evidências:** [F] O canal vermelho prevê verificação física da mercadoria (C02). [F] Em ao menos uma unidade, a carga sob suspeita fica retida e segregada até a manifestação da RFB (Portaria ALF/FNS nº 9/2024, art. 8º). [F] Em Santos, uma matéria de 2013 diz que a conferência física pode ser presencial ou remota (fonte na Entrega 4, CP02). Ninguém que executa a verificação física foi entrevistado ou observado, e não há evidência de que essa pessoa use a solução.  
+**Hipóteses relacionadas:** H03, H42
+
+A ficha usa as mesmas marcas de P02: **[F]**, **[H]**, **[?]** e **ficcional**. Ela descreve quem recebe o resultado da análise para agir no pátio. Enquanto H42 estiver aberta, Marcos é tratado como stakeholder do fluxo, e não como usuário.
 
 ![Persona P03](../assets/03_personas/persona_p03.jpeg)
 
 | Campo | Descrição |
 |---|---|
-| **Nome** | Marcos Oliveira (Capitão Oliveira) |
-| **Faixa etária / contexto relevante** | 38 anos. Agente de segurança/policial atuante na fiscalização de campo e repressão ao contrabando em recinto alfandegado portuário há 8 anos. Atua em patrulha externa, pátios de contêineres e vistorias físicas diretas no *gate* ou terminal. |
-| **Ocupação/papel** | Agente de Segurança Pública / Policial de Campo. É o usuário secundário e destinatário da decisão de triagem: não opera o console de raio-X nem analisa a imagem bruta, mas **consome o veredito simplificado de anomalia** para realizar a abordagem, retenção física, escolta do caminhão ou abertura do lacre do contêiner para verificação. |
-| **Conhecimento do domínio** | Elevado conhecimento em táticas de abordagem, procedimentos de apreensão, conferência física de carga, legislação penal e cadeia de custódia de provas. **Baixo/Nulo conhecimento em física de radiologia ou interpretação de raio-X**: não sabe ler mapas residuais, números atômicos ($Z_{eff}$) ou densidades radiográficas, dependendo exclusivamente de um indicador binário/classificatório claro e objetivo (Existe anomalia? Qual a localização aproximada no contêiner?). |
-| **Experiência tecnológica** | Média em dispositivos móveis (tablets e coletores robustecidos de pátio) e rádios comunicadores; baixa em softwares analíticos complexos. Exige dados diretos, legíveis sob luz solar e que requeiram o mínimo de toques na tela. |
-| **Objetivos** | 1. Receber alertas imediatos e sem ambiguidade de cargas críticas/anômalas direcionadas para interceptação física.<br>2. Localizar e abordar o caminhão/contêiner no pátio antes da sua saída do recinto alfandegado.<br>3. Ter suporte visual direto (localização da anomalia) para abrir a porta do contêiner e ir diretamente ao ponto suspeito durante a busca física. |
-| **Necessidades** | 1. Status claro e binário da anomalia (`[ANOMALIA DETECTADA — CANAL CINZA/VERMELHO]` vs `[NENHUMA ANOMALIA DETECTADA]`).<br>2. Indicador visual simplificado da posição no contêiner (ex.: "Setor Traseiro / Lado Esquerdo") para direcionar o esforço da vistoria física.<br>3. Notificações/alertas push instantâneos sobre contêineres que exigem retenção imediata.<br>4. Botão de confirmação de ação de campo rápida ("Abordagem Efetuada" / "Encaminhado para Vistoria Física"). |
-| **Dores/frustrações** | 1. Receber relatórios visuais poluídos com gráficos de IA ou imagens de raio-X complexas que ele não consegue/não tem tempo de interpretar no pátio.<br>2. Perder tempo procurando mercadorias ilícitas no meio de toneladas de carga por falta de indicação exata de onde a anomalia foi localizada.<br>3. Falhas de comunicação ou atrasos no recebimento da ordem de retenção que permitam que o caminhão saia do terminal portuário. |
-| **Motivadores** | 1. Efetuar a apreensão de ilícitos (drogas, armas, contrabando) com precisão e segurança para a equipe.<br>2. Agilidade no procedimento de liberação de pátio para não paralisar o tráfego de carretas. |
-| **Restrições/acessibilidade** | 1. Operação em ambiente aberto sob alta iluminação solar e chuva (exige alto contraste visual em telas móveis/tablets).<br>2. Uso de luvas táticas e equipamento de proteção individual (EPI), exigindo botões amplos e alvos de toque grandes.<br>3. Impossibilidade de ler textos longos durante ações de abordagem física. |
-| **Ambiente típico de uso** | Pátio aberto de contêineres, *gates* de saída de terminais portuários e galpões de conferência física; sob ruído forte de carretas e empilhadeiras; movimentado e exposto às intempéries do tempo. |
-| **Comportamentos relevantes** | Toma decisões operacionais imediatas baseadas em comandos diretos; consulta o tablet/dispositivo móvel rapidamente com uma só mão antes ou durante a abordagem; depende da autorização/laudo do fiscal aduaneiro (Persona P01) para violar o lacre. |
+| **Nome** | Marcos Oliveira (ficcional) |
+| **Faixa etária / contexto relevante** | Ficcional: 38 anos. [H] Escolha da proto-persona: cerca de 8 anos em verificação física de cargas em recinto alfandegado. |
+| **Ocupação/papel** | [H] Executa a verificação física de contêineres encaminhados para conferência. [?] Não sabemos a que órgão ou cargo pertence quem faz esse trabalho, nem se é a mesma pessoa em todas as unidades. [H42] Não está demonstrado que ele interage com a solução: pode receber a ordem por outro sistema, verbalmente ou por documento. |
+| **Conhecimento do domínio** | [H] Alto em procedimentos de conferência física, abertura de unidade de carga e registro de apreensão. [H] Não lê radiografias nem mapas residuais. |
+| **Experiência tecnológica** | [?] Não sabemos que dispositivos ou sistemas ele usa no pátio. |
+| **Objetivos práticos** | 1. [H] Saber qual contêiner verificar e por quê.<br>2. [H] Encontrar o contêiner antes que ele deixe o recinto.<br>3. [H] Ir à parte da carga que motivou a suspeita, em vez de revirar tudo. |
+| **Objetivos de experiência** | 1. [H] Confiar que a ordem recebida é clara e veio de quem tem autoridade para dá-la.<br>2. [H] Não precisar interpretar uma imagem que não sabe ler. |
+| **Necessidades** | 1. [H] Receber a indicação de qual contêiner verificar, sem ambiguidade.<br>2. [H] Saber em que região da carga está a suspeita, em linguagem que não exija ler a radiografia.<br>3. [H] Registrar o que encontrou, para que o resultado volte a quem decidiu e a quem analisou a imagem. |
+| **Dores/frustrações** | 1. [H] Receber material técnico que não consegue interpretar.<br>2. [H] Procurar em toda a carga por falta de indicação de onde está a suspeita.<br>3. [H] Ordem que chega tarde ou incompleta. |
+| **Motivadores** | 1. [H] Encontrar o que motivou a suspeita, quando existe.<br>2. [H] Concluir a verificação sem reter a carga além do necessário. |
+| **Restrições/acessibilidade** | [H] Trabalho em área externa, sujeito a sol, chuva e ruído. [?] Uso de luvas e de equipamento de proteção não foi investigado. |
+| **Ambiente típico de uso** | [H] Pátio de contêineres e área de conferência física do recinto alfandegado. [?] Nenhum ambiente foi observado. |
+| **Comportamentos relevantes** | [H] Age a partir de uma ordem de outra pessoa. [?] Não sabemos quem dá essa ordem nem por que meio ela chega (H39, H42). |
 
----
+**Implicações de P03 para o design (só se H42 for confirmada):**
 
-### Decisões de design influenciadas pela Persona P03 (Marcos):
+Nenhuma interface para o agente de campo faz parte do recorte. Se a investigação da Entrega 7 mostrar que ele interage com a solução, estas alternativas passam a valer como hipóteses de design:
 
-* **Cartão de Veredito Simplificado (Avisos de Campo):** Para perfis de segurança/policiais, o sistema deve fornecer uma visualização simplificada/exportável contendo apenas o número do contêiner, placa do veículo, o status formal do canal (ex.: `[CANAL CINZA — RETENÇÃO IMEDIATA]`) e a presença ou ausência de anomalia, sem expor o visualizador completo de raio-X.
-* **Mapeamento de Zona/Quadrante no Contêiner:** A anomalia deve ser traduzida em uma localização textual/esquemática simples (ex.: "Quadrante 3 — Fundo do Contêiner, Lado Direito") para guiar a busca física no pátio sem exigir que o policial interprete a imagem radiográfica.
-* **Ações de Confirmação em 1-Toque:** Botoeira simplificada para registro de status de campo (`[CONFIRMAR RETENÇÃO]` / `[INICIAR VISTORIA FÍSICA]`), garantindo a rastreabilidade e a sincronização do evento com o histórico do Siscomex (RC07, RC08[cite: 12]).
+- [H] Um resumo do caso sem a radiografia: identificação do contêiner e do veículo, a existência de suspeita e quem a encaminhou. O canal aduaneiro, se aparecer, fica separado do resultado da IA (RC05).
+- [H] A região da suspeita descrita em texto ou esquema simples, em vez de imagem.
+- [H] Registro do que foi feito no pátio, vinculado ao histórico do caso (RC08).
+- [H] Dispositivo móvel, aviso imediato e ação em um toque são alternativas de forma, a decidir só depois de conhecido o trabalho real.
+
+Se H42 for refutada, P03 permanece como stakeholder: o que importa para o projeto é como o resultado registrado por P01 e a decisão de P02 chegam até ele.
 
 ---
 
@@ -183,16 +184,16 @@ Nenhuma dessas alternativas avança antes de se investigar H39 e ?08: sem saber 
 | Dimensão | Persona P01 — Gustavo Onofre | Persona P02 — Dr. Eduardo Resende | Persona P03 — Marcos Oliveira |
 |---|---|---|---|
 | **Autor(a)** | Kawan Mark Geronimo Da Silva | Gabriel Albertini Pinheiro | Alexandre Domiciano Pierri |
-| **Papel no domínio** | [H01] Operador da estação de imagem de raio-X, que examina a imagem. [H39] A autoridade para liberar ou reter não lhe é atribuída | [F] Auditor-Fiscal da Receita Federal, responsável pelo desembaraço (C02) | Agente de Segurança Pública / Policial de Campo (Ação Tática) |
+| **Papel no domínio** | [H01] Operador da estação de imagem de raio-X. [?] Operador do recinto ou servidor da RFB | [F] Auditor-Fiscal da Receita Federal, responsável pelo desembaraço (C02) | [H] Agente que executa a verificação física. [?] Órgão e cargo desconhecidos |
 | **Tipo de persona** | **Primária** | **Primária** | **Proto-persona a validar** (possível stakeholder, H42) |
-| **Dispositivo / Hardware** | [F] Estação de trabalho com monitor dedicado de 22" a 24" (C03) | [?] Não investigado. [F] Acesso ao Portal Único com certificado digital (C02) | Tablet / coletor móvel robustecido de pátio |
-| **Ambiente de uso** | [H] Sala de operação do escâner em recinto alfandegado, com possibilidade de plantão noturno. [?] Iluminação, ruído e turnos não investigados (H16) | [H] Ambiente administrativo de unidade aduaneira | Pátio externo aberto sob intempéries (sol, chuva, poeira) e ruído |
-| **Frequência de interação** | [H] Contínua ao longo do turno, conforme chegam as imagens (H04). [?] Volume real não conhecido | [H] Sob demanda, quando recebe um caso apontado (H39) | Pontual e imediata (ao receber alertas de interceptação ou vistoria física) |
-| **Interação com a IA** | [H] Examina a imagem junto da região apontada pela IA. A forma de apresentação é alternativa a testar (H30) | [H] Usa o resultado da imagem como evidência, junto dos dados da declaração (H11, ?08) | Consome apenas o status binário (`ANOMALIA DETECTADA`) e localização de quadrante |
-| **Decisão central** | [H39] Concluir se há algo a apontar no contêiner e registrar a conclusão. Decidir sobre a carga depende de H39 | [F] Formalizar exigência, verificação física ou desembaraço (C02) | Executar a abordagem, romper lacre, vistoriar a carga e confirmar ação |
-| **Principal impacto no design** | [H] Prioridade visual da imagem, comparação do apontamento sem perder a imagem original e registro com motivo. Tema, proporção de tela e número de passos são alternativas (nível 3 da Síntese) | [H] Evidência da imagem reunida aos dados da declaração e registro com motivo. Formas a investigar | UI móvel de alto contraste para luz solar, botões grandes para luvas, alertas em 1 toque |
+| **Dispositivo / Hardware** | [F] Estação com monitor dedicado de 22" a 24" (C03) | [?] Não investigado. [F] Acesso ao Portal Único com certificado digital (C02) | [?] Não investigado |
+| **Ambiente de uso** | [F] Sala de operação do escâner, de acesso restrito. [?] Iluminação e ruído não observados (H16) | [H] Ambiente administrativo de unidade aduaneira | [H] Pátio e área de conferência física |
+| **Frequência de interação** | [H] Contínua ao longo do turno (H04). [?] Volume real desconhecido | [H] Sob demanda, quando recebe um caso apontado (H39) | [H] Pontual, quando uma carga é encaminhada para verificação. [H42] Uso da solução não demonstrado |
+| **Interação com a IA** | [H] Examina a radiografia e a região que o modelo apontou (H05) | [H] Usa o resultado da imagem como evidência, junto dos dados da declaração (H11, ?08) | [H] Receberia só a indicação de que há suspeita e onde, sem a radiografia |
+| **Decisão central** | [H] Concluir se o que foi apontado é compatível com a carga declarada e registrar o resultado. Não decide sobre a carga (H39) | [F] Formalizar exigência, verificação física ou desembaraço (C02) | [H] Como conduzir a verificação física do contêiner indicado |
+| **Principal impacto no design** | [H] Camada de IA que não oculte a imagem e registro do resultado com motivo. Formas a investigar | [H] Evidência da imagem reunida aos dados da declaração e registro com motivo. Formas a investigar | Nenhum no recorte enquanto H42 estiver aberta |
 
-Nas colunas de P01 e P02, cada afirmação traz `[F]`, `[H]` ou `[?]`. A coluna de P03 repete a ficha dessa persona, que ainda não tem essa marcação.
+Cada afirmação da tabela traz `[F]`, `[H]` ou `[?]`, como nas fichas.
 
 ---
 
@@ -224,7 +225,7 @@ Nenhum ambiente de trabalho foi visitado e nenhum usuário foi ouvido. Os fatos 
 
 | Dimensão | [F] O que tem fonte | [H] O que supomos | [?] O que não sabemos | Implicação a considerar |
 |---|---|---|---|---|
-| **Usuários** | O Auditor-Fiscal é o responsável pelo desembaraço (C02). Os produtos de mercado têm uma estação de imagem operada por alguém (C01, C03). Em ao menos uma unidade, o escâner é operado por operadores designados pelo recinto alfandegado (Portaria ALF/FNS nº 9/2024). | Quem examina a imagem (P01) e quem decide (P02) são papéis distintos (H01, H39). O agente de campo (P03) usaria a solução (H42). | Quem opera a estação de imagem nas unidades brasileiras. Se P03 tem acesso a algum sistema. | A interface de análise parte de P01. Nada é definido para P02 e P03 antes de H39 e H42. |
+| **Usuários** | O Auditor-Fiscal é o responsável pelo desembaraço (C02). Os produtos de mercado têm uma estação de imagem operada por alguém (C01, C03). Em ao menos uma unidade, o escâner é operado por operadores designados pelo recinto alfandegado (Portaria ALF/FNS nº 9/2024). | Quem examina a imagem (P01) e quem decide (P02) são papéis distintos (H01, H39). O agente de campo (P03) usaria a solução (H42). | Quem examina as imagens em cada unidade: operador do recinto, como na norma de Imbituba, ou servidor da vigilância da RFB, como indicam matérias sobre Santos (Entrega 4, CP02). Se P03 tem acesso a algum sistema. | A interface de análise parte de P01. Nada é definido para P02 e P03 antes de H39 e H42. |
 | **Tarefas** | O despacho tem as etapas de registro, parametrização, distribuição para auditor, exigência fiscal e desembaraço (C02). | Triagem contínua das imagens (H04), inspeção das regiões apontadas (H05), confronto com os dados declarados (H11) e registro do resultado (H06). | Tempo gasto por contêiner. Frequência de cada atividade (?02). Se existe uma fila e quem define a ordem (H41). | A Entrega 5 modela só as tarefas que a investigação sustentar. |
 | **Equipamentos** | Estação de trabalho com monitor dedicado de 22" a 24" (C03). Acesso ao Portal Único por certificado digital (C02). O software do escâner deve oferecer zoom, inversão, realce de contornos, colorização por densidades, brilho, contraste e equalização, com licenças para estações de trabalho da RFB (ADE Coana nº 19/2014). | Uso de teclado e atalhos na estação de imagem. | Equipamento e número de monitores do Auditor-Fiscal. Se o agente de campo usa algum dispositivo. | A área útil de um monitor de 22" a 24" é a premissa de layout. Proporções e painéis são alternativas a testar. |
 | **Ambiente físico** | Nenhum ambiente foi observado. Existe uma sala de operação do escâner, de acesso restrito (Portaria ALF/FNS nº 9/2024, art. 3º). | Sala de controle em recinto alfandegado (H14), com iluminação controlada, ruído de pátio e interrupções (H16). | Se a sala é mantida em penumbra. Nível de ruído. Como é o ambiente do Auditor-Fiscal. | Tema claro ou escuro e uso de som dependem dessa investigação. Não depender só de cor vale por princípio (RC11). |
@@ -247,7 +248,7 @@ A jornada é a de uma proto-persona: tudo é hipótese [H], salvo onde indicado 
 | **Antes** | **1. O que dispara a necessidade** | [H] Um contêiner passa pelo scanner e sua imagem fica disponível para análise. Gustavo assume o posto e já há imagens aguardando. | Saber o que precisa ser examinado. | "Quantos tem hoje, e quais são os complicados?" *(Expectativa)* | [H] Não sabe de antemão quais casos merecem mais atenção. | Ajudar a decidir por onde começar, se essa decisão for dele. | H04, H41 |
 | **Antes** | **2. Antes de abrir a imagem** | [H] Toma conhecimento do que a carga declara ser e das pendências deixadas por quem estava antes dele. | Chegar à imagem sabendo o que esperar. | "Se eu sei o que deveria estar lá dentro, vejo mais rápido o que não deveria." *(Preparação)* | [H] A informação sobre a carga e sobre casos pendentes está em lugares diferentes ou é passada de boca. | Ter o contexto do caso disponível antes da imagem. | H11 |
 | **Durante** | **3. Chegada ao sistema** | [H] Abre o caso na estação de trabalho. [?] Não sabemos como se identifica nem como a imagem chega até ali. | Começar a análise sem perder tempo. | "Já terminou de processar ou ainda está analisando?" *(Impaciência)* | [H] Esperar sem saber se a análise automática terminou. | Deixar claro em que estado está a análise de cada imagem. | H26, H27, ?05 |
-| **Durante** | **4. Exame da imagem** | [H] Examina a radiografia e a região que o modelo apontou, e compara com o que a carga declara ser. [F] Usa os tratamentos visuais que já conhece, como pseudo-cor por material e realce de bordas (C03). | Entender se o que foi apontado é mesmo incompatível com a carga. | "Isso é parte da carga ou tem algo escondido?" *(Tensão, dúvida)* | [H] Sobreposição de objetos e cansaço visual. [F] A marcação da IA pode competir com as cores de material já usadas (C03). | Mostrar onde e por que a IA apontou, sem esconder a imagem original. | H05, H10, H30, RC02, RC09 |
+| **Durante** | **4. Exame da imagem** | [H] Examina a radiografia e a região que o modelo apontou, e compara com o que a carga declara ser. [F] Usa os tratamentos visuais que já conhece, como pseudo-cor por material e realce de bordas (C03). | Entender se o que foi apontado é mesmo incompatível com a carga. | "Isso é parte da carga ou tem algo escondido?" *(Tensão, dúvida)* | [H] Sobreposição de objetos e cansaço visual. [F] A estação já usa pseudo-cor por material (C03). [H] A marcação da IA pode competir com essas cores. | Mostrar onde e por que a IA apontou, sem esconder a imagem original. | H05, H10, H30, RC02, RC09 |
 | **Durante** | **5. Conclusão e registro** | [H] Conclui e registra o resultado com a justificativa. [H39] O registro pode ser um apontamento para o Auditor-Fiscal ou a própria decisão. | Deixar a conclusão clara e defensável e encerrar o caso na estação. | "Se alguém me perguntar depois, consigo explicar por que concluí isso?" *(Receio de errar para qualquer lado)* | [H] Ter de registrar de novo em outro sistema. [F] A decisão com valor jurídico é registrada no Siscomex (C02). | Registro com motivo, aproveitável por quem decide, sem duplicar trabalho. | H06, H08, H12, RC04, RC07 |
 | **Depois** | **6. O que acontece com a carga** | [F] O despacho segue no Siscomex, conduzido pelo Auditor-Fiscal: exigência fiscal, verificação física ou desembaraço (C02). [F] Em ao menos uma unidade, a suspeita é comunicada à RFB e a carga fica retida até a sua manifestação (Portaria ALF/FNS nº 9/2024, art. 8º). [?08] Não sabemos como isso se liga ao despacho da declaração. Gustavo já está no contêiner seguinte. | Confiar que o que registrou chegou a quem decide. | "Será que tinha mesmo alguma coisa ali?" *(Incerteza)* | [H] Não acompanha o que foi feito com o caso depois que saiu da sua estação. | Manter disponível o que foi registrado e para quem seguiu. | H18, H39, H42, ?08 |
 | **Depois** | **7. Como percebe o resultado** | [H] Dias depois, a verificação física confirma ou não o que foi apontado. | Saber se sua leitura estava certa e quanto pode confiar na IA. | Satisfação quando o apontamento se confirma. Frustração quando era alarme falso. | [H] Sem retorno, o trabalho de hoje não melhora o de amanhã, e a confiança na IA não tem base. | Devolver o desfecho a quem analisou e permitir consultar casos anteriores. | H18, H34, H36 |
@@ -272,7 +273,7 @@ Esta entrega não fixa a interface. O que ela entrega às próximas está separa
 
 **Nível 2. Hipóteses que as próximas entregas precisam investigar.** Não entram como requisito antes disso.
 
-1. Quem opera a estação de imagem e quem decide e formaliza (H01, H39). Define se P01 e P02 continuam separadas. As normas consultadas indicam operador do recinto e decisão da RFB em ao menos uma unidade, mas não dizem quem examina as imagens na RFB.
+1. Quem opera a estação de imagem e quem decide e formaliza (H01, H39). Define se P01 e P02 continuam separadas. As normas consultadas indicam operador do recinto e decisão da RFB em ao menos uma unidade, mas não dizem quem examina as imagens na RFB. Em Santos, matérias de 2013 e 2015 indicam análise por servidores da vigilância da RFB (Entrega 4, CP02).
 2. Se existe uma fila de imagens e se quem examina decide a ordem (H04, H41).
 3. Quais informações da carga declarada são usadas junto da imagem e em que momento (H11).
 4. Como o resultado da imagem entra no processo formal no Siscomex (?08).
@@ -304,6 +305,8 @@ Para a Entrega 4, os cenários de problema partem da situação atual, sem a sol
 - BRASIL. Receita Federal. **Despacho de Importação: Parametrização (gerenciamento de riscos)**. Manual de Despacho de Importação. Referência completa na Entrega 2.
 - GAIKWAD, B.; PATRA, A.; CRAWFORD, C. R.; MILLER, E. L. **Self-supervised anomaly detection and localization for X-ray cargo images: generalization to novel anomalies**. Engineering Applications of Artificial Intelligence, 2025. DOI 10.1016/j.engappai.2024.109675.
 
+As fontes sobre a Alfândega do Porto de Santos (matérias de A Tribuna e Portaria ALF/STS nº 197/2025) estão nas Referências da Entrega 4.
+
 As três normas foram lidas em 06/10/2026 na reprodução do site normasbrasil.com.br, e não no Diário Oficial da União. O Manual de Despacho foi lido na página oficial da Receita Federal.
 
 ---
@@ -311,9 +314,9 @@ As três normas foram lidas em 06/10/2026 na reprodução do site normasbrasil.c
 ## Checklist
 
 - [x] Existe pelo menos uma persona por integrante (P01: Gustavo Onofre, P02: Dr. Eduardo Resende, P03: Marcos Oliveira).
-- [x] As personas não são apenas diferenças demográficas superficiais (diferenciadas por papéis, ambientes, dispositivos e relação com a IA: triagem contínua, despacho legal e ação tática de campo).
-- [ ] Está claro o que é dado real e o que é hipótese/proto-persona. (Feito em P01, P02, no mapa de empatia, no contexto de uso e na jornada. A ficha de P03 ainda não tem a marcação.)
-- [ ] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência. (Feito na tabela de entradas, em P01, P02 e na matriz. A ficha de P03 ainda apresenta hipóteses como características.)
+- [x] As personas não são apenas diferenças demográficas superficiais (diferenciadas pelo papel: exame da imagem, decisão formal no despacho e verificação física).
+- [x] Está claro o que é dado real e o que é hipótese/proto-persona.
+- [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
 - [x] Objetivos e dores têm consequência para o design.
 - [x] Contexto de uso está coerente com a Entrega 1 e com a análise de concorrência da Entrega 2.
 - [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica (modelo de anomalia residual em raio-X).
@@ -321,3 +324,9 @@ As três normas foram lidas em 06/10/2026 na reprodução do site normasbrasil.c
 - [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow (sete etapas, cobrindo antes, durante e depois da interação).
 - [x] IDs das personas foram mapeados para a rastreabilidade (seção 2.1 da matriz).
 
+## Histórico de revisões
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 06/10/2026 | Classificação do elenco, ficha de P02, tabela de entradas, mapa de empatia, contexto de uso, jornada e síntese. | [Parecer do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md), com o tratamento de cada item anotado no próprio parecer. |
+| 12/10/2026 | Fichas de P01 e P03 reescritas com a marcação [F], [H], [?] e ficcional, e com as decisões de design convertidas em alternativas a investigar. Tabela de síntese das personas refeita. Indício sobre Santos acrescentado às entradas, à classificação e ao contexto. Marca da etapa 4 da jornada corrigida. As fichas de P01 e P03 foram reescritas por Gabriel e ficam sujeitas à conferência de Kawan e Alexandre. | Auditoria de coerência de 12/10/2026 (AC-001, AC-002, AC-003, AC-011, AC-014) e parecer do professor, correções 2, 3 e 4. |
