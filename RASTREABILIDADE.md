@@ -89,7 +89,7 @@ As três fichas são proto-personas: nenhuma foi construída com pesquisa com us
 | Persona | Autor | Classificação | [F] Sustentado | Hipóteses e lacunas abertas de que depende | Atividades, cadeia e artefatos seguintes |
 |---|---|---|---|---|---|
 | **P01** Gustavo Onofre, operador da estação de imagem | Kawan Mark Geronimo Da Silva | primária | Existe estação de imagem operada por alguém nos produtos de mercado (C01, C03). Monitor dedicado de 22" a 24" (C03). | H01, H04, H05, H10, H16, H38, H39, H41, ?07 | A01, A02. R01, R02. Cenários de problema (Entrega 4) e tarefas (Entrega 5): PENDENTE |
-| **P02** Dr. Eduardo Resende, Auditor-Fiscal | Gabriel Albertini Pinheiro | primária | O Auditor-Fiscal responde pelo desembaraço. O despacho tem distribuição para auditor e exigência fiscal com motivo e prazo (C02). | H06, H08, H11, H17, H32, H39, ?08 | A03. R03. Cenário de problema CP02 (Entrega 4). Tarefas (Entrega 5): PENDENTE |
+| **P02** Dr. Eduardo Resende, Auditor-Fiscal | Gabriel Albertini Pinheiro | primária | O Auditor-Fiscal responde pelo desembaraço. O despacho tem distribuição para auditor e exigência fiscal com motivo e prazo (C02). | H06, H08, H11, H17, H32, H39, ?08 | A03. R03. Cenário de problema CP02 (Entrega 4). Tarefas T04 (HTA), T05 (GOMS) e T06 (CTT) na Entrega 5, modeladas na situação atual |
 | **P03** Marcos Oliveira, agente de campo | Alexandre Domiciano Pierri | proto-persona a validar, possível stakeholder | O canal vermelho prevê verificação física da mercadoria (C02). Nada sobre o uso da solução por quem a executa. | H03, H42 | Nenhuma atividade no recorte enquanto H42 estiver aberta |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
@@ -98,7 +98,7 @@ As três fichas são proto-personas: nenhuma foi construída com pesquisa com us
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | R01 | Mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | PENDENTE | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 | R02 | Medida de anomalia calculada para cada imagem | [H04, H25, H35] Saber quais contêineres examinar primeiro. A existência dessa tarefa é hipótese | P01 | PENDENTE | A01: triar os contêineres escaneados | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
-| R03 | Mapa residual como evidência associada ao contêiner | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 | CP02 | A03: registrar o resultado da análise | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R03 | Mapa residual como evidência associada ao contêiner | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 | CP02 | A03: registrar o resultado da análise | T04, T05, T06 (P02, situação atual) | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 
 As colunas marcadas `PENDENTE` pertencem a entregas ainda não realizadas (cenários na Entrega 4, tarefas na Entrega 5, MoLIC na Entrega 10, telas na Entrega 11, avaliação nas Entregas 13 e 14).
 

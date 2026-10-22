@@ -25,9 +25,9 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Kawan Mark Geronimo Da Silva | 22.222.010-5 | [@KawanMark](https://github.com/KawanMark) | C01 (Rapiscan InSight) na Entrega 2, persona P01 na Entrega 3 e cenário CP01 na Entrega 4 |
-| Gabriel Albertini Pinheiro | 22.122.094-8 | [@albertx0](https://github.com/albertx0) | C02 (Portal Único Siscomex) na Entrega 2, persona P02 na Entrega 3 e cenário CP02 na Entrega 4 |
-| Alexandre Domiciano Pierri | 22.125.061-6 | [@Apierri05](https://github.com/Apierri05) | C03 (Smiths Detection DaiSy/viZual) na Entrega 2, proto-persona P03 na Entrega 3 e cenário CP03 na Entrega 4 |
+| Kawan Mark Geronimo Da Silva | 22.222.010-5 | [@KawanMark](https://github.com/KawanMark) | C01 (Rapiscan InSight) na Entrega 2, persona P01 na Entrega 3, cenário CP01 na Entrega 4 e tarefas T01 a T03 na Entrega 5 |
+| Gabriel Albertini Pinheiro | 22.122.094-8 | [@albertx0](https://github.com/albertx0) | C02 (Portal Único Siscomex) na Entrega 2, persona P02 na Entrega 3, cenário CP02 na Entrega 4 e tarefas T04 a T06 na Entrega 5 |
+| Alexandre Domiciano Pierri | 22.125.061-6 | [@Apierri05](https://github.com/Apierri05) | C03 (Smiths Detection DaiSy/viZual) na Entrega 2, proto-persona P03 na Entrega 3, cenário CP03 na Entrega 4 e tarefas T07 a T09 na Entrega 5 |
 
 ## Relação entre TCC e projeto de IHC
 
@@ -98,7 +98,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟦 |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟦 |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟨 |
-| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | ⬜ |
+| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟨 |
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | ⬜ |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | ⬜ |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | ⬜ |
