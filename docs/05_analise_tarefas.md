@@ -32,7 +32,7 @@ Cada integrante modela três tarefas, uma por técnica. A numeração segue a or
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 |---|---|---|---|---|
 | T01 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
-| T02 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
+| T02 | Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita | P01 / CP01 | [H] Alta / Crítica: repete a cada contêiner (H05) e o erro tem custo nos dois sentidos (H12) | Kawan Mark Geronimo Da Silva |
 | T03 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
 | T04 | Decidir sobre uma carga bloqueada por suspeita na imagem do escâner (HTA) | P02 / CP02 | `[?]` Frequência desconhecida (CP02, Q9). `[H08]` Criticidade alta: o erro libera carga ilícita ou retém carga regular | Gabriel Albertini Pinheiro |
 | T05 | Entender por que a carga foi bloqueada (GOMS) | P02 / CP02, subobjetivo 2 de T04 | Ocorre em todo caso de T04. `[H]` É onde o cenário mostra a maior perda de informação | Gabriel Albertini Pinheiro |
@@ -72,23 +72,126 @@ Cada integrante modela três tarefas, uma por técnica. A numeração segue a or
 - Os **planos** indicam ordem, alternativa, repetição ou condição?
 - A decomposição parou em nível útil para projeto de interação?
 
-### GOMS — T02 {{nome da tarefa}}
+### GOMS — T02 Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5
 
+**Situação atual, não a solução.** O modelo descreve como P01 examina a imagem hoje, com os tratamentos do software do fabricante e sem a interface da disciplina. Isso segue a regra da Entrega 4 e a cobrança dos pareceres de não antecipar a solução. O exame com apoio da IA será modelado quando houver protótipo (Entregas 6 e 10).
+
+**Nível de análise.** Os operadores são de ação do usuário: perceber, ajustar, comparar e decidir. Não chegam ao nível de teclas do KLM, porque o fluxo real das estações não foi observado (Entrega 7). Por isso o modelo não estima tempo e não desenha tela.
+
+**Base de evidência.** P01 é persona primária, mas nenhum operador de estação de imagem foi entrevistado. Os passos de M1 vêm dos tratamentos oferecidos pelos softwares dos fabricantes (C01, C03; ADE Coana nº 19/2014, item 1.2.8) e do cenário CP01. Os demais passos trazem `[F]`, `[H]` ou `[?]`.
+
+#### Descrição da tarefa
+
+- **Persona e cenário:** P01 Gustavo Onofre, operador da estação de imagem; CP01. Atividade A02 (inspecionar).
+- **Início:** a imagem do contêiner está disponível na estação e Gustavo vai examiná-la.
+- **Fim:** Gustavo chega a uma conclusão, "apontar suspeita" ou "não apontar". A conclusão segue para o registro e para quem decide, o que corresponde a A03 e não é modelado aqui.
+- **Papel de Gustavo:** ele examina e conclui se há motivo para apontar. Quem decide formalmente sobre a carga pode ser outra pessoa (H39), então a meta não é "decidir sobre a carga".
+
 #### Goal
 
-`G0: {{meta do usuário}}`
+`G0: Concluir se há motivo para apontar suspeita na imagem de um contêiner`
+
+**Submetas e ordem (M0):** `G1 >> G2 >> G3`. Se G1 não deixar nenhuma região em dúvida, G2 pode ser dispensada e G3 conclui "não apontar" `[H]`.
+
+- `G1: Examinar a imagem e identificar regiões de dúvida`
+- `G2: Confrontar a região em dúvida com a carga declarada`
+- `G3: Decidir se aponta suspeita`
+
+#### Diagrama
+
+![GOMS T02](../assets/05_tarefas/goms_t02.svg)
+
+*Linha contínua: método baseado em fato `[F]`. Linha tracejada: hipótese sobre o trabalho atual `[H]`, a confirmar na Entrega 7. O SVG é a fonte editável.*
 
 #### Métodos, operadores e regras de seleção
 
-- **Method M1:** {{...}}
-  - Operators: {{perceber, apontar, clicar, digitar, decidir... conforme o nível adotado}}
-- **Method M2:** {{...}}
-  - Operators: {{...}}
-- **Selection Rule SR1:** usar M1 quando {{condição}}; usar M2 quando {{condição}}.
+**Para G1 (examinar a imagem e identificar regiões de dúvida)**
 
-> Não chame qualquer passo de “método”. Em GOMS, métodos são sequências alternativas capazes de atingir uma meta; regras de seleção explicam quando escolher entre eles.
+- **Method M1: exame direto, com os tratamentos do software do fabricante** `[F]`
+  1. Perceber a imagem inteira e as cores atribuídas a cada material (O1).
+  2. Varrer a imagem em busca de regiões que diferem do esperado (O2).
+  3. Para cada região em dúvida, repetir até conseguir dizer se faz parte da carga ou esgotar os tratamentos: ampliar e deslocar a imagem (O4); ajustar contraste e brilho (O3); ligar o realce de bordas (O5); alternar pseudo-cor ou inversão e comparar com a imagem original (O6).
+  4. Reter quais regiões seguem em dúvida (O7).
+- G1 tem um único método, porque não há outro sustentado pelas fontes. Por isso não há regra de seleção para G1.
+
+**Para G2 (confrontar a região com a carga declarada)**
+
+- **Method M2: dados da declaração mostrados na própria estação** `[F]` para o campo de produtos no software do fabricante (C03), `[?]` para o que a unidade de Gustavo realmente mostra
+  1. Ler a descrição e a natureza da carga declarada (O8).
+  2. Recordar o que essa carga deveria mostrar na imagem (O9).
+  3. Comparar a região em dúvida com isso (O10).
+- **Method M3: consulta à declaração fora da estação** `[H]`
+  1. Abrir a declaração em outro sistema (O11).
+  2. Ler e reter a descrição da carga (O8, O9).
+  3. Voltar à imagem e comparar (O10).
+- **Selection Rule SR1:** usar M2 quando a estação mostrar os dados da declaração; usar M3 quando não mostrar.
+
+**Para G3 (decidir se aponta suspeita)**
+
+- **Method M4: avaliar a compatibilidade e concluir** `[H]` (a estrutura vem do CP01, que é cenário; a segunda opinião não tem fonte)
+  1. Avaliar se a região é compatível com a carga declarada (O10).
+  2. Se compatível, concluir "não apontar" (O12).
+  3. Se incompatível, concluir "apontar" (O12).
+  4. Se a dúvida persistir, pedir segunda opinião `[?]` ou concluir sob incerteza, pesando o custo de errar (H12).
+- **Selection Rule SR2:** critérios de decisão. Compatível, concluir "não apontar". Incompatível, concluir "apontar". Dúvida persistente, aplicar o passo 4 de M4. Não há fonte que diga se Gustavo pode pedir segunda opinião `[?]`.
+
+> M2 e M3 são alternativas para G2. G1 e G3 têm um único método cada, então só G2 tem escolha entre métodos. SR2 não escolhe entre métodos: ela organiza os critérios de decisão.
+
+#### Operadores
+
+| ID | Operador (ação do usuário) | Tipo | Base |
+|---|---|---|---|
+| O1 | Perceber a imagem inteira e as cores atribuídas a cada material | perceptivo | `[F]` C01, C03 |
+| O2 | Varrer a imagem em busca de região que difere do esperado | perceptivo | `[F]` C01, C03 |
+| O3 | Ajustar contraste, brilho e equalização | motor e cognitivo | `[F]` C01, C03 |
+| O4 | Ampliar e deslocar a imagem até uma região | motor | `[F]` C01, C03 |
+| O5 | Ligar o realce de bordas | motor | `[F]` C01, C03 |
+| O6 | Alternar pseudo-cor ou inversão e comparar com a imagem original | motor e perceptivo | `[F]` C01, C03 |
+| O7 | Reter quais regiões seguem em dúvida | cognitivo | `[H]` |
+| O8 | Ler os dados da declaração (na estação em M2, em outro sistema em M3) | perceptivo | `[F]` C03 na estação, `[?]` na unidade |
+| O9 | Recordar o que a carga declarada deveria mostrar | cognitivo | `[H]` H11 |
+| O10 | Comparar a região com o que a carga deveria mostrar | cognitivo | `[H]` H11 |
+| O11 | Abrir a declaração em outro sistema | motor | `[H]` |
+| O12 | Concluir "apontar" ou "não apontar" | cognitivo | `[H]` CP01 |
+
+#### Interpretação
+
+O modelo mostra que o exame depende de três coisas ao mesmo tempo: do que Gustavo percebe na imagem (G1), do que ele sabe sobre a carga (G2) e de uma conclusão que ele precisa sustentar (G3). Nada na situação atual diz a Gustavo onde olhar: M1 depende de varrer a imagem inteira e de tratar cada região em dúvida até esgotar os tratamentos.
+
+G2 é onde há escolha entre métodos. Se a estação mostra a declaração (M2), Gustavo confronta a região sem sair da imagem. Se não mostra (M3), ele troca de sistema e depende da memória.
+
+#### Problemas e decisões de design observadas
+
+Estas são observações do modelo, não soluções.
+
+| # | Observação | Onde aparece | Base |
+|---|---|---|---|
+| 1 | A varredura depende de atenção sustentada e perde qualidade com cansaço. Nada indica a Gustavo onde olhar. | M1 passo 2 | `[H]` H10, H13 |
+| 2 | O laço do passo 3 de M1 não tem critério de parada. Sem ele, Gustavo pode gastar tempo em uma região enquanto há contêineres esperando. | M1 passo 3 | `[H]` H16 |
+| 3 | M3 obriga a trocar de sistema e a lembrar a descrição da carga ao voltar à imagem. | M3 | `[H]` H11 |
+| 4 | O erro tem custo nos dois sentidos: apontar sem motivo atrasa a carga, e não apontar pode deixar passar um ilícito. | G3 | `[H]` H12 |
+| 5 | Depois da conclusão, não está claro se Gustavo recebe retorno sobre o que aconteceu com a carga. | fim de G3 | `[?]` ?08, CP01 |
+
+#### Verificação do GOMS
+
+- **Goals:** G0 é uma meta de Gustavo (concluir se há motivo para apontar), não uma ação de tela. G1, G2 e G3 são metas, não passos.
+- **Operators:** os operadores O1 a O12 são ações no nível definido (perceber, ajustar, comparar, decidir) e não dependem de componente de interface.
+- **Methods:** M2 e M3 atingem a mesma meta (G2) por caminhos diferentes. G1 e G3 têm um método cada, e isso está dito no modelo.
+- **Selection Rules:** SR1 traz condição observável (a estação mostra a declaração?). SR2 traz critérios de decisão.
+- **Origem:** M1 e M2 têm base em fato (C01, C03, ADE Coana nº 19/2014), M2 com a lacuna sobre a unidade. M3 e M4 são hipóteses sobre o trabalho atual e estão marcadas como tal.
+- **Limites:** a tarefa não modela triagem (A01), registro (A03), nem o que o auditor faz depois. Também não assume que Gustavo decida sobre a carga (H39).
+
+#### Rastreabilidade
+
+| Elemento | Origem |
+|---|---|
+| Persona | P01 |
+| Cenário | CP01 |
+| Atividade | A02 |
+| Hipóteses e lacunas | H05, H10, H11, H12, H13, H16, H38, H39, ?08 |
+| Concorrentes | C01, C03 |
 
 ### CTT — T03 {{nome da tarefa}}
 
