@@ -332,6 +332,20 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 - que campos o Siscomex pede ao registrar exigência, verificação e desembaraço, e se aceita anexo (T06);
 - quem define o prazo da exigência e a modalidade da verificação (T06).
 
+## Referências
+
+Fontes de T04 a T06:
+
+- Cenário CP02 e suas fontes (A Tribuna, 2013 e 2015; Portaria ALF/STS nº 197/2025): referências completas na Entrega 4.
+- Manual de Despacho de Importação e Portal Único Siscomex (análise C02): referências completas na Entrega 2.
+- ADE Coana nº 19/2014 e Portaria ALF/FNS nº 9/2024: referências completas na Entrega 3.
+
+Métodos:
+
+- ANNETT, John; DUNCAN, Keith D. Task analysis and training design. **Occupational Psychology**, v. 41, p. 211–221, 1967. (HTA e critério de parada por probabilidade × custo)
+- CARD, Stuart K.; MORAN, Thomas P.; NEWELL, Allen. **The Psychology of Human-Computer Interaction**. Lawrence Erlbaum, 1983. (GOMS)
+- PATERNÒ, Fabio. **Model-Based Design and Evaluation of Interactive Applications**. Springer, 1999. (CTT)
+
 ## Checklist
 
 - [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
