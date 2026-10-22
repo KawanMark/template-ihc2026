@@ -1,149 +1,123 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1410" height="650" viewBox="0 0 1410 650" font-family="DejaVu Sans, Arial, sans-serif">
-  <title>GOMS T02: examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita (P01, CP01)</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1410" height="600" viewBox="0 0 1410 600" font-family="DejaVu Sans, Arial, sans-serif">
+  <title>GOMS T02, situação atual: examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita (P01, CP01)</title>
   <defs>
     <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
       <path d="M0,0 L10,4 L0,8 z" fill="#37474f"/>
     </marker>
   </defs>
-  <rect width="1410" height="650" fill="#ffffff"/>
+  <rect width="1410" height="600" fill="#ffffff"/>
 
   <!-- G0 -->
   <rect x="470" y="12" width="470" height="62" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
   <text x="705" y="36" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">G0: Concluir se há motivo para apontar suspeita</text>
   <text x="705" y="58" text-anchor="middle" font-size="13" fill="#0d47a1">M0: G1 &gt;&gt; G2 &gt;&gt; G3 (G2 pode ser dispensada se G1 não deixar dúvida)</text>
 
-  <!-- G0 -> G1, G2, G3 -->
-  <path d="M600,74 L322,108" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
-  <path d="M705,74 L880,108" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
-  <path d="M800,74 L1260,108" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M600,74 L235,108" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M705,74 L760,108" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M800,74 L1230,108" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
 
   <!-- Goals -->
-  <rect x="30" y="110" width="585" height="52" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="322" y="132" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">G1: Examinar a imagem e identificar</text>
-  <text x="322" y="150" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">regiões de dúvida</text>
+  <rect x="30" y="110" width="410" height="52" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="235" y="132" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">G1: Examinar a imagem e identificar</text>
+  <text x="235" y="150" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">regiões de dúvida</text>
 
-  <rect x="660" y="110" width="440" height="52" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="880" y="132" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">G2: Confrontar a região em dúvida</text>
-  <text x="880" y="150" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">com a carga declarada</text>
+  <rect x="480" y="110" width="560" height="52" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="760" y="132" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">G2: Confrontar a região em dúvida</text>
+  <text x="760" y="150" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">com a carga declarada</text>
 
-  <rect x="1140" y="110" width="240" height="52" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="1260" y="132" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">G3: Decidir se</text>
-  <text x="1260" y="150" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">aponta suspeita</text>
+  <rect x="1080" y="110" width="300" height="52" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="1230" y="132" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">G3: Decidir se</text>
+  <text x="1230" y="150" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b5e20">aponta suspeita</text>
 
-  <!-- sequence arrows -->
-  <path d="M615,136 L660,136" stroke="#37474f" stroke-width="2" fill="none" marker-end="url(#ar)"/>
-  <path d="M1100,136 L1140,136" stroke="#37474f" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M440,136 L480,136" stroke="#37474f" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M1040,136 L1080,136" stroke="#37474f" stroke-width="2" fill="none" marker-end="url(#ar)"/>
 
   <!-- Selection rules -->
-  <rect x="30" y="196" width="585" height="40" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="322" y="213" text-anchor="middle" font-size="12" fill="#5d4037"><tspan font-weight="bold">SR1:</tspan> M2 se a análise da IA terminou e apontou região;</text>
-  <text x="322" y="229" text-anchor="middle" font-size="12" fill="#5d4037">M1 se não há análise (em curso, indisponível) ou a IA não apontou nada</text>
+  <rect x="30" y="196" width="410" height="40" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.5"/>
+  <text x="235" y="213" text-anchor="middle" font-size="12" fill="#546e7a">Método único: não há outro sustentado</text>
+  <text x="235" y="229" text-anchor="middle" font-size="12" fill="#546e7a">para G1, então não há regra de seleção</text>
 
-  <rect x="660" y="196" width="440" height="40" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="880" y="213" text-anchor="middle" font-size="12" fill="#5d4037"><tspan font-weight="bold">SR2:</tspan> M3 se a estação mostra os dados da declaração;</text>
-  <text x="880" y="229" text-anchor="middle" font-size="12" fill="#5d4037">M4 se não mostra</text>
+  <rect x="480" y="196" width="560" height="40" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="760" y="213" text-anchor="middle" font-size="12" fill="#5d4037"><tspan font-weight="bold">SR1:</tspan> M2 se a estação mostra os dados da declaração;</text>
+  <text x="760" y="229" text-anchor="middle" font-size="12" fill="#5d4037">M3 se não mostra</text>
 
-  <rect x="1140" y="196" width="240" height="40" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="1260" y="213" text-anchor="middle" font-size="12" fill="#5d4037"><tspan font-weight="bold">SR3:</tspan> critérios de decisão</text>
-  <text x="1260" y="229" text-anchor="middle" font-size="12" fill="#5d4037">(compatível, incompatível, dúvida)</text>
+  <rect x="1080" y="196" width="300" height="40" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="1230" y="213" text-anchor="middle" font-size="12" fill="#5d4037"><tspan font-weight="bold">SR2:</tspan> critérios de decisão</text>
+  <text x="1230" y="229" text-anchor="middle" font-size="12" fill="#5d4037">(compatível, incompatível, dúvida)</text>
 
-  <path d="M322,162 L322,196" stroke="#37474f" stroke-width="1.2" fill="none"/>
-  <path d="M880,162 L880,196" stroke="#37474f" stroke-width="1.2" fill="none"/>
-  <path d="M1260,162 L1260,196" stroke="#37474f" stroke-width="1.2" fill="none"/>
+  <path d="M235,162 L235,196" stroke="#37474f" stroke-width="1.2" fill="none"/>
+  <path d="M760,162 L760,196" stroke="#37474f" stroke-width="1.2" fill="none"/>
+  <path d="M1230,162 L1230,196" stroke="#37474f" stroke-width="1.2" fill="none"/>
 
-  <!-- rule -> methods -->
-  <path d="M170,236 L170,268" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
-  <path d="M470,236 L470,268" stroke="#37474f" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#ar)"/>
-  <path d="M768,236 L768,268" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
-  <path d="M992,236 L992,268" stroke="#37474f" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#ar)"/>
-  <path d="M1260,236 L1260,268" stroke="#37474f" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#ar)"/>
+  <path d="M235,236 L235,268" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M617,236 L617,268" stroke="#37474f" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M903,236 L903,268" stroke="#37474f" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#ar)"/>
+  <path d="M1230,236 L1230,268" stroke="#37474f" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#ar)"/>
 
   <!-- M1 (fato) -->
-  <rect x="30" y="270" width="280" height="240" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2"/>
-  <text font-size="11.5" fill="#212121">
-    <tspan x="42" y="290" font-weight="bold" font-size="13">M1: exame direto  [F]</tspan>
-    <tspan x="42" y="312">1 Perceber a imagem inteira e as cores</tspan>
-    <tspan x="42" y="328">   por material</tspan>
-    <tspan x="42" y="348">2 Varrer em busca de região que difere</tspan>
-    <tspan x="42" y="364">   do esperado</tspan>
+  <rect x="30" y="270" width="410" height="250" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2"/>
+  <text font-size="12" fill="#212121">
+    <tspan x="42" y="292" font-weight="bold" font-size="13.5">M1: exame direto, com os tratamentos do software  [F]</tspan>
+    <tspan x="42" y="320">1 Perceber a imagem inteira e as cores por material</tspan>
+    <tspan x="42" y="344">2 Varrer a imagem em busca de região que difere</tspan>
+    <tspan x="42" y="360">   do esperado</tspan>
     <tspan x="42" y="384">3 Para cada região em dúvida, repetir:</tspan>
-    <tspan x="42" y="400">   ampliar e deslocar; ajustar contraste</tspan>
-    <tspan x="42" y="416">   e brilho; realce de bordas; alternar</tspan>
-    <tspan x="42" y="432">   pseudo-cor ou inversão e comparar,</tspan>
-    <tspan x="42" y="448">   até dizer se é carga ou esgotar</tspan>
-    <tspan x="42" y="464">   os tratamentos</tspan>
-    <tspan x="42" y="484">4 Reter as regiões ainda em dúvida</tspan>
+    <tspan x="42" y="400">   ampliar e deslocar; ajustar contraste e brilho;</tspan>
+    <tspan x="42" y="416">   ligar o realce de bordas; alternar pseudo-cor ou</tspan>
+    <tspan x="42" y="432">   inversão e comparar com a original, até dizer se</tspan>
+    <tspan x="42" y="448">   é carga ou esgotar os tratamentos</tspan>
+    <tspan x="42" y="472">4 Reter as regiões ainda em dúvida</tspan>
   </text>
 
-  <!-- M2 (hipótese) -->
-  <rect x="325" y="270" width="290" height="240" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2" stroke-dasharray="8,5"/>
-  <text font-size="11.5" fill="#212121">
-    <tspan x="337" y="290" font-weight="bold" font-size="13">M2: guiado pela região da IA  [H]</tspan>
-    <tspan x="337" y="312">1 Perceber a imagem e a região apontada</tspan>
-    <tspan x="337" y="332">2 Perceber onde e por quê (forma em</tspan>
-    <tspan x="337" y="348">   aberto, H31)</tspan>
-    <tspan x="337" y="368">3 Ampliar e deslocar até a região</tspan>
-    <tspan x="337" y="388">4 Mostrar ou ocultar a camada da IA</tspan>
-    <tspan x="337" y="404">   (forma em aberto, H30)</tspan>
-    <tspan x="337" y="424">5 Ajustar contraste ou realce, se preciso</tspan>
-    <tspan x="337" y="444">6 Varrer o restante por dúvida própria</tspan>
-    <tspan x="337" y="464">7 Decidir se a região é parte da carga</tspan>
-    <tspan x="337" y="488">Discordou ou tem dúvida em outra? SR1.1</tspan>
+  <!-- M2 -->
+  <rect x="480" y="270" width="275" height="250" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2"/>
+  <text font-size="12" fill="#212121">
+    <tspan x="491" y="292" font-weight="bold" font-size="13.5">M2: dados na estação  [F]</tspan>
+    <tspan x="491" y="320">1 Ler a descrição e a natureza</tspan>
+    <tspan x="491" y="336">   da carga declarada</tspan>
+    <tspan x="491" y="360">2 Recordar o que essa carga</tspan>
+    <tspan x="491" y="376">   deveria mostrar na imagem</tspan>
+    <tspan x="491" y="400">3 Comparar a região com isso</tspan>
+    <tspan x="491" y="436" fill="#6d4c41">Campo de produtos no software [F]</tspan>
+    <tspan x="491" y="452" fill="#6d4c41">(C03); na unidade de P01 [?]</tspan>
   </text>
 
-  <!-- M3 (fato / lacuna) -->
-  <rect x="660" y="270" width="215" height="240" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2"/>
-  <text font-size="11.5" fill="#212121">
-    <tspan x="671" y="290" font-weight="bold" font-size="13">M3: dados na estação  [F]</tspan>
-    <tspan x="671" y="312">1 Ler a descrição e a natureza</tspan>
-    <tspan x="671" y="328">   da carga declarada</tspan>
-    <tspan x="671" y="348">2 Recordar o que essa carga</tspan>
-    <tspan x="671" y="364">   deveria mostrar na imagem</tspan>
-    <tspan x="671" y="384">3 Comparar a região com isso</tspan>
-    <tspan x="671" y="412" fill="#6d4c41">Há campo de produtos no software</tspan>
-    <tspan x="671" y="428" fill="#6d4c41">[F]; se a unidade usa [?]</tspan>
+  <!-- M3 -->
+  <rect x="765" y="270" width="275" height="250" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2" stroke-dasharray="8,5"/>
+  <text font-size="12" fill="#212121">
+    <tspan x="776" y="292" font-weight="bold" font-size="13.5">M3: fora da estação  [H]</tspan>
+    <tspan x="776" y="320">1 Abrir a declaração em outro</tspan>
+    <tspan x="776" y="336">   sistema</tspan>
+    <tspan x="776" y="360">2 Ler e reter a descrição</tspan>
+    <tspan x="776" y="384">3 Voltar à imagem e comparar</tspan>
+    <tspan x="776" y="420" fill="#6d4c41">Carga de memória e troca de</tspan>
+    <tspan x="776" y="436" fill="#6d4c41">sistema (H11), a confirmar</tspan>
   </text>
 
-  <!-- M4 (hipótese) -->
-  <rect x="885" y="270" width="215" height="240" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2" stroke-dasharray="8,5"/>
-  <text font-size="11.5" fill="#212121">
-    <tspan x="896" y="290" font-weight="bold" font-size="13">M4: fora da estação  [H]</tspan>
-    <tspan x="896" y="312">1 Abrir a declaração em outro</tspan>
-    <tspan x="896" y="328">   sistema</tspan>
-    <tspan x="896" y="348">2 Ler e reter a descrição</tspan>
-    <tspan x="896" y="368">3 Voltar à imagem e comparar</tspan>
-    <tspan x="896" y="396" fill="#6d4c41">Carga de memória e troca de</tspan>
-    <tspan x="896" y="412" fill="#6d4c41">sistema (H11)</tspan>
+  <!-- M4 -->
+  <rect x="1080" y="270" width="300" height="250" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2" stroke-dasharray="8,5"/>
+  <text font-size="12" fill="#212121">
+    <tspan x="1091" y="292" font-weight="bold" font-size="13.5">M4: avaliar e concluir  [H]</tspan>
+    <tspan x="1091" y="320">1 Avaliar se a região é compatível</tspan>
+    <tspan x="1091" y="336">   com a carga</tspan>
+    <tspan x="1091" y="360">2 Compatível: concluir "não apontar"</tspan>
+    <tspan x="1091" y="380">3 Incompatível: concluir "apontar"</tspan>
+    <tspan x="1091" y="400">4 Dúvida persiste: [?] pedir segunda</tspan>
+    <tspan x="1091" y="416">   opinião, ou concluir sob incerteza</tspan>
+    <tspan x="1091" y="432">   pesando o custo de errar (H12)</tspan>
+    <tspan x="1091" y="468" fill="#6d4c41">Fim: a conclusão segue para o</tspan>
+    <tspan x="1091" y="484" fill="#6d4c41">registro (A03, não modelado)</tspan>
   </text>
-
-  <!-- M5 (hipótese) -->
-  <rect x="1140" y="270" width="240" height="240" rx="6" fill="#fafafa" stroke="#37474f" stroke-width="2"/>
-  <text font-size="11.5" fill="#212121">
-    <tspan x="1151" y="290" font-weight="bold" font-size="13">M5: avaliar e concluir  [H]</tspan>
-    <tspan x="1151" y="312">1 Avaliar se a região é compatível</tspan>
-    <tspan x="1151" y="328">   com a carga</tspan>
-    <tspan x="1151" y="348">2 Compatível: concluir "não apontar"</tspan>
-    <tspan x="1151" y="368">3 Incompatível: concluir "apontar"</tspan>
-    <tspan x="1151" y="388">4 Dúvida persiste: [H] pedir segunda</tspan>
-    <tspan x="1151" y="404">   opinião, ou concluir sob incerteza</tspan>
-    <tspan x="1151" y="420">   pesando o custo de errar (H12)</tspan>
-    <tspan x="1151" y="448" fill="#6d4c41">Fim: conclusão segue para o</tspan>
-    <tspan x="1151" y="464" fill="#6d4c41">registro (A03, não modelado)</tspan>
-  </text>
-
-  <!-- SR1.1 return -->
-  <path d="M470,510 L470,545 L170,545 L170,512" stroke="#37474f" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#ar)"/>
-  <text x="320" y="565" text-anchor="middle" font-size="12" fill="#5d4037"><tspan font-weight="bold">SR1.1:</tspan> se discordar da região ou tiver dúvida em outra, aplicar o passo 3 de M1 nela</text>
 
   <!-- Legend -->
-  <rect x="30" y="598" width="1350" height="40" rx="6" fill="#f5f5f5" stroke="#bdbdbd"/>
-  <rect x="45" y="609" width="34" height="18" fill="#fafafa" stroke="#37474f" stroke-width="2"/>
-  <text x="88" y="623" font-size="12" fill="#212121">linha contínua: baseado em fato [F]</text>
-  <rect x="340" y="609" width="34" height="18" fill="#fafafa" stroke="#37474f" stroke-width="2" stroke-dasharray="6,4"/>
-  <text x="383" y="623" font-size="12" fill="#212121">tracejada: hipótese de design [H]</text>
-  <rect x="630" y="609" width="34" height="18" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="673" y="623" font-size="12" fill="#212121">Goal</text>
-  <rect x="740" y="609" width="34" height="18" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="783" y="623" font-size="12" fill="#212121">Selection Rule</text>
-  <text x="920" y="623" font-size="12" fill="#212121">Passos dos métodos = operadores no nível da ação do usuário</text>
+  <rect x="30" y="548" width="1350" height="40" rx="6" fill="#f5f5f5" stroke="#bdbdbd"/>
+  <rect x="45" y="559" width="34" height="18" fill="#fafafa" stroke="#37474f" stroke-width="2"/>
+  <text x="88" y="573" font-size="12" fill="#212121">linha contínua: baseado em fato [F]</text>
+  <rect x="340" y="559" width="34" height="18" fill="#fafafa" stroke="#37474f" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="383" y="573" font-size="12" fill="#212121">tracejada: hipótese sobre o trabalho atual [H], a confirmar na Entrega 7</text>
+  <rect x="800" y="559" width="34" height="18" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="843" y="573" font-size="12" fill="#212121">Goal</text>
+  <rect x="900" y="559" width="34" height="18" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="943" y="573" font-size="12" fill="#212121">Selection Rule</text>
+  <text x="1060" y="573" font-size="12" fill="#212121">Passos = operadores no nível da ação do usuário</text>
 </svg>
