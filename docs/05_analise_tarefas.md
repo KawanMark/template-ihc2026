@@ -31,10 +31,8 @@ Cada integrante modela três tarefas, uma por técnica. A numeração segue a or
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 |---|---|---|---|---|
-| T01 | {{...}} | {{P01/C01}} | {{...}} | {{...}} |
-| T02 | Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita | P01 / CP01 | [H] Alta / Crítica: repete a cada contêiner (H05) e o erro tem custo nos dois sentidos (H12) | Kawan Mark Geronimo Da Silva — 22.222.010-5 |
 | T01 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
-| T02 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
+| T02 | Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita | P01 / CP01 | [H] Alta / Crítica: repete a cada contêiner (H05) e o erro tem custo nos dois sentidos (H12) | Kawan Mark Geronimo Da Silva |
 | T03 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
 | T04 | Decidir sobre uma carga bloqueada por suspeita na imagem do escâner (HTA) | P02 / CP02 | `[?]` Frequência desconhecida (CP02, Q9). `[H08]` Criticidade alta: o erro libera carga ilícita ou retém carga regular | Gabriel Albertini Pinheiro |
 | T05 | Entender por que a carga foi bloqueada (GOMS) | P02 / CP02, subobjetivo 2 de T04 | Ocorre em todo caso de T04. `[H]` É onde o cenário mostra a maior perda de informação | Gabriel Albertini Pinheiro |
@@ -74,13 +72,11 @@ Cada integrante modela três tarefas, uma por técnica. A numeração segue a or
 - Os **planos** indicam ordem, alternativa, repetição ou condição?
 - A decomposição parou em nível útil para projeto de interação?
 
-### GOMS — T02 {{nome da tarefa}}
-
-## GOMS — T02 Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita
+### GOMS — T02 Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5
 
-### Descrição da tarefa
+#### Descrição da tarefa
 
 Persona: P01 Gustavo Onofre, operador da estação de imagem. Cenário de origem: CP01. Atividade: A02 (inspecionar). Linha da cadeia de contribuição: R01 (mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal).
 
@@ -95,7 +91,7 @@ Persona: P01 Gustavo Onofre, operador da estação de imagem. Cenário de origem
 - **M2 [H]** é hipótese de uso da contribuição do TCC: examinar a imagem a partir da região que a IA aponta. Não há evidência de que seja mais rápido ou mais seguro (H34).
 - O resto é marcado em cada operador como `[F]`, `[H]` ou `[?]`.
 
-### Goal
+#### Goal
 
 `G0: Concluir se há motivo para apontar suspeita na imagem de um contêiner`
 
@@ -105,7 +101,7 @@ Persona: P01 Gustavo Onofre, operador da estação de imagem. Cenário de origem
 - `G2: Confrontar a região em dúvida com a carga declarada`
 - `G3: Decidir se aponta suspeita`
 
-### Diagrama
+#### Diagrama
 
 ![GOMS T02](../assets/05_tarefas/goms_t02.svg)
 
@@ -159,7 +155,7 @@ Persona: P01 Gustavo Onofre, operador da estação de imagem. Cenário de origem
 
 > M1 e M2 são alternativas para G1, e M3 e M4 para G2. G3 tem um único método (M5), então SR3 não escolhe entre métodos: ela organiza os critérios de decisão.
 
-### Operadores
+#### Operadores
 
 | ID | Operador (ação do usuário) | Tipo | Base |
 |---|---|---|---|
@@ -179,13 +175,13 @@ Persona: P01 Gustavo Onofre, operador da estação de imagem. Cenário de origem
 | O14 | Abrir a declaração em outro sistema | motor | [H] |
 | O15 | Concluir "apontar" ou "não apontar" | cognitivo | [H] CP01 |
 
-### Interpretação
+#### Interpretação
 
 O modelo mostra que o exame depende de três coisas ao mesmo tempo: do que Gustavo percebe na imagem (G1), do que ele sabe sobre a carga (G2) e de uma conclusão que ele precisa sustentar (G3). A IA entra apenas em G1, como alternativa de método (M2), e não substitui G2 nem G3: o mapa residual diz onde a imagem se afasta de uma carga normal, mas não diz se a região é compatível com a carga declarada.
 
 M1 reproduz o que o CP01 descreve: Gustavo percorre a imagem, recorre a tratamentos visuais e fica na dúvida. M2 troca a varredura inicial por uma região de partida, mas mantém a varredura do restante (passo 6) e a possibilidade de discordar (SR1.1), para que o julgamento continue sendo dele.
 
-### Problemas e decisões de design observadas
+#### Problemas e decisões de design observadas
 
 Estas são observações do modelo, não soluções.
 
@@ -200,7 +196,7 @@ Estas são observações do modelo, não soluções.
 | 7 | Depois da conclusão, não está claro se Gustavo recebe retorno sobre o que aconteceu com a carga. | fim de G3 | [?] ?08, CP01 |
 | 8 | O benefício de M2 sobre M1 (menos fadiga, foco mais rápido) não foi medido. | SR1 | [H] H34 |
 
-### Verificação do GOMS
+#### Verificação do GOMS
 
 - **Goals:** G0 é uma meta de Gustavo (concluir se há motivo para apontar), não uma ação de tela. G1, G2 e G3 são metas, não passos.
 - **Operators:** os operadores O1 a O15 são ações no nível definido (perceber, ajustar, comparar, decidir) e não dependem de componente de interface.
@@ -209,7 +205,7 @@ Estas são observações do modelo, não soluções.
 - **Origem:** M1 e M3 têm base em fato (C01, C03, ADE Coana nº 19/2014), M3 com a lacuna sobre a unidade. M2, M4 e M5 são hipóteses e estão marcadas como tal.
 - **Limites:** a tarefa não modela triagem (A01), registro (A03), nem o que o auditor faz depois. Também não assume que Gustavo decida sobre a carga (H39).
 
-### Rastreabilidade
+#### Rastreabilidade
 
 | Elemento | Origem |
 |---|---|
