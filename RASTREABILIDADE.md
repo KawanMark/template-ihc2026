@@ -96,7 +96,7 @@ As três fichas são proto-personas: nenhuma foi construída com pesquisa com us
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | Mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R01 | Mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Protótipo em papel PF01 (Entrega 6, `docs/06_prototipacao_papel.md`): telas PP01-A, PP01-B, PP02, PP03 e PP04. A e B comparam as formas de mostrar o mapa residual (H30). Aguarda simulação. |
 | R02 | Medida de anomalia calculada para cada imagem | [H04, H25, H35] Saber quais contêineres examinar primeiro. A existência dessa tarefa é hipótese | P01 | PENDENTE | A01: triar os contêineres escaneados | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 | R03 | Mapa residual como evidência associada ao contêiner | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 | CP02 | A03: registrar o resultado da análise | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 
@@ -134,6 +134,7 @@ Nenhuma tela existe ainda, por isso a coluna de ID fica `PENDENTE`. Os padrões 
 | 08/10/2026 | O cenário de problema CP02 é ambientado na Alfândega do Porto de Santos. Há indício de que, em Santos, a imagem é analisada por servidores da vigilância da RFB, em uma central, e não por operador do recinto nem pelo auditor do despacho. Nenhum estado de hipótese mudou. | Matérias de A Tribuna (2013 e 2015) e Portaria ALF/STS nº 197/2025, consultadas para as questões de refinamento de CP02. | H01, H18, H39, ?08; Entrega 4, CP02; linha R03 e seção 2.1 desta matriz | Gabriel Albertini Pinheiro |
 | 12/10/2026 | As fichas de P01 e P03 passam a seguir a classificação do elenco: P01 não decide sobre a carga e P03 não justifica interface móvel. A consulta ao histórico é desdobrada em consulta de um caso (AC04) e histórico agregado, este fora do recorte. H31 e H33 têm o mesmo enunciado na Entrega 1 e na matriz. Nenhum estado de hipótese mudou. | Auditoria de coerência de 12/10/2026 (`analises de coerencia/12-10-2026-17-22.html`). | P01, P03, H04, H06, H31, H33; Entregas 1 a 4; seções 1, 2 e 4 desta matriz | Gabriel Albertini Pinheiro |
 | 15/10/2026 | O cenário de problema CP01 retoma a situação concreta H13 com Gustavo (P01), na dúvida diante de uma imagem de contêiner. Adota como referência o modelo da Portaria ALF/FNS nº 9/2024 (operador do recinto que comunica a suspeita à RFB) e registra como lacuna em qual modelo Gustavo estaria. Nenhum estado de hipótese mudou. | Normas da RFB já usadas nas Entregas 1 a 3 e análises C02 e C03, consultadas para as questões de refinamento de CP01. | H01, H04, H10, H11, H12, H13, H38, H39, ?08; Entrega 4, CP01; linha R01 e seção 2.1 desta matriz | Kawan Mark Geronimo Da Silva |
+| 22/10/2026 | O protótipo em papel PF01 cobre o fluxo de P01 de examinar a imagem e concluir se há motivo para apontar suspeita. Desenha duas alternativas para a tela de exame (A, lado a lado; B, sobreposto com opacidade ajustável), um estado sem análise da IA, a conclusão do exame e dois avisos de erro. A simulação ainda não foi feita. Nenhum estado de hipótese mudou. | Atividade da Entrega 6, a partir de CP01 e da Entrega 1, seções 7.4 e 10. | H12, H27, H30, H31, H39, ?05, ?08; Entrega 6, PF01 e PP01 a PP04; linha R01 e identificadores desta matriz | Kawan Mark Geronimo Da Silva |
 
 ## Convenção de identificadores
 
@@ -151,6 +152,8 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 | `P01` | Persona | Entrega 3 |
 | `CP01` | Cenário de problema | Entrega 4 |
 | `T01` | Tarefa modelada | Entrega 5 |
+| `PF01` | Fluxo do protótipo em papel | Entrega 6 |
+| `PP01` | Tela ou estado do protótipo em papel | Entrega 6 |
 | `M01` | Diagrama MoLIC | Entrega 10 |
 | `F01` | Tela ou estado no Figma | Entrega 11 |
 | `V01` | Violação de heurística | Entrega 13 |
