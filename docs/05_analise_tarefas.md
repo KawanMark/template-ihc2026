@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 **Data:** 22/10/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -31,9 +31,9 @@ Cada integrante modela três tarefas, uma por técnica. A numeração segue a or
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 |---|---|---|---|---|
-| T01 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
-| T02 | Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita | P01 / CP01 | [H] Alta / Crítica: repete a cada contêiner (H05) e o erro tem custo nos dois sentidos (H12) | Kawan Mark Geronimo Da Silva |
-| T03 | {{...}} | {{P01/CP01}} | {{...}} | Kawan Mark Geronimo Da Silva |
+| T01 | Inspecionar a imagem do contêiner e manifestar conclusão sobre a carga (HTA) | P01 / CP01 | [F] Contínua (fluxo de escaneamento na entrada do terminal, Portaria RFB nº 143/2022). [H] Alta criticidade: o erro pode liberar ilícito ou causar retenção injustificada (H12). | Kawan Mark Geronimo Da Silva |
+| T02 | Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita (GOMS) | P01 / CP01, subobjetivo 2 de T01 | [H] Alta / Crítica: repete a cada contêiner (H05) e o erro tem custo nos dois sentidos (H12) | Kawan Mark Geronimo Da Silva |
+| T03 | Comunicar e registrar a conclusão do exame da imagem (CTT) | P01 / CP01, subobjetivo 4 de T01 | [F] Ocorre a cada contêiner examinado. [F] O apontamento retém e segrega a carga por até 3 dias úteis perante a RFB (Portaria ALF/FNS nº 9/2024, art. 8º). | Kawan Mark Geronimo Da Silva |
 | T04 | Decidir sobre uma carga bloqueada por suspeita na imagem do escâner (HTA) | P02 / CP02 | `[?]` Frequência desconhecida (CP02, Q9). `[H08]` Criticidade alta: o erro libera carga ilícita ou retém carga regular | Gabriel Albertini Pinheiro |
 | T05 | Entender por que a carga foi bloqueada (GOMS) | P02 / CP02, subobjetivo 2 de T04 | Ocorre em todo caso de T04. `[H]` É onde o cenário mostra a maior perda de informação | Gabriel Albertini Pinheiro |
 | T06 | Formalizar o ato sobre a carga bloqueada (CTT) | P02 / CP02, subobjetivo 5 de T04 | Ocorre em todo caso de T04. `[F]` O ato tem valor jurídico e é registrado no Siscomex (C02) | Gabriel Albertini Pinheiro |
@@ -47,30 +47,57 @@ Cada integrante modela três tarefas, uma por técnica. A numeração segue a or
 
 ## Kawan — T01 a T03
 
-### HTA — T01 {{nome da tarefa}}
+As três tarefas partem do cenário de problema CP01 (Entrega 4) e da persona primária P01 (Gustavo Onofre), abordando a atividade de inspeção não intrusiva de contêineres na estação de análise do terminal portuário. O HTA (T01) cobre a tarefa macro do operador: receber os dados, examinar a radiografia, confrontar com a carga declarada e manifestar a conclusão. O GOMS (T02) e o CTT (T03) aprofundam os dois subobjetivos críticos em que o cenário evidencia as maiores dificuldades cognitivas e operacionais: o exame visual minucioso na estação do fabricante (T02) e a formalização/comunicação da conclusão à autoridade aduaneira (T03).
+
+**Situação atual, não a solução.** Os modelos descrevem estritamente o trabalho como é realizado hoje, utilizando os recursos dos softwares dos fabricantes do escâner (C01, C03) e os procedimentos normativos vigentes (Portaria ALF/FNS nº 9/2024, Portaria RFB nº 143/2022, ADE Coana nº 19/2014), sem antecipar telas da disciplina nem bounding boxes da IA.
+
+**Base de evidência.** P01 é persona primária do projeto. Como nenhum operador de escâner foi entrevistado diretamente até o momento, a estrutura das tarefas fundamenta-se nas especificações técnicas de estações de inspeção (C01, C03), em normas da Receita Federal e na literatura técnica de triagem radiográfica. As etapas e operações estão identificadas com fatos `[F]`, hipóteses de trabalho `[H]` ou lacunas `[?]` a averiguar na Entrega 7.
+
+### HTA — T01 Inspecionar a imagem do contêiner e manifestar conclusão sobre a carga
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5
 
 #### Descrição da tarefa
 
-{{objetivo, ponto de início, conclusão esperada, contexto}}
+- **Objetivo:** Inspecionar a imagem radiográfica de um contêiner gerada pelo escâner e manifestar formalmente uma conclusão sobre a regularidade da carga (não apontar suspeita e liberar o fluxo do veículo, ou apontar suspeita fundamentada e segregar a unidade para a Receita Federal).
+- **Ponto de início:** Disponibilização da radiografia na estação após a passagem do caminhão pelo portal de escaneamento. `[F]` As imagens são transmitidas em tempo real pelo recinto (Portaria RFB nº 143/2022, art. 14).
+- **Conclusão esperada:** Conclusão formalizada e registrada no sistema da estação/terminal, permitindo o prosseguimento da viagem do veículo ou a retenção física e segregação da carga com notificação à Receita Federal (Portaria ALF/FNS nº 9/2024, art. 8º).
+- **Contexto:** Estação de análise de imagens do terminal alfandegado (recinto), em monitor dedicado de 22" a 24" (C03). Gustavo opera sob fluxo contínuo de veículos, em plantão com pressão de tempo para evitar formação de filas no gate (CP01, H10, H13).
 
 #### Diagrama
 
 ![HTA T01](../assets/05_tarefas/hta_t01.svg)
 
+*Figura 1 — HTA da tarefa T01, situação atual. Fonte: elaboração do autor a partir do cenário CP01, das análises de mercado C01/C03 e das normas aduaneiras.*
+
 #### Decomposição e planos
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | {{objetivo principal}} | {{1 > 2 > 3 / 1 ou 2 etc.}} | {{...}} |
+| 0 | Inspecionar a imagem do contêiner e manifestar conclusão sobre a carga | 1 > 2 > 3 > 4. Se 2 não apresentar dúvida visual: 3 pode ser dispensado e segue direto para 4.1. Se 3 mantiver dúvida após esgotar comparações, concluir sob incerteza em 4 (pesar custos de H12) | O operador trabalha sob incerteza (H38). Se liberar com dúvida, há risco de evasão ilícita; se reter sem fundamento, gera atrito e bloqueia o pátio por até 3 dias úteis (H12, Portaria ALF/FNS nº 9/2024) |
+| 1 | Receber dados da carga e confirmar imagem | 1.1 > 1.2. Se a imagem apresentar falha de captura ou corte, solicitar novo escaneamento | `[F]` O fluxo de entrada exige passagem pelo portal (Portaria RFB nº 143/2022). Os dados de manifesto nem sempre estão integrados na mesma tela da estação (H11) |
+| 1.1 | Identificar unidade, placa e manifesto | — | `[F]` Número do contêiner e placa são indexadores legais de busca e conferência (Portaria ALF/FNS nº 9/2024, art. 5º) |
+| 1.2 | Verificar integridade e nitidez da radiografia | — | Falhas na varredura mecânica do escâner podem exigir reescaneamento imediato antes da liberação do caminhão do portal |
+| 2 | Examinar a radiografia em busca de dúvida → T02 | 2.1 > 2.2. Para cada região em dúvida, repetir 2.3 até esclarecer ou esgotar recursos. Se restar dúvida, fazer 2.4 e ir a 3 | Detalhado no GOMS T02. O software do fabricante não indica onde olhar; a varredura depende integralmente de atenção visual sustentada, sujeita a fadiga (H10, H13) |
+| 2.1 | Perceber imagem e cores de material (Zeff) | — | `[F]` Classificação de materiais orgânicos, inorgânicos e metais por diferenciação de número atômico efetivo (C01, C03, ADE Coana nº 19/2014) |
+| 2.2 | Varrer a imagem em busca de descontinuidades | — | Inspeção visual sem direcionamento automático de foco, consumindo tempo em áreas homogêneas da carga |
+| 2.3 | Ajustar contraste, zoom, realce de bordas ou cores | — | `[F]` Recursos manuais previstos no software (ADE Coana nº 19/2014, item 1.2.8). O laço não possui critério objetivo de parada (H16) |
+| 2.4 | Reter regiões que seguem em dúvida | — | `[H]` Esforço de memória do operador para manter as coordenadas visuais das áreas anômalas antes de checar a declaração |
+| 3 | Confrontar anomalias com a declaração da carga | 3.1 > 3.2. Se compatível, ir para 4.1. Se incompatível ou dúvida persistir, ir para 4.2 (pesar custos de erro em H12) | O operador confronta a densidade observada com o conteúdo esperado. Dúvidas sutis exigem conhecimento empírico do tipo de embalagem e arranjo da carga (H11) |
+| 3.1 | Consultar descrição e natureza declarada | — | `[F]` Campo de produtos no software (C03) ou consulta manual em outro sistema `[H]` (M2 vs M3 de T02) |
+| 3.2 | Julgar se padrão visual é compatível com a carga declarada | — | Operação cognitiva complexa. Dificuldade em distinguir alterações legítimas de densidade (como madeira tratada) de objetos ocultos |
+| 4 | Formalizar manifestação sobre a carga → T03 | Escolha exclusiva: 4.1 se carga regular; 4.2 se houver suspeita fundamentada (Portaria ALF/FNS nº 9/2024, art. 8º) | Detalhado no CTT T03. A retenção interrompe a logística e inicia procedimento formal perante a Receita Federal |
+| 4.1 | Concluir "não apontar" e autorizar liberação do fluxo | — | `[F]` Permite o desengate ou a saída imediata do veículo do recinto aduaneiro |
+| 4.2 | Registrar suspeita, segregar contêiner e notificar a RFB | — | `[F]` Procedimento de contenção obrigatório. A carga vai para área segregada no pátio e aguarda manifestação da RFB por até 3 dias úteis |
+
+**Critério de parada.** A decomposição foi interrompida em operações que representam ações de trabalho completas e reconhecíveis pelo operador de raio-X (perceber cores Zeff, aplicar tratamentos de imagem, confrontar com declaração, registrar conclusão). Não desceu a eventos de nível motor elementar (como cliques em botões específicos da interface do fabricante), porque esses aspectos variam entre fornecedores e não foram observados in loco (lacuna reservada à Entrega 7). Pelo critério de probabilidade versus custo do HTA, as falhas com maior impacto ocorrem no exame visual (subobjetivo 2, detalhado em T02) e na comunicação/formalização da suspeita (subobjetivo 4, detalhado em T03).
 
 **Verificação do HTA:**
 
-- O objetivo 0 representa uma meta do usuário?
-- As subtarefas são necessárias e suficientes?
-- Os **planos** indicam ordem, alternativa, repetição ou condição?
-- A decomposição parou em nível útil para projeto de interação?
+- *O objetivo 0 representa uma meta do usuário?* Sim. Inspecionar a imagem e manifestar uma conclusão técnica é a meta de trabalho central de Gustavo (P01) e da atividade A02/A03.
+- *As subtarefas são necessárias e suficientes?* Sim. Cobrem todo o ciclo operacional narrado em CP01 e fundamentado nas normas portuárias: entrada da imagem (1), análise da radiografia (2), confronto documental (3) e despacho operacional (4).
+- *Os planos indicam ordem, alternativa, repetição ou condição?* Sim. O Plano 0 combina sequência, desvio condicional e critério sob incerteza; o Plano 1 é sequencial com tratamento de exceção; o Plano 2 possui laço de repetição com condição de parada; o Plano 3 prevê ramificação conforme compatibilidade; e o Plano 4 expressa escolha mutuamente exclusiva.
+- *A decomposição parou em nível útil para projeto de interação?* Sim. A análise evidencia os gargalos de atenção visual não assistida (subobjetivo 2) e a fricção no registro formal de suspeitas (subobjetivo 4), fornecendo os requisitos exatos para o projeto da interface de IHC.
 
 ### GOMS — T02 Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita
 
@@ -193,25 +220,44 @@ Estas são observações do modelo, não soluções.
 | Hipóteses e lacunas | H05, H10, H11, H12, H13, H16, H38, H39, ?08 |
 | Concorrentes | C01, C03 |
 
-### CTT — T03 {{nome da tarefa}}
+### CTT — T03 Comunicar e registrar a conclusão do exame da imagem
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5
 
 #### Descrição
 
-{{...}}
+Modela o subobjetivo 4 de T01: após concluir o exame da radiografia e o confronto com os dados da carga, Gustavo formaliza a conclusão no sistema e direciona o contêiner. A tarefa inicia na avaliação cognitiva de convicção pelo operador e termina quando o sistema autoriza a saída do veículo ou emite a ordem de segregação física no pátio com notificação eletrônica à Receita Federal.
+
+A modelagem reflete a **situação atual**, fundamentada na Portaria ALF/FNS nº 9/2024 (art. 8º, que estabelece o procedimento de interrupção do fluxo, segregação física e comunicação à RFB) e na análise de estações de inspeção (C01, C03; ADE Coana nº 19/2014). Adota a notação ConcurTaskTrees (CTT) de Paternò, especificando categorias de tarefas (usuário, interação, aplicação e abstrata) e operadores temporais.
 
 #### Diagrama
 
 ![CTT T03](../assets/05_tarefas/ctt_t03.svg)
 
+*Figura 2 — CTT da tarefa T03, situação atual. O detalhe inferior decompõe a elaboração do apontamento de suspeita e a efetivação da retenção. Fonte: elaboração do autor a partir do cenário CP01 e da Portaria ALF/FNS nº 9/2024.*
+
 #### Legenda e relações temporais usadas
 
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| `>>` habilitação sequencial | A tarefa da direita só pode iniciar após o término bem-sucedido da tarefa da esquerda | *Confirmar liberação no software do escâner* `>>` *Registrar liberação e autorizar saída*. *Elaborar apontamento de suspeita* `>>` *Efetivar retenção e comunicar RFB* |
+| `[]>>` habilitação com passagem de informação | Similar à habilitação, porém a tarefa da esquerda repassa um dado ou decisão essencial para a tarefa da direita | *Avaliar convicção e definir manifestação* `[]>>` *Efetivar manifestação no sistema*: a decisão (regular vs. suspeito) determina qual ramo de execução será ativado no sistema |
+| `[]` escolha exclusiva | Uma única tarefa entre as alternativas é executada; assim que uma inicia, as demais são desabilitadas | *Liberar trânsito regular* `[]` *Registrar suspeita fundamentada*: o operador libera a carga ou inicia a retenção |
+| `\|\|\|` entrelaçamento (concorrência) | As tarefas podem ser executadas em qualquer ordem ou alternadas entre si | *Indicar região suspeita (marcar ROI)* `\|\|\|` *Descrever inconformidade observada*: o operador pode marcar a anomalia visual na imagem, digitar a justificativa e retornar para ajustar a marcação. No sistema: *Emitir ordem de segregação física no pátio* `\|\|\|` *Transmitir notificação eletrônica à RFB* |
+| `[>` desativação (interrupção) | A inicialização da tarefa da direita interrompe e encerra em definitivo a tarefa da esquerda | *Elaborar apontamento* (marcação de ROI e texto descritivo) `[>` *Confirmar envio da ocorrência*: o ato de confirmar encerra a edição e consolida o formulário |
 
-Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
+Tipos de tarefa empregados no modelo:
+
+- **Abstratas:** a raiz *Comunicar e registrar a conclusão do exame da imagem*, o nó intermediário *Efetivar manifestação no sistema*, os ramos principais *Liberar trânsito regular* e *Registrar suspeita fundamentada*, e os subprocessos *Elaborar apontamento de suspeita* e *Efetivar retenção e comunicar RFB*.
+- **Do usuário (cognitiva):** *Avaliar convicção e definir manifestação*. Trata-se de uma deliberação humana puramente mental, correspondente aos subobjetivos 3 e 4 do HTA T01 e à meta G3 do GOMS T02.
+- **De interação:** *Confirmar liberação no software do escâner*, *Indicar região suspeita (marcar ROI na imagem)*, *Descrever inconformidade observada (texto livre)* e *Confirmar envio da ocorrência de suspeita*.
+- **Da aplicação (sistema):** *Registrar liberação e autorizar saída*, *Emitir ordem de segregação física no pátio* e *Transmitir notificação eletrônica à RFB*.
+
+#### Interpretação
+
+- **Assimetria de custo e esforço operacional.** O ramo de liberação (*Liberar trânsito regular*) é direto e veloz: uma interação rápida de confirmação habilita a liberação física e do sistema. Em contrapartida, o ramo de suspeita (*Registrar suspeita fundamentada*) exige esforço substancial de interação concorrente (`|||`), com anotação geométrica manual da ROI e redação de justificativa em texto livre, gerando atrito para o operador que lida com fila de veículos no gate (CP01).
+- **Ruptura de retroalimentação (fluxo unilateral terminal).** O modelo formaliza uma grave lacuna da situação atual: a tarefa encerra-se nas tarefas de aplicação de transmissão da ocorrência (*Transmitir notificação eletrônica à RFB*). Nenhuma tarefa do sistema recebe ou exibe ao operador o resultado posterior da conferência física ou a decisão final do Auditor-Fiscal (CP01, ?08, H38). Gustavo não sabe se sua desconfiança procedia, impedindo o aprendizado empírico para inspeções futuras.
+- **Ato de desativação irreversível.** A relação `[>` evidencia que, uma vez acionada a confirmação do envio da ocorrência, o operador perde a possibilidade de retificação rápida, disparando imediatamente a retenção física no pátio e a comunicação externa com a autoridade aduaneira (Portaria ALF/FNS nº 9/2024, art. 8º).
 
 ---
 
@@ -519,7 +565,32 @@ Modelagem das relações temporais e de comunicação entre o agente de campo (P
 
 Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
 
-> A síntese da equipe é consolidada depois de T01 a T03 e T07 a T09. Abaixo está a contribuição de T04 a T06.
+### Contribuição de T01 a T03 (Kawan)
+
+**Problemas de interação na situação atual.** A modelagem integrada de T01 (HTA), T02 (GOMS) e T03 (CTT) para P01 revelou quatro gargalos estruturais no posto de trabalho do operador:
+
+1. **Atenção visual não direcionada:** O operador recebe uma imagem densa e precisa examiná-la integralmente sem qualquer indicação algorítmica de relevância ou anomalia, demandando atenção sustentada exaustiva que se degrada ao longo do plantão (T01-2, T02 M1, H10, H13).
+2. **Laço de exploração sem critério de parada:** As ferramentas de tratamento do fabricante (zoom, contraste, Zeff, realce de bordas) são acionadas em ciclo repetitivo sem estimativa de certeza, fazendo o operador gastar tempo excessivo em regiões ambíguas sob fila de caminhões (T01-2.3, T02 M1 passo 3, H16).
+3. **Fragmentação cognitiva no confronto documental:** Para comparar a anomalia percebida com os dados declarados da carga, o operador muitas vezes precisa alternar para sistemas externos ou depender de memória de trabalho (T01-3.1, T02 M3, H11).
+4. **Assimetria de fricção e ausência de retorno:** Apontar uma suspeita exige redação descritiva manual e gera retenção por até 3 dias úteis (Portaria ALF/FNS nº 9/2024, art. 8º), enquanto liberar o contêiner exige apenas um clique. Além disso, o operador nunca recebe retorno sobre o que a fiscalização física de fato encontrou, impedindo o calibramento de suas futuras decisões (T01-4, T03 ruptura terminal, H12, H38, ?08).
+
+**Oportunidades, como hipóteses de design:**
+
+| Oportunidade | Problema acima | Hipóteses e recomendações ligadas |
+|---|---|---|
+| Destacar automaticamente regiões anômalas via mapa residual (XAI) | 1, 2 | R01, H10, H34, RC01 |
+| Apresentar a mercadoria declarada e referências visuais integradas na tela | 2, 3 | H11, H30, RC02, RC07 |
+| Registro semiautomático de suspeita vinculando a ROI e métricas residuais | 4 | R03, H06, H32, RC04 |
+| Painel com histórico e retorno de desfechos das cargas inspecionadas | 4 | H18, H38, ?08 |
+
+**Tarefas candidatas ao protótipo e ao teste de usabilidade:**
+- T01-2 / T02: Examinar a radiografia assistido pelo mapa residual e contraste de anomalias (foco no tempo de localização de anomalias e redução de carga cognitiva).
+- T01-4 / T03: Formalizar e registrar a conclusão técnica com exportação da ROI residual para o dossiê fiscal (foco na facilidade de registro e redução da assimetria operacional).
+
+**Informações a coletar na Entrega 7:**
+- Como é organizada a escala e o rodízio na estação para mitigar a fadiga visual (H13, H16, ?07).
+- Se a estação de trabalho utilizada na unidade possui os dados do manifesto em tela ou se exige terminal auxiliar (H11).
+- Se existe canal informal ou formal de retorno aos operadores sobre o que foi apreendido nas cargas apontadas (H38, ?08).
 
 ### Contribuição de T04 a T06 (Gabriel)
 
@@ -556,6 +627,11 @@ A modelagem de tarefas evidenciou que o principal gargalo operacional de campo r
 
 ## Referências
 
+Fontes de T01 a T03:
+
+- Cenário CP01 e fontes associadas (Portaria ALF/FNS nº 9/2024, arts. 3º, 5º e 8º; Portaria RFB nº 143/2022, art. 14; ADE Coana nº 19/2014, itens 1.2.8 e 1.2.9): referências completas nas Entregas 3 e 4.
+- Análises de concorrentes de sistemas de escaneamento de contêineres e estações de análise de imagem C01 (Rapiscan InSight) e C03 (Smiths Detection HCVM e RIW): referências completas na Entrega 2.
+
 Fontes de T04 a T06:
 
 - Cenário CP02 e suas fontes (A Tribuna, 2013 e 2015; Portaria ALF/STS nº 197/2025): referências completas na Entrega 4.
@@ -570,15 +646,15 @@ Métodos:
 
 ## Checklist
 
-- [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
-- [ ] Cada artefato identifica autor e tarefa.
-- [ ] Diagramas são legíveis e possuem fonte editável quando possível.
-- [ ] HTA contém planos, não apenas árvore de tópicos.
-- [ ] GOMS distingue Goals, Operators, Methods e Selection Rules.
-- [ ] CTT usa operadores temporais e tipos de tarefa coerentes.
-- [ ] Há texto explicando cada diagrama.
-- [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
-- [ ] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
-- [ ] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
+- [x] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
+- [x] Cada artefato identifica autor e tarefa.
+- [x] Diagramas são legíveis e possuem fonte editável quando possível.
+- [x] HTA contém planos, não apenas árvore de tópicos.
+- [x] GOMS distingue Goals, Operators, Methods e Selection Rules.
+- [x] CTT usa operadores temporais e tipos de tarefa coerentes.
+- [x] Há texto explicando cada diagrama.
+- [x] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
+- [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
 
-> O checklist fica em aberto enquanto T01 e T03 não forem preenchidos. T02, T04 a T06 e T07 a T09 atendem aos itens que dependem de cada integrante. Os diagramas de T04 e T06 são SVG em texto, que servem como fonte editável (abrem no draw.io e no Inkscape).
+> Todas as tarefas (T01 a T09) foram modeladas pelos respectivos autores (Kawan, Gabriel e Alexandre). Os diagramas são disponibilizados em SVG vetorial editável em `assets/05_tarefas/` (abrem no draw.io, Inkscape e navegadores).
