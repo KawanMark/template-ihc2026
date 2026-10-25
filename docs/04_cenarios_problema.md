@@ -1,6 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
-**Data:** 08/10/2026  
+**Data:** 08/10/2026 (versão original)  
+**Revisão:** 25/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe09.md)  
 **Status:** 🟩 concluída 
 **Responsabilidade:** 1 solução completa por integrante
 
@@ -291,4 +292,12 @@ Fontes do cenário CP03:
 - [x] O refinamento mostra claramente o que foi adicionado/alterado.
 - [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
 - [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+
+## Histórico de revisão
+
+| Data | Versão | Alteração | Motivo |
+|---|---|---|---|
+| 08/10/2026 | 1.0 | Entrega original dos cenários de análise/problema (CP01, CP02 e CP03). | Entrega 4 da disciplina. |
+| 25/10/2026 | 1.1 | Alinhamento das questões de refinamento e dos elementos extraídos aos sete elementos característicos do cenário (ambiente/contexto, atores, objetivos, planejamento, ações, eventos e avaliação) em CP01, CP02 e CP03; padronização dos marcadores `[Q1]`–`[Q10]` nos cenários refinados; ajuste de perguntas repetidas do cenário inicial; renomeação de C03 para CP03 e reescrita sem antecipação de solução nem fatos sem fonte, alinhada a H42 em `RASTREABILIDADE.md`. | [Feedback do professor da Entrega 4](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe09.md), correções 1 a 13. |
+
 
