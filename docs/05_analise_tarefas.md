@@ -126,12 +126,6 @@ As três tarefas partem do cenário de problema CP01 (Entrega 4) e da persona pr
 - `G2: Confrontar a região em dúvida com a carga declarada`
 - `G3: Decidir se aponta suspeita`
 
-#### Diagrama
-
-![GOMS T02](../assets/05_tarefas/goms_t02.svg)
-
-*Linha contínua: método baseado em fato `[F]`. Linha tracejada: hipótese sobre o trabalho atual `[H]`, a confirmar na Entrega 7. O SVG é a fonte editável.*
-
 #### Métodos, operadores e regras de seleção
 
 **Para G1 (examinar a imagem e identificar regiões de dúvida)**
@@ -141,30 +135,31 @@ As três tarefas partem do cenário de problema CP01 (Entrega 4) e da persona pr
   2. Varrer a imagem em busca de regiões que diferem do esperado (O2).
   3. Para cada região em dúvida, repetir até conseguir dizer se faz parte da carga ou esgotar os tratamentos: ampliar e deslocar a imagem (O4); ajustar contraste e brilho (O3); ligar o realce de bordas (O5); alternar pseudo-cor ou inversão e comparar com a imagem original (O6).
   4. Reter quais regiões seguem em dúvida (O7).
+  5. Verificar se toda a extensão do contêiner foi examinada e se as regiões que permanecem em dúvida estão delimitadas para o confronto documental (O13).
 - G1 tem um único método, porque não há outro sustentado pelas fontes. Por isso não há regra de seleção para G1.
 
 **Para G2 (confrontar a região com a carga declarada)**
 
 - **Method M2: dados da declaração mostrados na própria estação** `[F]` para o campo de produtos no software do fabricante (C03), `[?]` para o que a unidade de Gustavo realmente mostra
-  1. Ler a descrição e a natureza da carga declarada (O8).
+  1. Ler a descrição e a natureza da carga declarada na própria estação (O8).
   2. Recordar o que essa carga deveria mostrar na imagem (O9).
-  3. Comparar a região em dúvida com isso (O10).
+  3. Comparar a região em dúvida com o padrão esperado para a mercadoria (O10).
+  4. Verificar se os dados lidos na estação foram suficientes para avaliar a compatibilidade da região em dúvida (O13).
 - **Method M3: consulta à declaração fora da estação** `[H]`
-  1. Abrir a declaração em outro sistema (O11).
-  2. Ler e reter a descrição da carga (O8, O9).
-  3. Voltar à imagem e comparar (O10).
+  1. Abrir a declaração em outro sistema ou janela auxiliar (O11).
+  2. Ler e reter a descrição da carga declarada (O8, O9).
+  3. Voltar à imagem na estação e comparar a região em dúvida com a descrição retida (O10).
+  4. Verificar se a descrição consultada fora da estação foi retida sem perda e confrontada com todas as regiões em dúvida (O13).
 - **Selection Rule SR1:** usar M2 quando a estação mostrar os dados da declaração; usar M3 quando não mostrar.
 
 **Para G3 (decidir se aponta suspeita)**
 
-- **Method M4: avaliar a compatibilidade e concluir** `[H]` (a estrutura vem do CP01, que é cenário; a segunda opinião não tem fonte)
-  1. Avaliar se a região é compatível com a carga declarada (O10).
-  2. Se compatível, concluir "não apontar" (O12).
-  3. Se incompatível, concluir "apontar" (O12).
-  4. Se a dúvida persistir, pedir segunda opinião `[?]` ou concluir sob incerteza, pesando o custo de errar (H12).
-- **Selection Rule SR2:** critérios de decisão. Compatível, concluir "não apontar". Incompatível, concluir "apontar". Dúvida persistente, aplicar o passo 4 de M4. Não há fonte que diga se Gustavo pode pedir segunda opinião `[?]`.
+- **Method M4: avaliar a compatibilidade sob incerteza e concluir** `[H]` (a estrutura vem do CP01; a possibilidade de segunda opinião permanece lacuna `[?]`)
+  1. Avaliar o resultado da comparação entre a região em dúvida e a carga declarada (O10), aplicando o critério de decisão: se o padrão visual for compatível com a mercadoria declarada, definir a conclusão como "não apontar" (O12); se houver incompatibilidade evidente, definir a conclusão como "apontar" (O12).
+  2. Caso a dúvida persista após o confronto, ponderar os custos operacionais e de segurança de falso positivo e falso negativo (H12), recorrer a segunda opinião se houver colega disponível na sala `[?]` e definir a conclusão ("apontar" ou "não apontar") (O12).
+  3. Verificar se a conclusão final sobre o contêiner está formada e pronta para ser registrada na etapa seguinte (O13).
 
-> M2 e M3 são alternativas para G2. G1 e G3 têm um único método cada, então só G2 tem escolha entre métodos. SR2 não escolhe entre métodos: ela organiza os critérios de decisão.
+> M2 e M3 são métodos alternativos para atingir G2, escolhidos pela regra de seleção SR1. G1 e G3 possuem um único método cada na situação atual (M1 e M4), razão pela qual os critérios internos de decisão de G3 compõem diretamente os passos de M4, sem criar regra de seleção artificial.
 
 #### Operadores
 
@@ -182,6 +177,7 @@ As três tarefas partem do cenário de problema CP01 (Entrega 4) e da persona pr
 | O10 | Comparar a região com o que a carga deveria mostrar | cognitivo | `[H]` H11 |
 | O11 | Abrir a declaração em outro sistema | motor | `[H]` |
 | O12 | Concluir "apontar" ou "não apontar" | cognitivo | `[H]` CP01 |
+| O13 | Verificar internamente se o objetivo do método foi alcançado antes de encerrar | cognitivo | `[H]` controle cognitivo da tarefa |
 
 #### Interpretação
 
@@ -204,9 +200,9 @@ Estas são observações do modelo, não soluções.
 #### Verificação do GOMS
 
 - **Goals:** G0 é uma meta de Gustavo (concluir se há motivo para apontar), não uma ação de tela. G1, G2 e G3 são metas, não passos.
-- **Operators:** os operadores O1 a O12 são ações no nível definido (perceber, ajustar, comparar, decidir) e não dependem de componente de interface.
+- **Operators:** os operadores O1 a O13 são ações no nível definido (perceber, ajustar, comparar, decidir e verificar) e não dependem de componente de interface. Cada método (M1 a M4) encerra com o operador explícito de verificação cognitiva (O13).
 - **Methods:** M2 e M3 atingem a mesma meta (G2) por caminhos diferentes. G1 e G3 têm um método cada, e isso está dito no modelo.
-- **Selection Rules:** SR1 traz condição observável (a estação mostra a declaração?). SR2 traz critérios de decisão.
+- **Selection Rules:** SR1 traz condição observável (a estação mostra a declaração?) para escolher entre M2 e M3 em G2. Como G3 possui apenas o método M4, os critérios de decisão integram os passos de M4 sem usar regra de seleção.
 - **Origem:** M1 e M2 têm base em fato (C01, C03, ADE Coana nº 19/2014), M2 com a lacuna sobre a unidade. M3 e M4 são hipóteses sobre o trabalho atual e estão marcadas como tal.
 - **Limites:** a tarefa não modela triagem (A01), registro (A03), nem o que o auditor faz depois. Também não assume que Gustavo decida sobre a carga (H39).
 
@@ -336,23 +332,17 @@ As três tarefas vêm do cenário CP02 (Entrega 4), que já indicava na seção 
 
 `G0: Entender por que a carga foi bloqueada (o que a vigilância viu na imagem, em que parte do contêiner e com que fundamento)`
 
-Subobjetivo usado pelos métodos:
-
-`G1: Identificar quem fez o bloqueio`
-
-- Operators: ler na declaração os dados do bloqueio `[?]`; se não identificarem o servidor, perguntar à equipe de vigilância em plantão `[F]` (Eqvig, Portaria ALF/STS nº 197/2025, art. 34; CP02, Q1).
-
 #### Métodos, operadores e regras de seleção
 
 - **Method M1: obter o relato de quem bloqueou**
   - Operators:
-    1. cumprir G1;
-    2. contatar o servidor `[?]` (telefone, mensagem ou sistema; o canal não foi apurado);
-    3. perguntar o que foi visto e onde;
+    1. ler na declaração os dados do bloqueio para identificar quem o efetuou `[?]`; se não identificarem o servidor, consultar a equipe de vigilância em plantão `[F]` (Eqvig, Portaria ALF/STS nº 197/2025, art. 34; CP02, Q1);
+    2. contatar o servidor responsável pelo bloqueio `[?]` (telefone, mensagem ou sistema; o canal não foi apurado);
+    3. perguntar o que foi visto na radiografia e em que parte do contêiner;
     4. aguardar a resposta;
-    5. ler ou ouvir o relato;
+    5. ler ou ouvir o relato recebido;
     6. reter o relato, de memória ou em anotação, para usar em T04-3 e T06;
-    7. verificar se o relato diz o quê e onde. Se não disser, voltar ao operador 3.
+    7. verificar internamente se o relato informa o que foi visto e onde no contêiner (se não informar, voltar ao operador 3).
   - Resultado: `[H]` descrição curta, de segunda mão (CP02).
 - **Method M2: examinar a imagem pessoalmente**
   - Operators:
@@ -361,15 +351,16 @@ Subobjetivo usado pelos métodos:
     3. percorrer a imagem;
     4. ajustar os tratamentos visuais, se disponíveis `[F]` (pseudo-cor por material e realce de bordas existem nas estações analisadas em C03);
     5. procurar uma região incompatível com a mercadoria declarada;
-    6. decidir qual região provavelmente motivou o bloqueio.
+    6. decidir qual região provavelmente motivou o bloqueio;
+    7. verificar internamente se a região identificada oferece base suficiente sobre o motivo do bloqueio para prosseguir ao confronto com a declaração.
   - Resultado: leitura do próprio auditor, sem saber se é a mesma região que a vigilância viu.
 - **Method M3: examinar a imagem guiado pelo relato**
   - Operators:
-    1. executar M1, operadores 1 a 6;
-    2. localizar e abrir a imagem (M2, operadores 1 e 2);
-    3. ir à região indicada no relato;
-    4. comparar o que vê com a descrição recebida;
-    5. decidir se a região e a descrição batem. Se não baterem, voltar ao M1, operador 3.
+    1. executar os operadores 1 a 6 de M1 para identificar quem bloqueou e obter o relato da vigilância;
+    2. localizar e abrir a imagem (operadores 1 e 2 de M2);
+    3. ir à região do contêiner indicada no relato;
+    4. comparar o que vê na imagem com a descrição recebida;
+    5. verificar internamente se a região observada na imagem e a descrição do relato coincidem e esclarecem o motivo do bloqueio (se não coincidirem, voltar ao operador 3 de M1).
   - Resultado: a suspeita entendida com a evidência à vista.
 - **Selection Rule SR1:** usar M1 quando o auditor não tem acesso à imagem.
 - **Selection Rule SR2:** usar M2 quando tem acesso à imagem e prática de leitura de radiografia, ou quando quem fez o bloqueio não está disponível.
@@ -382,12 +373,12 @@ Subobjetivo usado pelos métodos:
 | Método | Operadores | Depende de outra pessoa | Sai do Siscomex | O que o auditor obtém |
 |---|---:|---|---|---|
 | M1 | 7, com espera e possível repetição | sim, de quem bloqueou | sim, para contatar | relato de segunda mão |
-| M2 | 6 | não | sim, para abrir a imagem | leitura própria, que exige prática |
+| M2 | 7 | não | sim, para abrir a imagem | leitura própria, que exige prática |
 | M3 | 11, com espera e possível repetição | sim | sim, duas vezes | relato e evidência juntos |
 
 O que o modelo mostra:
 
-- **Nenhum método começa pela suspeita.** Todos começam por buscar a suspeita, porque ela não chega com a declaração (CP02). G1 é necessário só porque a origem do bloqueio não vem identificada.
+- **Nenhum método começa pela suspeita.** Todos começam por buscar a suspeita, porque ela não chega com a declaração (CP02). O primeiro passo de M1 e M3 existe só porque a origem do bloqueio não vem explicada junto do processo.
 - **O método mais confiável é o mais longo.** M3 junta relato e evidência, mas soma os operadores de M1 e M2 e herda a espera de M1. É o método indicado para quem não lê radiografia, que é o caso de P02.
 - **A espera domina.** M1 e M3 dependem de alguém de outra divisão (CP02, Q3). O operador "aguardar a resposta" não tem duração conhecida (CP02, Q8).
 - **O resultado se perde no caminho.** O operador M1-6, reter o relato, existe porque nada registra o que foi explicado. É a origem do motivo reescrito à mão em T06.
@@ -488,58 +479,64 @@ Pontos em aberto no modelo:
 
 ---
 
-### GOMS — T08 Registrar ocorrência de divergência física em campo
+### GOMS — T08 Documentar e comunicar divergência ou achado na verificação física
 
 **Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6
 
+**Situação atual, não a solução.** Em conformidade com o parecer da Entrega 5 e com `RASTREABILIDADE.md` (H42 aberta), este GOMS modela exclusivamente como a documentação e a comunicação de um achado na conferência física ocorrem hoje, sem incluir aplicativos móveis ou mapas residuais da solução futura. Como não houve observação de campo até o momento, os procedimentos no pátio estão marcados como hipóteses `[H]` ou lacunas `[?]` a investigar na Entrega 7.
+
 #### Descrição da tarefa
 
-Persona: P03 Marcos Oliveira, agente de campo. Cenário de origem: CP03. Atividade: A04 / A05 (conferência física e registro de divergências).  
-Linha da cadeia de contribuição: R01 / suporte espacial para verificação no pátio.
-
-- **Início:** Marcos depara-se com uma divergência física ou falso positivo durante a abertura do contêiner no pátio.
-- **Fim:** O termo de ocorrência e as evidências são registrados e transmitidos para a retaguarda.
-- **Nível de detalhe:** Operadores no nível da ação do usuário (perceber, apontar, fotografar, registrar), sem estimativas de tempo via KLM.
+- **Proto-persona e cenário:** P03 Marcos Oliveira (stakeholder exploratório em H42); cenário CP03. Subobjetivo 3 do HTA T07.
+- **Início:** durante a verificação física do contêiner no pátio, é identificada uma divergência na carga ou a causa física da anomalia de densidade (como o acúmulo de gelo na estrutura de refrigeração em CP03).
+- **Fim:** as anotações e evidências fotográficas do achado estão registradas e conferidas para compor o resultado da verificação física no despacho aduaneiro.
+- **Nível de detalhe:** operadores no nível da ação do usuário (perceber, anotar, fotografar, comunicar, transcrever e verificar), sem estimativas de tempo via KLM.
 
 #### Goal
 
-`G0: Registrar formalmente a divergência encontrada na vistoria física do contêiner`
+`G0: Documentar e comunicar o achado da verificação física para instruir o despacho aduaneiro`
 
-**Submetas e ordem (M0):** `G1 >> G2 >> G3`.
+**Submetas e ordem (M0):** `G1 >> G2`.
 
-- `G1: Identificar a ocorrência e os dados da carga no terminal móvel`
-- `G2: Registrar a natureza da divergência e capturar evidências visuais`
-- `G3: Transmitir o termo de vistoria validado para a fiscalização`
+- `G1: Registrar os dados e evidências do achado no pátio`
+- `G2: Comunicar e consolidar o registro para o processo de despacho`
 
 #### Métodos, operadores e regras de seleção
 
-- **Method M1: Registro Digital Integrado via Aplicativo Móvel (Proposição de Design)**
-  - 1. Perceber os dados e o mapa residual de orientação na tela do dispositivo móvel.
-  - 2. Selecionar o tipo de divergência em campos estruturados (volumetria, mercadoria oculta, falso positivo estrutural).
-  - 3. Acionar a câmera integrada para capturar a evidência fotográfica vinculada ao caso.
-  - 4. Revisar e tocar em "Confirmar e Enviar Termo".
-  - Operators: O1, O2, O3, O4, O5.
-- **Method M2: Registro Manual Tradicional em Papel e Rádio (Situação Atual / Concorrente)**
-  - 1. Anotar manualmente as divergências em bloco de notas físico.
-  - 2. Fotografar a irregularidade usando um celular particular.
-  - 3. Acionar o rádio comunicador para informar a fiscalização.
-  - 4. Retornar à sala administrativa para redigitar os dados no sistema fixo.
-  - Operators: O6, O7, O8, O9.
-- **Selection Rule SR1:** Usar o **Method M1** quando o aplicativo móvel de campo estiver disponível e operando com conectividade; usar o **Method M2** em situações de contingência de rede ou ausência de equipamento digital oficial.
+**Para G1 e G2 (caminhos alternativos na situação atual)**
+
+- **Method M1: anotação no pátio e consolidação posterior no posto administrativo** `[H, ?]`
+  1. Perceber a natureza da divergência ou do falso positivo estrutural e identificar os dados do contêiner e do lacre (O1).
+  2. Anotar manualmente em formulário ou bloco de apoio a descrição do achado e a posição em que foi localizado no contêiner (O2).
+  3. Capturar fotografias do achado e do estado da carga para instruir o processo (O3).
+  4. Deslocar-se ao posto administrativo após o término da conferência no pátio e abrir o processo da carga no computador de mesa (O4).
+  5. Transcrever o relato da verificação física e anexar os registros fotográficos ao processo (O5).
+  6. Verificar internamente se todas as informações anotadas no pátio e as fotografias correspondentes estão completas e registradas sem omissão no processo (O8).
+- **Method M2: comunicação imediata por rádio ou telefone à fiscalização seguida de formalização no posto administrativo** `[H, ?]`
+  1. Perceber a divergência física crítica durante a abertura do contêiner e identificar os dados da unidade (O1).
+  2. Anotar os dados essenciais da ocorrência no formulário ou bloco de pátio (O2).
+  3. Acionar o rádio comunicador ou telefone para relatar imediatamente o achado à equipe de fiscalização/vigilância e alinhar a retenção ou continuidade da desova (O6).
+  4. Aguardar a confirmação verbal da equipe e capturar as fotografias comprobatórias da divergência (O7, O3).
+  5. Ao encerrar a etapa de pátio, acessar o posto administrativo e transcrever o relato detalhado no sistema (O4, O5).
+  6. Verificar internamente se o relato formalizado coincide com o que foi comunicado verbalmente e documentado no pátio (O8).
+- **Selection Rule SR1:** usar **M1** quando o achado na verificação física for uma divergência documental/volumétrica ordinária ou um falso positivo estrutural (como gelo no equipamento de refrigeração em CP03) que não exige interrupção imediata da operação para consulta `[H]`; usar **M2** quando for constatado indício grave de ocultação ou ilícito que demande comunicação imediata à fiscalização antes de prosseguir a movimentação no pátio `[H, ?]`.
 
 #### Operadores
 
 | ID | Operador (ação do usuário) | Tipo | Base |
 |---|---|---|---|
-| O1 | Perceber dados e orientações na tela do coletor móvel | perceptivo | [H] Proposta |
-| O2 | Selecionar campos de inconformidade por toque rápido | motor | [H] Proposta |
-| O3 | Acionar câmera integrada para registro fotográfico com metadados | motor | [H] Proposta |
-| O4 | Revisar informações compiladas do termo | cognitivo | [H] Proposta |
-| O5 | Tocar no botão de envio para transmissão síncrona | motor | [H] Proposta |
-| O6 | Escrever anotações manuais em bloco de papel | motor | [F] CP03 |
-| O7 | Fotografar com aparelho particular | motor | [F] CP03 |
-| O8 | Acionar rádio portátil PTT para comunicação verbal | motor e verbal | [F] CP03 |
-| O9 | Redigitar laudo posteriormente no computador de mesa | motor e cognitivo | [F] CP03 |
+| O1 | Perceber a divergência ou causa física da densidade atípica e conferir identificação do contêiner/lacre | perceptivo e cognitivo | `[F]` C02 (conferência física); `[H]` CP03 |
+| O2 | Anotar manualmente a descrição do achado e do lacre em formulário ou bloco no pátio | motor | `[H, ?]` prática de campo a confirmar na Entrega 7 |
+| O3 | Capturar fotografias da mercadoria ou da estrutura interna do contêiner | motor | `[H, ?]` meio fotográfico utilizado em campo a confirmar na Entrega 7 |
+| O4 | Deslocar-se ao posto administrativo e abrir o processo no computador de mesa | motor | `[H, ?]` separação entre pátio e registro no sistema (CP03) |
+| O5 | Transcrever o relato da verificação física e vincular evidências no sistema | motor e cognitivo | `[F]` C02 (registro do resultado da verificação); `[H]` retrabalho de transcrição |
+| O6 | Comunicar verbalmente o achado por rádio ou telefone à equipe de fiscalização/vigilância | motor e verbal | `[H, ?]` canal de comunicação no pátio a confirmar na Entrega 7 |
+| O7 | Aguardar orientação ou confirmação da equipe contatada | cognitivo (espera) | `[H, ?]` Entrega 7 |
+| O8 | Verificar internamente se o achado de campo foi integralmente comunicado e registrado no processo | cognitivo | `[H]` controle cognitivo de encerramento do método |
+
+#### Interpretação
+
+A modelagem na situação atual evidencia que, independentemente de a comunicação ocorrer apenas ao final da conferência (M1) ou de forma imediata por rádio/telefone durante a abertura (M2), há desconexão entre a observação no pátio (O2, O3) e a formalização no sistema administrativo (O4, O5) `[H, ?]`. Além disso, nenhum dos dois métodos conta com um canal estruturado que devolva à estação de imagem do escâner o motivo real da divergência de densidade constatada no pátio (como o gelo acumulado no equipamento em CP03, `?08`).
 
 ---
 
