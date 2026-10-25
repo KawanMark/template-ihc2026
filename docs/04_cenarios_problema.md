@@ -181,45 +181,49 @@ Informações a coletar na Entrega 7:
 
 ---
 
-## Cenário C03 — Inspeção Física no Pátio Ineficiente por Falta de Detalhamento Espacial e Visual da Anomalia em Cargas de Alto Risco
+## Cenário CP03 — Verificação física no pátio sem localização da suspeita apontada na imagem
 
 **Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6  
-**Persona(s) relacionada(s):** P03 – Marcos Oliveira (Agente de Campo / Fiscal de Pátio e Vistoria Física)  
-**Necessidade relacionada:** R01 (Orientação precisa para verificação física no pátio através de mapa residual e coordenadas)  
-**Situação concreta da Entrega 1 relacionada:** Seção 4.4 / H28 (Emissão e consulta de relatórios/laudos de instrução para vistorias) e H42 (Atuação e tomada de decisão do agente de pátio)  
-**Hipóteses ainda presentes:** H12, H28, H31, H37, H42  
+**Persona(s) relacionada(s):** P03 – Marcos Oliveira (Agente de Campo / Fiscal de Pátio e Vistoria Física, proto-persona exploratória de stakeholder impactado pelo apontamento)  
+**Necessidade relacionada:** R03 (registrar o apontamento com informação suficiente para que a etapa seguinte saiba o que foi visto e onde), com reflexo indireto de R01  
+**Situação concreta da Entrega 1 relacionada:** Seção 4.4 / H12 (consequência operacional de encaminhar um contêiner para vistoria física) e H28/H42 (como o apontamento da análise de imagem instrui quem executa a verificação física)  
+**Hipóteses ainda presentes:** H03, H12, H17, H28, H31, H37, H42 e a lacuna ?08  
+
+**Enquadramento no escopo do projeto.** Conforme registrado em [`RASTREABILIDADE.md`](../RASTREABILIDADE.md), o recorte principal da interface de IHC concentra-se na estação de análise de imagem (P01, H01) e na decisão sobre a carga (P02, H39). O perfil P03 permanece como proto-persona exploratória de stakeholder secundário (H03), pois ainda não há evidência de que quem realiza a verificação física no pátio utilize diretamente a solução (H42 aberta para a Entrega 7). Este cenário investiga a ponta final da cadeia do problema humano: o que acontece na verificação física quando a suspeita gerada a partir do raio-X chega sem indicação de qual parte do contêiner motivou a retenção. Toda a narrativa é exploratória `[H]`, salvo onde há norma ou documento citado `[F]`.
 
 ### 1. Cenário inicial
 
-Durante o turno da noite no Porto de Imbituba, o agente de campo Marcos Oliveira (P03) recebe uma ordem de verificação física para um contêiner refrigerado (*reefer*) mantido em retenção. O laudo anexado ao processo eletrônico indica apenas "Inconsistência de densidade detectada na imagem de raio-X", sem especificar a Região de Interesse (ROI), a profundidade ou a natureza do desvio.
+Durante o turno da noite em um terminal portuário, Marcos Oliveira (P03) recebe uma solicitação de verificação física para um contêiner refrigerado (*reefer*) mantido em retenção após passar pelo escâner. A indicação vinculada ao processo informa apenas que houve uma inconsistência de densidade na imagem de raio-X, sem especificar em que parte do contêiner (porta, meio ou fundo), em que altura ou que tipo de divergência chamou a atenção de quem analisou a imagem.
 
-Marcos desloca-se até o pátio sob iluminação artificial precária e ruído intenso de maquinário pesado. Acompanhado pela equipe de apoio, ele precisa romper os lacres e descarregar manualmente dezenas de caixas de carne congelada na tentativa de localizar o ponto de suspeita apontado pela análise inicial. Sem um documento visual ilustrativo ou um gabarito explicativo de coordenadas, a equipe gasta mais de três horas esvaziando dois terços do contêiner para constatar que a alteração de densidade tratava-se de um adensamento de gelo acumulado no compressor interno do sistema de refrigeração (falso positivo).
+Marcos desloca-se até o pátio sob iluminação artificial precária e ruído intenso de maquinário pesado. Acompanhado pela equipe de apoio, ele precisa romper os lacres e acompanhar o descarregamento manual de dezenas de caixas de carne congelada na tentativa de localizar o ponto que motivou a suspeita. Sem uma descrição que situe a região da divergência dentro da unidade de carga, a equipe gasta mais de três horas esvaziando dois terços do contêiner até constatar que a diferença de densidade decorria de acúmulo de gelo junto à estrutura interna de refrigeração, sem irregularidade na mercadoria.
 
-O processo estende o tempo de permanência da carga no pátio, gera atrito com o operador logístico devido ao risco de deterioração do produto e expõe a equipe de vistoria a esforço físico desnecessário. Marcos registra a liberação no terminal móvel, lamentando a falta de um documento visual instrucional que identificasse a coordenada exata e o tipo de anomalia identificada durante a triagem.
+O processo prolonga a permanência da carga no pátio, gera atrito com o operador logístico pelo risco à conservação do produto refrigerado e exige esforço físico elevado na movimentação de uma carga regular. Ao concluir a conferência e registrar o resultado, Marcos percebe que uma descrição clara de onde estava a suspeita na imagem teria evitado a retirada de grande parte da mercadoria.
 
 ---
 
 ### 2. Questões de refinamento
 
-As perguntas foram formuladas com base na taxonomia de refinamento de cenários (questões exploratórias, de verificação e por quê/como) para detalhar os elementos de ambiente, ator, ações e planejamento:
+As perguntas abaixo cobrem os **sete elementos característicos do cenário** (**ambiente/contexto, atores, objetivos, planejamento, ações, eventos e avaliação**) e buscam apenas informações **ainda ausentes** do cenário inicial. Como nenhuma entrevista ou observação de campo foi realizada até o momento, as respostas apoiam-se exclusivamente em normas e documentos já levantados (`[F]`), mantendo hipóteses como `[H]` e dúvidas dependentes da Entrega 7 como `[?]`.
 
-| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
-|---|---|---|---|
-| Q1 | Quais condições operacionais do ambiente de pátio afetam a leitura do laudo pelo agente? | Para entender as limitações físicas (iluminação, dispositivos, EPIs) enfrentadas na ponta durante a consulta do laudo. | Entrevista contextual / observação de campo com agentes de vistoria no porto. |
-| Q2 | Como a equipe de pátio decide por onde começar a descaltagem da carga quando o relatório é omisso? | Para identificar os heurísticos empíricos e os riscos operacionais assumidos ao adivinhar a posição da anomalia. | Análise de procedimento operacional padrão (POP) de vistoria física e histórico de incidentes. |
-| Q3 | Qual o impacto temporal e econômico exato de um falso positivo não esclarecido previamente? | Para quantificar o custo da ruptura no processo de trabalho e justificar a necessidade de explicar os níveis de incerteza da análise. | Dados de tempo médio de atendimento (TMA) do terminal e registros de vistorias desnecessárias. |
+| # | Elemento | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
+|---|---|---|---|---|
+| Q1 | Atores | Quem formalmente conduz, acompanha e executa a verificação física de uma carga retida no recinto alfandegado? | O cenário inicial fala em “agente de campo” e “equipe de apoio”, mas não distingue o papel da autoridade aduaneira, dos trabalhadores do recinto e do representante do importador. | `[F]` Decreto nº 6.759/2009 (Regulamento Aduaneiro) e Manual de Despacho de Importação (C02): a conferência física é realizada pela fiscalização aduaneira na presença do importador ou de seu representante, cabendo ao depositário a movimentação da carga. `[?]` Qual cargo específico conduz a vistoria em cada unidade e como P03 se insere nessa divisão (H42). |
+| Q2 | Objetivos | Qual é o objetivo institucional da verificação física determinada após uma suspeita e o que precisa ser respondido ao final dela? | Esclarece para que serve a verificação dentro do despacho aduaneiro e qual decisão depende do seu resultado. | `[F]` Manual de Despacho de Importação (C02): a verificação física visa identificar a mercadoria e constatar sua conformidade com a declaração para subsidiar o desembaraço ou a exigência/apreensão. `[?]` Como o objetivo é delimitado quando a conferência é motivada apenas por suspeita no escâner. |
+| Q3 | Eventos | Que eventos formais desencadeiam a verificação física após a passagem pelo escâner e que condições precisam ocorrer antes da abertura do contêiner? | O cenário inicial parte da ordem já recebida, sem explicitar como a retenção vira verificação física nem o agendamento prévio. | `[F]` Portaria ALF/FNS nº 9/2024 (art. 8º): a comunicação de suspeita interrompe o fluxo do veículo e mantém a carga retida e segregada até manifestação da RFB. `[F]` C02: a verificação física passa por agendamento antes da realização. `[?]` Como o evento de agendamento ocorre quando a retenção parte do escâner. |
+| Q4 | Planejamento | Que documentos e informações chegam atualmente à equipe responsável pela verificação física para planejar a inspeção da carga? | Permite saber se quem vai ao pátio recebe a imagem do escâner, um relato textual ou apenas os dados da declaração. | `[F]` C02: o despacho conta com a declaração e o dossiê de documentos. `[?]` Se algum recorte da imagem radiográfica ou descrição da região suspeita acompanha o pedido de verificação física hoje (H28, H31, ?08). Entrevista na Entrega 7. |
+| Q5 | Ambiente/contexto | Em que local do recinto ocorre a verificação física e se existe possibilidade de acompanhamento remoto pela fiscalização? | O cenário inicial já menciona turno noturno, iluminação precária e ruído no pátio, mas não informa as exigências normativas da área de conferência nem se há monitoramento por câmeras. | `[F]` A Tribuna, 2013 (registro histórico de Santos): a conferência física pode ser acompanhada presencialmente no terminal ou remotamente, por câmeras, a partir da COV. `[?]` Condições físicas reais da área de verificação de cargas refrigeradas e uso de equipamentos em campo (Entrega 7). |
+| Q6 | Ações | Como a desova e a conferência são executadas quando não há indicação espacial da suspeita e onde o resultado da verificação é formalizado? | Detalha as ações humanas de abertura, inspeção e registro sem presumir uma interface futura. | `[F]` C02: após a realização da verificação física, o resultado é registrado no fluxo do despacho no Siscomex para permitir o desembaraço ou nova exigência. `[?]` Se existe procedimento padrão para desova parcial ou total e como o servidor anota as constatações durante o ato no pátio (H37, H42). |
+| Q7 | Avaliação | Como o resultado da verificação física é avaliado e se há retorno para quem apontou a suspeita na estação de imagem? | O cenário inicial mostra um falso positivo (gelo na estrutura de refrigeração), mas não explica se esse desfecho realimenta a triagem por imagem. | `[F]` Portaria ALF/FNS nº 9/2024 (art. 5º): as imagens permanecem armazenadas por 180 dias para consulta. `[?]` Se o resultado da verificação física fica vinculado à imagem ou retorna a quem operou o escâner (H17, H38, ?08). |
 
 ---
 
 ### 3. Cenário refinado
 
-Durante o turno da noite no Porto de Imbituba, sob chuva fina, vento forte e iluminação artificial precária, o agente de campo Marcos Oliveira (P03) recebe uma ordem de verificação física para um contêiner refrigerado (*reefer*) retido em canal vermelho. **[NOVO: Marcos consulta a ordem de serviço em seu terminal móvel industrial com tela de baixa resolução sob luz refletida, encontrando apenas a mensagem genérica "Inconsistência de densidade detectada na imagem de raio-X", sem qualquer anexo gráfico, marcação de quadrante (porta, meio ou fundo) ou indicação de probabilidade de risco.]**
+Durante o turno da noite em um terminal portuário, Marcos Oliveira (P03) recebe uma solicitação de verificação física para um contêiner refrigerado (*reefer*) mantido em retenção após passar pelo escâner. **[NOVO [Q1, Q3]: `[F]` Na referência normativa de Imbituba, quando há suspeita na inspeção não invasiva, o fluxo do veículo é interrompido e a carga fica retida e segregada aguardando manifestação da RFB (Portaria ALF/FNS nº 9/2024, art. 8º), e no fluxo do despacho a verificação física passa por agendamento e exige a presença do importador ou de seu representante ao lado da fiscalização e da equipe do depositário que movimenta a carga (Decreto nº 6.759/2009; C02). `[?]` Ainda não sabemos qual é o cargo exato de quem conduz a vistoria em campo nem como o agendamento ocorre nos casos vindos do escâner (H42).]** A indicação vinculada ao processo informa apenas que houve uma inconsistência de densidade na imagem de raio-X, sem especificar em que parte do contêiner (porta, meio ou fundo), em que altura ou que tipo de divergência chamou a atenção de quem analisou a imagem. **[NOVO [Q4]: `[F]` Os dados da mercadoria declarada e do dossiê existem no processo de despacho (C02), mas `[H]` a equipe do projeto supõe que o apontamento da imagem chega à etapa de verificação física apenas como observação textual curta, sem indicação espacial da região suspeita; `[?]` que informações exatas chegam a quem executa a vistoria é uma lacuna a investigar na Entrega 7 (H28, H31, ?08).]**
 
-Marcos desloca-se até o setor de vistorias, onde o ruído de empilhadeiras e reach stackers impede a comunicação clara sem o uso de rádio. Acompanhado pela equipe de apoio de movimentação física, **[NOVO: por não saber em qual seção a anomalia se encontra, Marcos adota o procedimento padrão empírico de esvaziar o contêiner a partir da porta frontal.]** A equipe rompe os lacres e descarregar manualmente dezenas de caixas de carne congelada a -18 °C. 
+Marcos desloca-se até o pátio sob iluminação artificial precária e ruído intenso de maquinário pesado. **[NOVO [Q5]: `[F]` Há registro histórico em Santos de que a conferência física em terminais pode ocorrer de forma presencial ou com acompanhamento remoto por câmeras a partir da central de vigilância (A Tribuna, 2013). `[?]` Não sabemos em que condições físicas de área coberta, temperatura e comunicação ocorrem hoje as verificações presenciais de contêineres refrigerados na unidade estudada.]** Acompanhado pela equipe de apoio, **[NOVO [Q2, Q6]: `[F]` cujo objetivo formal é verificar a identidade e a conformidade da mercadoria declarada para subsidiar a decisão do despacho (C02), `[H]` Marcos não dispõe de indicação sobre qual seção do contêiner motivou a dúvida e, por isso, inicia a retirada da carga a partir da porta. `[?]` Não sabemos se há procedimento operacional padrão que defina desova parcial ou total nesses casos.]** Ele precisa romper os lacres e acompanhar o descarregamento manual de dezenas de caixas de carne congelada na tentativa de localizar o ponto que motivou a suspeita. Sem uma descrição que situe a região da divergência dentro da unidade de carga, a equipe gasta mais de três horas esvaziando dois terços do contêiner até constatar que a diferença de densidade decorria de acúmulo de gelo junto à estrutura interna de refrigeração, sem irregularidade na mercadoria. **[NOVO [Q4, Q6]: `[H]` Se a comunicação da suspeita informasse que a diferença de densidade estava concentrada junto à parede do fundo, na altura do equipamento de refrigeração, a conferência poderia ter direcionado a atenção para essa estrutura antes de retirar a maior parte da carga.]**
 
-Sem o mapa residual visual ou o gabarito explicativo de ROI (Região de Interesse), a equipe gasta mais de três horas esvaziando dois terços do contêiner **[NOVO: manipulando cerca de 12 toneladas de carga em ambiente de extrema fadiga física]** para constatar que a alteração de densidade tratava-se de um adensamento de gelo acumulado no compressor interno do sistema de refrigeração. **[NOVO: Se a equipe soubesse que a alteração estava na parede do fundo, junto ao motor, a vistoria teria focado apenas no painel técnico externo, sem necessidade de tocar na carga.]**
-
-O processo estende o tempo de permanência da carga no pátio em mais de 180 minutos, gera atrito com o operador logístico devido ao risco de quebra da cadeia de frio e expõe a equipe de vistoria a esforço físico e riscos de lesão desnecessários. Marcos registra a liberação no terminal móvel, lamentando a falta de um laudo instrucional detalhado com o mapa de divergências radiográficas.
+O processo prolonga a permanência da carga no pátio, gera atrito com o operador logístico pelo risco à conservação do produto refrigerado e exige esforço físico elevado na movimentação de uma carga regular. Ao concluir a conferência e registrar o resultado **[NOVO [Q6, Q7]: `[F]` para que o despacho siga no Siscomex rumo ao desembaraço (C02), `[?]` ainda não sabemos se Marcos faz anotações em papel ou formulário próprio no pátio antes do registro no sistema na mesa de trabalho (H37, H42), nem se quem apontou a suspeita na estação de imagem recebe retorno de que o caso era apenas gelo acumulado no equipamento (H17, H38, ?08)]**, Marcos percebe que uma descrição clara de onde estava a suspeita na imagem teria evitado a retirada de grande parte da mercadoria.
 
 ---
 
@@ -227,21 +231,26 @@ O processo estende o tempo de permanência da carga no pátio em mais de 180 min
 
 | Elemento | Evidência no cenário |
 |---|---|
-| **Ator(es)** | Marcos Oliveira (P03 - Agente de campo) e equipe de apoio de movimentação física de pátio. |
-| **Objetivo(s)** | Localizar e inspecionar a suspeita de anomalia no contêiner com precisão, agilidade e segurança, validando a infração ou liberando a carga sem danos. |
-| **Contexto** | Pátio portuário noturno, chuva fina, ruído alto de maquinário, restrições térmicas (-18 °C na carga) e uso de terminal móvel industrial sob iluminação deficiente. |
-| **Recursos/informações** | Ordem de serviço no terminal móvel com texto vago ("Inconsistência de densidade"); ausência de laudo visual com mapa residual, marcação de ROI ou profundidade. |
-| **Ações** | Consulta à ordem de serviço; deslocamento ao pátio; descaltagem e esvaziamento manual sistemático a partir da porta; inspeção visual das caixas; constatação do falso positivo; registro de liberação no terminal. |
-| **Problemas/rupturas** | Omissão de coordenadas e mapa visual no laudo recebido; descarregamento manual cego de 12 toneladas de carga; incapacidade de distinguir falha estrutural do contêiner (compressor) de ilícitos na carga. |
-| **Consequências** | Atraso de mais de 3 horas na liberação do contêiner; exposição do agente a fadiga e riscos físicos; risco de deterioração da carga refrigerada; atrito com operadores logísticos. |
+| **Ambiente/contexto** | Área de verificação física em terminal portuário durante turno noturno, sob iluminação artificial precária e ruído de maquinário `[H]`; contêiner refrigerado (*reefer*) retido e segregado após passagem pelo escâner `[F, H]`; possibilidade histórica de acompanhamento presencial ou remoto `[F]` e condições reais de campo em aberto `[?]`. |
+| **Atores** | Marcos Oliveira (P03, proto-persona exploratória de quem conduz a vistoria no pátio) `[H, H42]`; equipe do depositário responsável pela movimentação física das caixas `[F]`; representante do importador `[F]`; operador de imagem e responsável pelo despacho nas etapas anteriores `[F, H]`. |
+| **Objetivos** | Verificar fisicamente a carga retida para confirmar se a suspeita de densidade corresponde a uma irregularidade ou se a mercadoria está conforme a declaração, permitindo concluir o despacho com segurança `[F, H]`. |
+| **Planejamento** | Consulta aos dados da declaração de importação `[F]` e à observação de retenção vinda da análise de raio-X `[H]`; ausência de informação sobre qual região do contêiner (porta, meio, fundo ou altura) motivou a suspeita `[H, ?08]`, impedindo planejar uma conferência direcionada. |
+| **Ações** | Deslocar-se ao setor de vistoria; romper lacres; conduzir o descarregamento manual a partir da porta `[H]`; inspecionar as caixas e o interior do contêiner; identificar que a densidade atípica vinha de gelo acumulado na estrutura de refrigeração `[H]`; registrar o resultado da verificação para liberação no despacho `[F, ?]`. |
+| **Eventos** | Retenção e segregação do contêiner após comunicação de suspeita no escâner `[F]`; agendamento da verificação física `[F]`; mais de três horas de desova de dois terços da carga congelada até localizar a causa da divergência `[H]`. |
+| **Avaliação** | Constatação de falso positivo (acúmulo de gelo no sistema de refrigeração e não ilícito na carga) após esforço físico e atraso prolongado `[H]`; falta de vínculo conhecido que devolva esse resultado a quem analisou a imagem do escâner para evitar repetições em casos semelhantes `[H, ?08]`. |
 
 ---
 
 ### 5. Implicações para as próximas entregas
 
-* **Análise de Tarefas:** Mapear minuciosamente o fluxo de trabalho do agente de pátio, identificando os pontos em que a tomada de decisão depende da visualização do espaço tridimensional do contêiner.
-* **Mapeamento de Informações:** Levantar quais dados visuais (ex: mapa de calor residual, caixas de delimitação de ROI, identificação de setor anterior/posterior) e metadados (grau de incerteza da IA, tipo de material provável) precisam compor o artefato/laudo gerado na etapa de análise para instruir a ponta.
-* **Requisitos de Usabilidade em Campo:** Coletar requisitos sobre como as informações de inspeção precisam ser apresentadas para rápida leitura sob condições ambientais adversas (telas pequenas, alta luminosidade/escuridão, operação com luvas).
+Como P03 é um stakeholder cuja interação direta com a solução não está confirmada no escopo (H42 aberta), este cenário contribui principalmente para entender **o que precisa constar no registro produzido nas etapas anteriores (CP01 e CP02)** e para preparar a investigação da Entrega 7.
+
+* **Tarefas candidatas para análise na Entrega 5 (em caráter exploratório condicionado a H42):** modelar o trabalho atual de conferência física no pátio e registro do resultado (T07 a T09), sem presumir aplicativos móveis nem telas da solução futura, para explicitar quais informações fazem falta quando a carga é aberta.
+* **Informações a coletar na Entrega 7 (entrevistas e documentos):**
+  1. Quem conduz presencialmente a verificação física nas unidades aduaneiras e se esse profissional tem contato com sistemas de imagem ou apenas com o despacho (H03, H42).
+  2. Que informações acompanham hoje um pedido de verificação física motivado por escâner: se vai apenas texto, recorte da imagem ou indicação de posição no contêiner (H28, H31, ?08).
+  3. Como as constatações feitas durante a vistoria no pátio são anotadas e transferidas para o sistema de despacho (H37).
+  4. Se o resultado da verificação física retorna para quem examinou a imagem de raio-X (H17, H38, ?08).
 
 ---
 
@@ -264,12 +273,12 @@ Fontes do cenário CP02:
 
 As duas matérias são de jornal e têm mais de dez anos. Sustentam o que se dizia sobre Santos em 2013 e 2015, e não o funcionamento atual.
 
-Fontes do cenário C03:
+Fontes do cenário CP03:
 
 - BRASIL. Presidência da República. **Decreto nº 6.759, de 5 de fevereiro de 2009** (Regulamento Aduaneiro). Disposições sobre a conferência física e fiscalização aduaneira de mercadorias.
-- BRASIL. Receita Federal. **Manual de Despacho de Importação (MDI)**. Diretrizes sobre canais de parametrização e verificação física.
-- GAIKWAD, B.; PATRA, A.; CRAWFORD, C. R.; MILLER, E. L. **Self-supervised anomaly detection and localization for X-ray cargo images: generalization to novel anomalies**. *Engineering Applications of Artificial Intelligence*, 2025.
-- Entregas 1, 2 e 3 do projeto de IHC (especificamente as hipóteses H28, H42 e a caracterização da persona P03).
+- BRASIL. Receita Federal. **Manual de Despacho de Importação (MDI)**. Diretrizes sobre canais de parametrização e verificação física (análise C02 da Entrega 2).
+- Portaria ALF/FNS nº 9/2024 e A Tribuna (2013): referências completas nos cenários CP01 e CP02.
+- Entregas 1, 2 e 3 do projeto de IHC (especificamente as hipóteses H12, H28, H42 e a caracterização exploratória de P03).
 
 ## Checklist
 
