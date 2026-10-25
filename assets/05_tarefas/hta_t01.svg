@@ -25,13 +25,15 @@
 <text x="200.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">e confirmar imagem</text>
 
 <rect x="119.0" y="261" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="215.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">1.1 Identificar unidade,</text>
-<text x="215.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">placa e manifesto [F]</text>
+<line x1="123.0" y1="313" x2="307.0" y2="313" stroke="#24292f" stroke-width="2"/>
+<text x="215.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">1.1 Identificar unidade,</text>
+<text x="215.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">placa e manifesto [F]</text>
 <line x1="103.0" y1="285.0" x2="119.0" y2="285.0" stroke="#57606a" stroke-width="1.5"/>
 
 <rect x="119.0" y="321" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="215.0" y="339" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">1.2 Verificar integridade</text>
-<text x="215.0" y="356" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">e nitidez da radiografia</text>
+<line x1="123.0" y1="373" x2="307.0" y2="373" stroke="#24292f" stroke-width="2"/>
+<text x="215.0" y="339" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">1.2 Verificar integridade</text>
+<text x="215.0" y="356" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">e nitidez da radiografia</text>
 <line x1="103.0" y1="345.0" x2="119.0" y2="345.0" stroke="#57606a" stroke-width="1.5"/>
 
 <line x1="103.0" y1="239" x2="103.0" y2="345.0" stroke="#57606a" stroke-width="1.5"/>
@@ -49,24 +51,28 @@
 <text x="550.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">em busca de dúvida → T02</text>
 
 <rect x="469.0" y="261" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="565.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">2.1 Perceber imagem e</text>
-<text x="565.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">cores de material (Zeff) [F]</text>
+<line x1="473.0" y1="313" x2="657.0" y2="313" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.1 Perceber imagem e</text>
+<text x="565.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">cores de material (Zeff) [F]</text>
 <line x1="453.0" y1="285.0" x2="469.0" y2="285.0" stroke="#57606a" stroke-width="1.5"/>
 
 <rect x="469.0" y="321" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="565.0" y="339" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">2.2 Varrer a imagem em</text>
-<text x="565.0" y="356" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">busca de descontinuidades</text>
+<line x1="473.0" y1="373" x2="657.0" y2="373" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="339" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.2 Varrer a imagem em</text>
+<text x="565.0" y="356" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">busca de descontinuidades</text>
 <line x1="453.0" y1="345.0" x2="469.0" y2="345.0" stroke="#57606a" stroke-width="1.5"/>
 
 <rect x="469.0" y="381" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="565.0" y="399" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">2.3 Ajustar contraste, zoom,</text>
-<text x="565.0" y="415" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">realce de bordas ou cores</text>
-<text x="565.0" y="428" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">(esgotar tratamentos) [F]</text>
+<line x1="473.0" y1="437" x2="657.0" y2="437" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="399" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.3 Ajustar contraste, zoom,</text>
+<text x="565.0" y="415" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">realce de bordas ou cores</text>
+<text x="565.0" y="428" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">(esgotar tratamentos) [F]</text>
 <line x1="453.0" y1="407.0" x2="469.0" y2="407.0" stroke="#57606a" stroke-width="1.5"/>
 
 <rect x="469.0" y="445" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="565.0" y="463" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">2.4 Reter regiões que</text>
-<text x="565.0" y="480" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f" text-anchor="middle">seguem em dúvida [H]</text>
+<line x1="473.0" y1="497" x2="657.0" y2="497" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="463" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.4 Reter regiões que</text>
+<text x="565.0" y="480" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">seguem em dúvida [H]</text>
 <line x1="453.0" y1="469.0" x2="469.0" y2="469.0" stroke="#57606a" stroke-width="1.5"/>
 
 <line x1="453.0" y1="239" x2="453.0" y2="469.0" stroke="#57606a" stroke-width="1.5"/>
@@ -85,15 +91,17 @@
 <text x="900.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">com a declaração da carga</text>
 
 <rect x="819.0" y="261" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="915.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">3.1 Consultar descrição</text>
-<text x="915.0" y="295" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">e natureza declarada</text>
-<text x="915.0" y="308" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">(estação ou sistema externo)</text>
+<line x1="823.0" y1="317" x2="1007.0" y2="317" stroke="#24292f" stroke-width="2"/>
+<text x="915.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">3.1 Consultar descrição</text>
+<text x="915.0" y="295" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">e natureza declarada</text>
+<text x="915.0" y="308" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">(estação ou sistema externo)</text>
 <line x1="803.0" y1="287.0" x2="819.0" y2="287.0" stroke="#57606a" stroke-width="1.5"/>
 
 <rect x="819.0" y="325" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="915.0" y="343" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">3.2 Julgar se padrão visual</text>
-<text x="915.0" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">é compatível com a carga</text>
-<text x="915.0" y="372" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">declarada [H]</text>
+<line x1="823.0" y1="381" x2="1007.0" y2="381" stroke="#24292f" stroke-width="2"/>
+<text x="915.0" y="343" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">3.2 Julgar se padrão visual</text>
+<text x="915.0" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">é compatível com a carga</text>
+<text x="915.0" y="372" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">declarada [H]</text>
 <line x1="803.0" y1="351.0" x2="819.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
 
 <line x1="803.0" y1="239" x2="803.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
@@ -112,15 +120,17 @@
 <text x="1250.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">sobre a carga → T03</text>
 
 <rect x="1169.0" y="261" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="1265.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">4.1 Concluir "não apontar"</text>
-<text x="1265.0" y="295" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">e autorizar liberação</text>
-<text x="1265.0" y="308" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">do fluxo [F]</text>
+<line x1="1173.0" y1="317" x2="1357.0" y2="317" stroke="#24292f" stroke-width="2"/>
+<text x="1265.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">4.1 Concluir "não apontar"</text>
+<text x="1265.0" y="295" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">e autorizar liberação</text>
+<text x="1265.0" y="308" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">do fluxo [F]</text>
 <line x1="1153.0" y1="287.0" x2="1169.0" y2="287.0" stroke="#57606a" stroke-width="1.5"/>
 
 <rect x="1169.0" y="325" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="1265.0" y="343" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">4.2 Registrar suspeita,</text>
-<text x="1265.0" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">segregar contêiner e</text>
-<text x="1265.0" y="372" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">notificar a RFB [F]</text>
+<line x1="1173.0" y1="381" x2="1357.0" y2="381" stroke="#24292f" stroke-width="2"/>
+<text x="1265.0" y="343" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">4.2 Registrar suspeita,</text>
+<text x="1265.0" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">segregar contêiner e</text>
+<text x="1265.0" y="372" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">notificar a RFB [F]</text>
 <line x1="1153.0" y1="351.0" x2="1169.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
 
 <line x1="1153.0" y1="239" x2="1153.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
@@ -147,7 +157,8 @@
 <rect x="36" y="732" width="26" height="18" rx="3" fill="#fff8c5" stroke="#57606a" stroke-width="2.5"/>
 <text x="70" y="745" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">Detalhado em outro modelo (T02, T03)</text>
 <rect x="356" y="732" width="26" height="18" rx="3" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
-<text x="390" y="745" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">Operação (fim da decomposição)</text>
+<line x1="356" y1="753" x2="382" y2="753" stroke="#24292f" stroke-width="2"/>
+<text x="390" y="745" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="start">Operação final sublinhada (fim da decomposição)</text>
 <text x="36" y="764" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a" text-anchor="start">Nos planos: &gt; em sequência · "ou" / "só um" alternativa · "repetir" laço. [F] fato · [H] hipótese · [?] lacuna.</text>
 <text x="36" y="779" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a" text-anchor="start">A decomposição para nas ações do operador, sem antecipar interfaces ou automações futuras.</text>
 </svg>

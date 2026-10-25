@@ -74,7 +74,7 @@ As três tarefas partem do cenário de problema CP01 (Entrega 4) e da persona pr
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | Inspecionar a imagem do contêiner e manifestar conclusão sobre a carga | 1 > 2 > 3 > 4. Se 2 não apresentar dúvida visual: 3 pode ser dispensado e segue direto para 4.1. Se 3 mantiver dúvida após esgotar comparações, concluir sob incerteza em 4 (pesar custos de H12) | O operador trabalha sob incerteza (H38). Se liberar com dúvida, há risco de evasão ilícita; se reter sem fundamento, gera atrito e bloqueia o pátio por até 3 dias úteis (H12, Portaria ALF/FNS nº 9/2024) |
+| 0 | Inspecionar a imagem do contêiner e manifestar conclusão sobre a carga | **Input:** radiografia disponível na estação após a passagem do veículo pelo escâner e dados de identificação da unidade de carga `[F]` (Portaria RFB nº 143/2022, art. 14). **Feedback:** confirmação do registro da manifestação na estação, liberando o fluxo do veículo ou iniciando a retenção com segregação física e notificação à RFB `[F]` (Portaria ALF/FNS nº 9/2024, art. 8º). **Plano 0:** 1 > 2 > 3 > 4. Se 2 não apresentar dúvida visual: 3 pode ser dispensado e segue direto para 4.1. Se 3 mantiver dúvida após esgotar comparações, concluir sob incerteza em 4 (pesar custos de H12) | O operador trabalha sob incerteza (H38). Se liberar com dúvida, há risco de evasão ilícita; se reter sem fundamento, gera atrito e bloqueia o pátio por até 3 dias úteis (H12, Portaria ALF/FNS nº 9/2024) |
 | 1 | Receber dados da carga e confirmar imagem | 1.1 > 1.2. Se a imagem apresentar falha de captura ou corte, solicitar novo escaneamento | `[F]` O fluxo de entrada exige passagem pelo portal (Portaria RFB nº 143/2022). Os dados de manifesto nem sempre estão integrados na mesma tela da estação (H11) |
 | 1.1 | Identificar unidade, placa e manifesto | — | `[F]` Número do contêiner e placa são indexadores legais de busca e conferência (Portaria ALF/FNS nº 9/2024, art. 5º) |
 | 1.2 | Verificar integridade e nitidez da radiografia | — | Falhas na varredura mecânica do escâner podem exigir reescaneamento imediato antes da liberação do caminhão do portal |
@@ -97,7 +97,7 @@ As três tarefas partem do cenário de problema CP01 (Entrega 4) e da persona pr
 - *O objetivo 0 representa uma meta do usuário?* Sim. Inspecionar a imagem e manifestar uma conclusão técnica é a meta de trabalho central de Gustavo (P01) e da atividade A02/A03.
 - *As subtarefas são necessárias e suficientes?* Sim. Cobrem todo o ciclo operacional narrado em CP01 e fundamentado nas normas portuárias: entrada da imagem (1), análise da radiografia (2), confronto documental (3) e despacho operacional (4).
 - *Os planos indicam ordem, alternativa, repetição ou condição?* Sim. O Plano 0 combina sequência, desvio condicional e critério sob incerteza; o Plano 1 é sequencial com tratamento de exceção; o Plano 2 possui laço de repetição com condição de parada; o Plano 3 prevê ramificação conforme compatibilidade; e o Plano 4 expressa escolha mutuamente exclusiva.
-- *A decomposição parou em nível útil para projeto de interação?* Sim. A análise evidencia os gargalos de atenção visual não assistida (subobjetivo 2) e a fricção no registro formal de suspeitas (subobjetivo 4), fornecendo os requisitos exatos para o projeto da interface de IHC.
+- *A decomposição parou em nível útil para projeto de interação?* Sim. As operações finais (`1.1`, `1.2`, `2.1`, `2.2`, `2.3`, `2.4`, `3.1`, `3.2`, `4.1` e `4.2`) estão sublinhadas no diagrama `hta_t01.svg` para indicar o fim da decomposição. A análise evidencia os gargalos de atenção visual não assistida (subobjetivo 2) e a fricção no registro formal de suspeitas (subobjetivo 4), fornecendo os requisitos exatos para o projeto da interface de IHC.
 
 ### GOMS — T02 Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita
 
@@ -292,7 +292,7 @@ As três tarefas vêm do cenário CP02 (Entrega 4), que já indicava na seção 
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | Decidir sobre uma carga bloqueada por suspeita na imagem do escâner | 1 > 2 > 3 > 4 > 5. Se 3 não chega a conclusão, repetir 2 e 3 ou seguir para 4 com a dúvida. Fazer 6 só quando 5 foi exigência ou verificação física | A repetição de 2 e 3 é o ponto de atraso: cada volta depende de outra pessoa (ver T05). Seguir com a dúvida leva à verificação física por precaução (CP02) |
+| 0 | Decidir sobre uma carga bloqueada por suspeita na imagem do escâner | **Input:** declaração de importação distribuída ao Auditor-Fiscal com carga bloqueada por suspeita na imagem do escâner `[F, H]` (C02, CP02). **Feedback:** ato administrativo formalizado na linha do tempo do despacho no Siscomex (desembaraço, exigência fiscal ou determinação de verificação física) `[F]` (C02). **Plano 0:** 1 > 2 > 3 > 4 > 5. Se 3 não chega a conclusão, repetir 2 e 3 ou seguir para 4 com a dúvida. Fazer 6 só quando 5 foi exigência ou verificação física | A repetição de 2 e 3 é o ponto de atraso: cada volta depende de outra pessoa (ver T05). Seguir com a dúvida leva à verificação física por precaução (CP02) |
 | 1 | Tomar conhecimento do caso | 1.1 > 1.2. Depois 1.3 e 1.4 em qualquer ordem, se houver necessidade | `[F]` Tudo o que está em 1 fica no Siscomex (C02). A suspeita não está entre essas informações |
 | 1.1 | Localizar a declaração pelo número | — | `[F]` O número da declaração é a chave de consulta no Siscomex (C02, H29) |
 | 1.2 | Ler a mercadoria declarada | — | É a referência que 3.1 usa para confrontar a suspeita (H11) |
@@ -324,7 +324,7 @@ As três tarefas vêm do cenário CP02 (Entrega 4), que já indicava na seção 
 - *O objetivo 0 representa uma meta do usuário?* Sim. É o objetivo prático 1 de P02 e o objetivo do CP02. Não é uma função de sistema.
 - *As subtarefas são necessárias e suficientes?* As subtarefas 1 a 5 correspondem às ações extraídas do CP02 (seção 4). A subtarefa 6 cobre o desfecho narrado no cenário. Falta uma etapa, a de devolver o desfecho a quem analisou a imagem. Ela foi registrada como ausente porque o cenário mostra que hoje não acontece.
 - *Os planos indicam ordem, alternativa, repetição ou condição?* Sim: sequência (Plano 1, 3, 5), alternativa exclusiva com condição (Plano 4), escolha de método (Plano 2), repetição (Planos 0 e 6) e condição de execução (Plano 0, para 6).
-- *A decomposição parou em nível útil?* Parou no nível em que aparecem os problemas de interação do cenário. Os pontos que dependem de tela ficam para o protótipo.
+- *A decomposição parou em nível útil?* Sim. As operações finais (`1.1` a `1.4`, `2.1` a `2.4`, `3.1`, `3.2`, `4.1` a `4.3`, `5.1`, `5.2`, `6.1` e `6.2`) estão sublinhadas no diagrama `hta_t04.svg` para indicar o fim da decomposição. A análise parou no nível em que aparecem os problemas de interação do cenário, deixando os pontos que dependem de tela para o protótipo.
 
 ### GOMS — T05 Entender por que a carga foi bloqueada
 
@@ -442,45 +442,49 @@ Pontos em aberto no modelo:
 
 ## Alexandre — T07 a T09
 
-### HTA — T07 Localizar o contêiner, inspecionar fisicamente o conteúdo e registrar divergências no pátio
+**Enquadramento no escopo do projeto e situação atual.** Conforme registrado em [`RASTREABILIDADE.md`](../RASTREABILIDADE.md), o perfil P03 (Marcos Oliveira) é uma proto-persona exploratória de stakeholder secundário (H03), e a hipótese de que quem executa a verificação física no pátio utiliza diretamente a solução permanece aberta para a Entrega 7 (H42). Por isso, as modelagens T07 (HTA), T08 (GOMS) e T09 (CTT) têm caráter exploratório sobre a **situação atual** da conferência física no pátio (CP03), sem antecipar aplicativos móveis, mapas residuais nem marcações de ROI da solução futura. O objetivo é compreender que informações fazem falta na ponta física quando uma carga é retida a partir do escâner (R03).
+
+### HTA — T07 Conduzir a verificação física de contêiner retido e registrar o resultado
 
 **Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6
 
 #### Descrição da tarefa
 
-**Objetivo:** Localizar o contêiner direcionado no pátio, realizar a abertura física, inspecionar o conteúdo confrontando com os documentos declarados e registrar formalmente eventuais divergências.  
-**Ponto de início:** Recebimento da ordem de verificação física para carga em canal vermelho ou cinza.  
-**Conclusão esperada:** Contêiner vistoriado, termo de ocorrência preenchido, evidências fotográficas anexadas e comunicação enviada ao Auditor-Fiscal (P02).  
-**Contexto:** Pátio aberto de terminal portuário, sujeito a intempéries, ruído intenso de maquinário pesado e pressões operacionais por liberação de carga.
+- **Objetivo:** conduzir a verificação física de um contêiner retido após suspeita na inspeção por escâner, conferindo a mercadoria em relação à declaração e formalizando o resultado para o despacho aduaneiro `[F, H]` (Decreto nº 6.759/2009; C02; CP03).
+- **Ponto de início:** recebimento da solicitação de verificação física agendada para contêiner segregado no recinto `[F]` (Portaria ALF/FNS nº 9/2024, art. 8º; C02).
+- **Conclusão esperada:** contêiner inspecionado, eventuais divergências ou avarias documentadas e resultado da conferência registrado para subsidiar o desembaraço ou a retenção/exigência `[F]` (C02).
+- **Contexto:** setor de verificação física em terminal portuário, sob iluminação artificial e ruído de maquinário pesado `[H]` (CP03), com presença do representante do importador e movimentação física realizada pela equipe do depositário `[F]` (Decreto nº 6.759/2009; C02).
 
 #### Diagrama
 
 ![HTA T07](../assets/05_tarefas/HTA_ALE.svg)
 
+*Figura 6 — HTA da tarefa T07, situação atual (exploratória, condicionada a H42). Fonte: elaboração do autor a partir do cenário CP03 e das normas aduaneiras.*
+
 #### Decomposição e planos
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | Vistoriar fisicamente a carga no pátio e registrar divergências | 1 > 2 > 3 > 4 | O processo analógico atual depende de deslocamentos cegos e registros em papel/celular particular. |
-| 1 | Localizar e acessar o contêiner no pátio | 1.1 > 1.2 | Ausência de mapa residual ou coordenadas espaciais precisas para orientar a equipe diretamente ao ponto de anomalia. |
-| 1.1 | Conferir a identificação visual (número do contêiner e placa) | - | Inspeção visual direta sujeita a falhas sob baixa visibilidade. |
-| 1.2 | Coordenar com a equipe de apoio o posicionamento | - | Dependência de comunicação verbal via rádio sujeita a ruídos e atritos operacionais. |
-| 2 | Abrir o contêiner e inspecionar o conteúdo | 2.1 > 2.2 | Risco de descarregamento cego e exaustivo de toneladas de carga por falta de indicação de profundidade da ROI. |
-| 2.1 | Romper o lacre de segurança sob supervisão | - | Registro manual do número do lacre em prancheta de papel. |
-| 2.2 | Realizar a descaltagem e conferência visual | - | Esforço físico extremo e risco de quebra da cadeia de frio em cargas refrigeradas (reefer). |
-| 3 | Constatar e documentar divergências físicas | 3.1 / 3.2 (Seleção) | *Plano de seleção:* se houver conformidade, encerra; se houver divergência, executa o registro detalhado. |
-| 3.1 | Registrar divergências de volumetria ou mercadoria oculta | - | Uso de bloco de notas físico sujeito a perdas e rasuras. |
-| 3.2 | Capturar evidências fotográficas das irregularidades | - | Fotos avulsas em aparelhos particulares sem vínculo automático com o dossiê oficial. |
-| 4 | Formalizar e transmitir a ocorrência | 4.1 > 4.2 | Ruptura de comunicação entre o campo (P03) e o gabinete de despacho (P02). |
-| 4.1 | Comunicar resultado da vistoria à fiscalização | - | Comunicação fragmentada e geradora de atrasos na liberação. |
-| 4.2 | Consolidar e protocolar o relatório no sistema | - | Retrabalho de redigitação posterior das informações coletadas em campo. |
+| 0 | Conduzir a verificação física de contêiner retido e registrar o resultado | **Input:** solicitação de verificação física agendada para contêiner retido e segregado após suspeita na inspeção por escâner, acompanhada dos dados da declaração `[F, H]` (Decreto nº 6.759/2009; C02; Portaria ALF/FNS nº 9/2024, art. 8º). **Feedback:** resultado da verificação física formalizado no processo de despacho, habilitando o desembaraço ou a exigência/apreensão `[F]` (C02). **Plano 0:** 1 > 2 > 3 > 4. Executar 3 apenas se 2 encontrar divergência ou avaria; se a carga estiver regular após a conferência em 2, seguir diretamente para 4.1 | `[H]` Sem informação sobre qual parte do contêiner motivou a suspeita na imagem (?08), a conferência física exige desova extensa e pode levar horas mesmo em cargas regulares (CP03) |
+| 1 | Preparar a verificação física da unidade retida | 1.1 > 1.2. Sem indicação espacial da suspeita `[H]`, a abertura parte da porta | `[H]` A solicitação recebida traz observação genérica sobre a suspeita radiográfica, sem localizar a seção do contêiner (CP03, H28, ?08) |
+| 1.1 | Ler a solicitação de vistoria, a declaração e o motivo da retenção | — | `[F]` Declaração e dossiê compõem o processo (C02). `[?]` Que detalhes da suspeita de imagem acompanham o pedido de vistoria (Entrega 7) |
+| 1.2 | Localizar o contêiner segregado e reunir partes no setor de vistoria | — | `[F]` A unidade fica em área segregada (Portaria ALF/FNS nº 9/2024, art. 8º) e a conferência exige presença do importador ou representante (Decreto nº 6.759/2009) |
+| 2 | Abrir o contêiner e conferir a carga no pátio | 2.1 > 2.2. Repetir retirada e exame de lotes em 2.2 até esclarecer a suspeita `[H]` | `[H]` Risco de desova manual prolongada de carga refrigerada quando não se sabe se a divergência está na porta, no meio, no fundo ou na estrutura do equipamento (CP03) |
+| 2.1 | Conferir e romper lacres e orientar a desova pela equipe de apoio | — | `[F]` Movimentação executada pela equipe do depositário sob supervisão da fiscalização (C02). `[?]` Como o número do lacre é anotado em campo |
+| 2.2 | Inspecionar volumes e estrutura interna até achar a origem da suspeita | — | `[H]` Esforço físico e exposição da carga refrigerada até identificar a causa da diferença de densidade (CP03) |
+| 3 | Documentar divergência ou avaria constatada → T08 | 3.1 > 3.2. Quando há divergência ou avaria, anotar a descrição e registrar evidência fotográfica em sequência | Detalhado no GOMS T08. As duas suboperações são complementares (`3.1 > 3.2`) quando há achado irregular `[H]` |
+| 3.1 | Anotar descrição da divergência ou avaria encontrada no pátio | — | `[H]` Anotação provisória realizada durante a vistoria no pátio antes da consolidação no sistema administrativo `[?]` (Entrega 7) |
+| 3.2 | Registrar evidência fotográfica da ocorrência para o processo | — | `[H]` Captura de fotos da divergência para instruir o relato da verificação física `[?]` (meio utilizado em campo a confirmar na Entrega 7) |
+| 4 | Formalizar o resultado da verificação física → T09 | Escolha exclusiva (`4.1 / 4.2`): 4.1 se carga conforme; 4.2 se houve divergência documentada em 3 | Detalhado no CTT T09. `[H]` Nenhuma etapa devolve automaticamente o resultado da vistoria a quem analisou a imagem na estação do escâner (?08) |
+| 4.1 | Registrar conformidade da carga para liberação no despacho | — | `[F]` Permite o prosseguimento do despacho rumo ao desembaraço no Siscomex (C02) |
+| 4.2 | Formalizar relato de divergência e encaminhar para retenção/exigência | — | `[F]` Subsidia exigência fiscal ou procedimento administrativo cabível no despacho (C02) |
 
 **Verificação do HTA:**
 
-- O objetivo 0 representa uma meta do usuário? Sim, reflete a execução completa da vistoria tática de campo.
-- As subtarefas são necessárias e suficientes? Sim, cobrem desde a chegada ao pátio até a formalização.
-- Os **planos** indicam ordem, alternativa, repetição ou condição? Sim, o plano 3 emprega condição de seleção.
-- A decomposição parou em nível útil para projeto de interação? Sim, evidencia as lacunas analógicas que justificam a ferramenta de campo.
+- *O objetivo 0 representa uma meta do usuário?* Sim, expressa a meta completa de quem conduz a verificação física e registra seu resultado (CP03), com **Input**, **Feedback** e **Plano 0** explicitados na tabela auxiliar.
+- *As subtarefas são necessárias e suficientes?* Sim, cobrem desde a preparação e leitura da solicitação (1), abertura e conferência física (2), documentação de divergências quando ocorrem (3) até a formalização do resultado (4).
+- *Os **planos** indicam ordem, alternativa, repetição ou condição?* Sim: o Plano 0 traz sequência e condição para o ramo 3; o Plano 2 traz repetição por lotes; o Plano 3 é sequencial e complementar (`3.1 > 3.2`, pois anotar a divergência e fotografá-la se somam quando há irregularidade); e o Plano 4 é de escolha exclusiva (`4.1 / 4.2`).
+- *A decomposição parou em nível útil para projeto de interação?* Sim. As operações finais (`1.1`, `1.2`, `2.1`, `2.2`, `3.1`, `3.2`, `4.1` e `4.2`) estão sublinhadas no diagrama `HTA_ALE.svg` e descrevem apenas a atividade atual, sem presumir telas futuras.
 
 ---
 
