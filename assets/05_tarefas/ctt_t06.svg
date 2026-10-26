@@ -5,20 +5,27 @@
 <g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="631" cy="89" r="8"/><circle cx="649" cy="89" r="8"/><circle cx="640" cy="82" r="10"/><rect x="631" y="87" width="18" height="10" stroke="none"/></g>
 <text x="640" y="118" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Formalizar o ato sobre a carga bloqueada</text>
 <line x1="640" y1="129" x2="640" y2="163" stroke="#57606a" stroke-width="1.5"/>
-<line x1="250" y1="163" x2="1030" y2="163" stroke="#57606a" stroke-width="1.5"/>
-<line x1="250" y1="163" x2="250" y2="183" stroke="#57606a" stroke-width="1.5"/>
-<line x1="640" y1="163" x2="640" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="130" y1="163" x2="1030" y2="163" stroke="#57606a" stroke-width="1.5"/>
+<line x1="130" y1="163" x2="130" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="430" y1="163" x2="430" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="720" y1="163" x2="720" y2="183" stroke="#57606a" stroke-width="1.5"/>
 <line x1="1030" y1="163" x2="1030" y2="183" stroke="#57606a" stroke-width="1.5"/>
-<rect x="432.0" y="152" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
-<text x="445.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
-<rect x="814.0" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
-<text x="835.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
-<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="239" cy="196" r="5"/><path d="M231,211 Q231,202 239,202 Q247,202 247,211 Z"/><rect x="251" y="189" width="19" height="14" rx="1.5"/><line x1="260" y1="203" x2="260" y2="208"/><line x1="255" y1="209" x2="265" y2="209"/></g>
-<text x="250" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Localizar a</text>
-<text x="250" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">declaração pelo</text>
-<text x="250" y="261" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">número</text>
-<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5"><circle cx="640" cy="193" r="7"/><path d="M628,212 Q628,200 640,200 Q652,200 652,212 Z"/></g>
-<text x="640" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Escolher o ato</text>
+<rect x="259.0" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="280.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+<rect x="562.0" y="152" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="575.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<rect x="854.0" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="875.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5"><circle cx="130" cy="193" r="7"/><path d="M118,212 Q118,200 130,200 Q142,200 142,212 Z"/></g>
+<text x="130" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Concluir avaliação da</text>
+<text x="130" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">suspeita bloqueada</text>
+<text x="130" y="261" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" fill="#57606a" text-anchor="middle">(gatilho T04-3)</text>
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="419" cy="196" r="5"/><path d="M411,211 Q411,202 419,202 Q427,202 427,211 Z"/><rect x="431" y="189" width="19" height="14" rx="1.5"/><line x1="440" y1="203" x2="440" y2="208"/><line x1="435" y1="209" x2="445" y2="209"/></g>
+<text x="430" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Localizar a</text>
+<text x="430" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">declaração pelo</text>
+<text x="430" y="261" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">número</text>
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5"><circle cx="720" cy="193" r="7"/><path d="M708,212 Q708,200 720,200 Q732,200 732,212 Z"/></g>
+<text x="720" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Escolher o ato</text>
 <g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="1021" cy="202" r="8"/><circle cx="1039" cy="202" r="8"/><circle cx="1030" cy="195" r="10"/><rect x="1021" y="200" width="18" height="10" stroke="none"/></g>
 <text x="1030" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Registrar o ato</text>
 <text x="1030" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">escolhido</text>
