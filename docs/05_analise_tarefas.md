@@ -37,9 +37,9 @@ Cada integrante modela três tarefas, uma por técnica. A numeração segue a or
 | T04 | Decidir sobre uma carga bloqueada por suspeita na imagem do escâner (HTA) | P02 / CP02 | `[?]` Frequência desconhecida (CP02, Q9). `[H08]` Criticidade alta: o erro libera carga ilícita ou retém carga regular | Gabriel Albertini Pinheiro |
 | T05 | Entender por que a carga foi bloqueada (GOMS) | P02 / CP02, subobjetivo 2 de T04 | Ocorre em todo caso de T04. `[H]` É onde o cenário mostra a maior perda de informação | Gabriel Albertini Pinheiro |
 | T06 | Formalizar o ato sobre a carga bloqueada (CTT) | P02 / CP02, subobjetivo 5 de T04 | Ocorre em todo caso de T04. `[F]` O ato tem valor jurídico e é registrado no Siscomex (C02) | Gabriel Albertini Pinheiro |
-| T07 | Localizar o contêiner, inspecionar fisicamente o conteúdo e registrar divergências no pátio (HTA) | P03 / CP03 | Média / Alta: crítica para o fechamento da fiscalização e cadeia de custódia da prova física | Alexandre Domiciano Pierri |
-| T08 | Registrar ocorrência de divergência física em campo (GOMS) | P03 / CP03 | Média / Alta: registro de inconformidades e cadeia de custódia | Alexandre Domiciano Pierri |
-| T09 | Execução e formalização da vistoria física no pátio (CTT) | P03 / CP03 | Média / Alta: sincronização entre campo e fiscalização | Alexandre Domiciano Pierri |
+| T07 | Conduzir a verificação física de contêiner retido e registrar o resultado (HTA) | P03 (stakeholder exploratório em H42) / CP03 | `[?]` Frequência dependente do volume de retenções. `[H]` Alta criticidade operacional na ponta física quando a suspeita chega sem localização espacial (?08) | Alexandre Domiciano Pierri |
+| T08 | Documentar e comunicar divergência ou achado na verificação física (GOMS) | P03 (stakeholder exploratório em H42) / CP03, subobjetivo 3 de T07 | `[H, ?]` Ocorre quando há divergência ou necessidade de documentar a causa física da suspeita no pátio | Alexandre Domiciano Pierri |
+| T09 | Executar a verificação física no pátio e formalizar o resultado no despacho (CTT) | P03 (stakeholder exploratório em H42) / CP03, subobjetivo 4 de T07 | `[F]` O resultado formaliza a conferência física no despacho (C02). `[H]` Papel direto na interface condicionado a H42 | Alexandre Domiciano Pierri |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
@@ -222,7 +222,7 @@ Estas são observações do modelo, não soluções.
 
 #### Descrição
 
-Modela o subobjetivo 4 de T01: após concluir o exame da radiografia e o confronto com os dados da carga, Gustavo formaliza a conclusão no sistema e direciona o contêiner. A tarefa inicia na avaliação cognitiva de convicção pelo operador e termina quando o sistema autoriza a saída do veículo ou emite a ordem de segregação física no pátio com notificação eletrônica à Receita Federal.
+Modela o subobjetivo 4 de T01: após concluir o exame da radiografia e o confronto com os dados da carga, Gustavo formaliza a conclusão no sistema e direciona o contêiner. A tarefa inicia na ação humana que serve de gatilho externo ao registro (*Concluir inspeção visual e confronto*, vinda de T01-2/3), passa pela deliberação cognitiva (*Avaliar convicção e definir manifestação*) e termina quando o sistema autoriza a saída do veículo ou emite a ordem de segregação física no pátio com notificação eletrônica à Receita Federal.
 
 A modelagem reflete a **situação atual**, fundamentada na Portaria ALF/FNS nº 9/2024 (art. 8º, que estabelece o procedimento de interrupção do fluxo, segregação física e comunicação à RFB) e na análise de estações de inspeção (C01, C03; ADE Coana nº 19/2014). Adota a notação ConcurTaskTrees (CTT) de Paternò, especificando categorias de tarefas (usuário, interação, aplicação e abstrata) e operadores temporais.
 
@@ -236,7 +236,7 @@ A modelagem reflete a **situação atual**, fundamentada na Portaria ALF/FNS nº
 
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
-| `>>` habilitação sequencial | A tarefa da direita só pode iniciar após o término bem-sucedido da tarefa da esquerda | *Confirmar liberação no software do escâner* `>>` *Registrar liberação e autorizar saída*. *Elaborar apontamento de suspeita* `>>` *Efetivar retenção e comunicar RFB* |
+| `>>` habilitação sequencial | A tarefa da direita só pode iniciar após o término bem-sucedido da tarefa da esquerda | *Concluir inspeção visual e confronto (T01-2/3)* `>>` *Avaliar convicção e definir manifestação*. *Confirmar liberação no software do escâner* `>>` *Registrar liberação e autorizar saída* |
 | `[]>>` habilitação com passagem de informação | Similar à habilitação, porém a tarefa da esquerda repassa um dado ou decisão essencial para a tarefa da direita | *Avaliar convicção e definir manifestação* `[]>>` *Efetivar manifestação no sistema*: a decisão (regular vs. suspeito) determina qual ramo de execução será ativado no sistema |
 | `[]` escolha exclusiva | Uma única tarefa entre as alternativas é executada; assim que uma inicia, as demais são desabilitadas | *Liberar trânsito regular* `[]` *Registrar suspeita fundamentada*: o operador libera a carga ou inicia a retenção |
 | `\|\|\|` entrelaçamento (concorrência) | As tarefas podem ser executadas em qualquer ordem ou alternadas entre si | *Indicar região suspeita (marcar ROI)* `\|\|\|` *Descrever inconformidade observada*: o operador pode marcar a anomalia visual na imagem, digitar a justificativa e retornar para ajustar a marcação. No sistema: *Emitir ordem de segregação física no pátio* `\|\|\|` *Transmitir notificação eletrônica à RFB* |
@@ -245,7 +245,7 @@ A modelagem reflete a **situação atual**, fundamentada na Portaria ALF/FNS nº
 Tipos de tarefa empregados no modelo:
 
 - **Abstratas:** a raiz *Comunicar e registrar a conclusão do exame da imagem*, o nó intermediário *Efetivar manifestação no sistema*, os ramos principais *Liberar trânsito regular* e *Registrar suspeita fundamentada*, e os subprocessos *Elaborar apontamento de suspeita* e *Efetivar retenção e comunicar RFB*.
-- **Do usuário (cognitiva):** *Avaliar convicção e definir manifestação*. Trata-se de uma deliberação humana puramente mental, correspondente aos subobjetivos 3 e 4 do HTA T01 e à meta G3 do GOMS T02.
+- **Do usuário (cognitiva):** *Concluir inspeção visual e confronto (T01-2/3)* (gatilho humano que antecede o registro) e *Avaliar convicção e definir manifestação* (deliberação humana que corresponde aos subobjetivos 3 e 4 do HTA T01 e à meta G3 do GOMS T02).
 - **De interação:** *Confirmar liberação no software do escâner*, *Indicar região suspeita (marcar ROI na imagem)*, *Descrever inconformidade observada (texto livre)* e *Confirmar envio da ocorrência de suspeita*.
 - **Da aplicação (sistema):** *Registrar liberação e autorizar saída*, *Emitir ordem de segregação física no pátio* e *Transmitir notificação eletrônica à RFB*.
 
@@ -389,7 +389,7 @@ O que o modelo mostra:
 
 #### Descrição
 
-Modela o subobjetivo 5 de T04: depois de escolher o ato, o auditor o registra no Siscomex com o motivo. Começa na localização da declaração e termina quando o sistema atualiza a linha do tempo do despacho. Os atos e as tarefas da aplicação vêm da documentação do Siscomex `[F]` (C02): exigência comunicada ao importador com motivo e prazo, desembaraço e linha do tempo de marcos. A forma e o número das tarefas de interação são `[H]`, porque as telas do auditor não foram observadas. A notação é a do CTT de Paternò, com os tipos de tarefa e os operadores temporais da legenda do diagrama.
+Modela o subobjetivo 5 de T04: depois de avaliar a suspeita e confrontá-la com a declaração, o auditor registra o ato no Siscomex com o motivo. Começa na tarefa do usuário que serve de gatilho para acionar o Siscomex (*Concluir avaliação da suspeita bloqueada*, vinda de T04-3), segue para a localização da declaração e a escolha do ato, e termina quando o sistema atualiza a linha do tempo do despacho. Os atos e as tarefas da aplicação vêm da documentação do Siscomex `[F]` (C02): exigência comunicada ao importador com motivo e prazo, desembaraço e linha do tempo de marcos. A forma e o número das tarefas de interação são `[H]`, porque as telas do auditor não foram observadas. A notação é a do CTT de Paternò, com os tipos de tarefa e os operadores temporais da legenda do diagrama.
 
 #### Diagrama
 
@@ -402,7 +402,7 @@ Modela o subobjetivo 5 de T04: depois de escolher o ato, o auditor o registra no
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
 | `>>` habilitação | A tarefa da direita só começa quando a da esquerda termina | *Localizar a declaração* `>>` *Escolher o ato*. *Motivar o ato* `>>` *Comunicar a exigência e o prazo ao importador* |
-| `[]>>` habilitação com passagem de informação | Como `>>`, e a tarefa da esquerda entrega uma informação à da direita | *Escolher o ato* `[]>>` *Registrar o ato escolhido*: o ato escolhido decide qual ramo de *Executar o ato* acontece |
+| `[]>>` habilitação com passagem de informação | Como `>>`, e a tarefa da esquerda entrega uma informação à da direita | *Concluir avaliação da suspeita bloqueada (gatilho T04-3)* `[]>>` *Localizar a declaração pelo número* (entrega o número do processo e a conclusão da análise). *Escolher o ato* `[]>>` *Registrar o ato escolhido* |
 | `[]` escolha | Só uma das tarefas é realizada. Quando uma começa, as outras ficam indisponíveis | *Registrar exigência fiscal* `[]` *Determinar verificação física* `[]` *Desembaraçar* (Plano 4 de T04) |
 | `\|\|\|` entrelaçamento | As tarefas acontecem em qualquer ordem e podem se alternar | *Editar o texto do motivo* `\|\|\|` *Consultar o relato e a imagem*: o auditor escreve, volta à fonte e escreve de novo |
 | `[>` desativação | Quando a tarefa da direita começa, a da esquerda é encerrada | *Elaborar o motivo* `[>` *Confirmar o motivo*: confirmar encerra a edição |
@@ -412,7 +412,7 @@ Modela o subobjetivo 5 de T04: depois de escolher o ato, o auditor o registra no
 Tipos de tarefa usados:
 
 - **Abstratas:** a raiz, *Registrar o ato escolhido*, *Executar o ato*, os três atos, *Motivar o ato* e *Elaborar o motivo*.
-- **Do usuário:** *Escolher o ato*. É cognitiva e corresponde aos subobjetivos 3 e 4 de T04.
+- **Do usuário:** *Concluir avaliação da suspeita bloqueada (gatilho T04-3)* (gatilho humano que origina a necessidade de usar o Siscomex) e *Escolher o ato* (deliberação cognitiva correspondente ao subobjetivo 4 de T04).
 - **De interação:** *Localizar a declaração*, *Editar o texto do motivo*, *Confirmar o motivo*, *Confirmar o desembaraço* e *Consultar o relato e a imagem*. Esta última acontece fora do Siscomex `[H]`.
 - **Da aplicação:** *Comunicar a exigência e o prazo ao importador*, *Registrar a determinação*, *Registrar o desembaraço e liberar a carga* e *Atualizar a linha do tempo do despacho*.
 
@@ -540,25 +540,42 @@ A modelagem na situação atual evidencia que, independentemente de a comunicaç
 
 ---
 
-### CTT — T09 Execução e formalização da vistoria física no pátio
+### CTT — T09 Executar a verificação física no pátio e formalizar o resultado no despacho
 
 **Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6
 
 #### Descrição
 
-Modelagem das relações temporais e de comunicação entre o agente de campo (P03), o terminal móvel de vistoria e o sistema de retaguarda da fiscalização durante a inspeção física de um contêiner.
+Modela as relações temporais da execução da verificação física no pátio e da formalização posterior do resultado no posto administrativo na **situação atual** (CP03, subobjetivos 2, 3 e 4 do HTA T07), sem presumir aplicativos móveis ou mapas residuais futuros. A tarefa começa no gatilho humano de recebimento e leitura da solicitação de verificação física agendada (`[F]` Decreto nº 6.759/2009; C02), passa pela conferência física no pátio (com desova iterativa `*` e anotação opcional de achados `[T]`) e encerra-se na formalização do resultado no processo de despacho no computador administrativo (`[F]` C02; `[H, ?]` separação entre pátio e sistema).
 
 #### Diagrama
 
 ![CTT T09](../assets/05_tarefas/CTT_ALE.svg)
 
+*Figura 7 — CTT da tarefa T09, situação atual (exploratória, condicionada a H42). Fonte: elaboração do autor a partir do cenário CP03 e das normas aduaneiras.*
+
 #### Legenda e relações temporais usadas
 
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
-| `>>` | Ativação sequencial (a segunda tarefa inicia após o término da primeira) | `Deslocar-se ao contêiner >> Abrir o contêiner` |
-| `[]>>` | Ativação com passagem de informação | `Capturar fotos e dados no app móvel []>> Anexar ao processo eletrônico` |
-| `|||` | Tarefas concorrentes (podem ocorrer em qualquer ordem ou simultaneamente) | `Verificar volumetria e lacre ||| Conferir dados no terminal móvel` |
+| `[]>>` habilitação com passagem de informação | A tarefa da esquerda habilita a da direita entregando dados essenciais | *Receber solicitação de verificação física agendada e ler motivo da retenção* `[]>>` *Conduzir conferência física no pátio* `[]>>` *Formalizar resultado no posto administrativo* |
+| `>>` habilitação sequencial | A segunda tarefa inicia após o término da primeira | *Romper lacres e orientar desova pela porta* `>>` *Inspecionar lotes e estrutura interna*. *Abrir processo no sistema do posto administrativo* `>>` *Registrar desfecho da verificação física* |
+| `\|\|\|` entrelaçamento (concorrência) | As tarefas podem se alternar durante a conferência no pátio | *Inspecionar lotes e estrutura interna* `*` `\|\|\|` *[Anotar achados e registrar fotos no pátio]* |
+| `[]` escolha exclusiva | Apenas um dos desfechos é registrado no despacho | *Registrar conformidade da carga (falso positivo)* `[]` *Transcrever divergência e anexar fotos ao processo* |
+| `*` e `[T]` | Iteração por lotes (`*`) e tarefa opcional quando há achado (`[T]`) | *Inspecionar lotes e estrutura interna* `*` (repetida até localizar a origem da suspeita) e *[Anotar achados e registrar fotos no pátio]* |
+
+Tipos de tarefa empregados no modelo:
+
+- **Abstratas:** a raiz *Executar a verificação física no pátio e formalizar o resultado*, *Conduzir conferência física no pátio*, *Formalizar resultado no posto administrativo* e *Registrar desfecho da verificação física*.
+- **Do usuário:** *Receber solicitação de verificação física agendada e ler motivo da retenção* (gatilho inicial), *Romper lacres e orientar desova pela porta*, *Inspecionar lotes e estrutura interna* e *[Anotar achados e registrar fotos no pátio]*.
+- **De interação:** *Abrir processo no sistema do posto administrativo*, *Registrar conformidade da carga (falso positivo)* e *Transcrever divergência e anexar fotos ao processo*.
+- **Da aplicação (sistema):** *Atualizar andamento da verificação física no despacho (Siscomex)* `[F]` (C02).
+
+#### Interpretação
+
+- **Iteração no pátio causada pela ausência de localização espacial.** Como o gatilho inicial (*Receber solicitação de verificação física agendada*) não informa em que parte do contêiner estava a suspeita radiográfica (`[H, ?08]`), a tarefa *Inspecionar lotes e estrutura interna* torna-se iterativa (`*`) a partir da porta, exigindo a retirada de grande parte da carga mesmo em casos de falso positivo estrutural (CP03).
+- **Separação entre pátio e posto administrativo.** Na situação atual (`[H, ?]`), toda a etapa de pátio consiste em tarefas manuais do usuário, enquanto as tarefas de interação ocorrem depois, no posto administrativo, exigindo transcrição das anotações colhidas durante a desova.
+- **Ausência de retorno à estação de imagem.** A tarefa da aplicação atualiza o despacho no Siscomex, mas não envia retorno à estação de raio-X sobre o que motivou a densidade atípica no contêiner (`?08`).
 
 ---
 
@@ -575,18 +592,18 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 3. **Fragmentação cognitiva no confronto documental:** Para comparar a anomalia percebida com os dados declarados da carga, o operador muitas vezes precisa alternar para sistemas externos ou depender de memória de trabalho (T01-3.1, T02 M3, H11).
 4. **Assimetria de fricção e ausência de retorno:** Apontar uma suspeita exige redação descritiva manual e gera retenção por até 3 dias úteis (Portaria ALF/FNS nº 9/2024, art. 8º), enquanto liberar o contêiner exige apenas um clique. Além disso, o operador nunca recebe retorno sobre o que a fiscalização física de fato encontrou, impedindo o calibramento de suas futuras decisões (T01-4, T03 ruptura terminal, H12, H38, ?08).
 
-**Oportunidades, como hipóteses de design:**
+**Oportunidades, como hipóteses de design (a explorar nas Entregas 6 e 9 e validar na Entrega 7):**
 
-| Oportunidade | Problema acima | Hipóteses e recomendações ligadas |
+| Oportunidade (hipótese de design) | Problema acima | Hipóteses e recomendações ligadas |
 |---|---|---|
-| Destacar automaticamente regiões anômalas via mapa residual (XAI) | 1, 2 | R01, H10, H34, RC01 |
-| Apresentar a mercadoria declarada e referências visuais integradas na tela | 2, 3 | H11, H30, RC02, RC07 |
-| Registro semiautomático de suspeita vinculando a ROI e métricas residuais | 4 | R03, H06, H32, RC04 |
-| Painel com histórico e retorno de desfechos das cargas inspecionadas | 4 | H18, H38, ?08 |
+| Apoiar a localização visual de regiões que destoam do padrão esperado da carga | 1, 2 | R01, H10, H34, RC01 |
+| Disponibilizar os dados essenciais da mercadoria declarada junto da inspeção da imagem | 2, 3 | H11, H30, RC02, RC07 |
+| Reduzir o esforço de registrar onde está a suspeita e o motivo do apontamento | 4 | R03, H06, H32, RC04 |
+| Permitir que quem analisou a imagem tome conhecimento do desfecho das cargas apontadas | 4 | H18, H38, ?08 |
 
-**Tarefas candidatas ao protótipo e ao teste de usabilidade:**
-- T01-2 / T02: Examinar a radiografia assistido pelo mapa residual e contraste de anomalias (foco no tempo de localização de anomalias e redução de carga cognitiva).
-- T01-4 / T03: Formalizar e registrar a conclusão técnica com exportação da ROI residual para o dossiê fiscal (foco na facilidade de registro e redução da assimetria operacional).
+**Tarefas humanas candidatas ao protótipo e ao teste de usabilidade (formuladas pelo trabalho humano a apoiar, sem fixar a interface):**
+- **T01-2 / T02 (Examinar a imagem de um contêiner e concluir se há motivo para apontar suspeita):** tarefa central de P01 (A02, R01), na qual se avaliará como apoiar a inspeção visual e o confronto com a declaração sob incerteza.
+- **T01-4 / T03 (Comunicar e registrar a conclusão do exame da imagem):** tarefa crítica de transição (A03, R03), na qual se avaliará como registrar a região e o motivo da suspeita sem sobrecarregar o operador no fluxo do terminal.
 
 **Informações a coletar na Entrega 7:**
 - Como é organizada a escala e o rodízio na estação para mitigar a fadiga visual (H13, H16, ?07).
@@ -597,7 +614,7 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 
 **Problemas de interação na situação atual.** Os três modelos chegam ao mesmo ponto: a suspeita e a decisão ficam em lugares diferentes.
 
-1. A suspeita não chega com a declaração. O auditor precisa buscá-la, e todo método de T05 começa por isso (T04-2, T05 G1).
+1. A suspeita não chega com a declaração. O auditor precisa buscá-la, e todo método de T05 começa por isso (T04-2, T05 M1/M3).
 2. Entender a suspeita depende de outra pessoa ou de prática com a imagem. O método mais confiável para quem não lê radiografia é o mais longo e o que mais espera (T05, M3).
 3. Confrontar a suspeita com a declaração exige alternar entre fontes e guardar o relato de memória (T04-3.1, T05 M1-6, T06 `|||`).
 4. O ato é registrado sem vínculo com a evidência que o motivou (T06).
@@ -612,11 +629,11 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 | O motivo do ato poder referenciar a análise da imagem, em vez de reescrevê-la | 3, 4 | H06, H32, RC04 |
 | O desfecho voltar a quem analisou a imagem | 5 | H18, H34, H36 |
 
-**Tarefas candidatas ao protótipo e ao teste.** T04-3, confrontar a suspeita com a declaração, e T06, formalizar o ato com motivo. São as que concentram os problemas 2 a 4 e as que a interface da disciplina pode apoiar com o mapa residual (R03). Entram no protótipo só se a Entrega 7 confirmar que o Auditor-Fiscal decide a partir da imagem (H39).
+**Tarefas candidatas ao protótipo e ao teste.** **T04-3** (confrontar a suspeita apontada na imagem com a declaração) e **T06** (formalizar o ato sobre a carga bloqueada com motivo). São as tarefas humanas que concentram os problemas 2 a 4 (R03) e entram no protótipo se a Entrega 7 confirmar que o Auditor-Fiscal decide a partir do apontamento de imagem (H39).
 
 **Informações a coletar na Entrega 7,** além das listadas no CP02:
 
-- se o registro do bloqueio identifica quem o fez e por quê (T05, G1);
+- se o registro do bloqueio identifica quem o fez e por quê (T05, M1);
 - por que canal o auditor contata a vigilância e quanto espera (T05, M1);
 - se o auditor abre a imagem, em que sistema, e se tem treino para lê-la (T05, SR1 a SR3);
 - que campos o Siscomex pede ao registrar exigência, verificação e desembaraço, e se aceita anexo (T06);
@@ -624,7 +641,13 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 
 ### Contribuição de T07 a T09 (Alexandre)
 
-A modelagem de tarefas evidenciou que o principal gargalo operacional de campo reside na dependência de meios analógicos e fragmentados (papel, rádio e celular pessoal). A introdução de um fluxo móvel integrado reduz o esforço motor de redigitação, garante a segurança da cadeia de custódia por meio de transmissão direta de evidências (`[]>>`) e orienta a equipe de pátio com precisão espacial, mitigando falsos positivos e o desgaste físico severo em cargas refrigeradas.
+**Problemas observados na situação atual (exploratórios, condicionados a H42).** A modelagem de T07 (HTA), T08 (GOMS) e T09 (CTT) mostrou que, quando uma carga vai para verificação física a partir de uma suspeita no escâner, três rupturas afetam o trabalho no pátio:
+
+1. **Solicitação sem localização espacial da suspeita:** o pedido de vistoria não informa em qual seção do contêiner (porta, meio, fundo ou altura) a densidade divergiu, obrigando a equipe a esvaziar a unidade por lotes a partir da porta (`*` em T07-2.2 e T09) `[H, ?08]`.
+2. **Desconexão entre a observação no pátio e o registro administrativo:** as constatações e fotos colhidas durante a abertura precisam ser transcritas posteriormente no computador do posto administrativo (T08 M1/M2, T09) `[H, ?]`.
+3. **Ausência de retorno sobre falsos positivos estruturais:** quando a vistoria constata que a diferença de densidade decorria da estrutura do próprio contêiner (como gelo no sistema de refrigeração em CP03), esse achado encerra o despacho mas não realimenta quem examinou a imagem na estação (T07-4, T09) `[H, ?08]`.
+
+**Implicações para o recorte e para a Entrega 7:** enquanto H42 permanecer aberta em [`RASTREABILIDADE.md`](../RASTREABILIDADE.md), T07 a T09 **não** geram telas móveis próprias no protótipo; sua contribuição direta para o projeto é demonstrar que o registro produzido nas tarefas de P01 e P02 (T03 e T06, ligadas a R03) precisa indicar claramente **onde** está a suspeita e **o que** foi observado na imagem, para que uma eventual verificação física subsequente não ocorra às cegas. Na Entrega 7, será investigado se quem executa a vistoria consulta diretamente algum sistema de imagem (H42) e que informações recebe hoje (H28, ?08).
 
 ## Referências
 
@@ -638,6 +661,10 @@ Fontes de T04 a T06:
 - Cenário CP02 e suas fontes (A Tribuna, 2013 e 2015; Portaria ALF/STS nº 197/2025): referências completas na Entrega 4.
 - Manual de Despacho de Importação e Portal Único Siscomex (análise C02): referências completas na Entrega 2.
 - ADE Coana nº 19/2014 e Portaria ALF/FNS nº 9/2024: referências completas na Entrega 3.
+
+Fontes de T07 a T09:
+
+- Cenário CP03 e suas fontes (Decreto nº 6.759/2009 — Regulamento Aduaneiro; Manual de Despacho de Importação — análise C02; Portaria ALF/FNS nº 9/2024, art. 8º): referências completas nas Entregas 2, 3 e 4.
 
 Métodos:
 
