@@ -1,6 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** 22/10/2026  
+**Data:** 22/10/2026 (versão original)  
+**Revisão:** 25/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe09.md)  
 **Status:** 🟩 concluída  
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
@@ -685,4 +686,12 @@ Métodos:
 - [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
 - [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
 
-> Todas as tarefas (T01 a T09) foram modeladas pelos respectivos autores (Kawan, Gabriel e Alexandre). Os diagramas são disponibilizados em SVG vetorial editável em `assets/05_tarefas/` (abrem no draw.io, Inkscape e navegadores).
+> Todas as tarefas (T01 a T09) foram modeladas pelos respectivos autores (Kawan, Gabriel e Alexandre). Os diagramas de HTA e CTT são disponibilizados em SVG vetorial editável em `assets/05_tarefas/` (abrem no draw.io, Inkscape e navegadores).
+
+## Histórico de revisão
+
+| Data | Versão | Alteração | Motivo |
+|---|---|---|---|
+| 22/10/2026 | 1.0 | Entrega original da análise de tarefas (T01 a T09 em HTA, GOMS e CTT). | Entrega 5 da disciplina. |
+| 25/10/2026 | 1.1 | Sublinhado das operações finais nos diagramas HTA (`hta_t01.svg`, `hta_t04.svg`, `HTA_ALE.svg`); inclusão explícita de Input, Feedback e Plano na linha da tarefa 0 das tabelas auxiliares de T01, T04 e T07; ajuste do Plano 3 de T07 para sequência complementar (`3.1 > 3.2`); remoção do diagrama em GOMS T02, incorporação dos critérios de SR2 em M4 e adição de operador explícito de verificação no fim dos métodos de T02, T05 e T08; explicitação do gatilho humano inicial nos CTTs T03, T06 e T09; modelagem de T07 a T09 na situação atual sem antecipar aplicativo móvel, alinhada a H42 em `RASTREABILIDADE.md` e na síntese da equipe. | [Feedback do professor da Entrega 5](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe09.md), correções 1 a 18. |
+
