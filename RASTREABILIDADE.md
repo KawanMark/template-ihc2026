@@ -106,7 +106,7 @@ R01/AC02/PF01 serão avaliados por MU01/MU02; R03/AC03/PF02 por MU03–MU05; MU0
 
 ## 2.3 Modelo conceitual da Entrega 9
 
-A [Entrega 9](docs/09_modelo_conceitual.md) apresenta CI01 (Kawan, de CP01), CI02 (Gabriel, de CP02) e CI03 (Alexandre, de CP03), com mapas individuais e consolidado. São propostas de interação, sem nova coleta com pessoas. CI03 prepara a informação no parecer e mantém P03 como destinatário externo.
+A [Entrega 9](docs/09_modelo_conceitual.md) apresenta CI01 (Kawan, de CP01), CI02 (Gabriel, de CP02) e CI03 (Alexandre, de CP03), com mapas individuais e consolidado. A revisão pela aula 9 acrescenta versões inicial/refinada e perguntas, mantém os cenários sem rótulos/widgets e classifica as rupturas dos signos em PP/PA/AL/RA/CE. São propostas de interação, sem nova coleta com pessoas. CI03 prepara a informação no parecer e mantém P03 como destinatário externo.
 
 | Cadeia | Objetivos | Signos | Metas da Entrega 8 |
 |---|---|---|---|
