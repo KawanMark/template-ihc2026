@@ -84,7 +84,7 @@ Quando o estado é "aberta" ou "parcialmente sustentada", a coluna "Impacto no p
 
 ## 2.1a Atualização documental da Entrega 7
 
-**Data:** 04/11/2026. A [Entrega 7](docs/07_coleta_dados.md) foi concluída com pesquisa documental como coleta principal, devido à falta de acesso ao profissional especializado. Cinco fontes públicas foram analisadas; questionário e entrevista foram preparados, sem aplicação.
+**Data:** 04/11/2026. A [Entrega 7](docs/07_coleta_dados.md) foi concluída com pesquisa documental como coleta principal, devido à falta de acesso ao profissional especializado. Cinco fontes públicas foram analisadas; questionário e entrevista foram preparados, sem aplicação. Na revisão pelas aulas, a Parte A passou a explicitar os cinco grupos de dados: usuário, tecnologia, domínio, tarefas e motivações/valores. Características pessoais e preferências não documentadas permanecem desconhecidas. Um gerador de I02/I03 para Google Forms foi preparado; criação e verificação dos links na conta Google ainda não realizadas.
 
 | IDs | Evidência e resultado | Consequência de IHC |
 |---|---|---|

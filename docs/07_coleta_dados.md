@@ -26,6 +26,19 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 ## Parte A — necessidades e aspectos éticos
 
+### Dados a investigar — cinco grupos da aula
+
+| Grupo | Informação relevante para nosso projeto | Uso no design e forma de obter |
+|---|---|---|
+| O próprio usuário | Papel, formação necessária, vocabulário profissional e necessidades de leitura/acessibilidade. | Identificar quem interpreta a imagem e adequar termos e legibilidade. Documentos ajudam a definir o papel; características pessoais continuam desconhecidas. Não coletar sexo ou renda sem necessidade para o projeto. |
+| Relação com tecnologia | Softwares de inspeção conhecidos, uso de mouse/teclado, monitor e ferramentas de realce disponíveis. | Reaproveitar convenções e dimensionar a comparação. Manuais mostram capacidades; experiência e preferências pessoais exigiriam contato direto. |
+| Conhecimento do domínio | Prática com radiografias de carga, leitura da declaração e entendimento dos limites da IA. | Definir explicações do mapa e do indicador. Distinguir experiência em logística de experiência em interpretação radiográfica. |
+| Conhecimento das tarefas | Responsabilidades, sequência, frequência, consulta de dados e consequência dos erros. | Priorizar comparação e parecer. Investigar H01/H11/H39; fila e frequência continuam abertas quando não documentadas. |
+| Motivações e valores | O que caracteriza uma análise bem feita, confiança no registro, autonomia e preferência de treinamento. | Orientar ajuda e comunicação da incerteza. Documentos não revelam sentimentos ou preferências individuais: H37/H38 continuam hipóteses. |
+
+**De quem obter:** o perfil principal é quem interpreta a imagem (P01); a autoridade que recebe o parecer e decide (P02) também interessa. A RFB e a administração do recinto definem os processos documentados. Depositário, representantes da carga e equipe de conferência são afetados, mas isso não demonstra uso direto da Mesa por P03. Não houve coleta com essas pessoas; o levantamento atual é documental.
+
+
 ### A01 — análise da imagem
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5
@@ -135,6 +148,10 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 **Análise:** organizar as notas por papéis, informações, registros e dificuldades. Separar experiência direta de suposição e comparar com os documentos. Um relato descreve seu contexto; não representa todos os recintos. Guardar as notas conforme as regras de privacidade da Parte A.
 
+### Preparação dos instrumentos online
+
+A atividade da aula pede ferramenta online para questionário e entrevista. O [gerador dos formulários](../instrumentos/07_coleta/README.md) reproduz I02/I03 no Google Forms, com consentimento e coleta de e-mail desativada. Foi preparado, mas não executado em conta Google: **a criação e verificação dos links online ainda não foram realizadas**. O conteúdo integral dos instrumentos permanece acima.
+
 ## Resultados da pesquisa documental
 
 Foram consultados cinco documentos em **04/11/2026**. As referências completas estão ao final.
@@ -157,8 +174,13 @@ H01/H39, H11/H26 e H30 foram **refinadas ou parcialmente sustentadas**, no alcan
 
 Esses resultados estão registrados na [rastreabilidade](../RASTREABILIDADE.md#21a-atualização-documental-da-entrega-7). Eles orientam as próximas etapas de modelagem e avaliação, sem atribuir à pesquisa documental a observação de uma rotina profissional.
 
+## Relação com a aula
+
+A Parte A segue os cinco grupos da aula 7 (Parte A, páginas 2–8 e exercício da página 13). A Parte B apresenta instrumentos e protocolos, como solicitado na Parte B, páginas 20–21. Pesquisa documental é a adaptação adotada pela equipe para a falta de acesso ao perfil; não é apresentada como entrevista ou observação.
+
 ## Checklist
 
+- [x] Cinco grupos de dados da aula relacionados ao projeto.
 - [x] Hipóteses e lacunas da Entrega 1 retomadas.
 - [x] Dados, fontes e decisões de design relacionados ao projeto.
 - [x] Uma Parte A por integrante, com autoria e aspectos éticos.
@@ -169,8 +191,11 @@ Esses resultados estão registrados na [rastreabilidade](../RASTREABILIDADE.md#2
 - [x] Instrumentos preparados diferenciados de coleta realizada.
 - [x] Limitações e hipóteses ainda abertas registradas.
 - [x] Rastreabilidade atualizada.
+- [ ] Instrumentos criados em ferramenta online e links de acesso verificados.
 
 ## Referências
+
+- AQUINO JR., Plinio T. *Identificação de Necessidades dos Usuários e Requisitos de IHC*, Partes A e B. Material da aula 7, baseado em Barbosa e Silva (2010). Cópia local: `Estudos/FEI_CC8122_IHC/07 - Tópico 7/`.
 
 Acesso às fontes em 04/11/2026.
 
