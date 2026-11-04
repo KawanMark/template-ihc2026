@@ -20,7 +20,7 @@ O mapa indica regiões relevantes para a predição, sem provar a presença de i
 
 | Característica | Definição para o protótipo | Consequência para IHC |
 |---|---|---|
-| Software | Interface desktop, representada primeiro em baixa fidelidade e depois no Figma. | Manter os mesmos termos e estados entre os protótipos. |
+| Software | Interface para uso em computador, com protótipo navegável no Figma; demonstração técnica local em navegador, quando integrada. Windows/Linux como ambientes previstos, sem dependência de celular. | Manter os mesmos termos e estados entre os protótipos. |
 | Hardware | Mouse, teclado e um monitor; referência de avaliação: 1920 × 1080, em tela de 22–24 polegadas. | Dar prioridade à radiografia e verificar a legibilidade dos painéis. É uma condição de teste, não um levantamento do posto real. |
 | Capacidades | Abrir um caso, ajustar visualização, comparar camadas, marcar regiões e gerar parecer. | Ajustes e marcações devem ser reversíveis, preservando a imagem original. |
 | Restrições | Sem validação profissional da interface; mapa de atenção aproximado e sem classificação do tipo de ilícito. | Explicar limites do resultado e separar indicação automática de conclusão humana. |
@@ -32,17 +32,19 @@ O mapa indica regiões relevantes para a predição, sem provar a presença de i
 
 ## 2. Princípios do projeto
 
-| Princípio | Aplicação no projeto | Base |
-|---|---|---|
-| Contexto e tarefa | Concentrar a tela na comparação e no registro; fila priorizada depende de H04/H41. | Entregas 1, 3 e 7. |
-| Controle do usuário | Permitir ocultar mapa, restaurar ajustes e corrigir marcações antes da exportação. | T01–T03; RC01/RC09. |
-| Clareza do resultado | Distinguir imagem, destaque do modelo e parecer humano; não usar “liberar carga” para um apontamento. | H31/H39; ED01–ED05 da Entrega 7. |
-| Acessibilidade visual | Informação crítica com texto além da cor; contraste mínimo de 4,5:1 para texto comum e 3:1 para texto grande. | WCAG 2.2, critérios 1.4.1 e 1.4.3. |
-| Acesso aos controles | Foco visível, controles nomeados e operação por teclado; alternativa por clique ao comando de manter a tecla C pressionada. | WCAG 2.2, critérios 2.1.1, 2.4.7 e 4.1.2. |
-| Prevenção e recuperação | Identificar campo incompleto e preservar o que já foi preenchido; confirmar descarte de um parecer em edição. | PP06 da Entrega 6; WCAG 2.2, critérios 3.3.1 e 3.3.3. |
-| Minimização de dados | Usar identificação fictícia nos casos e publicar apenas resultados de avaliação sem identificação pessoal. | Aspectos éticos da Entrega 7. |
+**Contexto de uso adotado:** P01 examina a radiografia em estação com teclado, mouse e monitor dedicado; P02 recebe o parecer para apoiar o despacho. A sala de operação é documentada, mas iluminação, interrupções, volume por turno e pressão temporal continuam hipóteses (H14–H16, ?07). O protótipo trabalha um caso por vez. Essas condições orientam os princípios abaixo.
 
-Esses critérios orientam o projeto; sua inclusão não declara conformidade integral do protótipo com a WCAG.
+| Contexto de uso | Referência | O que orienta e por que importa | Link |
+|---|---|---|---|
+| P01 compara a imagem com o destaque do modelo. | Mayhew — engenharia de usabilidade, conforme aula 8 | Relacionar usuário, tarefa e plataforma antes de fixar a solução; avaliar e revisar as decisões com base nas metas. | [Material da aula 8 no Moodle](https://moodle.fei.edu.br/mod/resource/view.php?id=2524), págs. 8–15; [perfil](03_personas_contexto_jornada.md) e [tarefas](05_analise_tarefas.md). |
+| Radiografia e camada do modelo usam informação visual. | WCAG 2.2 — 1.4.1 e 1.4.3 | Usar texto além da cor e contraste de 4,5:1 para texto comum e 3:1 para texto grande, para favorecer a leitura dos rótulos e avisos. | [Uso de cor](https://www.w3.org/TR/WCAG22/#use-of-color) e [contraste](https://www.w3.org/TR/WCAG22/#contrast-minimum). |
+| Controles usados com teclado e mouse na estação. | WCAG 2.2 — 2.1.1, 2.4.7 e 4.1.2 | Oferecer teclado, foco visível e nomes acessíveis. Comparar não deve depender apenas de manter a tecla C pressionada. | [Teclado](https://www.w3.org/TR/WCAG22/#keyboard), [foco](https://www.w3.org/TR/WCAG22/#focus-visible) e [nome/papel/valor](https://www.w3.org/TR/WCAG22/#name-role-value). |
+| P01 preenche e revisa o parecer. | WCAG 2.2 — 3.3.1 e 3.3.3 | Identificar o campo incompleto e explicar a correção, preservando as demais informações para evitar retrabalho. | [Identificação de erro](https://www.w3.org/TR/WCAG22/#error-identification) e [sugestão de correção](https://www.w3.org/TR/WCAG22/#error-suggestion). |
+| A análise pode exigir voltar à imagem e corrigir um achado. | Controle do usuário e reversibilidade | Permitir ocultar mapa, restaurar ajustes e editar/excluir marcações antes da exportação. Confirmar descarte ao trocar o caso. | [Protótipo e estados de recuperação](06_prototipacao_papel.md), RC01/RC09. |
+| Resultado automático e decisão humana têm alcances diferentes. | Clareza da comunicação e divisão de responsabilidades | Distinguir resultado do modelo e parecer. A interface não usa liberação de carga como sinônimo de conclusão da imagem. | [Evidências ED01–ED05 e limites](07_coleta_dados.md), H31/H39. |
+| Demonstração e futura avaliação usam casos e anotações. | Minimização de dados e consentimento | Usar identificação fictícia; não expor operações reais nem dados pessoais nos resultados publicados. | [Aspectos éticos e armazenamento](07_coleta_dados.md). |
+
+O link do material de aula exige acesso ao Moodle da FEI; a referência foi conferida na cópia local. Esses critérios orientam o projeto; sua inclusão não declara conformidade integral do protótipo com a WCAG.
 
 ## 3. Metas de usabilidade
 
@@ -83,7 +85,7 @@ São **critérios propostos**, ainda sem resultados. Nas Entregas 12–14, preve
 
 ## 4. Ciclo de revisão
 
-O ciclo adotado é **compreender o contexto → definir requisitos → projetar → avaliar → revisar**. A pesquisa documental sustenta a primeira definição; a ausência de acesso profissional continua como limite da base de conhecimento.
+A organização segue a **engenharia de usabilidade de Mayhew**, trabalhada na aula: perfil e tarefas alimentam plataforma, princípios e metas; seguem-se modelo conceitual, protótipos e avaliações iterativas. No recorte da disciplina, o ciclo é **compreender o contexto → definir requisitos → projetar → avaliar → revisar**. A pesquisa documental sustenta a primeira definição; a ausência de acesso profissional continua como limite da base de conhecimento.
 
 A Entrega 9 transforma PF01/PF02 em objetivos e signos; as Entregas 10/11 modelam e prototipam a interação. A avaliação heurística verifica estados, linguagem e recuperação; o teste observado verifica MU01–MU06. Quando uma meta falhar, registrar o problema e sua origem na rastreabilidade, revisar o fluxo e repetir a tarefa afetada. Evidência nova sobre H39 ou H42 também pode exigir revisão das personas e das tarefas.
 
@@ -93,12 +95,14 @@ A Entrega 9 transforma PF01/PF02 em objetivos e signos; as Entregas 10/11 modela
 - [x] Contribuição técnica e camada de interação estão separadas.
 - [x] Dados, resultados e espera simulados foram explicitados.
 - [x] As metas avaliam a interação e não substituem métricas do TCC.
-- [x] Princípios estão ligados às tarefas e ao contexto.
+- [x] Tabela de princípios contém contexto, referência, justificativa e link.
 - [x] Metas indicam público, tarefa, medida e limite aceitável.
 - [x] Eficácia, eficiência e satisfação foram consideradas.
 - [x] Critérios podem ser verificados nas Entregas 12–14.
 
 ## Referências
+
+- AQUINO JR., Plinio T. *Processos de Projeto de IHC*, Parte A+B, págs. 13–15, e Parte C, págs. 3–6. Material da aula 8, baseado em Barbosa e Silva (2010). Cópia local: `Estudos/FEI_CC8122_IHC/08 - Tópico 8/`.
 
 - Entregas [5](05_analise_tarefas.md), [6](06_prototipacao_papel.md) e [7](07_coleta_dados.md); [rastreabilidade](../RASTREABILIDADE.md).
 - W3C. *Web Content Accessibility Guidelines (WCAG) 2.2*. Recomendação de 2024. [Critérios de acessibilidade](https://www.w3.org/TR/WCAG22/). Acesso em 04/11/2026.
