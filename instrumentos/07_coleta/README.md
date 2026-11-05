@@ -1,12 +1,26 @@
 # Instrumentos online da Entrega 7
 
-O [gerador para Google Apps Script](criar_formularios.gs) prepara I02 (questionário) e I03 (roteiro de entrevista para anotações do entrevistador), com o conteúdo textual da [Entrega 7](../../docs/07_coleta_dados.md). Nenhum instrumento foi aplicado. O gerador ainda não foi executado numa conta Google; não há links online criados nesta revisão.
+Criados em **05/11/2026**, usando o `agent-browser` e o [gerador em Google Apps Script](criar_formularios.gs). Os instrumentos estão publicados; não foram aplicados. As perguntas também estão na [Entrega 7](../../docs/07_coleta_dados.md).
 
-1. Na conta Google da equipe, abrir [Google Apps Script](https://script.google.com/) e criar um projeto.
-2. Copiar `criar_formularios.gs` e executar `criarInstrumentosEntrega7`. Autorizar o acesso aos formulários quando solicitado pelo Google.
-3. Os endereços de edição aparecem no registro de execução. Os dois formulários ficam como rascunhos, sem receber respostas. Uma nova execução no mesmo projeto reutiliza os formulários, sem duplicá-los.
-4. Conferir o conteúdo, manter coleta de e-mail desativada e definir acesso compatível com a revisão pelo professor. Publicar somente quando a equipe decidir disponibilizar os instrumentos; verificar o acesso sem privilégios e registrar os links na Entrega 7.
+| Instrumento | Acesso para leitura/preenchimento | Edição pela equipe |
+|---|---|---|
+| I02 — Questionário, Gabriel | [Abrir questionário](https://docs.google.com/forms/d/e/1FAIpQLSdSndNp5FioH8sv7jDSutkHYdAmeOqOeKNn247wJcviVF-Pkg/viewform) | [Editar](https://docs.google.com/forms/d/1oxMqGPpMAJ3TN2_hBkf4w9bmwdtfrLn6T1TFNv9LkFQ/edit) |
+| I03 — Entrevista, Alexandre | [Abrir roteiro](https://docs.google.com/forms/d/e/1FAIpQLSfsc7UUP9KlAzQQzuqxQjVzSOzdyPg5rU0ag7LPhFXdi7pfGg/viewform) | [Editar](https://docs.google.com/forms/d/1_yuRgM6ilwdGepLaH4PZddhkT0oRkj6iZUr1WPa1Ku8/edit) |
 
-No questionário, recusa leva ao encerramento sem apresentar as perguntas. Caso a coleta seja aberta, a recusa pode gerar apenas o registro dessa opção; não deve ser contada como resposta válida. A entrevista é conduzida por uma pessoa: o formulário organiza notas e não transforma a técnica em questionário autoadministrado. Antes de eventual aplicação, definir canal para pedir exclusão pelo código e conferir se as permissões da conta não exigem identificação do participante.
+Os links de edição exigem permissão da conta proprietária; conhecer o endereço não concede acesso. O roteiro I03 serve ao entrevistador para organizar notas, não substitui uma conversa conduzida por ele.
 
-Referência técnica: Google, [FormApp](https://developers.google.com/apps-script/reference/forms/form-app) e [Form](https://developers.google.com/apps-script/reference/forms/form). Sintaxe verificada localmente; execução e permissões online dependem da conta da equipe.
+## Verificação
+
+- Acesso às duas seções de cada formulário em sessão sem login.
+- Conteúdo conferido com os roteiros do repositório; campos de explicação/correção são opcionais.
+- Coleta de e-mail e limitação de uma resposta por conta desativadas.
+- Consentimento inicial; o código configura a recusa para encerrar antes das perguntas.
+- Nenhuma resposta enviada durante a conferência. Capturas vazias em [assets/07_coleta](../../assets/07_coleta/).
+
+Uma eventual recusa enviada não deve contar como resposta válida. Antes de aplicação, a equipe deve definir o canal para pedidos de exclusão por código e restringir o acesso às respostas brutas. As respostas não devem ser publicadas no repositório.
+
+## Manutenção
+
+O [projeto no Apps Script](https://script.google.com/home/projects/1pnhS6OUvm2rhswMvrKRRakXRe-88Z5PIljkYtO9kIy4lLqHdVib6VcKg/edit) guarda a função `criarInstrumentosEntrega7`. Ela reutiliza os formulários no mesmo projeto; copiar o código para outro projeto cria outros formulários. A execução publica os instrumentos, sem enviar respostas.
+
+Referência técnica: Google, [FormApp](https://developers.google.com/apps-script/reference/forms/form-app) e [Form](https://developers.google.com/apps-script/reference/forms/form).
