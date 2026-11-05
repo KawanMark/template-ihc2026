@@ -1,5 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">Mapa consolidado de objetivos — Mesa de inspeção</title>
+<desc id="desc">CI01 examina o caso; CI02 compreende o parecer; CI03 prepara informação. O02 é compartilhado pelos três. O07 e O08 são compartilhados por CI02 e CI03. A conferência física permanece fora da interface.</desc>
+<rect width="1200" height="700" fill="#f8fafc"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+<polyline points="600,100 600,125 210,125 210,150" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="600,100 600,125 600,125 600,150" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="600,100 600,125 990,125 990,150" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="210,232 210,260 600,260 600,288" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="600,232 600,260 600,260 600,288" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="990,232 990,260 600,260 600,288" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="210,232 210,415 170,415 170,445" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="210,232 210,415 550,415 550,445" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="210,232 210,415 930,415 930,445" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="600,232 400,245 400,375 1180,375 1180,535 905,535 905,560" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="990,232 990,375" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1180,535 360,535 360,560" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="300" y="32" width="600" height="68" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="600.0" y="59" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Analisar e comunicar um achado na radiografia</text>
+<rect x="40" y="150" width="340" height="82" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="210.0" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O01 Examinar o caso</text>
+<text x="210.0" y="201" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">com apoio visual · CI01</text>
+<rect x="430" y="150" width="340" height="82" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="600.0" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O06 Compreender o</text>
+<text x="600.0" y="201" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">fundamento do parecer · CI02</text>
+<rect x="820" y="150" width="340" height="82" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<text x="990.0" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O09 Preparar informação para</text>
+<text x="990.0" y="201" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">conferência física · CI03</text>
+<rect x="420" y="288" width="360" height="60" rx="10" fill="#fff" stroke="#64748b" stroke-width="2"/>
+<text x="600.0" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O02 Conferir caso</text>
+<rect x="30" y="445" width="280" height="62" rx="10" fill="#fff" stroke="#64748b" stroke-width="2"/>
+<text x="170.0" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O03 Comparar original e mapa</text>
+<rect x="350" y="445" width="400" height="62" rx="10" fill="#fff" stroke="#64748b" stroke-width="2"/>
+<text x="550.0" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O04 Registrar regiões e comentários</text>
+<rect x="790" y="445" width="370" height="62" rx="10" fill="#fff" stroke="#64748b" stroke-width="2"/>
+<text x="975.0" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O05 Concluir e exportar parecer</text>
+<rect x="110" y="560" width="500" height="80" rx="10" fill="#fff" stroke="#64748b" stroke-width="2"/>
+<text x="360.0" y="587" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O07 Relacionar região,</text>
+<text x="360.0" y="611" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">comentário e conclusão</text>
+<rect x="650" y="560" width="510" height="80" rx="10" fill="#fff" stroke="#64748b" stroke-width="2"/>
+<text x="905.0" y="587" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">O08 Reconhecer limites e</text>
+<text x="905.0" y="611" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">informação insuficiente</text>
+<text x="600" y="682" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#334155">O02: compartilhado pelos três cenários · O07/O08: CI02 e CI03 · Vistoria e decisão formal fora da Mesa</text></svg>
