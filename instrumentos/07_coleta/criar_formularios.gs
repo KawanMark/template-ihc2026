@@ -1,10 +1,10 @@
 // Google Apps Script: executar criarInstrumentosEntrega7 em script.google.com.
-// Cria rascunhos na conta que executar. Não publica nem coleta respostas.
+// Cria e publica instrumentos vazios na conta que executar. Não envia respostas.
 function criarInstrumentosEntrega7() {
   const props = PropertiesService.getScriptProperties();
   const questionario = obterOuCriar('I02', 'IHC — I02 — Compreensão da triagem', props);
   if (questionario.getItems().length === 0) {
-    questionario.setDescription(CONSENTIMENTO);
+    questionario.setDescription('Entrega 7 — IHC — Equipe 09. Responsável: Gabriel Albertini Pinheiro — 22.122.094-8. Tempo estimado: 5 a 10 minutos. ' + CONSENTIMENTO);
     const consentimento = questionario.addMultipleChoiceItem()
       .setTitle('Você aceita participar?').setRequired(true);
     const perguntas = questionario.addPageBreakItem().setTitle('Questionário');
@@ -28,7 +28,7 @@ function criarInstrumentosEntrega7() {
   }
   const entrevista = obterOuCriar('I03', 'IHC — I03 — Roteiro de entrevista', props);
   if (entrevista.getItems().length === 0) {
-    entrevista.setDescription('Roteiro para o entrevistador, sem gravação. Leia o consentimento e peça autorização para notas. Não registre nomes, empresas ou operações identificáveis. ' + CONSENTIMENTO);
+    entrevista.setDescription('Entrega 7 — IHC — Equipe 09. Responsável: Alexandre Domiciano Pierri — 22.125.061-6. Roteiro para o entrevistador, sem gravação. Leia o consentimento e peça autorização para notas. Não registre nomes, empresas ou operações identificáveis. ' + CONSENTIMENTO.replace('Este questionário acadêmico', 'Esta entrevista acadêmica'));
     entrevista.addTextItem().setTitle('Código da entrevista (sem nome ou contato)');
     const consentimento = entrevista.addMultipleChoiceItem()
       .setTitle('O participante aceitou a entrevista e as notas escritas?').setRequired(true);
@@ -41,8 +41,9 @@ function criarInstrumentosEntrega7() {
     entrevista.addParagraphTextItem().setTitle('Correções solicitadas após a recapitulação das notas');
   }
   [questionario, entrevista].forEach(form => {
-    form.setAcceptingResponses(false);
-    Logger.log(form.getTitle() + ': ' + form.getEditUrl());
+    form.setPublished(true);
+    form.setAcceptingResponses(true);
+    Logger.log(form.getTitle() + ' | EDITAR: ' + form.getEditUrl() + ' | RESPONDER: ' + form.getPublishedUrl());
   });
 }
 
