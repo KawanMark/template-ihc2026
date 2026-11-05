@@ -98,6 +98,12 @@ Quando o estado é "aberta" ou "parcialmente sustentada", a coluna "Impacto no p
 
 As descrições iniciais de autoencoder/mapa residual e a evolução para classificador/mapas de atenção ficam diferenciadas na Entrega 7. A cadeia R01/R03 mantém a intenção de comparação e registro, sem tratar os métodos como equivalentes.
 
+## 2.2 Metas da Entrega 8
+
+A [Entrega 8](docs/08_engenharia_usabilidade.md) define a plataforma demonstrativa, os limites do modelo e as metas MU01–MU06. A revisão pela aula 8 explicita Mayhew e relaciona cada princípio ao contexto, à referência, à justificativa e ao link. São critérios de projeto, sem avaliações executadas: comparação (MU01), compreensão da IA (MU02), parecer completo (MU03), tempo de registro (MU04), prevenção/recuperação (MU05) e facilidade percebida (MU06). A população prevista tem três participantes externos; eventual uso de proxies limita as conclusões à interação.
+
+R01/AC02/PF01 serão avaliados por MU01/MU02; R03/AC03/PF02 por MU03–MU05; MU06 cobre ambos. Não há nova evidência sobre rotina profissional, metas portuárias ou calibração do modelo. Simulação de resultados e latência é declarada; P03 permanece stakeholder.
+
 ## 2.1 Personas da Entrega 3 e hipóteses de que dependem
 
 As três fichas são proto-personas: nenhuma foi construída com pesquisa com usuários. A tabela mostra o que cada uma tem de sustentado, de que hipóteses abertas depende e para onde segue.
@@ -179,6 +185,7 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 | `T01` | Tarefa modelada | Entrega 5 |
 | `PF01` | Fluxo do protótipo em papel / baixa fidelidade | Entrega 6 |
 | `PP01` | Tela ou estado do protótipo em papel / baixa fidelidade | Entrega 6 |
+| `MU01` | Meta de usabilidade | Entrega 8 |
 | `I01` | Instrumento de coleta | Entrega 7 |
 | `D01` | Documento do corpus de pesquisa | Entrega 7 |
 | `ED01` | Evidência extraída de documento | Entrega 7 |
