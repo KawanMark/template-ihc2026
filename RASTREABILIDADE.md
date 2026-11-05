@@ -98,6 +98,24 @@ Quando o estado é "aberta" ou "parcialmente sustentada", a coluna "Impacto no p
 
 As descrições iniciais de autoencoder/mapa residual e a evolução para classificador/mapas de atenção ficam diferenciadas na Entrega 7. A cadeia R01/R03 mantém a intenção de comparação e registro, sem tratar os métodos como equivalentes.
 
+## 2.2 Metas da Entrega 8
+
+A [Entrega 8](docs/08_engenharia_usabilidade.md) define a plataforma demonstrativa, os limites do modelo e as metas MU01–MU06. A revisão pela aula 8 explicita Mayhew e relaciona cada princípio ao contexto, à referência, à justificativa e ao link. São critérios de projeto, sem avaliações executadas: comparação (MU01), compreensão da IA (MU02), parecer completo (MU03), tempo de registro (MU04), prevenção/recuperação (MU05) e facilidade percebida (MU06). A população prevista tem três participantes externos; eventual uso de proxies limita as conclusões à interação.
+
+R01/AC02/PF01 serão avaliados por MU01/MU02; R03/AC03/PF02 por MU03–MU05; MU06 cobre ambos. Não há nova evidência sobre rotina profissional, metas portuárias ou calibração do modelo. Simulação de resultados e latência é declarada; P03 permanece stakeholder.
+
+## 2.3 Modelo conceitual da Entrega 9
+
+A [Entrega 9](docs/09_modelo_conceitual.md) apresenta CI01 (Kawan, de CP01), CI02 (Gabriel, de CP02) e CI03 (Alexandre, de CP03), com mapas individuais e consolidado. A revisão pela aula 9 acrescenta versões inicial/refinada e perguntas, mantém os cenários sem rótulos/widgets e classifica as rupturas dos signos em PP/PA/AL/RA/CE. São propostas de interação, sem nova coleta com pessoas. CI03 prepara a informação no parecer e mantém P03 como destinatário externo.
+
+| Cadeia | Objetivos | Signos | Metas da Entrega 8 |
+|---|---|---|---|
+| R01 / AC02 / T01–T02 / PF01 / CI01 | O01, O02, O03, O08 | S01–S06 | MU01/MU02/MU06 |
+| R03 / AC03 / T03–T06 / PF02 / CI01–CI02 | O04–O08, com O02 | S01, S07–S12 e S04 | MU02–MU06 |
+| R03 / CP03 / T07–T09 exploratórias / CI03 | O09, com O02/O07/O08 | S01/S07/S08/S12 | MU03/MU05 |
+
+O parecer não é ato de desembaraço. Encaminhamento institucional, vistoria e retorno do desfecho ficam fora da Mesa; H28/H39/H42/?08 não foram integralmente confirmadas. MoLIC e telas continuam por produzir nas Entregas 10/11.
+
 ## 2.1 Personas da Entrega 3 e hipóteses de que dependem
 
 As três fichas são proto-personas: nenhuma foi construída com pesquisa com usuários. A tabela mostra o que cada uma tem de sustentado, de que hipóteses abertas depende e para onde segue.
@@ -179,6 +197,10 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 | `T01` | Tarefa modelada | Entrega 5 |
 | `PF01` | Fluxo do protótipo em papel / baixa fidelidade | Entrega 6 |
 | `PP01` | Tela ou estado do protótipo em papel / baixa fidelidade | Entrega 6 |
+| `CI01` | Cenário de interação | Entrega 9 |
+| `O01` | Objetivo de interação | Entrega 9 |
+| `S01` | Signo do modelo conceitual | Entrega 9 |
+| `MU01` | Meta de usabilidade | Entrega 8 |
 | `I01` | Instrumento de coleta | Entrega 7 |
 | `D01` | Documento do corpus de pesquisa | Entrega 7 |
 | `ED01` | Evidência extraída de documento | Entrega 7 |

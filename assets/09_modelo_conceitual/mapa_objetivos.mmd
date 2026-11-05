@@ -1,0 +1,15 @@
+flowchart TB
+    G[Analisar e comunicar um achado na radiografia]
+    G --> O01[O01 Examinar o caso com apoio visual — CI01]
+    G --> O06[O06 Compreender o fundamento do parecer — CI02]
+    G --> O09[O09 Preparar informação para conferência física — CI03]
+    O01 --> O02[O02 Conferir caso]
+    O01 --> O03[O03 Comparar original e mapa]
+    O01 --> O04[O04 Registrar regiões e comentários]
+    O01 --> O05[O05 Concluir e exportar parecer]
+    O06 --> O02
+    O06 --> O07[O07 Relacionar região, comentário e conclusão]
+    O06 --> O08[O08 Reconhecer limites e informação insuficiente]
+    O09 --> O02
+    O09 --> O07
+    O09 --> O08
