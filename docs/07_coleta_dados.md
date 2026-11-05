@@ -150,7 +150,12 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 ### Preparação dos instrumentos online
 
-A atividade da aula pede ferramenta online para questionário e entrevista. O [gerador dos formulários](../instrumentos/07_coleta/README.md) reproduz I02/I03 no Google Forms, com consentimento e coleta de e-mail desativada. Foi preparado, mas não executado em conta Google: **a criação e verificação dos links online ainda não foram realizadas**. O conteúdo integral dos instrumentos permanece acima.
+Os dois instrumentos foram criados no Google Forms em **05/11/2026**, com acesso verificado sem login e coleta de e-mail desativada:
+
+- **I02 — [Questionário de compreensão da triagem](https://docs.google.com/forms/d/e/1FAIpQLSdSndNp5FioH8sv7jDSutkHYdAmeOqOeKNn247wJcviVF-Pkg/viewform)** — Gabriel. [Captura do formulário vazio](../assets/07_coleta/i02_questionario.png).
+- **I03 — [Roteiro de entrevista](https://docs.google.com/forms/d/e/1FAIpQLSfsc7UUP9KlAzQQzuqxQjVzSOzdyPg5rU0ag7LPhFXdi7pfGg/viewform)** — Alexandre. Formulário para notas do entrevistador, não para resposta autônoma do participante. [Captura do roteiro vazio](../assets/07_coleta/i03_roteiro_entrevista.png).
+
+Os instrumentos estão publicados, mas **não foram aplicados**. A verificação percorreu as seções sem enviar respostas. O conteúdo textual permanece acima; o [código de criação e os links de edição](../instrumentos/07_coleta/README.md) também foram preservados.
 
 ## Resultados da pesquisa documental
 
@@ -191,7 +196,7 @@ A Parte A segue os cinco grupos da aula 7 (Parte A, páginas 2–8 e exercício 
 - [x] Instrumentos preparados diferenciados de coleta realizada.
 - [x] Limitações e hipóteses ainda abertas registradas.
 - [x] Rastreabilidade atualizada.
-- [ ] Instrumentos criados em ferramenta online e links de acesso verificados.
+- [x] Instrumentos criados no Google Forms e links verificados sem login.
 
 ## Referências
 

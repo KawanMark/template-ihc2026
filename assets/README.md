@@ -6,6 +6,7 @@ Use as pastas abaixo para manter o repositório navegável:
 - `03_personas/` — personas, mapa de empatia e jornada.
 - `05_tarefas/` — HTA, GOMS, CTT e fontes editáveis.
 - `06_prototipos/` — desenho principal em baixa fidelidade e fonte do tldraw.
+- `07_coleta/` — capturas dos instrumentos online vazios, sem respostas de participantes.
 - `09_modelo_conceitual/` — mapa de objetivos e esquemas.
 - `10_molic/` — diagramas MoLIC e fontes editáveis; fluxograma anterior guardado como referência.
 - `11_figma/` — estados e descrição detalhada realocados da Entrega 6 para reaproveitamento; prints de telas/estados do protótipo, incluindo quando pertinentes dashboard, relatórios, histórico/filtros, administração, CRUDs e estados de erro/processamento.
