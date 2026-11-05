@@ -82,6 +82,22 @@ Quando o estado é "aberta" ou "parcialmente sustentada", a coluna "Impacto no p
 | **?07** | Existem metas de liberação por turno ou por dia para quem examina as imagens? Como são cobradas? | ? | Se existirem, a pressão de produtividade vira restrição de projeto. Se não, não deve aparecer em personas e cenários. | Entrega 7 (entrevista) | PENDENTE | aberta | Decide se tempo por contêiner entra como meta de usabilidade. |
 | **?08** | Qual é a relação entre a evidência de anomalia produzida sobre a imagem e o canal de parametrização da declaração? O resultado da imagem pode levar à mudança de canal? Quem faz essa mudança e como ela chega ao Siscomex? | ? | Evita que um resultado algorítmico seja lido como decisão normativa. Define se canal e anomalia aparecem juntos, separados ou se o canal nem aparece. | Entrega 7 (entrevista, normas da RFB sobre uso de imagens de escâner na conferência) | [F] Manual de Despacho de Importação (C02, print marcado, P1 e P2): os elementos de seleção do canal são fiscais e documentais, e a declaração em canal verde pode ser redirecionada durante a análise fiscal quando há indícios de irregularidade. Não diz como a imagem entra nesse processo. (Entrega 2) [F] Portaria ALF/FNS nº 9/2024, art. 8º: a suspeita é comunicada à RFB com interrupção do fluxo, a carga fica retida e segregada, e segue se não houver manifestação ou bloqueio no Siscomex Carga em 3 dias úteis. Vale para uma unidade e não trata do canal de parametrização. (norma consultada em 06/10/2026) [F] A Tribuna, 2013: em Santos, servidores da COV podem bloquear cargas a partir das imagens. Não diz como o bloqueio chega ao auditor do despacho nem ao canal de parametrização. (Entrega 4, CP02) | aberta, com resposta parcial para uma unidade | Canal e resultado da IA ficam separados na interface até a relação ser conhecida. |
 
+## 2.1a Atualização documental da Entrega 7
+
+**Data:** 04/11/2026. A [Entrega 7](docs/07_coleta_dados.md) foi concluída com pesquisa documental como coleta principal, devido à falta de acesso ao profissional especializado. Cinco fontes públicas foram analisadas; questionário e entrevista foram preparados, sem aplicação. Na revisão pelas aulas, a Parte A passou a explicitar os cinco grupos de dados: usuário, tecnologia, domínio, tarefas e motivações/valores. Características pessoais e preferências não documentadas permanecem desconhecidas. Em 05/11/2026, I02/I03 foram criados e publicados no Google Forms; os links foram verificados em sessão sem login e estão na Entrega 7. A navegação de conferência não enviou respostas: os instrumentos continuam não aplicados.
+
+| IDs | Evidência e resultado | Consequência de IHC |
+|---|---|---|
+| H01, H39 | ED01/ED03 distinguem responsabilidades do recinto e da fiscalização. Sustentação parcial; o percurso completo da interpretação permanece desconhecido. | Manter a distinção entre parecer e decisão formal. |
+| H11, H26 | ED01/ED02 documentam transmissão de imagem com metadados. Uso efetivo de cada campo pelo analista continua aberto. | Identificar o caso e tratar upload como entrada demonstrativa. |
+| H28, H32, ?08 | Há transmissão e uso de imagens, sem descrição completa do encaminhamento do parecer e retorno do desfecho. | Permanecem abertas; não afirmar ausência de integração. |
+| H30 | ED04 documenta comparação lado a lado entre radiografias no InSight. | Refinada quanto ao recurso de mercado; preferência por original/mapa lado a lado ou sobreposição não foi medida. |
+| H31, H37 | ED05 fundamenta o mapa como indicação aproximada de relevância para a predição. | Compreensão e aceitação continuam abertas. Não equiparar mapa de atenção a mapa residual ou prova de ilícito. |
+| H03, H42 | ED03 diferencia atores da conferência, sem demonstrar uso direto da solução. | P03 permanece stakeholder, sem tela própria. |
+| H04, H41, H10, H16, H34, ?07 | Sem nova evidência sobre fila, autonomia, condições de trabalho, metas ou redução de esforço. | Hipóteses preservadas; sem benefícios operacionais medidos. |
+
+As descrições iniciais de autoencoder/mapa residual e a evolução para classificador/mapas de atenção ficam diferenciadas na Entrega 7. A cadeia R01/R03 mantém a intenção de comparação e registro, sem tratar os métodos como equivalentes.
+
 ## 2.1 Personas da Entrega 3 e hipóteses de que dependem
 
 As três fichas são proto-personas: nenhuma foi construída com pesquisa com usuários. A tabela mostra o que cada uma tem de sustentado, de que hipóteses abertas depende e para onde segue.
@@ -121,6 +137,7 @@ Os padrões adotados na Entrega 6 (`PF01` e `PF02`, estados `PP01` a `PP06`) est
 
 | Data | O que mudou | Evidência/feedback que motivou | Artefatos afetados | Responsável |
 |---|---|---|---|---|
+| 04/11/2026 | Entrega 7 concluída com pesquisa documental, cinco fontes e achados ED01–ED05. Questionário e entrevista preparados sem aplicação. Texto e instrumentos enxugados, preservando autoria, ética, evidências e limitações. | Falta de acesso ao perfil especializado informada pela equipe; fontes e limites na Entrega 7. | Entrega 7; complementos de H01, H11, H26, H28, H30–H32, H37, H39, H42 e ?08 na seção 2.1a; continuidade de R01/R03. | Equipe — contribuições identificadas na Entrega 7 |
 | 05/11/2026 | Entrega 6 simplificada, mantendo escopo, famílias, fluxos, prancha principal do tldraw, tabela breve de estados/retornos, protocolo do walkthrough, evidências OBS-01–OBS-06 e alterações antes/depois. Fluxograma preservado nos assets da Entrega 10; estados e descrição completa nos da Entrega 11, como material de referência. | Solicitação da equipe para simplificar a entrega de baixa fidelidade. | Entrega 6; R01/R03; assets/06_prototipos, assets/10_molic e assets/11_figma. O escopo funcional permanece o mesmo. | Equipe |
 | 03/09/2026 | A escala de risco passa de três para **quatro** níveis, incluindo um estado de "indício de fraude" distinto de "vistoria física". | C02 — o gerenciamento de risco do despacho de importação classifica a declaração nos canais verde, amarelo, vermelho e cinza (Manual de Despacho de Importação da RFB). | H24, H33; fila de triagem e semáforo de risco do protótipo | Gabriel Albertini Pinheiro |
 | 03/09/2026 | O registro de veredito deixa de ser modelado como mudança de estado e passa a ser um **ato motivado, com destinatário e prazo**. | C02 — a exigência fiscal é comunicada formalmente ao administrado com motivo e prazo de resposta. | H19, H32, RC04; fluxo de decisão | Gabriel Albertini Pinheiro |
@@ -162,6 +179,9 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 | `T01` | Tarefa modelada | Entrega 5 |
 | `PF01` | Fluxo do protótipo em papel / baixa fidelidade | Entrega 6 |
 | `PP01` | Tela ou estado do protótipo em papel / baixa fidelidade | Entrega 6 |
+| `I01` | Instrumento de coleta | Entrega 7 |
+| `D01` | Documento do corpus de pesquisa | Entrega 7 |
+| `ED01` | Evidência extraída de documento | Entrega 7 |
 | `M01` | Diagrama MoLIC | Entrega 10 |
 | `F01` | Tela ou estado no Figma | Entrega 11 |
 | `V01` | Violação de heurística | Entrega 13 |
