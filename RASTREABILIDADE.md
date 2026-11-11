@@ -231,3 +231,9 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 | R03 / CI03 / CP03 exploratório | O09/O02/O07/O08; S01/S04/S07–S12 | M03 | Preparação na origem; P03 continua stakeholder. |
 
 [Diagramas e fontes](docs/10_molic.md). F01–F12 são estados previstos para a Entrega 11, ainda sem arquivo publicado no Figma. Não foram acrescentadas funcionalidades ao escopo nem realizadas sessões com usuários.
+
+## Entrega 11 — pranchas preparadas (11/11/2026)
+
+R01/M01 → F01–F05 e F10A/B: entrada, espera, comparação e falha. R03/M01/M03 → F06–F09, F10C/D e F11A/B: registro, revisão, exportação e recuperação. R03/M02 → F12: conteúdo do parecer recebido. As fontes estão em `assets/11_figma/`; imagens técnicas existentes no TCC têm origem registrada no README dos assets.
+
+A montagem, publicação, permissões e verificação dos fluxos no Figma permanecem pendentes por solicitação da equipe. As pranchas estáticas não validam MU01–MU06 nem substituem observação de usuários.
