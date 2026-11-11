@@ -1,138 +1,85 @@
-# Entrega 13 — Avaliação de IHC por inspeção heurística
+# Entrega 13 — Avaliação heurística
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
-**Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
+**Data:** 11/11/2026<br>
+**Status:** 🟨 processo e fichas preparados; três inspeções individuais e consolidação pendentes.<br>
+**Responsabilidade:** uma inspeção completa por integrante, seguida de síntese da equipe.
 
-## Objetivo da atividade
+A inspeção avalia a interação da Mesa de inspeção, não o desempenho científico do modelo. Conforme a aula 13, cada pessoa primeiro examina a interface individualmente; depois a equipe consolida os problemas. Preparar fichas não equivale a executar essas inspeções.
 
-Encontrar problemas de usabilidade por inspeção sistemática da interface com as **10 heurísticas de Nielsen**. Cada avaliador trabalha individualmente primeiro; depois a equipe consolida problemas duplicados e prioridades.
+## 1. Processo / fluxograma
 
-> **Parte de violações:** registre somente problemas reais. Não invente uma violação para “preencher” cada heurística. Para provar que todas foram exercitadas, use a **matriz de cobertura H1–H10**. Para heurísticas sem violação, a disciplina solicita um exemplo didático de boa prática.
+![Processo da inspeção](../assets/13_heuristica/fluxograma_inspecao.svg)
 
-## 1. Heurísticas adotadas
+[Fonte SVG editável](../assets/13_heuristica/fluxograma_inspecao.svg). A revisão devolve os fluxos afetados à inspeção, mantendo a versão de origem de cada achado.
 
-1. Visibilidade do status do sistema
-2. Compatibilidade entre o sistema e o mundo real
-3. Controle e liberdade do usuário
-4. Consistência e padrões
-5. Prevenção de erros
-6. Reconhecimento em vez de memorização
-7. Flexibilidade e eficiência de uso
-8. Estética e design minimalista
-9. Ajudar usuários a reconhecer, diagnosticar e recuperar-se de erros
-10. Ajuda e documentação
-
-## Cobertura especial para interfaces administrativas e analíticas
-
-Quando existirem, não limite a avaliação às “telas principais”. Inspecione também:
-
-- dashboard em estados normal, vazio e erro;
-- filtros sem resultado e filtros combinados;
-- relatórios e exportação;
-- histórico/listas longas;
-- formulários CRUD (criação, edição, exclusão, validação);
-- alteração de perfil/permissão;
-- confirmações de ações destrutivas;
-- processamento/loading/progresso;
-- falha e recuperação;
-- comparação de resultados;
-- mensagens de termos técnicos, métricas e recomendações;
-- ajuda/documentação contextual.
-
-Em TCCs técnicos, observe especialmente se a interface comunica o estado do processamento e traduz informações técnicas para o vocabulário do usuário escolhido.
-
-## 2. Escopo da inspeção
+## 2. Escopo e procedimento
 
 | Item | Definição |
 |---|---|
-| Versão avaliada | {{link/commit/data}} |
-| Telas/estados | {{lista completa}} |
-| Fluxos | {{M01/M02...}} |
-| Dispositivo/viewport | {{...}} |
-| Avaliadores | {{nomes}} |
+| Versão | Base visual: [pranchas da Entrega 11](11_figma.md). Inspeção final depende do Figma navegável; registrar URL/node, commit e data nas fichas. |
+| Telas/estados | F01–F09, F10A/B/C/D, F11A/B e F12: 16 pranchas. Incluir leitura do documento, vazio, processamento, erro, retorno, confirmação e sucesso. |
+| Fluxos | M01 exame/registro; M02 compreensão do parecer; M03 preparação para conferência. |
+| Dispositivo | Computador com teclado/mouse; referência 1920 × 1080. Registrar configuração efetiva. |
+| Fora do recorte | Dashboard, filtros, histórico, CRUD, permissões e decisão institucional não existem na solução. Não inventar testes para esses padrões. |
 
-## 3. Procedimento individual
+Cada integrante faz uma passagem de familiarização e outra verificando H1–H10 em **todos** os estados. Registra ação, localização e print destacado por problema; depois justifica severidade e recomenda correção. Não discutir achados antes de concluir as três fichas. Ausência de observação não pode ser preenchida como “sem violação”.
 
-Cada avaliador deve:
-
-1. percorrer os fluxos/telas ao menos uma vez para familiarização;
-2. inspecionar novamente aplicando sistematicamente H1–H10;
-3. registrar cada problema com evidência e contexto;
-4. atribuir severidade **depois de compreender bem o problema**, justificando a decisão;
-5. não discutir achados com os demais antes de terminar a inspeção individual, quando o objetivo for preservar independência.
-
-### Escala de severidade (0–4)
-
-| Grau | Interpretação |
+| Severidade | Significado |
 |---:|---|
-| 0 | não é considerado problema de usabilidade |
-| 1 | problema cosmético; corrigir se houver tempo |
-| 2 | problema menor; baixa prioridade |
-| 3 | problema maior; alta prioridade |
-| 4 | catástrofe de usabilidade; correção imperativa antes de disponibilizar |
+| 0 | Não é problema de usabilidade. |
+| 1 | Cosmético; corrigir se houver tempo. |
+| 2 | Menor, com baixa prioridade. |
+| 3 | Maior; alta prioridade. |
+| 4 | Impede disponibilização até a correção. |
 
-Ao justificar, considere **frequência, impacto e persistência** do problema no contexto real de uso.
+A justificativa considera frequência provável, impacto sobre a tarefa e persistência, conforme págs. 11–14 da aula. Uma inspeção não demonstra a frequência real de erro de usuários.
 
----
+## 3. Registros individuais
 
-## Avaliador A01 — {{nome}}
+| Avaliador / responsável | Ficha com matriz H1–H10 e declaração de violações | Situação |
+|---|---|---|
+| A01 — Kawan Mark Geronimo Da Silva, 22.222.010-5 | [Inspeção A01](../instrumentos/13_heuristica/a01.md) | Não realizada. |
+| A02 — Gabriel Albertini Pinheiro, 22.122.094-8 | [Inspeção A02](../instrumentos/13_heuristica/a02.md) | Não realizada. |
+| A03 — Alexandre Domiciano Pierri, 22.125.061-6 | [Inspeção A03](../instrumentos/13_heuristica/a03.md) | Não realizada. |
 
-### 4. Matriz de cobertura das 10 heurísticas
+Cada ficha inclui cobertura, registro de violações com evidência/severidade/recomendação e boas práticas para heurísticas não violadas. Não há achados atribuídos a integrantes sem que tenham inspecionado. O arquivo ilustrativo antigo `v01.svg` não foi utilizado como evidência.
 
-| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
-|---|---|---|---|---|
-| H1 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H2 | {{...}} | sim/não |  |  |
-| H3 | {{...}} | sim/não |  |  |
-| H4 | {{...}} | sim/não |  |  |
-| H5 | {{...}} | sim/não |  |  |
-| H6 | {{...}} | sim/não |  |  |
-| H7 | {{...}} | sim/não |  |  |
-| H8 | {{...}} | sim/não |  |  |
-| H9 | {{...}} | sim/não |  |  |
-| H10 | {{...}} | sim/não |  |  |
+## 4. Uso das heurísticas — exercício didático
 
-### 5. Declaração de violações
+Os slides de fechamento da aula 14 pedem **dez exemplos**, um para cada heurística. A tabela abaixo mostra decisões presentes nas pranchas. Não é resultado das inspeções e não significa que cada heurística esteja integralmente atendida.
 
-| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
-|---|---|---|---|---|---:|---|---|
-| V01 | H1 | {{F02}} | {{o que ocorre, em que ação e qual consequência}} | ![print](../assets/13_heuristica/v01.svg) | 3 | {{frequência/impacto/persistência}} | {{correção específica}} |
+| Heurística de Nielsen | Exemplo no projeto | Evidência e propósito |
+|---|---|---|
+| H1 — Visibilidade do estado | “Analisando imagem” separado de sucesso e falha. | [F02](../assets/11_figma/f02.svg), [F10B](../assets/11_figma/f10b.svg): evitar interpretar falta de resultado como normalidade. |
+| H2 — Correspondência com o mundo real | Caso, carga declarada, região e parecer, sem código técnico como mensagem principal. | [F08](../assets/11_figma/f08.svg): comunicar o fundamento da observação. Vocabulário ainda requer validação com o perfil. |
+| H3 — Controle e liberdade | Cancelar análise, voltar para corrigir e manter caso diante de descarte. | [F02](../assets/11_figma/f02.svg), [F11A](../assets/11_figma/f11a.svg): saída explícita. |
+| H4 — Consistência e padrões | Mesmos rótulos para original, sobreposição e lado a lado; posição persistente. | [F03](../assets/11_figma/f03.svg), [F05](../assets/11_figma/f05.svg): reconhecer ações equivalentes. |
+| H5 — Prevenção de erros | Responsável obrigatório e confirmação de conclusão divergente. | [F10C](../assets/11_figma/f10c.svg), [F11B](../assets/11_figma/f11b.svg): conferir antes da emissão. |
+| H6 — Reconhecimento em vez de memorização | Caso, marcação numerada e comentário aparecem juntos na revisão. | [F08](../assets/11_figma/f08.svg): relacionar evidência sem depender da lembrança. |
+| H7 — Flexibilidade e eficiência | Alternativas original/sobreposição/lado a lado e restauração dos ajustes. | [F05](../assets/11_figma/f05.svg): adequar a comparação; eficiência ainda será medida. |
+| H8 — Estética e minimalismo | Radiografia ocupa o painel principal; registro e resultado agrupados à direita. | [F06](../assets/11_figma/f06.svg): foco na tarefa, sem indicadores ou cadastros sem objetivo. |
+| H9 — Reconhecimento e recuperação de erros | Mensagem explica falha de exportação, preservação dos registros e verificação do destino. | [F10D](../assets/11_figma/f10d.svg): orientar a próxima ação. |
+| H10 — Ajuda e documentação | Passos curtos junto à análise e limites do mapa no painel do resultado. | [F03](../assets/11_figma/f03.svg): ajuda contextual; não depende de manual externo. |
 
-**Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+## 5. Consolidação e plano de melhoria
 
-### 6. Boas práticas — heurísticas não violadas (atividade didática)
+Após as três inspeções, agrupar problemas pela mesma causa/tela, preservando todos os IDs e avaliadores. Resolver diferenças de severidade com justificativa, sem calcular uma média automática. Só então preencher:
 
-| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
-|---|---|---|---|
-| {{H4}} | {{...}} | {{print}} | {{...}} |
+| ID consolidado | IDs individuais / avaliadores | Heurística / tela | Problema e evidência | Severidade final / motivo | Prioridade / responsável / situação |
+|---|---|---|---|---|---|
 
-> Repita a seção para A02, A03... um avaliador por integrante.
-
-## 7. Consolidação da equipe
-
-Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes devem ser consolidados, preservando quem os encontrou.
-
-| ID consolidado | Achados individuais | Heurística | Problema | Severidade final | Prioridade | Responsável pela correção |
-|---|---|---|---|---:|---|---|
-| HC01 | V01(A01), V04(A02) | H1 | {{...}} | {{...}} | alta | {{...}} |
-
-## 8. Síntese e plano de melhoria
-
-- Quantidade de problemas por heurística e severidade.
-- Problemas críticos/graves que bloqueiam teste ou release.
-- Padrões recorrentes entre telas.
-- Correções que serão feitas antes/para a avaliação com usuários.
+**Síntese atual:** ainda não há contagem de problemas por heurística ou severidade, nem conclusão de que inexistam problemas. A tabela vazia indica coleta pendente. Depois da coleta, registrar totais, padrões recorrentes e os bloqueios encontrados. Severidade 4 deve ser corrigida e verificada antes dos testes; problemas 3 que comprometam UT01–UT03 também bloqueiam a respectiva tarefa. Demais ajustes seguem impacto/recorrência. Cada correção precisa citar achado, versão e tela na rastreabilidade.
 
 ## Checklist
 
-- [ ] Cada integrante fez uma inspeção completa e identificada.
-- [ ] Todas as telas/estados relevantes foram examinados.
-- [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
-- [ ] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
-- [ ] H1–H10 aparecem na matriz de cobertura de cada avaliador.
-- [ ] Parte de violações contém apenas violações, sem “forçar” exemplos.
-- [ ] Todo problema tem print/localização e contexto.
-- [ ] Severidade possui justificativa, não apenas número.
-- [ ] Recomendação resolve a causa ou reduz o impacto.
-- [ ] Achados duplicados foram consolidados ao final.
+- [x] Escopo, processo iterativo, procedimento individual e escala definidos.
+- [x] Ficha completa com H1–H10 preparada para cada integrante.
+- [x] Estados de erro, processamento, relatório e retorno incluídos no escopo.
+- [x] Exercício didático separado das violações, com dez exemplos do projeto.
+- [x] Critérios de evidência, severidade, recomendação e consolidação definidos.
+- [ ] Cada integrante executou sua inspeção completa na versão navegável.
+- [ ] Matrizes preenchidas com resultados e boas práticas observadas.
+- [ ] Violações reais registradas com print destacado, contexto e justificativa.
+- [ ] Duplicados consolidados; totais e correções prioritárias definidos.
+
+**Referências:** aula 13, *Avaliação de Usabilidade por Inspeções*, págs. 8–16; aula 14, *Teste de Usabilidade com Observação do Usuário*, pág. 16; [plano DECIDE](12_planejamento_avaliacao.md). Para concluir, a equipe precisa realizar as três inspeções; revisão automatizada das pranchas não as substitui.

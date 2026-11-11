@@ -248,3 +248,7 @@ A montagem, publicação, permissões e verificação dos fluxos no Figma perman
 | R01/R03 / UT01–UT02 | QA06 | MU06 | Facilidade 1–5 e comentário. |
 
 O plano DECIDE e os instrumentos estão prontos. Nenhum dado foi coletado. Proxies dependem de justificativa individual e validação de adequação com o professor; não substituem validação profissional do TCC.
+
+## Entrega 13 — inspeção preparada (11/11/2026)
+
+M01–M03/F01–F12 compõem o escopo das três inspeções. A01/A02/A03 têm fichas separadas e matriz H1–H10; o processo inclui preparação, coleta individual, interpretação, consolidação, relato e revisão. A tabela de dez exemplos é didática, não comprova inspeções individuais. Não há V/HC ou severidades coletadas; esses IDs só serão atribuídos a problemas observados após a execução pela equipe.
