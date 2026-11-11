@@ -221,3 +221,34 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 - Não force relação inexistente: se algo ainda não foi modelado, marque `PENDENTE`.
 - Ao remover uma funcionalidade, registre a decisão em vez de apagar silenciosamente o histórico.
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
+
+## Entrega 10 — conversas modeladas (11/11/2026)
+
+| Origem | Objetivos/signos | MoLIC | Decisão |
+|---|---|---|---|
+| R01 / CI01 / T01–T02 | O01–O03/O08; S01–S06 | M01 | Entrada, análise, comparação e recuperação. |
+| R03 / CI01–CI02 / T03–T06 | O04–O08; S01/S04/S07–S12 | M01/M02 | Registro/exportação e leitura do parecer; decisão formal externa. |
+| R03 / CI03 / CP03 exploratório | O09/O02/O07/O08; S01/S04/S07–S12 | M03 | Preparação na origem; P03 continua stakeholder. |
+
+[Diagramas e fontes](docs/10_molic.md). F01–F12 são estados previstos para a Entrega 11, ainda sem arquivo publicado no Figma. Não foram acrescentadas funcionalidades ao escopo nem realizadas sessões com usuários.
+
+## Entrega 11 — pranchas preparadas (11/11/2026)
+
+R01/M01 → F01–F05 e F10A/B: entrada, espera, comparação e falha. R03/M01/M03 → F06–F09, F10C/D e F11A/B: registro, revisão, exportação e recuperação. R03/M02 → F12: conteúdo do parecer recebido. As fontes estão em `assets/11_figma/`; imagens técnicas existentes no TCC têm origem registrada no README dos assets.
+
+A montagem, publicação, permissões e verificação dos fluxos no Figma permanecem pendentes por solicitação da equipe. As pranchas estáticas não validam MU01–MU06 nem substituem observação de usuários.
+
+## Entrega 12 — critérios de avaliação (11/11/2026)
+
+| Cadeia | Pergunta/tarefa | Meta | Evidência futura |
+|---|---|---|---|
+| R01 / CI01 / M01 / F03–F05 | QA01–QA02 / UT01 | MU01/MU02 | Comparação e explicação dos limites do modelo. |
+| R03 / CI01–CI03 / M01–M03 / F06–F09/F12 | QA03–QA04 / UT02 | MU03/MU04 | Parecer correto, completo, relacionável à imagem e tempo. |
+| R03 / M01/M03 / F10C/D | QA05 / UT03 | MU05 | Bloqueio de emissão incompleta e recuperação. |
+| R01/R03 / UT01–UT02 | QA06 | MU06 | Facilidade 1–5 e comentário. |
+
+O plano DECIDE e os instrumentos estão prontos. Nenhum dado foi coletado. Proxies dependem de justificativa individual e validação de adequação com o professor; não substituem validação profissional do TCC.
+
+## Entrega 13 — inspeção preparada (11/11/2026)
+
+M01–M03/F01–F12 compõem o escopo das três inspeções. A01/A02/A03 têm fichas separadas e matriz H1–H10; o processo inclui preparação, coleta individual, interpretação, consolidação, relato e revisão. A tabela de dez exemplos é didática, não comprova inspeções individuais. Não há V/HC ou severidades coletadas; esses IDs só serão atribuídos a problemas observados após a execução pela equipe.
