@@ -130,11 +130,11 @@ As três fichas são proto-personas: nenhuma foi construída com pesquisa com us
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | Mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | HTA T01, GOMS T02 (Entrega 5, `docs/05_analise_tarefas.md`) | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF01 e síntese OBS-01–OBS-03 na Entrega 6: contexto da carga, comparação e explicação do indicador. Estados detalhados PP01–PP03/PP06c preservados como referência em `assets/11_figma/`, sem declarar a Entrega 11 concluída. |
+| R01 | Mapa de atenção associado à predição da imagem (versão demonstrativa do TCC) | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | HTA T01, GOMS T02 (Entrega 5, `docs/05_analise_tarefas.md`) | CI01; O01–O03/O08; S01–S06 | M01 | F01–F05/F10A/B — pranchas; Figma pendente | H1–H10: inspeções pendentes | UT01 — não aplicada | Esboço principal PF01 e síntese OBS-01–OBS-03 na Entrega 6: contexto da carga, comparação e explicação do indicador. Estados detalhados PP01–PP03/PP06c preservados como referência em `assets/11_figma/`, sem declarar a Entrega 11 concluída. |
 | R02 | Medida de anomalia calculada para cada imagem | [H04, H25, H35] Saber quais contêineres examinar primeiro. A existência dessa tarefa é hipótese | P01 | PENDENTE | A01: triar os contêineres escaneados | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
-| R03 | Mapa residual como evidência associada ao contêiner | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 (e P03 como stakeholder em H42) | CP01, CP02 (e CP03 exploratório) | A03: registrar o resultado da análise | T01, T03 (P01); T04, T05, T06 (P02, situação atual); T07 a T09 (P03, exploratórias fora do recorte enquanto H42 estiver aberta) | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF02 e síntese OBS-04–OBS-06 na Entrega 6: parecer, comentário por região e revisão antes da exportação. Estados detalhados PP04–PP06c preservados em `assets/11_figma/` para evolução posterior. |
+| R03 | Imagem e mapa de atenção como apoio ao registro do parecer | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 (e P03 como stakeholder em H42) | CP01, CP02 (e CP03 exploratório) | A03: registrar o resultado da análise | T01, T03 (P01); T04, T05, T06 (P02, situação atual); T07 a T09 (P03, exploratórias fora do recorte enquanto H42 estiver aberta) | CI01–CI03; O04–O09/O02; S01/S04/S07–S12 | M01/M02/M03 | F06–F09/F10C/D/F11A/B/F12 — pranchas; Figma pendente | H1–H10: inspeções pendentes | UT02/UT03 — não aplicadas | Esboço principal PF02 e síntese OBS-04–OBS-06 na Entrega 6: parecer, comentário por região e revisão antes da exportação. Estados detalhados PP04–PP06c preservados em `assets/11_figma/` para evolução posterior. |
 
-As colunas marcadas `PENDENTE` pertencem a entregas ainda não realizadas (cenários de interação e signos na Entrega 9, MoLIC na Entrega 10, telas no Figma na Entrega 11, avaliação nas Entregas 13 e 14).
+A matriz incorpora CI/signos da Entrega 9 e os MoLICs concluídos da Entrega 10. F01–F12 são pranchas preparadas; montagem no Figma e avaliações reais continuam pendentes. R02 permanece hipótese fora do recorte, sem tela de triagem criada. As descrições históricas de mapa residual foram atualizadas nesta matriz para mapa de atenção, conforme as Entregas 7–9 e os exemplos técnicos do TCC; não representam alteração do algoritmo por esta atividade.
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -221,3 +221,40 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 - Não force relação inexistente: se algo ainda não foi modelado, marque `PENDENTE`.
 - Ao remover uma funcionalidade, registre a decisão em vez de apagar silenciosamente o histórico.
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
+
+## Entrega 10 — conversas modeladas (11/11/2026)
+
+| Origem | Objetivos/signos | MoLIC | Decisão |
+|---|---|---|---|
+| R01 / CI01 / T01–T02 | O01–O03/O08; S01–S06 | M01 | Entrada, análise, comparação e recuperação. |
+| R03 / CI01–CI02 / T03–T06 | O04–O08; S01/S04/S07–S12 | M01/M02 | Registro/exportação e leitura do parecer; decisão formal externa. |
+| R03 / CI03 / CP03 exploratório | O09/O02/O07/O08; S01/S04/S07–S12 | M03 | Preparação na origem; P03 continua stakeholder. |
+
+[Diagramas e fontes](docs/10_molic.md). F01–F12 são estados previstos para a Entrega 11, ainda sem arquivo publicado no Figma. Não foram acrescentadas funcionalidades ao escopo nem realizadas sessões com usuários.
+
+## Entrega 11 — pranchas preparadas (11/11/2026)
+
+R01/M01 → F01–F05 e F10A/B: entrada, espera, comparação e falha. R03/M01/M03 → F06–F09, F10C/D e F11A/B: registro, revisão, exportação e recuperação. R03/M02 → F12: conteúdo do parecer recebido. As fontes estão em `assets/11_figma/`; imagens técnicas existentes no TCC têm origem registrada no README dos assets.
+
+A montagem, publicação, permissões e verificação dos fluxos no Figma permanecem pendentes por solicitação da equipe. As pranchas estáticas não validam MU01–MU06 nem substituem observação de usuários.
+
+## Entrega 12 — critérios de avaliação (11/11/2026)
+
+| Cadeia | Pergunta/tarefa | Meta | Evidência futura |
+|---|---|---|---|
+| R01 / CI01 / M01 / F03–F05 | QA01–QA02 / UT01 | MU01/MU02 | Comparação e explicação dos limites do modelo. |
+| R03 / CI01–CI03 / M01–M03 / F06–F09/F12 | QA03–QA04 / UT02 | MU03/MU04 | Parecer correto, completo, relacionável à imagem e tempo. |
+| R03 / M01/M03 / F10C/D | QA05 / UT03 | MU05 | Bloqueio de emissão incompleta e recuperação. |
+| R01/R03 / UT01–UT02 | QA06 | MU06 | Facilidade 1–5 e comentário. |
+
+O plano DECIDE e os instrumentos estão prontos. Nenhum dado foi coletado. Proxies dependem de justificativa individual e validação de adequação com o professor; não substituem validação profissional do TCC.
+
+## Entrega 13 — inspeção preparada (11/11/2026)
+
+M01–M03/F01–F12 compõem o escopo das três inspeções. A01/A02/A03 têm fichas separadas e matriz H1–H10; o processo inclui preparação, coleta individual, interpretação, consolidação, relato e revisão. A tabela de dez exemplos é didática, não comprova inspeções individuais. Não há V/HC ou severidades coletadas; esses IDs só serão atribuídos a problemas observados após a execução pela equipe.
+
+## Entrega 14 — observação preparada (11/11/2026)
+
+UT01 relaciona R01/M01/F03–F05 a MU01/MU02. UT02 relaciona R03/M01–M03/F06–F09/F12 a MU03/MU04. UT03 relaciona R03/M01/M03/F10C/D a MU05. MU06 usa facilidade após UT01/UT02. U01–U03 são vagas planejadas, não participantes já observados.
+
+Há fluxograma, protocolo, consentimento, questionários e fichas/CSV vazios. Piloto, recrutamento, sessões, gravações, achados AU e comparação com HC permanecem pendentes. Nenhuma hipótese sobre a rotina profissional foi encerrada por essa preparação. A adequação dos proxies deve ser validada antes da coleta; os resultados não validarão o algoritmo nem substituirão experiência profissional.

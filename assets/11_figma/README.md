@@ -1,8 +1,7 @@
-# Materiais para a Entrega 11
+# Pranchas para o Figma
 
-- [Estados da Mesa de inspeção](estados_prototipo_pp01_pp06.svg): telas e estados completos preservados da versão extensa da Entrega 6.
-- [Referência detalhada](referencia_mesa_inspecao.md): descrição original, simulação e propostas de revisão.
-- [Fonte do tldraw](../06_prototipos/mesa_inspecao.tldr): arquivo original editável.
-- [Fluxograma de apoio](../10_molic/prototipo_fluxo_01.svg): material guardado para a Entrega 10.
+`f01.svg` a `f09.svg`, `f10a.svg` a `f10d.svg`, `f11a.svg`, `f11b.svg` e `f12.svg` são 16 pranchas vetoriais editáveis (1440 × 960). Podem ser importadas para o Figma; as conexões estão especificadas na [Entrega 11](../../docs/11_figma.md). **Ainda não constituem um protótipo clicável publicado.**
 
-Esses arquivos são referências para construir o protótipo navegável; ainda não são uma entrega de Figma concluída. Rótulos, indicadores e estados devem acompanhar o modelo conceitual e o MoLIC. Os códigos PP não substituem os futuros identificadores F das telas do Figma.
+As radiografias incorporadas provêm dos arquivos `01_imagem_original.png` e `06_gradcam_overlay.png` do TCC da própria equipe, em `TCC-VisaoRaioxContainer/parteEscrita/images/`. O overlay é uma ilustração técnica já existente; seu uso nas pranchas não é uma nova inferência. Identificação, carga, conclusão e responsável são fictícios. Nenhuma precisão/calibração é inferida dessas imagens.
+
+`referencia_mesa_inspecao.md` e `estados_prototipo_pp01_pp06.svg` preservam o detalhamento histórico da Entrega 6. Não são evidência de teste do novo protótipo.
