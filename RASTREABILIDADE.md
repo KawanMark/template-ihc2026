@@ -237,3 +237,14 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 R01/M01 → F01–F05 e F10A/B: entrada, espera, comparação e falha. R03/M01/M03 → F06–F09, F10C/D e F11A/B: registro, revisão, exportação e recuperação. R03/M02 → F12: conteúdo do parecer recebido. As fontes estão em `assets/11_figma/`; imagens técnicas existentes no TCC têm origem registrada no README dos assets.
 
 A montagem, publicação, permissões e verificação dos fluxos no Figma permanecem pendentes por solicitação da equipe. As pranchas estáticas não validam MU01–MU06 nem substituem observação de usuários.
+
+## Entrega 12 — critérios de avaliação (11/11/2026)
+
+| Cadeia | Pergunta/tarefa | Meta | Evidência futura |
+|---|---|---|---|
+| R01 / CI01 / M01 / F03–F05 | QA01–QA02 / UT01 | MU01/MU02 | Comparação e explicação dos limites do modelo. |
+| R03 / CI01–CI03 / M01–M03 / F06–F09/F12 | QA03–QA04 / UT02 | MU03/MU04 | Parecer correto, completo, relacionável à imagem e tempo. |
+| R03 / M01/M03 / F10C/D | QA05 / UT03 | MU05 | Bloqueio de emissão incompleta e recuperação. |
+| R01/R03 / UT01–UT02 | QA06 | MU06 | Facilidade 1–5 e comentário. |
+
+O plano DECIDE e os instrumentos estão prontos. Nenhum dado foi coletado. Proxies dependem de justificativa individual e validação de adequação com o professor; não substituem validação profissional do TCC.
