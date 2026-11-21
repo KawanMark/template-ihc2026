@@ -134,11 +134,11 @@ As três fichas são proto-personas: nenhuma foi construída com pesquisa com us
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | Mapa de atenção (Grad-CAM) da versão técnica consultada, indicando regiões relevantes para a predição; localização aproximada | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | HTA T01, GOMS T02 (Entrega 5, `docs/05_analise_tarefas.md`) | CI01/DCC01; O01/O02/O03/O07/O08; S01–S06/S13/S16/S17; S14/S15 candidatos | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF01 e síntese OBS-01–OBS-03 na Entrega 6: contexto da carga, comparação e explicação do indicador. Estados detalhados PP01–PP03/PP06c preservados como referência em `assets/11_figma/`, sem declarar a Entrega 11 concluída. |
+| R01 | Mapa de atenção (Grad-CAM) da versão técnica consultada, indicando regiões relevantes para a predição; localização aproximada | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | HTA T01, GOMS T02 (Entrega 5, `docs/05_analise_tarefas.md`) | CI01/DCC01; O01/O02/O03/O07/O08; S01–S06/S13/S16/S17; S14/S15 candidatos | M01 | F01–F05, F10a, F10b | V04 (H2), V05 (H7), V07 (H1) — consolidados em A01–A03 | UT01 (3/3 sucesso, med. 95 s; MU01/MU02 atendidas; AU02, AU05) | Corrigidos na v1.1: remoção dos códigos S nos rótulos, contorno duplo no tracejado âmbar e botão `Restaurar ajustes`. Backlog: zoom sincronizado em F05 (`AU05`) e reforço do subtítulo qualitativo (`AU02`). |
 | R02 | Medida de anomalia calculada para cada imagem | [H04, H25, H35] Saber quais contêineres examinar primeiro. A existência dessa tarefa é hipótese | P01 | PENDENTE | A01: triar os contêineres escaneados | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
-| R03 | Radiografia e mapa de atenção como apoio ao parecer associado ao caso, sem equivalência com o mapa residual da formulação inicial | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 (e P03 como stakeholder em H42) | CP01, CP02 (e CP03 exploratório) | A03: registrar o resultado da análise | T01, T03 (P01); T04, T05, T06 (P02, situação atual); T07 a T09 (P03, exploratórias fora do recorte enquanto H42 estiver aberta) | CI01–CI03/DCC01–DCC03; O02/O04–O09; S01/S04/S07–S13/S18; leitura externa em CI02/CI03 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF02 e síntese OBS-04–OBS-06 na Entrega 6: parecer, comentário por região e revisão antes da exportação. Estados detalhados PP04–PP06c preservados em `assets/11_figma/` para evolução posterior. |
+| R03 | Radiografia e mapa de atenção como apoio ao parecer associado ao caso, sem equivalência com o mapa residual da formulação inicial | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 (e P03 como stakeholder em H42) | CP01, CP02 (e CP03 exploratório) | A03: registrar o resultado da análise | T01, T03 (P01); T04, T05, T06 (P02, situação atual); T07 a T09 (P03, exploratórias fora do recorte enquanto H42 estiver aberta) | CI01–CI03/DCC01–DCC03; O02/O04–O09; S01/S04/S07–S13/S18; leitura externa em CI02/CI03 | M01/M02/M03 | F06–F12, F07b, F08b, F10c, F10c_ut03, F10d, F11a, F11b | V01 (H3), V02 (H9), V03 (H3), V04 (H2), V06 (H8), V08 (H6), V09 (H6) — consolidados em A01–A03 | UT02 e UT03 (3/3 sucesso, med. 164 s e 82 s; MU03–MU06 atendidas; AU01, AU03, AU04) | Corrigidos na v1.1: `F07b`/`F08b` preservando conclusão divergente, recuperação direta em `F10c`/`F10c_ut03`, `F11a → F07`, ajuste de altura em `F10c` e link `Editar`. Próxima iteração: botão `+ Marcar região` no painel direito (`AU01`), destaque de `Editar` (`AU03`) e reforço da mensagem em `F10d` (`AU04`). |
 
-R01/R03 já possuem cenários de interação e signos da Entrega 9. MoLIC, Figma e avaliações permanecem pendentes nas Entregas 10–14. R02 continua hipótese de fila/priorização sem tarefa demonstrada; seus campos pendentes não significam ausência da Entrega 9 inteira.
+R01/R03 fecham a cadeia completa de evidências da disciplina: modelo conceitual (Entrega 9), MoLIC (Entrega 10), protótipo F01–F12 no Figma e HTML (Entrega 11), plano DECIDE (Entrega 12), avaliação heurística consolidada A01–A03 com correções na v1.1 (Entrega 13) e observação com três participantes proxy externos U01–U03 e vídeo publicado (Entrega 14). R02 continua hipótese de fila/priorização sem tarefa demonstrada.
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -226,3 +226,44 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 - Não force relação inexistente: se algo ainda não foi modelado, marque `PENDENTE`.
 - Ao remover uma funcionalidade, registre a decisão em vez de apagar silenciosamente o histórico.
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
+
+## Entrega 10 — conversas modeladas (11/11/2026)
+
+| Origem | Objetivos/signos | MoLIC | Decisão |
+|---|---|---|---|
+| R01 / CI01 / T01–T02 | O01–O03/O08; S01–S06/S13/S16/S17 | M01 | Entrada, análise, comparação e recuperação. |
+| R03 / CI01–CI02 / T03–T06 | O04–O08; S01/S04/S07–S12/S18 | M01/M02 | Registro/exportação e leitura do parecer; decisão formal externa. |
+| R03 / CI03 / CP03 exploratório | O09/O02/O07/O08; S01/S04/S07–S13/S18 | M03 | Preparação na origem; P03 continua stakeholder. |
+
+[Diagramas e fontes](docs/10_molic.md). F01–F12 são estados previstos para a Entrega 11, ainda sem arquivo publicado no Figma. Não foram acrescentadas funcionalidades ao escopo nem realizadas sessões com usuários.
+
+## Entrega 11 — protótipo navegável (17/11/2026)
+
+| Origem | MoLIC | Telas F | Decisão |
+|---|---|---|---|
+| R01 / CI01 / T01–T02 / O01–O03/O08 | M01 C1–C3 | F01–F05; F10a, F10b | Abertura, análise, resultado qualitativo (S04/S05) e comparação persistente (S06). Probabilidade e limiar não exibidos (S14/S15 candidatos). |
+| R03 / CI01 / T03 / O04/O05 | M01 C4–C7 | F06–F09; F10c, F10d, F11a, F11b | Região comentada, conclusão humana, revisão, validação e exportação recuperável. |
+| R03 / CI02 / T04–T06 externas / O06 | M02 | F12 | PDF lido em leitor externo; nenhuma tela de decisão para P02. |
+| R03 / CI03 / O09 | M03 | F06–F09 (reuso) | Mesma preparação e exportação de M01; P03 continua sem interface (H42). |
+
+[Protótipo e catálogo](docs/11_figma.md). As telas derivam da interface de demonstração do TCC (`codigo/interface/`), com o mapa de atenção real do modelo para a imagem de teste; caso e responsável são fictícios. Não houve sessão com usuários.
+
+As pranchas SVG preparadas em 11/11/2026 (`assets/11_figma/f01.svg`–`f12.svg`) continuam como fontes vetoriais com os mesmos IDs F e foram a especificação de conexões usada na montagem do Figma.
+
+## Entrega 12 — critérios de avaliação (11/11/2026)
+
+| Cadeia | Pergunta/tarefa | Meta | Evidência futura |
+|---|---|---|---|
+| R01 / CI01 / M01 / F03–F05 | QA01–QA02 / UT01 | MU01/MU02 | Comparação e explicação dos limites do modelo. |
+| R03 / CI01–CI03 / M01–M03 / F06–F09/F12 | QA03–QA04 / UT02 | MU03/MU04 | Parecer correto, completo, relacionável à imagem e tempo. |
+| R03 / M01/M03 / F10C/D | QA05 / UT03 | MU05 | Bloqueio de emissão incompleta e recuperação. |
+| R01/R03 / UT01–UT02 | QA06 | MU06 | Facilidade 1–5 e comentário. |
+
+O plano DECIDE e os instrumentos estão prontos. Nenhum dado foi coletado. Proxies dependem de justificativa individual e validação de adequação com o professor; não substituem validação profissional do TCC.
+
+## Entregas 13 e 14 — avaliação do protótipo (atualizado em 21/11/2026)
+
+| Origem | Artefato de avaliação | Situação |
+|---|---|---|
+| M01–M03, F01–F12 (16 estados, H1–H10) | [Inspeções A01–A03 e consolidação V01–V09](docs/13_avaliacao_heuristica.md) | Concluída: 16 relatos individuais consolidados em 9 problemas únicos (`V01`–`V09`). Bloqueios `V01`/`V02` e melhorias `V03`–`V07`/`V09` corrigidos no protótipo HTML `v1.1` antes do piloto. |
+| QA01–QA06, MU01–MU06, UT01–UT03 | [Observação U01–U03 e achados AU01–AU05](docs/14_observacao_usuario.md) | Concluída sobre a versão `v1.1` com 3 participantes proxy externos: 3/3 sucesso em UT01–UT03, medianas 95 s / 164 s / 82 s, facilidade 4/5, metas MU01–MU06 atendidas na amostra, 5 melhorias priorizadas (`AU01`–`AU05`) e [vídeo publicado](https://www.youtube.com/watch?v=G2-ZTG27CLQ). |
